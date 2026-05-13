@@ -2,11 +2,6 @@
   command = "vite build"
   publish = "dist"
 
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
-
 [dev]
   framework = "vite"
   port = 8888
@@ -14,4 +9,4 @@
 
 [functions]
   directory = "netlify/functions"
-  external_node_modules = ["@netlify/database"]
+  external_node_modules = ["@netlify/blobs"]
