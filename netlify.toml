@@ -9,4 +9,3 @@
 
 [functions]
   directory = "netlify/functions"
-  external_node_modules = ["@netlify/database", "@netlify/blobs"]
