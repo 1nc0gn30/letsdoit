@@ -1,0 +1,10 @@
+{
+  "name": "Navi - Personalized Routing",
+  "description": "A personal guide to Hampton Roads with AI assistance and tailored recommendations.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
