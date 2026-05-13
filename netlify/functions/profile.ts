@@ -1,5 +1,5 @@
 import type { Handler, HandlerContext, HandlerEvent } from '@netlify/functions';
-import { getUserId, getDoc, setDoc } from './_shared/store';
+import { getUserId, getDoc, setDoc, dbQuery } from './_shared/store';
 
 interface Profile {
   id: string;
@@ -23,7 +23,14 @@ const handler: Handler = async (event: HandlerEvent, context: HandlerContext) =>
   const key = `profiles/${userId}`;
 
   if (event.httpMethod === 'GET') {
-    let profile = await getDoc<Profile>(key);
+    // Try Postgres first
+    const dbResult = await dbQuery('SELECT * FROM profiles WHERE id = $1', [userId]);
+    if (dbResult && dbResult.rows.length > 0) {
+      return { statusCode: 200, body: JSON.stringify(dbResult.rows[0]) };
+    }
+
+    // Fall back to blob store
+    let profile = await getDoc(key);
     if (!profile) {
       const email = context.clientContext?.user?.email || '';
       const displayName = (context.clientContext?.user?.user_metadata?.display_name as string) || email.split('@')[0] || 'Explorer';
@@ -44,7 +51,7 @@ const handler: Handler = async (event: HandlerEvent, context: HandlerContext) =>
 
   if (event.httpMethod === 'PUT' || event.httpMethod === 'POST') {
     const body = JSON.parse(event.body || '{}');
-    const existing = (await getDoc<Profile>(key)) || {
+    const existing = (await getDoc(key)) || {
       id: userId,
       display_name: body.display_name || '',
       email: context.clientContext?.user?.email || '',
@@ -62,6 +69,30 @@ const handler: Handler = async (event: HandlerEvent, context: HandlerContext) =>
       }
     }
     updated.updated_at = new Date().toISOString();
+
+    // Try Postgres update first
+    const db = await dbQuery('SELECT 1');
+    if (db) {
+      const updates: string[] = [];
+      const values: unknown[] = [];
+      let idx = 1;
+      for (const field of ALLOWED_FIELDS) {
+        if (body[field] !== undefined) {
+          updates.push(`${field} = $${idx++}`);
+          values.push(field === 'preferences' ? body[field] : body[field]);
+        }
+      }
+      if (updates.length > 0) {
+        updates.push('updated_at = NOW()');
+        values.push(userId);
+        const q = `UPDATE profiles SET ${updates.join(', ')} WHERE id = $${idx} RETURNING *`;
+        const result = await dbQuery(q, values);
+        if (result && result.rows.length > 0) {
+          return { statusCode: 200, body: JSON.stringify(result.rows[0]) };
+        }
+      }
+    }
+
     await setDoc(key, updated);
     return { statusCode: 200, body: JSON.stringify(updated) };
   }
