@@ -20,7 +20,7 @@ export default function App() {
     );
   }
 
-  const needsOnboarding = !user || (profile && (!profile.preferences || profile.preferences.length === 0));
+  const needsOnboarding = !user || !profile || !profile.preferences || profile.preferences.length === 0;
 
   if (needsOnboarding) {
     return <Onboarding />;

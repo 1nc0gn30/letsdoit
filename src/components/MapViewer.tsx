@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap, Polyline } from 'react-leaflet';
 import L from 'leaflet';
-import { Navigation } from 'lucide-react';
+import { ExternalLink, Navigation } from 'lucide-react';
 import 'leaflet/dist/leaflet.css';
 
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
@@ -15,6 +15,15 @@ L.Icon.Default.mergeOptions({
 });
 
 import { Place } from '../data/places';
+import {
+  getAppleMapsUrl,
+  getGoogleDirectionsUrl,
+  getGoogleMapsUrl,
+  getPlaceCity,
+  getPlaceDescription,
+  getPlaceTypeLabel,
+  HAMPTON_ROADS_BOUNDS,
+} from '../lib/placePresentation';
 
 function ChangeView({ center, zoom }: { center: [number, number]; zoom: number }) {
   const map = useMap();
@@ -67,12 +76,22 @@ export default function MapViewer({ places, selectedPlaceId, onSelectPlace, user
 
   return (
     <div className="w-full h-full relative z-0">
-      <MapContainer center={center} zoom={zoom} style={{ height: '100%', width: '100%' }}>
+      <MapContainer
+        center={center}
+        zoom={zoom}
+        minZoom={8}
+        maxBounds={HAMPTON_ROADS_BOUNDS}
+        maxBoundsViscosity={0.9}
+        worldCopyJump={false}
+        style={{ height: '100%', width: '100%' }}
+      >
         <ChangeView center={center} zoom={zoom} />
         
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          noWrap
+          bounds={HAMPTON_ROADS_BOUNDS}
         />
 
         {userLocation && (
@@ -121,24 +140,31 @@ export default function MapViewer({ places, selectedPlaceId, onSelectPlace, user
               }}
             >
               <Popup>
-                <div className="p-1 min-w-[220px]">
-                  <div className="text-[10px] font-bold text-indigo-600 uppercase tracking-widest mb-1 opacity-70">
-                    {place.type === 'event' ? '🎟️ Event' : '📍 Place'}
+                <div className="p-1 min-w-[250px] max-w-[280px]">
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <div className="text-[10px] font-bold text-indigo-600 uppercase tracking-widest opacity-70">
+                      {place.type === 'event' ? 'Event' : 'Place'} · {getPlaceCity(place)}
+                    </div>
+                    <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-bold text-slate-500">
+                      {place.tags[0]}
+                    </span>
                   </div>
                   <h3 className="font-bold text-slate-900 leading-tight mb-1 text-base">{place.name}</h3>
                   <p className="text-xs text-slate-500 mb-3">{place.address}</p>
+                  <p className="text-xs text-slate-600 leading-relaxed mb-3">{getPlaceDescription(place)}</p>
                   
                   <div className="grid grid-cols-2 gap-2">
                     <a 
-                      href={`https://www.google.com/maps/dir/?api=1&destination=${place.lat},${place.lng}`}
+                      href={getGoogleMapsUrl(place)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex flex-col items-center justify-center gap-1 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-[10px] font-bold rounded-xl transition-colors border border-slate-200"
                     >
-                      <span>Google Maps</span>
+                      <ExternalLink size={13} />
+                      <span>Search</span>
                     </a>
                     <a 
-                      href={`https://maps.apple.com/?daddr=${place.lat},${place.lng}`}
+                      href={getAppleMapsUrl(place)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex flex-col items-center justify-center gap-1 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-[10px] font-bold rounded-xl transition-colors border border-slate-200"
@@ -148,13 +174,13 @@ export default function MapViewer({ places, selectedPlaceId, onSelectPlace, user
                   </div>
                   
                   <a 
-                    href={`https://www.google.com/maps/dir/?api=1&destination=${place.lat},${place.lng}`}
+                    href={getGoogleDirectionsUrl(place)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-2 flex items-center justify-center gap-2 w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold rounded-xl shadow-lg shadow-indigo-200 transition-all active:scale-95"
                   >
                     <Navigation size={14} className="fill-current" />
-                    <span>In-House Navigate</span>
+                    <span>Directions to {getPlaceTypeLabel(place).toLowerCase()}</span>
                   </a>
                 </div>
               </Popup>

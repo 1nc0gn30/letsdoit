@@ -47,7 +47,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (res.ok) {
       const data = await res.json();
       setProfile(data as Profile);
+      return data as Profile;
     }
+    setProfile(null);
+    return null;
   };
 
   useEffect(() => {
@@ -58,11 +61,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
 
     const handleLogin = (u: NetlifyUser) => {
+      setLoading(true);
       setUser(u);
-      u.jwt().then((t: string) => {
-        setToken(t);
-        fetchProfile(t);
-      });
+      u.jwt()
+        .then(async (t: string) => {
+          setToken(t);
+          await fetchProfile(t);
+        })
+        .finally(() => setLoading(false));
     };
 
     const handleLogout = () => {
@@ -75,8 +81,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       const current = widget.currentUser?.();
       if (current) {
         handleLogin(current);
+      } else {
+        setLoading(false);
       }
-      setLoading(false);
     };
 
     widget.on('init', handleInit);

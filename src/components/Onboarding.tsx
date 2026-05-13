@@ -46,15 +46,19 @@ export default function Onboarding() {
     setLoading(true);
     setError('');
 
-    if (token) {
-      const { error: saveError } = await updatePreferences(token, preferences);
-      if (saveError) {
-        setError('Failed to save preferences. Please try again.');
-        setLoading(false);
-        return;
-      }
-      await refreshProfile();
+    if (!token) {
+      setError('Your login session is still loading. Please try again.');
+      setLoading(false);
+      return;
     }
+
+    const { error: saveError } = await updatePreferences(token, preferences);
+    if (saveError) {
+      setError('Failed to save preferences. Please try again.');
+      setLoading(false);
+      return;
+    }
+    await refreshProfile();
 
     setLoading(false);
     navigate('/');

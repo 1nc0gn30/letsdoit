@@ -52,23 +52,28 @@ export default function DailyPicks() {
     const prefs = (profile?.preferences as Tag[] | undefined) || [];
     const place = pickSuggestion(hamptonRoadsPlaces, prefs, userLocation, [], skipped, visited);
     setSuggestedPlace(place);
+    setVisitId(null);
     setPhase('suggesting');
-    if (place && token) {
-      createUserVisit(token, place.id, 'suggested').then(({ visit }) => {
-        if (visit) setVisitId(visit.id);
-      });
-    }
-  }, [history, profile, userLocation, token]);
+  }, [history, profile, userLocation]);
 
   const handleAccept = async () => {
-    if (!suggestedPlace || !token || !visitId) return;
-    await updateUserVisit(token, visitId, { status: 'accepted' });
+    if (!suggestedPlace || !token) return;
+    const id = visitId || (await createUserVisit(token, suggestedPlace.id, 'accepted')).data?.id;
+    if (!id) return;
+    setVisitId(id);
+    if (visitId) {
+      await updateUserVisit(token, id, { status: 'accepted' });
+    }
     setPhase('accepted');
   };
 
   const handleDecline = async () => {
     if (!token || !suggestedPlace) { setPhase('prompt'); return; }
-    if (visitId) await updateUserVisit(token, visitId, { status: 'declined' });
+    if (visitId) {
+      await updateUserVisit(token, visitId, { status: 'declined' });
+    } else {
+      await createUserVisit(token, suggestedPlace.id, 'declined');
+    }
     await adjustCredibility(token, computeCredibilityDelta('declined'));
     await refreshProfile();
     setPhase('prompt');

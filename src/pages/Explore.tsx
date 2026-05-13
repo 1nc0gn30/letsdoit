@@ -84,19 +84,20 @@ export default function Explore() {
     const prefs = selectedTags.length > 0 ? selectedTags : (profile?.preferences as Tag[] ?? []);
     const place = pickSuggestion(places, prefs, userLocation, [], skipped, visited);
     setSuggestedPlace(place);
+    setVisitId(null);
     setPhase('suggesting');
-    if (place && token) {
-      createUserVisit(token, place.id, 'suggested').then(({ visit }) => {
-        if (visit) setVisitId(visit.id);
-      });
-    }
-  }, [places, selectedTags, profile, userLocation, history, token]);
+  }, [places, selectedTags, profile, userLocation, history]);
 
   const handleReady = () => setPhase('prompt');
 
   const handleAccept = async () => {
-    if (!suggestedPlace || !token || !visitId) return;
-    await updateUserVisit(token, visitId, { status: 'accepted' });
+    if (!suggestedPlace || !token) return;
+    const id = visitId || (await createUserVisit(token, suggestedPlace.id, 'accepted')).data?.id;
+    if (!id) return;
+    setVisitId(id);
+    if (visitId) {
+      await updateUserVisit(token, id, { status: 'accepted' });
+    }
     setPhase('accepted');
     setSelectedPlaceId(suggestedPlace.id);
     if (window.innerWidth < 768) setIsSidebarOpen(false);
@@ -104,7 +105,11 @@ export default function Explore() {
 
   const handleDecline = async () => {
     if (!token || !suggestedPlace) { setPhase('idle'); return; }
-    if (visitId) await updateUserVisit(token, visitId, { status: 'declined' });
+    if (visitId) {
+      await updateUserVisit(token, visitId, { status: 'declined' });
+    } else {
+      await createUserVisit(token, suggestedPlace.id, 'declined');
+    }
     await adjustCredibility(token, computeCredibilityDelta('declined'));
     await refreshProfile();
     setPhase('idle');

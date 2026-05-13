@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { X, User, Star, Zap, TrendingUp, ThumbsUp, ThumbsDown, MapPin, LogOut, Settings } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { getUserVisits, getUserFeedback } from '../lib/visitService';
-import { hamptonRoadsPlaces } from '../data/places';
+import { hamptonRoadsPlaces, Place } from '../data/places';
 
 interface ProfilePanelProps {
   isOpen: boolean;
@@ -26,8 +26,9 @@ export default function ProfilePanel({ isOpen, onClose }: ProfilePanelProps) {
     })();
   }, [token]);
 
-  const likedPlaces = feedback.filter((f) => f.liked).map((f) => hamptonRoadsPlaces.find((p) => p.id === f.place_id)).filter(Boolean);
-  const dislikedPlaces = feedback.filter((f) => !f.liked).map((f) => hamptonRoadsPlaces.find((p) => p.id === f.place_id)).filter(Boolean);
+  const isPlace = (place: Place | undefined): place is Place => Boolean(place);
+  const likedPlaces = feedback.filter((f) => f.liked).map((f) => hamptonRoadsPlaces.find((p) => p.id === f.place_id)).filter(isPlace);
+  const dislikedPlaces = feedback.filter((f) => !f.liked).map((f) => hamptonRoadsPlaces.find((p) => p.id === f.place_id)).filter(isPlace);
   const wentCount = visits.filter((v) => v.status === 'checked_in').length;
 
   const score = profile?.credibility_score ?? 100;

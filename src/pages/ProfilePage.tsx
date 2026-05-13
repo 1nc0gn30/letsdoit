@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { User, Zap, TrendingUp, MapPin, ThumbsUp, ThumbsDown, Star, LogOut, Settings } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { getUserVisits, getUserFeedback } from '../lib/visitService';
-import { hamptonRoadsPlaces } from '../data/places';
+import { availableTags, hamptonRoadsPlaces, Place } from '../data/places';
 import SEO from '../components/SEO';
 
 export default function ProfilePage() {
@@ -22,8 +22,9 @@ export default function ProfilePage() {
     })();
   }, [token]);
 
-  const liked = feedback.filter((f) => f.liked).map((f) => hamptonRoadsPlaces.find((p) => p.id === f.place_id)).filter(Boolean);
-  const disliked = feedback.filter((f) => !f.liked).map((f) => hamptonRoadsPlaces.find((p) => p.id === f.place_id)).filter(Boolean);
+  const isPlace = (place: Place | undefined): place is Place => Boolean(place);
+  const liked = feedback.filter((f) => f.liked).map((f) => hamptonRoadsPlaces.find((p) => p.id === f.place_id)).filter(isPlace);
+  const disliked = feedback.filter((f) => !f.liked).map((f) => hamptonRoadsPlaces.find((p) => p.id === f.place_id)).filter(isPlace);
   const wentCount = visits.filter((v) => v.status === 'checked_in').length;
 
   return (

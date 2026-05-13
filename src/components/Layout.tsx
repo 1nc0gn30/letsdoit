@@ -16,7 +16,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const isOnboarding = !user || (profile && (!profile.preferences || profile.preferences.length === 0));
+  const isOnboarding = !user || !profile || !profile.preferences || profile.preferences.length === 0;
   if (isOnboarding) return <>{children}</>;
 
   return (
