@@ -7,16 +7,11 @@
   to = "/.netlify/functions/:splat"
   status = 200
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
 [dev]
-  command = "vite"
-  targetPort = 5173
+  framework = "vite"
   port = 8888
   publish = "dist"
 
 [functions]
   directory = "netlify/functions"
+  external_node_modules = ["@netlify/database"]

@@ -2,7 +2,7 @@
 
 A curated map of 500+ real places and events across Hampton Roads, VA (Norfolk, Virginia Beach, Chesapeake, Hampton, Newport News, Portsmouth, Suffolk, Williamsburg, Yorktown, and beyond).
 
-Built with **React + Vite + Tailwind + Leaflet** on the frontend and **Netlify Identity + Netlify Functions + Netlify Blobs** on the backend.
+Built with **React + Vite + Tailwind + Leaflet** on the frontend and **Netlify Identity + Netlify Functions + Netlify Database** on the backend.
 
 ## Features
 
@@ -11,7 +11,7 @@ Built with **React + Vite + Tailwind + Leaflet** on the frontend and **Netlify I
 - **Credibility scoring** — earn points by following through on suggestions, lose points for skipping
 - **Streak tracking** for consecutive successful visits
 - **Like / Dislike** feedback to mature your recommendation algorithm
-- **User profiles** stored in Netlify's serverless document store
+- **User profiles** stored in Netlify's managed Postgres database
 - **Responsive map + sidebar** with live distance calculation and routing links
 
 ## Stack
@@ -21,7 +21,7 @@ Built with **React + Vite + Tailwind + Leaflet** on the frontend and **Netlify I
 | Frontend | React 19, Vite, Tailwind CSS, Leaflet, Framer Motion |
 | Auth | Netlify Identity |
 | API | Netlify Functions (TypeScript) |
-| Data | Netlify Blobs (document store) |
+| Data | Netlify Database (Postgres) |
 | Deploy | Netlify |
 
 ## Setup
@@ -32,29 +32,53 @@ Built with **React + Vite + Tailwind + Leaflet** on the frontend and **Netlify I
 npm install
 ```
 
-### 2. Local development
+### 2. Netlify setup (required for auth and database)
+
+1. Create a new site on [Netlify](https://app.netlify.com)
+2. Enable **Netlify Identity** in your site settings → Registration preferences → "Open" or "Invite only"
+3. The database will be auto-provisioned on first deploy because migrations exist in `netlify/database/migrations/`
+
+## Development
+
+### Frontend only (fastest iteration)
 
 ```bash
 npm run dev
 ```
 
-### 3. Netlify setup (required for auth and data)
+This starts Vite on `http://localhost:5173`. Netlify Functions and the database won't work, but the UI, map, and suggestion engine are fully functional.
 
-1. Create a new site on [Netlify](https://app.netlify.com)
-2. Enable **Netlify Identity** in your site settings
-3. Set Identity registration to "Open" or "Invite only" as preferred
-4. Deploy the site (or run `netlify dev` locally)
+### Full stack (frontend + functions + database)
 
-The Netlify Functions in `netlify/functions/` handle profile, visits, and feedback storage via Netlify Blobs. No external database connection strings are required.
-
-### 4. Environment variables
-
-No env vars are required for the base app. If you want to customize:
-
+```bash
+netlify dev
 ```
-# Optional: Netlify Identity URL (auto-detected in production)
-NETLIFY_IDENTITY_URL=https://your-site.netlify.app
+
+This starts:
+- Vite dev server (auto-detected port)
+- Netlify Functions locally
+- Local Postgres database via Netlify Database
+- Netlify Identity widget available
+
+**Access the app at `http://localhost:8888`** (the Netlify dev proxy port), NOT the Vite port directly.
+
+> ⚠️ If you see "Port 5173 is in use", kill any old Vite processes first: `killall node` or `lsof -ti:5173 | xargs kill -9`
+
+### Functions only
+
+```bash
+netlify functions:serve
 ```
+
+Test individual functions at `http://localhost:9999/.netlify/functions/profile`, etc.
+
+## Deploy
+
+```bash
+netlify deploy --prod
+```
+
+Or connect your Git repo to Netlify for auto-deploys.
 
 ## Data
 
@@ -75,11 +99,23 @@ Places are stored in `src/data/places.ts` (612 entries). They span:
 - Shopping
 - Festivals & Events
 
+## Database Schema
+
+Migrations live in `netlify/database/migrations/`:
+
+| Table | Purpose |
+|-------|---------|
+| `profiles` | User profile (preferences, credibility score, streak) |
+| `visits` | Visit history (suggested, accepted, checked_in, skipped, declined) |
+| `place_feedback` | Like/dislike per place per user |
+
+Netlify applies migrations automatically on deploy.
+
 ## Netlify Functions
 
 | Function | Purpose |
 |----------|---------|
-| `/.netlify/functions/profile` | GET/PUT user profile (preferences, score, streak) |
+| `/.netlify/functions/profile` | GET/PUT user profile |
 | `/.netlify/functions/visits` | GET/POST/PUT visit history |
 | `/.netlify/functions/feedback` | GET/POST place like/dislike feedback |
 
@@ -109,41 +145,59 @@ The suggestion engine (`src/lib/suggestionEngine.ts`) scores places using:
 
 ```
 netlify/
+  database/
+    migrations/
+      0000_initial.sql    # Postgres schema
   functions/
-    _shared/store.ts      # Netlify Blobs wrapper
+    _shared/
+      store.ts            # Auth context helper
     profile.ts            # Profile CRUD
     visits.ts             # Visit history CRUD
     feedback.ts           # Like/dislike CRUD
+public/
+  _redirects              # Production SPA fallback
+  robots.txt
+  sitemap.xml
+  og-image.svg
 src/
   components/
+    Layout.tsx            # App shell with navigation
     MapViewer.tsx         # Leaflet map with markers
     Onboarding.tsx        # Auth + preferences UI
+    SEO.tsx               # Dynamic meta tag manager
     SuggestionCard.tsx    # Ready-to-go + suggestion flow
     ProfilePanel.tsx      # Score, streak, history, likes
   contexts/
-    AuthContext.tsx       # Netlify Identity auth provider
+    AuthContext.tsx       # Netlify Identity provider
   data/
     places.ts             # 612 Hampton Roads locations
+  pages/
+    Home.tsx              # Dashboard with stats & picks
+    Explore.tsx           # Full map + sidebar
+    Events.tsx            # Filterable events grid
+    DailyPicks.tsx        # Standalone suggestion flow
+    ProfilePage.tsx       # Full profile page
+    PlaceDetail.tsx       # Individual place page
   lib/
     suggestionEngine.ts   # Scoring algorithm
     netlifyApi.ts         # API client for Netlify Functions
     profileService.ts     # Profile helpers
     visitService.ts       # Visit/feedback helpers
-  App.tsx                 # Main layout + suggestion flow
+  App.tsx                 # Router + auth guards
 ```
 
-## Deploy
+## Auth Flow
 
-```bash
-netlify deploy --prod
-```
-
-Or connect your Git repo to Netlify for auto-deploys.
+1. User opens app, not logged in → Welcome screen with **Create Account** / **Sign In**
+2. Clicking either opens the **Netlify Identity modal** (popup from `identity.netlify.com`)
+3. After signup/login, modal closes → app detects user via `window.netlifyIdentity` events
+4. If no preferences set → shows interest selection
+5. Then the full app loads with personalized suggestions
 
 ## Iteration Roadmap
 
-- [ ] Real-time event feeds ( scrape & import recurring events )
-- [ ] Social features ( friend suggestions, group outings )
+- [ ] Real-time event feeds (scrape & import recurring events)
+- [ ] Social features (friend suggestions, group outings)
 - [ ] Weather-aware recommendations
 - [ ] Push notifications for nearby streak opportunities
 - [ ] Leaderboards & badges

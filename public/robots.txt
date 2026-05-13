@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://navi.757tech.pro/sitemap.xml
