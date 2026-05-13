@@ -10,7 +10,7 @@ interface OnboardingProps {
 }
 
 export default function Onboarding({ onComplete }: OnboardingProps) {
-  const { user, profile } = useAuth();
+  const { user, profile, token, refreshProfile } = useAuth();
   const [step, setStep] = useState<'auth' | 'preferences'>('auth');
   const [preferences, setPreferences] = useState<Tag[]>([]);
   const [loading, setLoading] = useState(false);
@@ -47,12 +47,17 @@ export default function Onboarding({ onComplete }: OnboardingProps) {
     }
     setLoading(true);
     setError('');
-    const widget = (window as any).netlifyIdentity;
-    const u = widget?.currentUser?.();
-    if (u) {
-      const t = await u.jwt();
-      await updatePreferences(t, preferences);
+
+    if (token) {
+      const { error: saveError } = await updatePreferences(token, preferences);
+      if (saveError) {
+        setError('Failed to save preferences. Please try again.');
+        setLoading(false);
+        return;
+      }
+      await refreshProfile();
     }
+
     setLoading(false);
     onComplete();
   };
