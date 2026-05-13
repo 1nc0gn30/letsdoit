@@ -10,7 +10,7 @@ import ProfilePage from './pages/ProfilePage';
 import PlaceDetail from './pages/PlaceDetail';
 
 export default function App() {
-  const { user, profile, loading, refreshProfile } = useAuth();
+  const { user, profile, loading } = useAuth();
 
   if (loading) {
     return (
@@ -23,7 +23,7 @@ export default function App() {
   const needsOnboarding = !user || (profile && (!profile.preferences || profile.preferences.length === 0));
 
   if (needsOnboarding) {
-    return <Onboarding onComplete={() => { refreshProfile(); }} />;
+    return <Onboarding />;
   }
 
   return (

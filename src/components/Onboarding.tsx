@@ -1,15 +1,13 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Compass, Sparkles } from 'lucide-react';
 import { availableTags, Tag } from '../data/places';
 import { useAuth } from '../contexts/AuthContext';
 import { updatePreferences } from '../lib/profileService';
 
-interface OnboardingProps {
-  onComplete: () => void;
-}
-
-export default function Onboarding({ onComplete }: OnboardingProps) {
+export default function Onboarding() {
+  const navigate = useNavigate();
   const { user, profile, token, refreshProfile } = useAuth();
   const [step, setStep] = useState<'auth' | 'preferences'>('auth');
   const [preferences, setPreferences] = useState<Tag[]>([]);
@@ -19,12 +17,12 @@ export default function Onboarding({ onComplete }: OnboardingProps) {
   useEffect(() => {
     if (user) {
       if (profile?.preferences && profile.preferences.length > 0) {
-        onComplete();
+        navigate('/');
       } else {
         setStep('preferences');
       }
     }
-  }, [user, profile, onComplete]);
+  }, [user, profile, navigate]);
 
   const openSignup = () => {
     (window as any).netlifyIdentity?.open('signup');
@@ -59,7 +57,7 @@ export default function Onboarding({ onComplete }: OnboardingProps) {
     }
 
     setLoading(false);
-    onComplete();
+    navigate('/');
   };
 
   if (step === 'auth') {

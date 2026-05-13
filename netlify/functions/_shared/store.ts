@@ -16,23 +16,19 @@ export function getUserId(context: NetlifyContext): string | null {
 
 let pool: Pool | null = null;
 
-export function getPool(): Pool | null {
+export function getPool(): Pool {
   const url = process.env.DATABASE_URL;
-  if (!url) return null;
+  if (!url) {
+    throw new Error('DATABASE_URL is not set. Make sure Netlify Database is connected to this site.');
+  }
   if (!pool) {
     pool = new Pool({ connectionString: url, ssl: { rejectUnauthorized: false } });
   }
   return pool;
 }
 
-export async function query(sql: string, params?: unknown[]): Promise<{ rows: any[] } | null> {
+export async function dbQuery(sql: string, params?: unknown[]): Promise<{ rows: any[] }> {
   const p = getPool();
-  if (!p) return null;
-  try {
-    const result = await p.query(sql, params);
-    return { rows: result.rows };
-  } catch (e) {
-    console.error('DB query error:', e);
-    return null;
-  }
+  const result = await p.query(sql, params);
+  return { rows: result.rows };
 }
