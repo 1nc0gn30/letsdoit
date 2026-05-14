@@ -1,4 +1,5 @@
 import { Pool } from 'pg';
+import { getConnectionString } from '@netlify/database';
 
 interface NetlifyContext {
   clientContext?: {
@@ -16,11 +17,27 @@ export function getUserId(context: NetlifyContext): string | null {
 
 let pool: Pool | null = null;
 
-export function getPool(): Pool {
-  const url = process.env.DATABASE_URL;
-  if (!url) {
-    throw new Error('DATABASE_URL is not set. Make sure Netlify Database is connected to this site.');
+function getDatabaseUrl() {
+  const manualUrl = process.env.DATABASE_URL;
+  if (manualUrl) return manualUrl;
+
+  try {
+    return getConnectionString();
+  } catch (error) {
+    const visibleDatabaseKeys = Object.keys(process.env)
+      .filter((key) => key.includes('DATABASE') || key.includes('POSTGRES') || key.includes('NETLIFY'))
+      .sort();
+    const suffix = visibleDatabaseKeys.length > 0
+      ? ` Visible database-related env keys: ${visibleDatabaseKeys.join(', ')}.`
+      : ' No database-related env keys are visible to this function.';
+    throw new Error(
+      `Netlify Database connection is not available. Connect Netlify Database to this site or set DATABASE_URL for local/manual Postgres.${suffix}`
+    );
   }
+}
+
+export function getPool(): Pool {
+  const url = getDatabaseUrl();
   if (!pool) {
     pool = new Pool({ connectionString: url, ssl: { rejectUnauthorized: false } });
   }
