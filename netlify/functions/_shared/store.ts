@@ -17,23 +17,37 @@ export function getUserId(context: NetlifyContext): string | null {
 
 let pool: Pool | null = null;
 
-function getDatabaseUrl() {
-  const manualUrl = process.env.DATABASE_URL;
-  if (manualUrl) return manualUrl;
+function getDatabaseUrl(): string {
+  // 1. Manual DATABASE_URL fallback (external Postgres, local dev, etc.)
+  const databaseUrl = process.env.DATABASE_URL;
+  if (databaseUrl) return databaseUrl;
 
+  // 2. Netlify Database native variable (pooled connection, auto-injected when linked)
+  const netlifyDbUrl = process.env.NETLIFY_DB_URL;
+  if (netlifyDbUrl) return netlifyDbUrl;
+
+  // 3. Let @netlify/database resolve it (reads NETLIFY_DB_URL via its own helper)
   try {
     return getConnectionString();
-  } catch (error) {
-    const visibleDatabaseKeys = Object.keys(process.env)
-      .filter((key) => key.includes('DATABASE') || key.includes('POSTGRES') || key.includes('NETLIFY'))
-      .sort();
-    const suffix = visibleDatabaseKeys.length > 0
-      ? ` Visible database-related env keys: ${visibleDatabaseKeys.join(', ')}.`
-      : ' No database-related env keys are visible to this function.';
-    throw new Error(
-      `Netlify Database connection is not available. Connect Netlify Database to this site or set DATABASE_URL for local/manual Postgres.${suffix}`
-    );
+  } catch {
+    // Intentionally fall through to a clear error
   }
+
+  const visibleKeys = Object.keys(process.env)
+    .filter((key) =>
+      key.includes('DATABASE') || key.includes('POSTGRES') || key.includes('DB_URL') || key.includes('NETLIFY')
+    )
+    .sort();
+
+  const suffix = visibleKeys.length > 0
+    ? ` Visible env keys: ${visibleKeys.join(', ')}.`
+    : ' No database-related env keys are visible to this function.';
+
+  throw new Error(
+    `Database connection is not available. ` +
+    `Add NETLIFY_DB_URL (from your Netlify Database dashboard) or DATABASE_URL to your site's environment variables. ` +
+    `Docs: https://ntl.fyi/database-environment${suffix}`
+  );
 }
 
 export function getPool(): Pool {
