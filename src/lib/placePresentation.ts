@@ -62,3 +62,11 @@ export function getAppleMapsUrl(place: Place) {
   const query = encodeURIComponent(`${place.name} ${place.address}`);
   return `https://maps.apple.com/?q=${query}&ll=${place.lat},${place.lng}`;
 }
+
+export function getAppleDirectionsUrl(place: Place) {
+  return `https://maps.apple.com/?daddr=${place.lat},${place.lng}`;
+}
+
+export function getWazeUrl(place: Place) {
+  return `https://waze.com/ul?ll=${place.lat},${place.lng}&navigate=yes`;
+}

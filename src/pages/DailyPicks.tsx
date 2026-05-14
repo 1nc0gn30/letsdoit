@@ -1,17 +1,19 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'motion/react';
-import { Sparkles, Navigation, ThumbsUp, ThumbsDown, Check, Star, Zap } from 'lucide-react';
+import { Sparkles, Navigation, ThumbsUp, ThumbsDown, Check, Star, Zap, ExternalLink, MapPin, Clock } from 'lucide-react';
+import { getGoogleDirectionsUrl, getAppleDirectionsUrl, getWazeUrl } from '../lib/placePresentation';
 import { useAuth } from '../contexts/AuthContext';
 import { hamptonRoadsPlaces, Tag } from '../data/places';
 import { pickSuggestion, computeCredibilityDelta } from '../lib/suggestionEngine';
 import { createUserVisit, updateUserVisit, getUserVisits, submitUserFeedback } from '../lib/visitService';
 import { adjustCredibility, adjustStreak } from '../lib/profileService';
 import SEO from '../components/SEO';
+import DirectionsPanel from '../components/DirectionsPanel';
 
 export default function DailyPicks() {
   const { user, profile, token, refreshProfile } = useAuth();
   const [userLocation, setUserLocation] = useState<[number, number] | null>(null);
-  const [phase, setPhase] = useState<'prompt' | 'suggesting' | 'accepted' | 'checked_in' | 'rated'>('prompt');
+  const [phase, setPhase] = useState<'prompt' | 'suggesting' | 'accepted' | 'arrived' | 'checked_in' | 'rated'>('prompt');
   const [suggestedPlace, setSuggestedPlace] = useState<typeof hamptonRoadsPlaces[0] | null>(null);
   const [visitId, setVisitId] = useState<string | null>(null);
   const [history, setHistory] = useState<{ place_id: string; status: string }[]>([]);
@@ -87,6 +89,11 @@ export default function DailyPicks() {
     await refreshProfile();
     setPhase('prompt');
   };
+  const handleArrived = async () => {
+    if (!token || !suggestedPlace || !visitId) { setPhase('prompt'); return; }
+    await updateUserVisit(token, visitId, { status: 'accepted' });
+    setPhase('arrived');
+  };
 
   const handleCheckIn = async () => {
     if (!token || !suggestedPlace || !visitId) return;
@@ -161,11 +168,68 @@ export default function DailyPicks() {
             <div className="text-[10px] font-bold text-green-400 uppercase tracking-widest mb-3">You're Committed</div>
             <div className="w-14 h-14 bg-slate-800 rounded-2xl flex items-center justify-center text-3xl mb-4">{suggestedPlace.emoji}</div>
             <h3 className="text-xl font-bold text-white mb-1">{suggestedPlace.name}</h3>
-            <p className="text-sm text-slate-400 mb-4">Head over now. Check in when you arrive.</p>
-            <div className="flex gap-3">
-              <button onClick={handleCheckIn} className="flex-1 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl transition-colors flex items-center justify-center gap-2"><Check size={16} />Check In</button>
-              <button onClick={handleSkip} className="px-5 py-3 bg-red-900/40 hover:bg-red-900/60 text-red-200 font-bold rounded-xl transition-colors border border-red-800">Didn't Go</button>
+            <div className="flex items-center gap-1.5 text-xs text-slate-500 mb-2">
+              <MapPin size={12} />
+              {suggestedPlace.address}
             </div>
+            <p className="text-sm text-slate-400 mb-4">Head over now. Use the in-app directions or your favorite map app.</p>
+
+            {dist !== null && (
+              <div className="flex items-center gap-2 mb-4 px-3 py-2 bg-slate-800 rounded-xl border border-slate-700">
+                <Clock size={14} className="text-slate-400" />
+                <span className="text-xs font-bold text-slate-300">{dist.toFixed(1)} miles away</span>
+              </div>
+            )}
+
+            <div className="mb-4">
+              <DirectionsPanel place={suggestedPlace} userLocation={userLocation} onArrived={handleArrived} />
+            </div>
+
+            <div className="grid grid-cols-3 gap-2 mb-5">
+              <a
+                href={getGoogleDirectionsUrl(suggestedPlace)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center justify-center gap-1 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-300 text-[10px] font-bold rounded-xl transition-colors border border-slate-700"
+              >
+                <Navigation size={14} />
+                Google Maps
+              </a>
+              <a
+                href={getAppleDirectionsUrl(suggestedPlace)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center justify-center gap-1 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-300 text-[10px] font-bold rounded-xl transition-colors border border-slate-700"
+              >
+                <MapPin size={14} />
+                Apple Maps
+              </a>
+              <a
+                href={getWazeUrl(suggestedPlace)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center justify-center gap-1 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-300 text-[10px] font-bold rounded-xl transition-colors border border-slate-700"
+              >
+                <ExternalLink size={14} />
+                Waze
+              </a>
+            </div>
+
+            <button onClick={handleArrived} className="w-full py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl transition-colors flex items-center justify-center gap-2"><Check size={16} />I've Arrived — Check In</button>
+          </motion.div>
+        )}
+
+        {phase === 'arrived' && suggestedPlace && (
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="bg-slate-900 border border-slate-800 rounded-2xl p-6 text-center">
+            <div className="w-16 h-16 bg-indigo-600/20 text-indigo-400 rounded-full flex items-center justify-center mx-auto mb-4">
+              <MapPin size={32} />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">Did you make it?</h3>
+            <p className="text-sm text-slate-400 mb-6">Tap below once you're at {suggestedPlace.name}.</p>
+            <div className="flex gap-3">
+              <button onClick={handleCheckIn} className="flex-1 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl transition-colors flex items-center justify-center gap-2"><Check size={16} />I'm Here — Check In</button>
+            </div>
+            <button onClick={handleDecline} className="w-full mt-3 text-xs font-bold text-red-400 hover:text-red-300 transition-colors">Didn't Go</button>
           </motion.div>
         )}
 

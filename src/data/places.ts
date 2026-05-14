@@ -1,4 +1,4 @@
-export type Tag = 'food' | 'music' | 'outdoors' | 'culture' | 'nightlife' | 'coffee' | 'history' | 'entertainment' | 'family' | 'beach' | 'festival' | 'nature' | 'sports' | 'wellness';
+export type Tag = 'food' | 'music' | 'outdoors' | 'culture' | 'nightlife' | 'coffee' | 'history' | 'entertainment' | 'family' | 'beach' | 'festival' | 'nature' | 'sports' | 'wellness' | 'shopping';
 
 export interface Place {
   id: string;
@@ -13,6 +13,7 @@ export interface Place {
 }
 
 export const availableTags: { id: Tag; label: string; icon: string }[] = [
+
   { id: 'food', label: 'Food & Dining', icon: '🍔' },
   { id: 'coffee', label: 'Coffee Shops', icon: '☕' },
   { id: 'music', label: 'Live Music', icon: '🎵' },
@@ -27,8455 +28,10986 @@ export const availableTags: { id: Tag; label: string; icon: string }[] = [
   { id: 'nature', label: 'Nature & Wildlife', icon: '🦌' },
   { id: 'sports', label: 'Sports & Fitness', icon: '⚽' },
   { id: 'wellness', label: 'Health & Wellness', icon: '🧘' },
+  { id: 'shopping', label: 'Shopping', icon: '🛍️' },
 ];
 
 export const hamptonRoadsPlaces: Place[] = [
   {
-    "id": "1",
-    "name": "Cheesesteak Spot — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.86787,
-    "lng": -76.274401,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "3962 Main St, Norfolk, VA",
-    "emoji": "⛵"
-  },
-  {
-    "id": "2",
-    "name": "Cookie Dough — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.818075,
-    "lng": -76.27667,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "6074 Hampton Way, Norfolk, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "3",
-    "name": "Boardwalk Bites — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.842208,
-    "lng": -76.254467,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "6488 Virginia Ave, Norfolk, VA",
-    "emoji": "⚽"
-  },
-  {
-    "id": "4",
-    "name": "Pizza Joint — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.865307,
-    "lng": -76.265714,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "7056 Atlantic Pkwy, Norfolk, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "5",
-    "name": "Supper Club — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.834498,
-    "lng": -76.268989,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "1546 Hampton Ave, Norfolk, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "6",
-    "name": "Private Dining — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.875705,
-    "lng": -76.263829,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "3912 Ocean Ave, Norfolk, VA",
-    "emoji": "🧘"
-  },
-  {
-    "id": "7",
-    "name": "Brunch Spot — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.872845,
-    "lng": -76.323554,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "2384 Chesapeake Ln, Norfolk, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "8",
-    "name": "Charcuterie Board — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.885639,
-    "lng": -76.272285,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "5146 Atlantic Ln, Norfolk, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "9",
-    "name": "BBQ — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.816301,
-    "lng": -76.253793,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "3667 Victory Ave, Norfolk, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "10",
-    "name": "Patisserie — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.845285,
-    "lng": -76.251653,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "6981 Main Pkwy, Norfolk, VA",
-    "emoji": "🥞"
-  },
-  {
-    "id": "11",
-    "name": "Seafood Shack — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.849604,
-    "lng": -76.295876,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "1097 Atlantic Rd, Norfolk, VA",
-    "emoji": "🧘"
-  },
-  {
-    "id": "12",
-    "name": "Yacht Club Dining — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.876458,
-    "lng": -76.263565,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "6276 Shore Blvd, Norfolk, VA",
-    "emoji": "☕"
-  },
-  {
-    "id": "13",
-    "name": "Pour Over Station — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.866489,
-    "lng": -76.265722,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "193 Main Blvd, Norfolk, VA",
-    "emoji": "🛍️"
-  },
-  {
-    "id": "14",
-    "name": "Nitro Tap — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.867908,
-    "lng": -76.284883,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "4990 Main Rd, Norfolk, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "15",
-    "name": "Latte Lounge — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.874554,
-    "lng": -76.302105,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "194 Main St, Norfolk, VA",
-    "emoji": "🎊"
-  },
-  {
-    "id": "16",
-    "name": "Pilsner Pub — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.861153,
-    "lng": -76.312766,
-    "tags": [
-      "nightlife",
-      "food"
-    ],
-    "type": "business",
-    "address": "3033 Independence Ave, Norfolk, VA",
-    "emoji": "🛍️"
-  },
-  {
-    "id": "17",
-    "name": "Harbor Bar — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.86325,
-    "lng": -76.323941,
-    "tags": [
-      "nightlife",
-      "food"
-    ],
-    "type": "business",
-    "address": "6802 Ocean Rd, Norfolk, VA",
-    "emoji": "⚽"
-  },
-  {
-    "id": "18",
-    "name": "Dock Bar — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.874393,
-    "lng": -76.259969,
-    "tags": [
-      "nightlife",
-      "music"
-    ],
-    "type": "business",
-    "address": "7241 Virginia Ln, Norfolk, VA",
-    "emoji": "🥞"
-  },
-  {
-    "id": "19",
-    "name": "Mixology Lab — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.862028,
-    "lng": -76.309517,
-    "tags": [
-      "nightlife",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "210 Chesapeake Rd, Norfolk, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "20",
-    "name": "Skate Park — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.849284,
-    "lng": -76.286514,
-    "tags": [
-      "outdoors",
-      "family"
-    ],
-    "type": "business",
-    "address": "7454 Atlantic Way, Norfolk, VA",
-    "emoji": "☕"
-  },
-  {
-    "id": "21",
-    "name": "Ropes Course — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.87643,
-    "lng": -76.296052,
-    "tags": [
-      "outdoors",
-      "family"
-    ],
-    "type": "business",
-    "address": "6188 Colonial Dr, Norfolk, VA",
-    "emoji": "🏛️"
-  },
-  {
-    "id": "22",
-    "name": "Canoe Ramp — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.868549,
-    "lng": -76.321672,
-    "tags": [
-      "outdoors",
-      "nature"
-    ],
-    "type": "business",
-    "address": "5016 Atlantic Blvd, Norfolk, VA",
-    "emoji": "🧘"
-  },
-  {
-    "id": "23",
-    "name": "Pump Track — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.87747,
-    "lng": -76.245606,
-    "tags": [
-      "outdoors",
-      "beach"
-    ],
-    "type": "business",
-    "address": "6085 Colonial Blvd, Norfolk, VA",
-    "emoji": "🌳"
-  },
-  {
-    "id": "24",
-    "name": "Linear Park — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.880791,
-    "lng": -76.304823,
-    "tags": [
-      "outdoors",
-      "beach"
-    ],
-    "type": "business",
-    "address": "2625 Colonial Ln, Norfolk, VA",
-    "emoji": "🥞"
-  },
-  {
-    "id": "25",
-    "name": "Beach Access — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.839879,
-    "lng": -76.260696,
-    "tags": [
-      "beach"
-    ],
-    "type": "business",
-    "address": "3181 Chesapeake Ave, Norfolk, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "26",
-    "name": "Surf Spot — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.852905,
-    "lng": -76.26842,
-    "tags": [
-      "beach"
-    ],
-    "type": "business",
-    "address": "1570 Shore Pkwy, Norfolk, VA",
-    "emoji": "🏖️"
-  },
-  {
-    "id": "27",
-    "name": "Ballet Academy — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.862089,
-    "lng": -76.312108,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "7390 Shore Ln, Norfolk, VA",
-    "emoji": "🌮"
-  },
-  {
-    "id": "28",
-    "name": "Black Box Theater — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.814317,
-    "lng": -76.25269,
-    "tags": [
-      "culture",
-      "music"
-    ],
-    "type": "business",
-    "address": "3884 Ocean Dr, Norfolk, VA",
-    "emoji": "🏕️"
-  },
-  {
-    "id": "29",
-    "name": "Pottery Studio — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.820296,
-    "lng": -76.295733,
-    "tags": [
-      "culture",
-      "music"
-    ],
-    "type": "business",
-    "address": "3376 Virginia Way, Norfolk, VA",
-    "emoji": "🎊"
-  },
-  {
-    "id": "30",
-    "name": "Civil War Trail — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.833814,
-    "lng": -76.322155,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "8050 Shore Dr, Norfolk, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "31",
-    "name": "Plaza — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.820764,
-    "lng": -76.258966,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "3146 Victory Blvd, Norfolk, VA",
-    "emoji": "🎢"
-  },
-  {
-    "id": "32",
-    "name": "Church — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.861305,
-    "lng": -76.251249,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "1123 Colonial Ln, Norfolk, VA",
-    "emoji": "🍕"
-  },
-  {
-    "id": "33",
-    "name": "Mini Golf — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.850911,
-    "lng": -76.254209,
-    "tags": [
-      "entertainment",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "5139 Colonial Ave, Norfolk, VA",
-    "emoji": "🥐"
-  },
-  {
-    "id": "34",
-    "name": "Wave Pool — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.83598,
-    "lng": -76.251757,
-    "tags": [
-      "entertainment",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "3362 Colonial Way, Norfolk, VA",
-    "emoji": "🏖️"
-  },
-  {
-    "id": "35",
-    "name": "Glow Party — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.861355,
-    "lng": -76.261091,
-    "tags": [
-      "entertainment",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "3610 Ocean Way, Norfolk, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "36",
-    "name": "Ferris Wheel — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.836923,
-    "lng": -76.277104,
-    "tags": [
-      "family",
-      "food"
-    ],
-    "type": "business",
-    "address": "4256 Shore Way, Norfolk, VA",
-    "emoji": "🥞"
-  },
-  {
-    "id": "37",
-    "name": "Climbing Zone — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.830246,
-    "lng": -76.30833,
-    "tags": [
-      "family",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "4318 Virginia Rd, Norfolk, VA",
-    "emoji": "🎬"
-  },
-  {
-    "id": "38",
-    "name": "Parkour Gym — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.888109,
-    "lng": -76.252911,
-    "tags": [
-      "sports",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "3363 Hampton Dr, Norfolk, VA",
-    "emoji": "☕"
-  },
-  {
-    "id": "39",
-    "name": "Curling Club — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.857618,
-    "lng": -76.316177,
-    "tags": [
-      "sports",
-      "family"
-    ],
-    "type": "business",
-    "address": "2754 Atlantic Rd, Norfolk, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "40",
-    "name": "Ice Hockey Rink — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.819302,
-    "lng": -76.309427,
-    "tags": [
-      "sports",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "1166 Atlantic Dr, Norfolk, VA",
-    "emoji": "🦅"
-  },
-  {
-    "id": "41",
-    "name": "Float Tank — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.865034,
-    "lng": -76.306804,
-    "tags": [
-      "wellness"
-    ],
-    "type": "business",
-    "address": "7251 Victory St, Norfolk, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "42",
-    "name": "Physical Therapy — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.875636,
-    "lng": -76.303,
-    "tags": [
-      "wellness"
-    ],
-    "type": "business",
-    "address": "2242 Main Blvd, Norfolk, VA",
-    "emoji": "☕"
-  },
-  {
-    "id": "43",
-    "name": "Flea Market — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.892692,
-    "lng": -76.308779,
-    "tags": [
-      "culture",
-      "music"
-    ],
-    "type": "business",
-    "address": "539 Independence Ln, Norfolk, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "44",
-    "name": "Pop-Up Market — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.82542,
-    "lng": -76.303019,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "5204 Colonial Blvd, Norfolk, VA",
-    "emoji": "⚽"
-  },
-  {
-    "id": "45",
-    "name": "Music Hall — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.880853,
-    "lng": -76.308533,
-    "tags": [
-      "music",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "1517 Virginia St, Norfolk, VA",
-    "emoji": "🎤"
-  },
-  {
-    "id": "46",
-    "name": "Piano Bar — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.867703,
-    "lng": -76.293604,
-    "tags": [
-      "music",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "5101 Ocean Dr, Norfolk, VA",
-    "emoji": "🏕️"
-  },
-  {
-    "id": "47",
-    "name": "Brunch Spot — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.843861,
-    "lng": -75.971977,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "5388 Shore Rd, Virginia Beach, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "48",
-    "name": "Waterfront Dining — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.852609,
-    "lng": -75.980488,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "4754 Shore Way, Virginia Beach, VA",
-    "emoji": "👪"
-  },
-  {
-    "id": "49",
-    "name": "Falafel House — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.818611,
-    "lng": -75.920795,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "374 Colonial Rd, Virginia Beach, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "50",
-    "name": "Bagel Bar — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.874068,
-    "lng": -75.948136,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "4245 Hampton Rd, Virginia Beach, VA",
-    "emoji": "🥗"
-  },
-  {
-    "id": "51",
-    "name": "Cotton Candy — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.896598,
-    "lng": -75.941765,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "4625 Ocean St, Virginia Beach, VA",
-    "emoji": "📍"
-  },
-  {
-    "id": "52",
-    "name": "Eatery — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.829017,
-    "lng": -75.9605,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "2946 Atlantic Way, Virginia Beach, VA",
-    "emoji": "🍺"
-  },
-  {
-    "id": "53",
-    "name": "Muffin Shop — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.911317,
-    "lng": -75.926598,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "7206 Atlantic Ln, Virginia Beach, VA",
-    "emoji": "🏛️"
-  },
-  {
-    "id": "54",
-    "name": "Shoreline Diner — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.842312,
-    "lng": -75.931273,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "1872 Victory Pkwy, Virginia Beach, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "55",
-    "name": "Sandwich Shop — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.809277,
-    "lng": -75.919996,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "4181 Main Ln, Virginia Beach, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "56",
-    "name": "Avocado Toast — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.900836,
-    "lng": -75.994403,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "7183 Ocean St, Virginia Beach, VA",
-    "emoji": "🎵"
-  },
-  {
-    "id": "57",
-    "name": "Fish Fry — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.814845,
-    "lng": -76.013753,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "7664 Independence Pkwy, Virginia Beach, VA",
-    "emoji": "🎢"
-  },
-  {
-    "id": "58",
-    "name": "Underground Bar — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.865634,
-    "lng": -75.993578,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "1178 Colonial Ln, Virginia Beach, VA",
-    "emoji": "⛵"
-  },
-  {
-    "id": "59",
-    "name": "Poetry Cafe — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.830951,
-    "lng": -75.991198,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "8004 Main St, Virginia Beach, VA",
-    "emoji": "🎢"
-  },
-  {
-    "id": "60",
-    "name": "Latte Lounge — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.839412,
-    "lng": -75.95358,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "1631 Hampton Pkwy, Virginia Beach, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "61",
-    "name": "Coffee Roasters — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.905976,
-    "lng": -76.037124,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "5979 Hampton Dr, Virginia Beach, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "62",
-    "name": "Pilsner Pub — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.878702,
-    "lng": -75.96838,
-    "tags": [
-      "nightlife",
-      "music"
-    ],
-    "type": "business",
-    "address": "7634 Ocean Way, Virginia Beach, VA",
-    "emoji": "🎨"
-  },
-  {
-    "id": "63",
-    "name": "Lager Lounge — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.852262,
-    "lng": -76.009973,
-    "tags": [
-      "nightlife",
-      "music"
-    ],
-    "type": "business",
-    "address": "7481 Atlantic Dr, Virginia Beach, VA",
-    "emoji": "🥗"
-  },
-  {
-    "id": "64",
-    "name": "Irish Pub — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.858655,
-    "lng": -75.980953,
-    "tags": [
-      "nightlife",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "5251 Ocean Dr, Virginia Beach, VA",
-    "emoji": "🥗"
-  },
-  {
-    "id": "65",
-    "name": "Sake Bar — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.820061,
-    "lng": -75.979449,
-    "tags": [
-      "nightlife",
-      "food"
-    ],
-    "type": "business",
-    "address": "1381 Shore St, Virginia Beach, VA",
-    "emoji": "🍺"
-  },
-  {
-    "id": "66",
-    "name": "Golf Course — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.794956,
-    "lng": -76.030581,
-    "tags": [
-      "outdoors",
-      "nature"
-    ],
-    "type": "business",
-    "address": "3715 Ocean Pkwy, Virginia Beach, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "67",
-    "name": "Arena — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.872753,
-    "lng": -75.959905,
-    "tags": [
-      "outdoors",
-      "sports"
-    ],
-    "type": "business",
-    "address": "5704 Independence Blvd, Virginia Beach, VA",
-    "emoji": "👪"
-  },
-  {
-    "id": "68",
-    "name": "Soccer Complex — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.852544,
-    "lng": -75.922048,
-    "tags": [
-      "outdoors",
-      "family"
-    ],
-    "type": "business",
-    "address": "5034 Victory Way, Virginia Beach, VA",
-    "emoji": "📍"
-  },
-  {
-    "id": "69",
-    "name": "Creek Trail — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.887913,
-    "lng": -76.004212,
-    "tags": [
-      "outdoors",
-      "beach"
-    ],
-    "type": "business",
-    "address": "7540 Ocean St, Virginia Beach, VA",
-    "emoji": "🎨"
-  },
-  {
-    "id": "70",
-    "name": "Canoe Ramp — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.820556,
-    "lng": -75.954692,
-    "tags": [
-      "outdoors",
-      "beach"
-    ],
-    "type": "business",
-    "address": "5504 Virginia Way, Virginia Beach, VA",
-    "emoji": "🥞"
-  },
-  {
-    "id": "71",
-    "name": "Oceanfront Park — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.85749,
-    "lng": -75.945985,
-    "tags": [
-      "beach"
-    ],
-    "type": "business",
-    "address": "649 Independence St, Virginia Beach, VA",
-    "emoji": "🍕"
-  },
-  {
-    "id": "72",
-    "name": "Beach Access — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.854925,
-    "lng": -75.952475,
-    "tags": [
-      "beach"
-    ],
-    "type": "business",
-    "address": "6504 Victory Dr, Virginia Beach, VA",
-    "emoji": "🎤"
-  },
-  {
-    "id": "73",
-    "name": "Fashion Studio — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.912578,
-    "lng": -75.960103,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "2218 Hampton Rd, Virginia Beach, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "74",
-    "name": "Sculpture Garden — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.807677,
-    "lng": -75.986948,
-    "tags": [
-      "culture",
-      "family"
-    ],
-    "type": "business",
-    "address": "587 Virginia St, Virginia Beach, VA",
-    "emoji": "🍕"
-  },
-  {
-    "id": "75",
-    "name": "Woodworking Shop — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.853526,
-    "lng": -76.009063,
-    "tags": [
-      "culture",
-      "family"
-    ],
-    "type": "business",
-    "address": "6475 Colonial Ave, Virginia Beach, VA",
-    "emoji": "🌳"
-  },
-  {
-    "id": "76",
-    "name": "Antebellum Home — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.801053,
-    "lng": -76.02755,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "6123 Main Ln, Virginia Beach, VA",
-    "emoji": "⚽"
-  },
-  {
-    "id": "77",
-    "name": "Historic Mansion — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.904447,
-    "lng": -76.000514,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "3902 Virginia Ave, Virginia Beach, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "78",
-    "name": "Historic Site — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.825022,
-    "lng": -75.925772,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "3749 Hampton Blvd, Virginia Beach, VA",
-    "emoji": "🎤"
-  },
-  {
-    "id": "79",
-    "name": "Open Mic — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.895839,
-    "lng": -75.994015,
-    "tags": [
-      "entertainment",
-      "food"
-    ],
-    "type": "business",
-    "address": "7992 Hampton Blvd, Virginia Beach, VA",
-    "emoji": "🥗"
-  },
-  {
-    "id": "80",
-    "name": "Film Festival Venue — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.887211,
-    "lng": -76.034735,
-    "tags": [
-      "entertainment",
-      "food"
-    ],
-    "type": "business",
-    "address": "651 Atlantic Way, Virginia Beach, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "81",
-    "name": "Flight Sim — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.902324,
-    "lng": -75.98868,
-    "tags": [
-      "entertainment",
-      "food"
-    ],
-    "type": "business",
-    "address": "7059 Main Dr, Virginia Beach, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "82",
-    "name": "Youth Center — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.898035,
-    "lng": -75.96438,
-    "tags": [
-      "family",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "3361 Chesapeake Way, Virginia Beach, VA",
-    "emoji": "👪"
-  },
-  {
-    "id": "83",
-    "name": "Coding Camp — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.85079,
-    "lng": -76.035175,
-    "tags": [
-      "family",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "5505 Main Ave, Virginia Beach, VA",
-    "emoji": "🌮"
-  },
-  {
-    "id": "84",
-    "name": "Badminton Club — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.803709,
-    "lng": -75.957108,
-    "tags": [
-      "sports",
-      "wellness"
-    ],
-    "type": "business",
-    "address": "4411 Virginia Ave, Virginia Beach, VA",
-    "emoji": "⛵"
-  },
-  {
-    "id": "85",
-    "name": "Ice Hockey Rink — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.822825,
-    "lng": -75.965624,
-    "tags": [
-      "sports",
-      "family"
-    ],
-    "type": "business",
-    "address": "2585 Virginia Ave, Virginia Beach, VA",
-    "emoji": "⛵"
-  },
-  {
-    "id": "86",
-    "name": "Beach Volleyball — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.90036,
-    "lng": -75.984503,
-    "tags": [
-      "sports",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "7516 Virginia Ln, Virginia Beach, VA",
-    "emoji": "🏛️"
-  },
-  {
-    "id": "87",
-    "name": "Spa — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.897516,
-    "lng": -75.950871,
-    "tags": [
-      "wellness"
-    ],
-    "type": "business",
-    "address": "7238 Independence Dr, Virginia Beach, VA",
-    "emoji": "📍"
-  },
-  {
-    "id": "88",
-    "name": "Med Spa — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.870165,
-    "lng": -76.003106,
-    "tags": [
-      "wellness"
-    ],
-    "type": "business",
-    "address": "5526 Independence Way, Virginia Beach, VA",
-    "emoji": "🥐"
-  },
-  {
-    "id": "89",
-    "name": "Mall — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.815961,
-    "lng": -75.924883,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "3198 Atlantic Blvd, Virginia Beach, VA",
-    "emoji": "🧘"
-  },
-  {
-    "id": "90",
-    "name": "Gift Shop — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.83204,
-    "lng": -75.959415,
-    "tags": [
-      "culture",
-      "music"
-    ],
-    "type": "business",
-    "address": "4279 Main Pkwy, Virginia Beach, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "91",
-    "name": "DJ Spot — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.800566,
-    "lng": -75.956397,
-    "tags": [
-      "music",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "235 Chesapeake Pkwy, Virginia Beach, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "92",
-    "name": "Orchestra Pit — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.826383,
-    "lng": -75.930211,
-    "tags": [
-      "music",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "2247 Main Rd, Virginia Beach, VA",
-    "emoji": "🏕️"
-  },
-  {
-    "id": "93",
-    "name": "Bagel Shop — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.740167,
-    "lng": -76.281838,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "7388 Colonial Way, Chesapeake, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "94",
-    "name": "Rotisserie — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.693704,
-    "lng": -76.276443,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "3352 Ocean Blvd, Chesapeake, VA",
-    "emoji": "🍕"
-  },
-  {
-    "id": "95",
-    "name": "Vegan Cafe — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.696692,
-    "lng": -76.208914,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "4047 Hampton Ln, Chesapeake, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "96",
-    "name": "Soul Food Kitchen — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.679695,
-    "lng": -76.275643,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "6865 Virginia Ln, Chesapeake, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "97",
-    "name": "Creole Spot — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.68763,
-    "lng": -76.263587,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "6910 Hampton Dr, Chesapeake, VA",
-    "emoji": "🎵"
-  },
-  {
-    "id": "98",
-    "name": "Meat Market — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.741179,
-    "lng": -76.249004,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "797 Ocean Dr, Chesapeake, VA",
-    "emoji": "🍕"
-  },
-  {
-    "id": "99",
-    "name": "Sandwich Shop — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.664126,
-    "lng": -76.270438,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "7112 Colonial Blvd, Chesapeake, VA",
-    "emoji": "🥞"
-  },
-  {
-    "id": "100",
-    "name": "Pop-Up Kitchen — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.687936,
-    "lng": -76.193557,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "5014 Atlantic Blvd, Chesapeake, VA",
-    "emoji": "👪"
-  },
-  {
-    "id": "101",
-    "name": "Kitchen — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.694077,
-    "lng": -76.221612,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "1084 Virginia Blvd, Chesapeake, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "102",
-    "name": "Cake Shop — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.715325,
-    "lng": -76.232339,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "910 Chesapeake Blvd, Chesapeake, VA",
-    "emoji": "🎵"
-  },
-  {
-    "id": "103",
-    "name": "Bloody Mary Spot — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.753402,
-    "lng": -76.261367,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "500 Colonial Ln, Chesapeake, VA",
-    "emoji": "⚽"
-  },
-  {
-    "id": "104",
-    "name": "Omakase — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.737186,
-    "lng": -76.231179,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "6818 Hampton Way, Chesapeake, VA",
-    "emoji": "🌮"
-  },
-  {
-    "id": "105",
-    "name": "Nitro Tap — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.722705,
-    "lng": -76.261364,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "3002 Hampton Dr, Chesapeake, VA",
-    "emoji": "🎬"
-  },
-  {
-    "id": "106",
-    "name": "Coffee Collective — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.684034,
-    "lng": -76.24319,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "3482 Shore Ave, Chesapeake, VA",
-    "emoji": "🛍️"
-  },
-  {
-    "id": "107",
-    "name": "French Press — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.69481,
-    "lng": -76.232878,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "1788 Ocean Ln, Chesapeake, VA",
-    "emoji": "🥗"
-  },
-  {
-    "id": "108",
-    "name": "Lager Lounge — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.74139,
-    "lng": -76.201034,
-    "tags": [
-      "nightlife",
-      "food"
-    ],
-    "type": "business",
-    "address": "6834 Virginia Ave, Chesapeake, VA",
-    "emoji": "🦅"
-  },
-  {
-    "id": "109",
-    "name": "Taproom — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.680124,
-    "lng": -76.264921,
-    "tags": [
-      "nightlife",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "6594 Shore Blvd, Chesapeake, VA",
-    "emoji": "🍺"
-  },
-  {
-    "id": "110",
-    "name": "Wine Lounge — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.753618,
-    "lng": -76.222242,
-    "tags": [
-      "nightlife",
-      "music"
-    ],
-    "type": "business",
-    "address": "1354 Virginia Ave, Chesapeake, VA",
-    "emoji": "🎬"
-  },
-  {
-    "id": "111",
-    "name": "German Beer Hall — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.716401,
-    "lng": -76.274372,
-    "tags": [
-      "nightlife",
-      "food"
-    ],
-    "type": "business",
-    "address": "5986 Atlantic Blvd, Chesapeake, VA",
-    "emoji": "🥗"
-  },
-  {
-    "id": "112",
-    "name": "Canoe Ramp — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.728133,
-    "lng": -76.285339,
-    "tags": [
-      "outdoors",
-      "beach"
-    ],
-    "type": "business",
-    "address": "6722 Chesapeake Way, Chesapeake, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "113",
-    "name": "Wetlands Trail — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.723962,
-    "lng": -76.207786,
-    "tags": [
-      "outdoors",
-      "beach"
-    ],
-    "type": "business",
-    "address": "1920 Atlantic Ave, Chesapeake, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "114",
-    "name": "Skate Park — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.747756,
-    "lng": -76.219155,
-    "tags": [
-      "outdoors",
-      "beach"
-    ],
-    "type": "business",
-    "address": "1382 Victory Rd, Chesapeake, VA",
-    "emoji": "🌳"
-  },
-  {
-    "id": "115",
-    "name": "Gazebo — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.679665,
-    "lng": -76.254341,
-    "tags": [
-      "outdoors",
-      "family"
-    ],
-    "type": "business",
-    "address": "3208 Shore Way, Chesapeake, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "116",
-    "name": "Fountain Park — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.673735,
-    "lng": -76.237887,
-    "tags": [
-      "outdoors",
-      "sports"
-    ],
-    "type": "business",
-    "address": "2575 Independence Pkwy, Chesapeake, VA",
-    "emoji": "🧘"
-  },
-  {
-    "id": "117",
-    "name": "Beach Access — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.720647,
-    "lng": -76.272079,
-    "tags": [
-      "beach"
-    ],
-    "type": "business",
-    "address": "5930 Hampton St, Chesapeake, VA",
-    "emoji": "🎤"
-  },
-  {
-    "id": "118",
-    "name": "Surf Spot — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.713613,
-    "lng": -76.189363,
-    "tags": [
-      "beach"
-    ],
-    "type": "business",
-    "address": "930 Virginia Rd, Chesapeake, VA",
-    "emoji": "🌮"
-  },
-  {
-    "id": "119",
-    "name": "Black Box Theater — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.663662,
-    "lng": -76.264805,
-    "tags": [
-      "culture",
-      "music"
-    ],
-    "type": "business",
-    "address": "4090 Virginia Ave, Chesapeake, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "120",
-    "name": "Installation Art — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.738793,
-    "lng": -76.191708,
-    "tags": [
-      "culture",
-      "family"
-    ],
-    "type": "business",
-    "address": "4566 Ocean Ave, Chesapeake, VA",
-    "emoji": "🛍️"
-  },
-  {
-    "id": "121",
-    "name": "Fashion Studio — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.739841,
-    "lng": -76.285276,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "1041 Victory Blvd, Chesapeake, VA",
-    "emoji": "🎤"
-  },
-  {
-    "id": "122",
-    "name": "Lighthouse — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.751248,
-    "lng": -76.271008,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "7830 Hampton Rd, Chesapeake, VA",
-    "emoji": "📍"
-  },
-  {
-    "id": "123",
-    "name": "Courthouse — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.697906,
-    "lng": -76.207189,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "4318 Chesapeake Dr, Chesapeake, VA",
-    "emoji": "🏖️"
-  },
-  {
-    "id": "124",
-    "name": "Gristmill — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.70253,
-    "lng": -76.207394,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "7325 Independence Way, Chesapeake, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "125",
-    "name": "Casino — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.681787,
-    "lng": -76.246622,
-    "tags": [
-      "entertainment",
-      "food"
-    ],
-    "type": "business",
-    "address": "7363 Colonial Rd, Chesapeake, VA",
-    "emoji": "🛍️"
-  },
-  {
-    "id": "126",
-    "name": "Racing Sim — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.757401,
-    "lng": -76.200059,
-    "tags": [
-      "entertainment",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "3351 Shore Ln, Chesapeake, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "127",
-    "name": "Board Game Bar — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.760977,
-    "lng": -76.278483,
-    "tags": [
-      "entertainment",
-      "family"
-    ],
-    "type": "business",
-    "address": "6212 Independence Dr, Chesapeake, VA",
-    "emoji": "🎨"
-  },
-  {
-    "id": "128",
-    "name": "Mini Train — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.690112,
-    "lng": -76.256538,
-    "tags": [
-      "family",
-      "food"
-    ],
-    "type": "business",
-    "address": "2611 Main Pkwy, Chesapeake, VA",
-    "emoji": "⚽"
-  },
-  {
-    "id": "129",
-    "name": "Petting Zoo — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.661647,
-    "lng": -76.285585,
-    "tags": [
-      "family",
-      "food"
-    ],
-    "type": "business",
-    "address": "894 Colonial Ln, Chesapeake, VA",
-    "emoji": "🎬"
-  },
-  {
-    "id": "130",
-    "name": "Shooting Range — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.67806,
-    "lng": -76.253414,
-    "tags": [
-      "sports",
-      "family"
-    ],
-    "type": "business",
-    "address": "301 Ocean Rd, Chesapeake, VA",
-    "emoji": "🍺"
-  },
-  {
-    "id": "131",
-    "name": "Yoga Studio — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.757564,
-    "lng": -76.261914,
-    "tags": [
-      "sports",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "6230 Main Ln, Chesapeake, VA",
-    "emoji": "🎵"
-  },
-  {
-    "id": "132",
-    "name": "Squash Courts — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.674987,
-    "lng": -76.189454,
-    "tags": [
-      "sports",
-      "wellness"
-    ],
-    "type": "business",
-    "address": "7289 Colonial Ave, Chesapeake, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "133",
-    "name": "Massage Studio — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.744701,
-    "lng": -76.239835,
-    "tags": [
-      "wellness"
-    ],
-    "type": "business",
-    "address": "2458 Atlantic Ave, Chesapeake, VA",
-    "emoji": "🎬"
-  },
-  {
-    "id": "134",
-    "name": "Nutritionist — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.700958,
-    "lng": -76.241732,
-    "tags": [
-      "wellness"
-    ],
-    "type": "business",
-    "address": "2976 Virginia Blvd, Chesapeake, VA",
-    "emoji": "🏖️"
-  },
-  {
-    "id": "135",
-    "name": "Craft Market — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.663858,
-    "lng": -76.196438,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "7392 Hampton Rd, Chesapeake, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "136",
-    "name": "Farmers Market — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.754314,
-    "lng": -76.216132,
-    "tags": [
-      "culture",
-      "family"
-    ],
-    "type": "business",
-    "address": "3826 Independence Ln, Chesapeake, VA",
-    "emoji": "☕"
-  },
-  {
-    "id": "137",
-    "name": "Music Hall — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.712965,
-    "lng": -76.283518,
-    "tags": [
-      "music",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "2573 Colonial Blvd, Chesapeake, VA",
-    "emoji": "🥗"
-  },
-  {
-    "id": "138",
-    "name": "Electronic Venue — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.698665,
-    "lng": -76.226871,
-    "tags": [
-      "music",
-      "food"
-    ],
-    "type": "business",
-    "address": "6310 Hampton Pkwy, Chesapeake, VA",
-    "emoji": "🌮"
-  },
-  {
-    "id": "139",
-    "name": "Juice Bar — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.006442,
-    "lng": -76.369844,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "4805 Main St, Hampton, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "140",
-    "name": "Chophouse — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.062347,
-    "lng": -76.343427,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "7914 Shore St, Hampton, VA",
-    "emoji": "🎢"
-  },
-  {
-    "id": "141",
-    "name": "Deli — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.001169,
-    "lng": -76.349084,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "1573 Chesapeake Dr, Hampton, VA",
-    "emoji": "🧘"
-  },
-  {
-    "id": "142",
-    "name": "Bistro — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.029201,
-    "lng": -76.312389,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "2808 Colonial Pkwy, Hampton, VA",
-    "emoji": "📍"
-  },
-  {
-    "id": "143",
-    "name": "Seafood Shack — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.032636,
-    "lng": -76.384313,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "1953 Ocean Pkwy, Hampton, VA",
-    "emoji": "🎊"
-  },
-  {
-    "id": "144",
-    "name": "Sushi Spot — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.020783,
-    "lng": -76.364147,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "7500 Main Ln, Hampton, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "145",
-    "name": "Sorbet — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.009804,
-    "lng": -76.352714,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "5556 Main Ln, Hampton, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "146",
-    "name": "Taco Stand — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.041635,
-    "lng": -76.377752,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "6221 Ocean Pkwy, Hampton, VA",
-    "emoji": "🥐"
-  },
-  {
-    "id": "147",
-    "name": "Mediterranean Grill — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.054385,
-    "lng": -76.360372,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "7597 Hampton Pkwy, Hampton, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "148",
-    "name": "Pho House — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.063808,
-    "lng": -76.337505,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "6194 Chesapeake Way, Hampton, VA",
-    "emoji": "🎢"
-  },
-  {
-    "id": "149",
-    "name": "Pie Bar — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 36.994934,
-    "lng": -76.36207,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "4685 Ocean Dr, Hampton, VA",
-    "emoji": "🎵"
-  },
-  {
-    "id": "150",
-    "name": "Patisserie — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.018043,
-    "lng": -76.315485,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "8033 Colonial St, Hampton, VA",
-    "emoji": "☕"
-  },
-  {
-    "id": "151",
-    "name": "Drive Thru Coffee — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.056009,
-    "lng": -76.38131,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "5481 Atlantic Rd, Hampton, VA",
-    "emoji": "🌳"
-  },
-  {
-    "id": "152",
-    "name": "Cappuccino Corner — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.06336,
-    "lng": -76.374519,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "539 Colonial Dr, Hampton, VA",
-    "emoji": "🏛️"
-  },
-  {
-    "id": "153",
-    "name": "Study Spot — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.032622,
-    "lng": -76.329297,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "547 Virginia Rd, Hampton, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "154",
-    "name": "Pool Hall — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.02719,
-    "lng": -76.366465,
-    "tags": [
-      "nightlife",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "8095 Virginia Ln, Hampton, VA",
-    "emoji": "🛍️"
-  },
-  {
-    "id": "155",
-    "name": "Barrel House — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.027134,
-    "lng": -76.326891,
-    "tags": [
-      "nightlife",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "6207 Virginia Dr, Hampton, VA",
-    "emoji": "🎊"
-  },
-  {
-    "id": "156",
-    "name": "Dive Bar — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.000072,
-    "lng": -76.367344,
-    "tags": [
-      "nightlife",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "2655 Victory Rd, Hampton, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "157",
-    "name": "Piano Bar — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.053045,
-    "lng": -76.327841,
-    "tags": [
-      "nightlife",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "6371 Victory Ave, Hampton, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "158",
-    "name": "Zipline Park — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.034172,
-    "lng": -76.325686,
-    "tags": [
-      "outdoors",
-      "family"
-    ],
-    "type": "business",
-    "address": "2794 Colonial Dr, Hampton, VA",
-    "emoji": "⛵"
-  },
-  {
-    "id": "159",
-    "name": "BMX Track — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.065839,
-    "lng": -76.305562,
-    "tags": [
-      "outdoors",
-      "beach"
-    ],
-    "type": "business",
-    "address": "6023 Shore St, Hampton, VA",
-    "emoji": "📍"
-  },
-  {
-    "id": "160",
-    "name": "Disc Golf Course — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.061006,
-    "lng": -76.373426,
-    "tags": [
-      "outdoors",
-      "beach"
-    ],
-    "type": "business",
-    "address": "5640 Virginia Ave, Hampton, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "161",
-    "name": "Velodrome — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.025866,
-    "lng": -76.312211,
-    "tags": [
-      "outdoors",
-      "family"
-    ],
-    "type": "business",
-    "address": "8035 Hampton Rd, Hampton, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "162",
-    "name": "Splash Pad — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.032497,
-    "lng": -76.37957,
-    "tags": [
-      "outdoors",
-      "beach"
-    ],
-    "type": "business",
-    "address": "6037 Victory Pkwy, Hampton, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "163",
-    "name": "Sunrise Point — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.018807,
-    "lng": -76.363557,
-    "tags": [
-      "beach"
-    ],
-    "type": "business",
-    "address": "2122 Virginia Rd, Hampton, VA",
-    "emoji": "🍕"
-  },
-  {
-    "id": "164",
-    "name": "Boardwalk Segment — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 36.9974,
-    "lng": -76.372533,
-    "tags": [
-      "beach"
-    ],
-    "type": "business",
-    "address": "7051 Chesapeake Ln, Hampton, VA",
-    "emoji": "🛍️"
-  },
-  {
-    "id": "165",
-    "name": "Library — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.021074,
-    "lng": -76.336481,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "755 Atlantic Ln, Hampton, VA",
-    "emoji": "🍕"
-  },
-  {
-    "id": "166",
-    "name": "Studio — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.036126,
-    "lng": -76.347392,
-    "tags": [
-      "culture",
-      "family"
-    ],
-    "type": "business",
-    "address": "3502 Shore Dr, Hampton, VA",
-    "emoji": "🎵"
-  },
-  {
-    "id": "167",
-    "name": "Woodworking Shop — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.003971,
-    "lng": -76.375351,
-    "tags": [
-      "culture",
-      "music"
-    ],
-    "type": "business",
-    "address": "3254 Independence Ave, Hampton, VA",
-    "emoji": "🏛️"
-  },
-  {
-    "id": "168",
-    "name": "Historic Hotel — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.064134,
-    "lng": -76.381996,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "4224 Hampton Ln, Hampton, VA",
-    "emoji": "🥞"
-  },
-  {
-    "id": "169",
-    "name": "Church — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.038467,
-    "lng": -76.37984,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "2521 Victory Pkwy, Hampton, VA",
-    "emoji": "🛍️"
-  },
-  {
-    "id": "170",
-    "name": "Earthworks — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.019809,
-    "lng": -76.322858,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "6989 Main Ave, Hampton, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "171",
-    "name": "Batting Cages — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.027862,
-    "lng": -76.323091,
-    "tags": [
-      "entertainment",
-      "food"
-    ],
-    "type": "business",
-    "address": "3837 Virginia Rd, Hampton, VA",
-    "emoji": "🎢"
-  },
-  {
-    "id": "172",
-    "name": "Arcade — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.00767,
-    "lng": -76.320356,
-    "tags": [
-      "entertainment",
-      "food"
-    ],
-    "type": "business",
-    "address": "364 Colonial Ave, Hampton, VA",
-    "emoji": "🥗"
-  },
-  {
-    "id": "173",
-    "name": "Ice Rink — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.053053,
-    "lng": -76.362083,
-    "tags": [
-      "entertainment",
-      "food"
-    ],
-    "type": "business",
-    "address": "5495 Shore St, Hampton, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "174",
-    "name": "Day Camp — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.049244,
-    "lng": -76.356189,
-    "tags": [
-      "family",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "6472 Atlantic Ave, Hampton, VA",
-    "emoji": "🌮"
-  },
-  {
-    "id": "175",
-    "name": "Nature Camp — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.006791,
-    "lng": -76.35431,
-    "tags": [
-      "family",
-      "food"
-    ],
-    "type": "business",
-    "address": "4188 Ocean Way, Hampton, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "176",
-    "name": "Triathlon Club — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 36.993207,
-    "lng": -76.357189,
-    "tags": [
-      "sports",
-      "wellness"
-    ],
-    "type": "business",
-    "address": "5253 Colonial St, Hampton, VA",
-    "emoji": "🏕️"
-  },
-  {
-    "id": "177",
-    "name": "Running Club — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.053338,
-    "lng": -76.337005,
-    "tags": [
-      "sports",
-      "wellness"
-    ],
-    "type": "business",
-    "address": "955 Main Ln, Hampton, VA",
-    "emoji": "🏖️"
-  },
-  {
-    "id": "178",
-    "name": "Obstacle Racing — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.017774,
-    "lng": -76.384847,
-    "tags": [
-      "sports",
-      "family"
-    ],
-    "type": "business",
-    "address": "6156 Chesapeake Pkwy, Hampton, VA",
-    "emoji": "🥗"
-  },
-  {
-    "id": "179",
-    "name": "Salt Cave — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.056119,
-    "lng": -76.329025,
-    "tags": [
-      "wellness"
-    ],
-    "type": "business",
-    "address": "1775 Independence Way, Hampton, VA",
-    "emoji": "☕"
-  },
-  {
-    "id": "180",
-    "name": "Infrared Sauna — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.065589,
-    "lng": -76.375846,
-    "tags": [
-      "wellness"
-    ],
-    "type": "business",
-    "address": "4947 Shore Rd, Hampton, VA",
-    "emoji": "🧘"
-  },
-  {
-    "id": "181",
-    "name": "Outlet Mall — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.002429,
-    "lng": -76.344555,
-    "tags": [
-      "culture",
-      "family"
-    ],
-    "type": "business",
-    "address": "7693 Colonial Ln, Hampton, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "182",
-    "name": "Vintage Clothing — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.036486,
-    "lng": -76.36846,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "3289 Virginia Way, Hampton, VA",
-    "emoji": "⚽"
-  },
-  {
-    "id": "183",
-    "name": "Rap Battle Spot — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.013854,
-    "lng": -76.378179,
-    "tags": [
-      "music",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "2867 Atlantic St, Hampton, VA",
-    "emoji": "🦅"
-  },
-  {
-    "id": "184",
-    "name": "Electronic Venue — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.033896,
-    "lng": -76.335724,
-    "tags": [
-      "music",
-      "culture"
-    ],
-    "type": "business",
-    "address": "7900 Colonial Way, Hampton, VA",
-    "emoji": "⚽"
-  },
-  {
-    "id": "185",
-    "name": "Seafood Market — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.046548,
-    "lng": -76.431061,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "5034 Atlantic Dr, Newport News, VA",
-    "emoji": "🎬"
-  },
-  {
-    "id": "186",
-    "name": "Eatery — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.103394,
-    "lng": -76.450653,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "2302 Hampton Ln, Newport News, VA",
-    "emoji": "☕"
-  },
-  {
-    "id": "187",
-    "name": "Seafood Shack — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.04854,
-    "lng": -76.483461,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "1350 Colonial Rd, Newport News, VA",
-    "emoji": "⛵"
-  },
-  {
-    "id": "188",
-    "name": "Po Boy Shop — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.071805,
-    "lng": -76.499247,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "7375 Shore Ave, Newport News, VA",
-    "emoji": "🎊"
-  },
-  {
-    "id": "189",
-    "name": "Wine Bar — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.061115,
-    "lng": -76.435457,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "2703 Independence Way, Newport News, VA",
-    "emoji": "⛵"
-  },
-  {
-    "id": "190",
-    "name": "Supper Club — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.062453,
-    "lng": -76.460566,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "2034 Colonial Rd, Newport News, VA",
-    "emoji": "🎨"
-  },
-  {
-    "id": "191",
-    "name": "Sailor Pub — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.073518,
-    "lng": -76.481354,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "785 Independence Dr, Newport News, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "192",
-    "name": "Pie Shop — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.081076,
-    "lng": -76.464174,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "6854 Virginia Rd, Newport News, VA",
-    "emoji": "🎤"
-  },
-  {
-    "id": "193",
-    "name": "Speakeasy — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.101661,
-    "lng": -76.425871,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "1024 Chesapeake Ave, Newport News, VA",
-    "emoji": "☕"
-  },
-  {
-    "id": "194",
-    "name": "Basement Taps — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.060461,
-    "lng": -76.44348,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "4928 Atlantic Blvd, Newport News, VA",
-    "emoji": "🛍️"
-  },
-  {
-    "id": "195",
-    "name": "Corner Store — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.041779,
-    "lng": -76.460409,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "201 Ocean Rd, Newport News, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "196",
-    "name": "Patisserie — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.061424,
-    "lng": -76.488761,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "5108 Hampton Ln, Newport News, VA",
-    "emoji": "⛵"
-  },
-  {
-    "id": "197",
-    "name": "Walk-Up Window — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.051755,
-    "lng": -76.47619,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "4687 Main Rd, Newport News, VA",
-    "emoji": "🎊"
-  },
-  {
-    "id": "198",
-    "name": "Coffee Cart — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.037594,
-    "lng": -76.484899,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "6453 Hampton Rd, Newport News, VA",
-    "emoji": "📍"
-  },
-  {
-    "id": "199",
-    "name": "Cold Brew Lab — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.052332,
-    "lng": -76.476581,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "3314 Main Ave, Newport News, VA",
-    "emoji": "☕"
-  },
-  {
-    "id": "200",
-    "name": "Champagne Bar — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.072744,
-    "lng": -76.492411,
-    "tags": [
-      "nightlife",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "7373 Atlantic St, Newport News, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "201",
-    "name": "Mimosa Bar — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.083643,
-    "lng": -76.48331,
-    "tags": [
-      "nightlife",
-      "food"
-    ],
-    "type": "business",
-    "address": "4277 Hampton Way, Newport News, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "202",
-    "name": "Dock Bar — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.062123,
-    "lng": -76.454263,
-    "tags": [
-      "nightlife",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "7637 Victory Dr, Newport News, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "203",
-    "name": "Tequila Spot — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.031375,
-    "lng": -76.426734,
-    "tags": [
-      "nightlife",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "4836 Chesapeake Ln, Newport News, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "204",
-    "name": "Rock Climbing Wall — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.109063,
-    "lng": -76.456109,
-    "tags": [
-      "outdoors",
-      "family"
-    ],
-    "type": "business",
-    "address": "1501 Atlantic Ave, Newport News, VA",
-    "emoji": "🥐"
-  },
-  {
-    "id": "205",
-    "name": "RV Park — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.098454,
-    "lng": -76.479362,
-    "tags": [
-      "outdoors",
-      "family"
-    ],
-    "type": "business",
-    "address": "3849 Chesapeake Ln, Newport News, VA",
-    "emoji": "🏕️"
-  },
-  {
-    "id": "206",
-    "name": "Meadow Walk — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.083978,
-    "lng": -76.480619,
-    "tags": [
-      "outdoors",
-      "nature"
-    ],
-    "type": "business",
-    "address": "1338 Ocean Blvd, Newport News, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "207",
-    "name": "Arena — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.066426,
-    "lng": -76.467028,
-    "tags": [
-      "outdoors",
-      "nature"
-    ],
-    "type": "business",
-    "address": "6702 Main Blvd, Newport News, VA",
-    "emoji": "☕"
-  },
-  {
-    "id": "208",
-    "name": "Obstacle Course — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.031512,
-    "lng": -76.440822,
-    "tags": [
-      "outdoors",
-      "family"
-    ],
-    "type": "business",
-    "address": "1253 Independence St, Newport News, VA",
-    "emoji": "⚽"
-  },
-  {
-    "id": "209",
-    "name": "Sunset Beach — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.060142,
-    "lng": -76.469141,
-    "tags": [
-      "beach"
-    ],
-    "type": "business",
-    "address": "8051 Independence Pkwy, Newport News, VA",
-    "emoji": "🎬"
-  },
-  {
-    "id": "210",
-    "name": "Fishing Pier — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.057248,
-    "lng": -76.44451,
-    "tags": [
-      "beach"
-    ],
-    "type": "business",
-    "address": "7715 Colonial Ln, Newport News, VA",
-    "emoji": "🛍️"
-  },
-  {
-    "id": "211",
-    "name": "Discovery Center — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.077689,
-    "lng": -76.489669,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "846 Chesapeake Ave, Newport News, VA",
-    "emoji": "🥗"
-  },
-  {
-    "id": "212",
-    "name": "Ballet Academy — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.038595,
-    "lng": -76.489523,
-    "tags": [
-      "culture",
-      "family"
-    ],
-    "type": "business",
-    "address": "159 Hampton Ave, Newport News, VA",
-    "emoji": "🛍️"
-  },
-  {
-    "id": "213",
-    "name": "Black Box Theater — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.063813,
-    "lng": -76.476681,
-    "tags": [
-      "culture",
-      "music"
-    ],
-    "type": "business",
-    "address": "4078 Chesapeake Ln, Newport News, VA",
-    "emoji": "☕"
-  },
-  {
-    "id": "214",
-    "name": "Barracks — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.100053,
-    "lng": -76.496069,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "4079 Independence Rd, Newport News, VA",
-    "emoji": "🎨"
-  },
-  {
-    "id": "215",
-    "name": "National Cemetery — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.072893,
-    "lng": -76.478604,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "6731 Atlantic Way, Newport News, VA",
-    "emoji": "🎵"
-  },
-  {
-    "id": "216",
-    "name": "Fort — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.062727,
-    "lng": -76.463826,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "2144 Victory Ln, Newport News, VA",
-    "emoji": "🥐"
-  },
-  {
-    "id": "217",
-    "name": "Go-Kart Track — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.048258,
-    "lng": -76.471774,
-    "tags": [
-      "entertainment",
-      "food"
-    ],
-    "type": "business",
-    "address": "4018 Victory Pkwy, Newport News, VA",
-    "emoji": "🎨"
-  },
-  {
-    "id": "218",
-    "name": "Topgolf — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.078109,
-    "lng": -76.433456,
-    "tags": [
-      "entertainment",
-      "food"
-    ],
-    "type": "business",
-    "address": "4328 Hampton Blvd, Newport News, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "219",
-    "name": "Axe Throwing — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.078028,
-    "lng": -76.463147,
-    "tags": [
-      "entertainment",
-      "family"
-    ],
-    "type": "business",
-    "address": "6355 Hampton Way, Newport News, VA",
-    "emoji": "🍺"
-  },
-  {
-    "id": "220",
-    "name": "Coding Camp — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.0807,
-    "lng": -76.459733,
-    "tags": [
-      "family",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "3306 Independence Rd, Newport News, VA",
-    "emoji": "🏛️"
-  },
-  {
-    "id": "221",
-    "name": "Wading Pool — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.103711,
-    "lng": -76.472368,
-    "tags": [
-      "family",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "4719 Virginia Blvd, Newport News, VA",
-    "emoji": "🎨"
-  },
-  {
-    "id": "222",
-    "name": "Gym — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.066684,
-    "lng": -76.483563,
-    "tags": [
-      "sports",
-      "wellness"
-    ],
-    "type": "business",
-    "address": "1628 Shore Rd, Newport News, VA",
-    "emoji": "🏖️"
-  },
-  {
-    "id": "223",
-    "name": "Field Hockey — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.069001,
-    "lng": -76.49064,
-    "tags": [
-      "sports",
-      "family"
-    ],
-    "type": "business",
-    "address": "7677 Victory Pkwy, Newport News, VA",
-    "emoji": "🎤"
-  },
-  {
-    "id": "224",
-    "name": "Spartan Training — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.03674,
-    "lng": -76.4324,
-    "tags": [
-      "sports",
-      "wellness"
-    ],
-    "type": "business",
-    "address": "1740 Hampton Ave, Newport News, VA",
-    "emoji": "⚽"
-  },
-  {
-    "id": "225",
-    "name": "Massage Studio — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.080147,
-    "lng": -76.426773,
-    "tags": [
-      "wellness"
-    ],
-    "type": "business",
-    "address": "2707 Main Way, Newport News, VA",
-    "emoji": "🌮"
-  },
-  {
-    "id": "226",
-    "name": "Hammam — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.07151,
-    "lng": -76.487064,
-    "tags": [
-      "wellness"
-    ],
-    "type": "business",
-    "address": "1148 Hampton St, Newport News, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "227",
-    "name": "Bike Shop — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.038759,
-    "lng": -76.490499,
-    "tags": [
-      "culture",
-      "music"
-    ],
-    "type": "business",
-    "address": "5595 Independence Way, Newport News, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "228",
-    "name": "Craft Market — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.073166,
-    "lng": -76.457274,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "5170 Chesapeake Way, Newport News, VA",
-    "emoji": "🍕"
-  },
-  {
-    "id": "229",
-    "name": "Warehouse Rave — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.08187,
-    "lng": -76.47127,
-    "tags": [
-      "music",
-      "culture"
-    ],
-    "type": "business",
-    "address": "2400 Chesapeake Rd, Newport News, VA",
-    "emoji": "🎤"
-  },
-  {
-    "id": "230",
-    "name": "Marching Band Field — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.042894,
-    "lng": -76.440541,
-    "tags": [
-      "music",
-      "food"
-    ],
-    "type": "business",
-    "address": "2576 Chesapeake Way, Newport News, VA",
-    "emoji": "🥞"
-  },
-  {
-    "id": "231",
-    "name": "Health Bar — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.846793,
-    "lng": -76.275286,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "2375 Shore Dr, Portsmouth, VA",
-    "emoji": "☕"
-  },
-  {
-    "id": "232",
-    "name": "Sailor Pub — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.815885,
-    "lng": -76.288359,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "4373 Chesapeake Dr, Portsmouth, VA",
-    "emoji": "🥗"
-  },
-  {
-    "id": "233",
-    "name": "Sunset Dining — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.845825,
-    "lng": -76.326624,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "2212 Shore Rd, Portsmouth, VA",
-    "emoji": "🍕"
-  },
-  {
-    "id": "234",
-    "name": "Rooftop Lounge — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.831361,
-    "lng": -76.303537,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "6538 Ocean Way, Portsmouth, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "235",
-    "name": "Anchor Tavern — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.846167,
-    "lng": -76.307265,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "2153 Chesapeake Dr, Portsmouth, VA",
-    "emoji": "🎊"
-  },
-  {
-    "id": "236",
-    "name": "Corn Dog — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.828191,
-    "lng": -76.317421,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "673 Virginia Ave, Portsmouth, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "237",
-    "name": "Lighthouse Cafe — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.836808,
-    "lng": -76.311303,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "460 Colonial Ave, Portsmouth, VA",
-    "emoji": "🧘"
-  },
-  {
-    "id": "238",
-    "name": "Sandwich Shop — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.828055,
-    "lng": -76.280449,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "7279 Main Pkwy, Portsmouth, VA",
-    "emoji": "🌳"
-  },
-  {
-    "id": "239",
-    "name": "Scone Spot — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.845057,
-    "lng": -76.291106,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "3445 Independence Pkwy, Portsmouth, VA",
-    "emoji": "🎊"
-  },
-  {
-    "id": "240",
-    "name": "Burger Bar — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.858332,
-    "lng": -76.278472,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "2815 Main Pkwy, Portsmouth, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "241",
-    "name": "Taco Stand — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.863971,
-    "lng": -76.269006,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "4672 Hampton Way, Portsmouth, VA",
-    "emoji": "🎤"
-  },
-  {
-    "id": "242",
-    "name": "Wing Spot — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.834827,
-    "lng": -76.315394,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "2703 Main Ave, Portsmouth, VA",
-    "emoji": "🎤"
-  },
-  {
-    "id": "243",
-    "name": "Bookstore Cafe — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.852858,
-    "lng": -76.327085,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "1127 Colonial Pkwy, Portsmouth, VA",
-    "emoji": "📍"
-  },
-  {
-    "id": "244",
-    "name": "Moka Pot — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.827479,
-    "lng": -76.293504,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "7859 Atlantic Dr, Portsmouth, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "245",
-    "name": "Cupping Room — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.83182,
-    "lng": -76.290622,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "6153 Virginia Ave, Portsmouth, VA",
-    "emoji": "🎵"
-  },
-  {
-    "id": "246",
-    "name": "Biergarten — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.852589,
-    "lng": -76.322105,
-    "tags": [
-      "nightlife",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "165 Shore Dr, Portsmouth, VA",
-    "emoji": "🌮"
-  },
-  {
-    "id": "247",
-    "name": "Sunset Bar — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.831365,
-    "lng": -76.284333,
-    "tags": [
-      "nightlife",
-      "food"
-    ],
-    "type": "business",
-    "address": "5104 Shore Pkwy, Portsmouth, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "248",
-    "name": "Marina Lounge — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.840305,
-    "lng": -76.297228,
-    "tags": [
-      "nightlife",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "448 Atlantic Dr, Portsmouth, VA",
-    "emoji": "🥐"
-  },
-  {
-    "id": "249",
-    "name": "Harbor Bar — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.835476,
-    "lng": -76.31201,
-    "tags": [
-      "nightlife",
-      "food"
-    ],
-    "type": "business",
-    "address": "7180 Victory Way, Portsmouth, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "250",
-    "name": "Nature Trail — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.831887,
-    "lng": -76.301166,
-    "tags": [
-      "outdoors",
-      "nature"
-    ],
-    "type": "business",
-    "address": "3449 Colonial Ave, Portsmouth, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "251",
-    "name": "Bike Path — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.835068,
-    "lng": -76.29029,
-    "tags": [
-      "outdoors",
-      "sports"
-    ],
-    "type": "business",
-    "address": "3665 Ocean Dr, Portsmouth, VA",
-    "emoji": "🏛️"
-  },
-  {
-    "id": "252",
-    "name": "RV Park — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.860842,
-    "lng": -76.304484,
-    "tags": [
-      "outdoors",
-      "nature"
-    ],
-    "type": "business",
-    "address": "1614 Victory Dr, Portsmouth, VA",
-    "emoji": "⛵"
-  },
-  {
-    "id": "253",
-    "name": "Basketball Courts — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.83279,
-    "lng": -76.269022,
-    "tags": [
-      "outdoors",
-      "nature"
-    ],
-    "type": "business",
-    "address": "3318 Colonial Ln, Portsmouth, VA",
-    "emoji": "⛵"
-  },
-  {
-    "id": "254",
-    "name": "Velodrome — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.836436,
-    "lng": -76.276689,
-    "tags": [
-      "outdoors",
-      "sports"
-    ],
-    "type": "business",
-    "address": "3408 Virginia Blvd, Portsmouth, VA",
-    "emoji": "🌮"
-  },
-  {
-    "id": "255",
-    "name": "Boardwalk Segment — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.829444,
-    "lng": -76.305896,
-    "tags": [
-      "beach"
-    ],
-    "type": "business",
-    "address": "614 Victory St, Portsmouth, VA",
-    "emoji": "🎊"
-  },
-  {
-    "id": "256",
-    "name": "Beach Access — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.839601,
-    "lng": -76.275076,
-    "tags": [
-      "beach"
-    ],
-    "type": "business",
-    "address": "4106 Hampton Ln, Portsmouth, VA",
-    "emoji": "🦅"
-  },
-  {
-    "id": "257",
-    "name": "History Center — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.864669,
-    "lng": -76.278489,
-    "tags": [
-      "culture",
-      "music"
-    ],
-    "type": "business",
-    "address": "5287 Victory Rd, Portsmouth, VA",
-    "emoji": "🏕️"
-  },
-  {
-    "id": "258",
-    "name": "Installation Art — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.821487,
-    "lng": -76.297153,
-    "tags": [
-      "culture",
-      "music"
-    ],
-    "type": "business",
-    "address": "564 Colonial Rd, Portsmouth, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "259",
-    "name": "Planetarium — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.822659,
-    "lng": -76.276101,
-    "tags": [
-      "culture",
-      "music"
-    ],
-    "type": "business",
-    "address": "5639 Main Way, Portsmouth, VA",
-    "emoji": "🥗"
-  },
-  {
-    "id": "260",
-    "name": "Battery — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.813783,
-    "lng": -76.27918,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "3532 Independence Blvd, Portsmouth, VA",
-    "emoji": "🎵"
-  },
-  {
-    "id": "261",
-    "name": "Plantation House — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.846352,
-    "lng": -76.268329,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "6958 Ocean Ave, Portsmouth, VA",
-    "emoji": "🍕"
-  },
-  {
-    "id": "262",
-    "name": "Historic Site — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.847108,
-    "lng": -76.295429,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "4101 Atlantic Pkwy, Portsmouth, VA",
-    "emoji": "🦅"
-  },
-  {
-    "id": "263",
-    "name": "Game Cafe — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.837123,
-    "lng": -76.273559,
-    "tags": [
-      "entertainment",
-      "food"
-    ],
-    "type": "business",
-    "address": "7433 Shore Ln, Portsmouth, VA",
-    "emoji": "🎨"
-  },
-  {
-    "id": "264",
-    "name": "Dance Party — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.860266,
-    "lng": -76.318168,
-    "tags": [
-      "entertainment",
-      "food"
-    ],
-    "type": "business",
-    "address": "6548 Main St, Portsmouth, VA",
-    "emoji": "🛍️"
-  },
-  {
-    "id": "265",
-    "name": "Casino — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.833777,
-    "lng": -76.291706,
-    "tags": [
-      "entertainment",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "5803 Main Way, Portsmouth, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "266",
-    "name": "Birthday Venue — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.827972,
-    "lng": -76.322448,
-    "tags": [
-      "family",
-      "food"
-    ],
-    "type": "business",
-    "address": "3146 Chesapeake Dr, Portsmouth, VA",
-    "emoji": "🎬"
-  },
-  {
-    "id": "267",
-    "name": "Petting Zoo — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.820827,
-    "lng": -76.279043,
-    "tags": [
-      "family",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "2652 Main Ln, Portsmouth, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "268",
-    "name": "Yoga Studio — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.85791,
-    "lng": -76.308086,
-    "tags": [
-      "sports",
-      "wellness"
-    ],
-    "type": "business",
-    "address": "7757 Atlantic Ln, Portsmouth, VA",
-    "emoji": "🥞"
-  },
-  {
-    "id": "269",
-    "name": "BJJ Academy — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.853822,
-    "lng": -76.301796,
-    "tags": [
-      "sports",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "494 Shore Way, Portsmouth, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "270",
-    "name": "Tennis Club — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.862564,
-    "lng": -76.274929,
-    "tags": [
-      "sports",
-      "wellness"
-    ],
-    "type": "business",
-    "address": "4923 Independence Blvd, Portsmouth, VA",
-    "emoji": "🥐"
-  },
-  {
-    "id": "271",
-    "name": "Day Spa — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.853912,
-    "lng": -76.31214,
-    "tags": [
-      "wellness"
-    ],
-    "type": "business",
-    "address": "5480 Atlantic Ln, Portsmouth, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "272",
-    "name": "Salt Cave — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.81792,
-    "lng": -76.30018,
-    "tags": [
-      "wellness"
-    ],
-    "type": "business",
-    "address": "6497 Shore Dr, Portsmouth, VA",
-    "emoji": "🎢"
-  },
-  {
-    "id": "273",
-    "name": "Flea Market — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.83746,
-    "lng": -76.274109,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "427 Main Ave, Portsmouth, VA",
-    "emoji": "🏛️"
-  },
-  {
-    "id": "274",
-    "name": "Vintage Clothing — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.850667,
-    "lng": -76.282169,
-    "tags": [
-      "culture",
-      "family"
-    ],
-    "type": "business",
-    "address": "1445 Victory St, Portsmouth, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "275",
-    "name": "Piano Bar — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.847123,
-    "lng": -76.304234,
-    "tags": [
-      "music",
-      "food"
-    ],
-    "type": "business",
-    "address": "6008 Atlantic Pkwy, Portsmouth, VA",
-    "emoji": "🎢"
-  },
-  {
-    "id": "276",
-    "name": "Open Mic Night — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.810288,
-    "lng": -76.303804,
-    "tags": [
-      "music",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "2705 Main Dr, Portsmouth, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "277",
-    "name": "Local Hangout — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.705738,
-    "lng": -76.554448,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "2592 Hampton Pkwy, Suffolk, VA",
-    "emoji": "🎊"
-  },
-  {
-    "id": "278",
-    "name": "Anchor Tavern — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.753543,
-    "lng": -76.589581,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "1760 Atlantic Way, Suffolk, VA",
-    "emoji": "🥗"
-  },
-  {
-    "id": "279",
-    "name": "Avocado Toast — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.751136,
-    "lng": -76.569213,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "5735 Chesapeake Way, Suffolk, VA",
-    "emoji": "🧘"
-  },
-  {
-    "id": "280",
-    "name": "Speakeasy — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.724933,
-    "lng": -76.60645,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "4244 Virginia Ave, Suffolk, VA",
-    "emoji": "🥗"
-  },
-  {
-    "id": "281",
-    "name": "Sorbet — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.729014,
-    "lng": -76.587777,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "574 Shore Ave, Suffolk, VA",
-    "emoji": "☕"
-  },
-  {
-    "id": "282",
-    "name": "Coffee & Toast — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.740458,
-    "lng": -76.612857,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "949 Independence Way, Suffolk, VA",
-    "emoji": "⛵"
-  },
-  {
-    "id": "283",
-    "name": "Cookie Dough — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.740745,
-    "lng": -76.584774,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "6971 Main Ln, Suffolk, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "284",
-    "name": "Mimosa Bar — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.761328,
-    "lng": -76.591651,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "4441 Virginia Way, Suffolk, VA",
-    "emoji": "🧘"
-  },
-  {
-    "id": "285",
-    "name": "Cantina — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.71784,
-    "lng": -76.577558,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "2237 Chesapeake Ave, Suffolk, VA",
-    "emoji": "🎊"
-  },
-  {
-    "id": "286",
-    "name": "Diner — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.709186,
-    "lng": -76.571633,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "2124 Victory Pkwy, Suffolk, VA",
-    "emoji": "🥞"
-  },
-  {
-    "id": "287",
-    "name": "Kitchen — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.716419,
-    "lng": -76.617098,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "5110 Virginia Ln, Suffolk, VA",
-    "emoji": "🏕️"
-  },
-  {
-    "id": "288",
-    "name": "Gastropub — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.746306,
-    "lng": -76.54576,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "411 Virginia Pkwy, Suffolk, VA",
-    "emoji": "⛵"
-  },
-  {
-    "id": "289",
-    "name": "Latte Lounge — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.749685,
-    "lng": -76.611272,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "4317 Independence Pkwy, Suffolk, VA",
-    "emoji": "🍺"
-  },
-  {
-    "id": "290",
-    "name": "Moka Pot — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.704497,
-    "lng": -76.548341,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "1192 Colonial St, Suffolk, VA",
-    "emoji": "🥞"
-  },
-  {
-    "id": "291",
-    "name": "WiFi Cafe — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.734349,
-    "lng": -76.607117,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "7629 Ocean St, Suffolk, VA",
-    "emoji": "🥐"
-  },
-  {
-    "id": "292",
-    "name": "Cocktail Bar — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.741398,
-    "lng": -76.545787,
-    "tags": [
-      "nightlife",
-      "music"
-    ],
-    "type": "business",
-    "address": "3184 Atlantic Rd, Suffolk, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "293",
-    "name": "Lager Lounge — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.736134,
-    "lng": -76.593738,
-    "tags": [
-      "nightlife",
-      "music"
-    ],
-    "type": "business",
-    "address": "6997 Chesapeake St, Suffolk, VA",
-    "emoji": "🏕️"
-  },
-  {
-    "id": "294",
-    "name": "Biergarten — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.753645,
-    "lng": -76.590548,
-    "tags": [
-      "nightlife",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "240 Chesapeake St, Suffolk, VA",
-    "emoji": "🎊"
-  },
-  {
-    "id": "295",
-    "name": "Brewing Co — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.708463,
-    "lng": -76.621448,
-    "tags": [
-      "nightlife",
-      "food"
-    ],
-    "type": "business",
-    "address": "1133 Colonial Pkwy, Suffolk, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "296",
-    "name": "Dog Park — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.690697,
-    "lng": -76.562528,
-    "tags": [
-      "outdoors",
-      "family"
-    ],
-    "type": "business",
-    "address": "6277 Chesapeake Ave, Suffolk, VA",
-    "emoji": "🍺"
-  },
-  {
-    "id": "297",
-    "name": "Lake Park — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.701301,
-    "lng": -76.578795,
-    "tags": [
-      "outdoors",
-      "family"
-    ],
-    "type": "business",
-    "address": "2981 Colonial Ave, Suffolk, VA",
-    "emoji": "🍺"
-  },
-  {
-    "id": "298",
-    "name": "Aerial Park — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.734042,
-    "lng": -76.593441,
-    "tags": [
-      "outdoors",
-      "beach"
-    ],
-    "type": "business",
-    "address": "5339 Ocean Rd, Suffolk, VA",
-    "emoji": "👪"
-  },
-  {
-    "id": "299",
-    "name": "Obstacle Course — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.716508,
-    "lng": -76.567581,
-    "tags": [
-      "outdoors",
-      "sports"
-    ],
-    "type": "business",
-    "address": "2974 Independence Way, Suffolk, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "300",
-    "name": "Hiking Trail — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.712704,
-    "lng": -76.591309,
-    "tags": [
-      "outdoors",
-      "beach"
-    ],
-    "type": "business",
-    "address": "4273 Ocean St, Suffolk, VA",
-    "emoji": "👪"
-  },
-  {
-    "id": "301",
-    "name": "Breakwater Path — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.707608,
-    "lng": -76.596417,
-    "tags": [
-      "beach"
-    ],
-    "type": "business",
-    "address": "4454 Ocean Pkwy, Suffolk, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "302",
-    "name": "Beach Pavilion — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.744286,
-    "lng": -76.598153,
-    "tags": [
-      "beach"
-    ],
-    "type": "business",
-    "address": "3389 Hampton Ln, Suffolk, VA",
-    "emoji": "🎤"
-  },
-  {
-    "id": "303",
-    "name": "History Center — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.737593,
-    "lng": -76.54628,
-    "tags": [
-      "culture",
-      "music"
-    ],
-    "type": "business",
-    "address": "3438 Hampton Ln, Suffolk, VA",
-    "emoji": "🧘"
-  },
-  {
-    "id": "304",
-    "name": "Fashion Studio — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.728066,
-    "lng": -76.599048,
-    "tags": [
-      "culture",
-      "family"
-    ],
-    "type": "business",
-    "address": "6643 Hampton Blvd, Suffolk, VA",
-    "emoji": "🎬"
-  },
-  {
-    "id": "305",
-    "name": "Science Center — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.736856,
-    "lng": -76.587898,
-    "tags": [
-      "culture",
-      "family"
-    ],
-    "type": "business",
-    "address": "3758 Shore Ave, Suffolk, VA",
-    "emoji": "📍"
-  },
-  {
-    "id": "306",
-    "name": "Light Station — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.720703,
-    "lng": -76.546124,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "5418 Colonial Rd, Suffolk, VA",
-    "emoji": "🎨"
-  },
-  {
-    "id": "307",
-    "name": "Colonial Home — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.708371,
-    "lng": -76.586792,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "6058 Virginia Ave, Suffolk, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "308",
-    "name": "Revolutionary War Site — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.718224,
-    "lng": -76.615248,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "2289 Virginia Way, Suffolk, VA",
-    "emoji": "⚽"
-  },
-  {
-    "id": "309",
-    "name": "Outdoor Cinema — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.752157,
-    "lng": -76.571432,
-    "tags": [
-      "entertainment",
-      "food"
-    ],
-    "type": "business",
-    "address": "4334 Atlantic Ln, Suffolk, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "310",
-    "name": "Batting Cages — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.75863,
-    "lng": -76.552742,
-    "tags": [
-      "entertainment",
-      "family"
-    ],
-    "type": "business",
-    "address": "6451 Shore St, Suffolk, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "311",
-    "name": "Escape Room — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.706078,
-    "lng": -76.596324,
-    "tags": [
-      "entertainment",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "3088 Chesapeake Dr, Suffolk, VA",
-    "emoji": "🎊"
-  },
-  {
-    "id": "312",
-    "name": "Kids Library — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.706395,
-    "lng": -76.558344,
-    "tags": [
-      "family",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "2696 Shore Ave, Suffolk, VA",
-    "emoji": "⛵"
-  },
-  {
-    "id": "313",
-    "name": "4H Center — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.765992,
-    "lng": -76.579712,
-    "tags": [
-      "family",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "6359 Ocean Blvd, Suffolk, VA",
-    "emoji": "🏖️"
-  },
-  {
-    "id": "314",
-    "name": "Racquet Club — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.74539,
-    "lng": -76.585381,
-    "tags": [
-      "sports",
-      "wellness"
-    ],
-    "type": "business",
-    "address": "2747 Main Dr, Suffolk, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "315",
-    "name": "Running Club — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.758165,
-    "lng": -76.589228,
-    "tags": [
-      "sports",
-      "wellness"
-    ],
-    "type": "business",
-    "address": "4001 Ocean Ave, Suffolk, VA",
-    "emoji": "🌮"
-  },
-  {
-    "id": "316",
-    "name": "CrossFit Box — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.757628,
-    "lng": -76.610317,
-    "tags": [
-      "sports",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "3397 Virginia Ln, Suffolk, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "317",
-    "name": "Spa — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.737369,
-    "lng": -76.578567,
-    "tags": [
-      "wellness"
-    ],
-    "type": "business",
-    "address": "3362 Virginia Dr, Suffolk, VA",
-    "emoji": "🎢"
-  },
-  {
-    "id": "318",
-    "name": "Day Spa — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.737931,
-    "lng": -76.591596,
-    "tags": [
-      "wellness"
-    ],
-    "type": "business",
-    "address": "2445 Victory Dr, Suffolk, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "319",
-    "name": "Pop-Up Market — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.697417,
-    "lng": -76.597474,
-    "tags": [
-      "culture",
-      "music"
-    ],
-    "type": "business",
-    "address": "2995 Independence Ln, Suffolk, VA",
-    "emoji": "🛍️"
-  },
-  {
-    "id": "320",
-    "name": "Mall — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.761187,
-    "lng": -76.546862,
-    "tags": [
-      "culture",
-      "family"
-    ],
-    "type": "business",
-    "address": "4116 Ocean Dr, Suffolk, VA",
-    "emoji": "🎤"
-  },
-  {
-    "id": "321",
-    "name": "Blues Club — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.748663,
-    "lng": -76.602832,
-    "tags": [
-      "music",
-      "food"
-    ],
-    "type": "business",
-    "address": "5435 Virginia Way, Suffolk, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "322",
-    "name": "Live Music Bar — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.692236,
-    "lng": -76.549389,
-    "tags": [
-      "music",
-      "food"
-    ],
-    "type": "business",
-    "address": "5908 Hampton Dr, Suffolk, VA",
-    "emoji": "🥞"
-  },
-  {
-    "id": "323",
-    "name": "Deli — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.251553,
-    "lng": -76.679843,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "115 Virginia Way, Williamsburg, VA",
-    "emoji": "🍕"
-  },
-  {
-    "id": "324",
-    "name": "Cocktail Lounge — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.263911,
-    "lng": -76.698096,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "4058 Hampton Rd, Williamsburg, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "325",
-    "name": "Bakery — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.295351,
-    "lng": -76.722738,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "600 Independence Ln, Williamsburg, VA",
-    "emoji": "🏛️"
-  },
-  {
-    "id": "326",
-    "name": "Anchor Tavern — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.299515,
-    "lng": -76.712238,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "5973 Hampton Blvd, Williamsburg, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "327",
-    "name": "Mimosa Bar — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.273997,
-    "lng": -76.717291,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "2991 Shore Dr, Williamsburg, VA",
-    "emoji": "👪"
-  },
-  {
-    "id": "328",
-    "name": "Waterfront Dining — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.268676,
-    "lng": -76.685781,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "6473 Ocean Blvd, Williamsburg, VA",
-    "emoji": "🧘"
-  },
-  {
-    "id": "329",
-    "name": "Ghent Eats — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.265017,
-    "lng": -76.730209,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "773 Main Dr, Williamsburg, VA",
-    "emoji": "🛍️"
-  },
-  {
-    "id": "330",
-    "name": "Rooftop Bar — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.294813,
-    "lng": -76.691348,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "1466 Chesapeake St, Williamsburg, VA",
-    "emoji": "👪"
-  },
-  {
-    "id": "331",
-    "name": "Tasting Menu — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.249143,
-    "lng": -76.715645,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "315 Hampton Pkwy, Williamsburg, VA",
-    "emoji": "🦅"
-  },
-  {
-    "id": "332",
-    "name": "Butcher Block — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.272068,
-    "lng": -76.73428,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "439 Shore Rd, Williamsburg, VA",
-    "emoji": "🍕"
-  },
-  {
-    "id": "333",
-    "name": "Pier Snacks — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.260185,
-    "lng": -76.731829,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "3445 Shore Blvd, Williamsburg, VA",
-    "emoji": "🏛️"
-  },
-  {
-    "id": "334",
-    "name": "Rooftop Lounge — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.27196,
-    "lng": -76.691519,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "4484 Virginia Blvd, Williamsburg, VA",
-    "emoji": "📍"
-  },
-  {
-    "id": "335",
-    "name": "Espresso Bar — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.250138,
-    "lng": -76.697701,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "6958 Chesapeake Ln, Williamsburg, VA",
-    "emoji": "👪"
-  },
-  {
-    "id": "336",
-    "name": "Coffee Roasters — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.245143,
-    "lng": -76.682463,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "2813 Main Blvd, Williamsburg, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "337",
-    "name": "Art Cafe — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.299567,
-    "lng": -76.689343,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "7862 Shore St, Williamsburg, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "338",
-    "name": "Dive Bar — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.291634,
-    "lng": -76.696027,
-    "tags": [
-      "nightlife",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "2107 Hampton Pkwy, Williamsburg, VA",
-    "emoji": "🏖️"
-  },
-  {
-    "id": "339",
-    "name": "Brewpub — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.2982,
-    "lng": -76.723005,
-    "tags": [
-      "nightlife",
-      "music"
-    ],
-    "type": "business",
-    "address": "637 Main Pkwy, Williamsburg, VA",
-    "emoji": "🌮"
-  },
-  {
-    "id": "340",
-    "name": "Dance Club — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.30002,
-    "lng": -76.728125,
-    "tags": [
-      "nightlife",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "2140 Independence Way, Williamsburg, VA",
-    "emoji": "⚽"
-  },
-  {
-    "id": "341",
-    "name": "DJ Lounge — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.268513,
-    "lng": -76.707626,
-    "tags": [
-      "nightlife",
-      "food"
-    ],
-    "type": "business",
-    "address": "356 Ocean Ln, Williamsburg, VA",
-    "emoji": "🥞"
-  },
-  {
-    "id": "342",
-    "name": "Campground — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.26121,
-    "lng": -76.725423,
-    "tags": [
-      "outdoors",
-      "beach"
-    ],
-    "type": "business",
-    "address": "4456 Virginia Way, Williamsburg, VA",
-    "emoji": "📍"
-  },
-  {
-    "id": "343",
-    "name": "Baseball Field — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.264759,
-    "lng": -76.702276,
-    "tags": [
-      "outdoors",
-      "sports"
-    ],
-    "type": "business",
-    "address": "3494 Virginia Ln, Williamsburg, VA",
-    "emoji": "☕"
-  },
-  {
-    "id": "344",
-    "name": "Boat Ramp — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.273192,
-    "lng": -76.714359,
-    "tags": [
-      "outdoors",
-      "family"
-    ],
-    "type": "business",
-    "address": "3679 Victory Pkwy, Williamsburg, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "345",
-    "name": "Botanical Walk — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.251783,
-    "lng": -76.689619,
-    "tags": [
-      "outdoors",
-      "beach"
-    ],
-    "type": "business",
-    "address": "143 Chesapeake Ave, Williamsburg, VA",
-    "emoji": "⛵"
-  },
-  {
-    "id": "346",
-    "name": "Obstacle Course — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.256009,
-    "lng": -76.692813,
-    "tags": [
-      "outdoors",
-      "beach"
-    ],
-    "type": "business",
-    "address": "3233 Ocean Blvd, Williamsburg, VA",
-    "emoji": "⚽"
-  },
-  {
-    "id": "347",
-    "name": "Boardwalk Segment — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.244868,
-    "lng": -76.712625,
-    "tags": [
-      "beach"
-    ],
-    "type": "business",
-    "address": "1468 Chesapeake Rd, Williamsburg, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "348",
-    "name": "Sunrise Point — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.274219,
-    "lng": -76.720452,
-    "tags": [
-      "beach"
-    ],
-    "type": "business",
-    "address": "2721 Atlantic Blvd, Williamsburg, VA",
-    "emoji": "🍕"
-  },
-  {
-    "id": "349",
-    "name": "Art Gallery — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.248649,
-    "lng": -76.679914,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "5000 Main Way, Williamsburg, VA",
-    "emoji": "🎵"
-  },
-  {
-    "id": "350",
-    "name": "Street Art Walk — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.258427,
-    "lng": -76.699379,
-    "tags": [
-      "culture",
-      "music"
-    ],
-    "type": "business",
-    "address": "4722 Main Ln, Williamsburg, VA",
-    "emoji": "🎬"
-  },
-  {
-    "id": "351",
-    "name": "Childrens Museum — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.292205,
-    "lng": -76.730273,
-    "tags": [
-      "culture",
-      "music"
-    ],
-    "type": "business",
-    "address": "829 Main Pkwy, Williamsburg, VA",
-    "emoji": "🎢"
-  },
-  {
-    "id": "352",
-    "name": "Cemetery — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.253172,
-    "lng": -76.717776,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "3673 Ocean Dr, Williamsburg, VA",
-    "emoji": "🏕️"
-  },
-  {
-    "id": "353",
-    "name": "Historic Site — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.279427,
-    "lng": -76.713656,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "904 Colonial Way, Williamsburg, VA",
-    "emoji": "🍕"
-  },
-  {
-    "id": "354",
-    "name": "Battlefield — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.291935,
-    "lng": -76.710779,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "345 Independence Ave, Williamsburg, VA",
-    "emoji": "🎵"
-  },
-  {
-    "id": "355",
-    "name": "Cinema — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.276445,
-    "lng": -76.715197,
-    "tags": [
-      "entertainment",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "3389 Colonial St, Williamsburg, VA",
-    "emoji": "🎤"
-  },
-  {
-    "id": "356",
-    "name": "IMAX Theater — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.275132,
-    "lng": -76.725468,
-    "tags": [
-      "entertainment",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "3576 Main Ave, Williamsburg, VA",
-    "emoji": "🦅"
-  },
-  {
-    "id": "357",
-    "name": "Slide Complex — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.298972,
-    "lng": -76.706208,
-    "tags": [
-      "entertainment",
-      "family"
-    ],
-    "type": "business",
-    "address": "2674 Independence Way, Williamsburg, VA",
-    "emoji": "🥗"
-  },
-  {
-    "id": "358",
-    "name": "Kids Library — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.299198,
-    "lng": -76.715585,
-    "tags": [
-      "family",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "4932 Hampton Ave, Williamsburg, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "359",
-    "name": "Fairgrounds — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.299384,
-    "lng": -76.69271,
-    "tags": [
-      "family",
-      "food"
-    ],
-    "type": "business",
-    "address": "6163 Shore Ln, Williamsburg, VA",
-    "emoji": "🥞"
-  },
-  {
-    "id": "360",
-    "name": "Trail Running — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.241555,
-    "lng": -76.690708,
-    "tags": [
-      "sports",
-      "wellness"
-    ],
-    "type": "business",
-    "address": "7379 Ocean Dr, Williamsburg, VA",
-    "emoji": "🧘"
-  },
-  {
-    "id": "361",
-    "name": "Masters Swimming — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.296937,
-    "lng": -76.698189,
-    "tags": [
-      "sports",
-      "family"
-    ],
-    "type": "business",
-    "address": "6188 Independence St, Williamsburg, VA",
-    "emoji": "🎵"
-  },
-  {
-    "id": "362",
-    "name": "Wrestling Club — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.248608,
-    "lng": -76.687687,
-    "tags": [
-      "sports",
-      "wellness"
-    ],
-    "type": "business",
-    "address": "1126 Main Pkwy, Williamsburg, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "363",
-    "name": "Med Spa — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.2959,
-    "lng": -76.690587,
-    "tags": [
-      "wellness"
-    ],
-    "type": "business",
-    "address": "1171 Main Blvd, Williamsburg, VA",
-    "emoji": "☕"
-  },
-  {
-    "id": "364",
-    "name": "Infrared Sauna — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.242621,
-    "lng": -76.687164,
-    "tags": [
-      "wellness"
-    ],
-    "type": "business",
-    "address": "562 Main Way, Williamsburg, VA",
-    "emoji": "⛵"
-  },
-  {
-    "id": "365",
-    "name": "Craft Market — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.255861,
-    "lng": -76.719084,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "7466 Shore Blvd, Williamsburg, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "366",
-    "name": "Outdoor Gear — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.276356,
-    "lng": -76.737247,
-    "tags": [
-      "culture",
-      "family"
-    ],
-    "type": "business",
-    "address": "1536 Independence Blvd, Williamsburg, VA",
-    "emoji": "🎤"
-  },
-  {
-    "id": "367",
-    "name": "Rock Venue — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.258221,
-    "lng": -76.736315,
-    "tags": [
-      "music",
-      "food"
-    ],
-    "type": "business",
-    "address": "5827 Main Blvd, Williamsburg, VA",
-    "emoji": "🍺"
-  },
-  {
-    "id": "368",
-    "name": "Rap Battle Spot — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.298396,
-    "lng": -76.691299,
-    "tags": [
-      "music",
-      "culture"
-    ],
-    "type": "business",
-    "address": "3114 Hampton St, Williamsburg, VA",
-    "emoji": "🧘"
-  },
-  {
-    "id": "369",
-    "name": "Mimosa Bar — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.21408,
-    "lng": -76.504117,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "5609 Virginia Dr, Yorktown, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "370",
-    "name": "Fish Fry — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.222037,
-    "lng": -76.492102,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "6938 Independence St, Yorktown, VA",
-    "emoji": "☕"
-  },
-  {
-    "id": "371",
-    "name": "BBQ — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.239496,
-    "lng": -76.520843,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "3933 Victory Way, Yorktown, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "372",
-    "name": "Kebab House — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.244144,
-    "lng": -76.50365,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "177 Atlantic Way, Yorktown, VA",
-    "emoji": "🎊"
-  },
-  {
-    "id": "373",
-    "name": "Bistro — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.248707,
-    "lng": -76.504451,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "7742 Independence St, Yorktown, VA",
-    "emoji": "🛍️"
-  },
-  {
-    "id": "374",
-    "name": "Butcher Block — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.24387,
-    "lng": -76.516498,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "3481 Main Pkwy, Yorktown, VA",
-    "emoji": "🍺"
-  },
-  {
-    "id": "375",
-    "name": "Risotto Spot — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.216919,
-    "lng": -76.531079,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "1282 Virginia Ave, Yorktown, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "376",
-    "name": "Sky Bar — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.235484,
-    "lng": -76.53308,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "3889 Hampton Ln, Yorktown, VA",
-    "emoji": "🎵"
-  },
-  {
-    "id": "377",
-    "name": "Coastal Kitchen — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.245134,
-    "lng": -76.487355,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "6342 Atlantic Way, Yorktown, VA",
-    "emoji": "🛍️"
-  },
-  {
-    "id": "378",
-    "name": "Cafe — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.24477,
-    "lng": -76.492737,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "7581 Hampton Dr, Yorktown, VA",
-    "emoji": "🎊"
-  },
-  {
-    "id": "379",
-    "name": "Boba Tea — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.26102,
-    "lng": -76.519838,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "7619 Shore Pkwy, Yorktown, VA",
-    "emoji": "📍"
-  },
-  {
-    "id": "380",
-    "name": "Gluten Free Spot — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.246354,
-    "lng": -76.511477,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "4989 Main Pkwy, Yorktown, VA",
-    "emoji": "🍕"
-  },
-  {
-    "id": "381",
-    "name": "Espresso Stand — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.21709,
-    "lng": -76.486154,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "1732 Shore Dr, Yorktown, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "382",
-    "name": "Nitro Tap — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.246207,
-    "lng": -76.527965,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "1390 Colonial Ln, Yorktown, VA",
-    "emoji": "⛵"
-  },
-  {
-    "id": "383",
-    "name": "Laptop Friendly — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.241936,
-    "lng": -76.50877,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "6248 Virginia Ave, Yorktown, VA",
-    "emoji": "🥞"
-  },
-  {
-    "id": "384",
-    "name": "Sunset Bar — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.215584,
-    "lng": -76.528118,
-    "tags": [
-      "nightlife",
-      "music"
-    ],
-    "type": "business",
-    "address": "3142 Ocean St, Yorktown, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "385",
-    "name": "Rum Bar — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.228911,
-    "lng": -76.514357,
-    "tags": [
-      "nightlife",
-      "music"
-    ],
-    "type": "business",
-    "address": "6854 Chesapeake Blvd, Yorktown, VA",
-    "emoji": "🏖️"
-  },
-  {
-    "id": "386",
-    "name": "Mezcaleria — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.225136,
-    "lng": -76.496039,
-    "tags": [
-      "nightlife",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "478 Main Dr, Yorktown, VA",
-    "emoji": "🏛️"
-  },
-  {
-    "id": "387",
-    "name": "Blues Bar — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.256319,
-    "lng": -76.520147,
-    "tags": [
-      "nightlife",
-      "music"
-    ],
-    "type": "business",
-    "address": "138 Hampton Ave, Yorktown, VA",
-    "emoji": "🎢"
-  },
-  {
-    "id": "388",
-    "name": "Adventure Park — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.263656,
-    "lng": -76.524997,
-    "tags": [
-      "outdoors",
-      "family"
-    ],
-    "type": "business",
-    "address": "2328 Independence St, Yorktown, VA",
-    "emoji": "🏛️"
-  },
-  {
-    "id": "389",
-    "name": "Park — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.263074,
-    "lng": -76.485177,
-    "tags": [
-      "outdoors",
-      "nature"
-    ],
-    "type": "business",
-    "address": "5986 Hampton Pkwy, Yorktown, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "390",
-    "name": "Pavilion — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.215836,
-    "lng": -76.521372,
-    "tags": [
-      "outdoors",
-      "beach"
-    ],
-    "type": "business",
-    "address": "5472 Virginia Dr, Yorktown, VA",
-    "emoji": "🍺"
-  },
-  {
-    "id": "391",
-    "name": "BMX Track — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.250378,
-    "lng": -76.529529,
-    "tags": [
-      "outdoors",
-      "sports"
-    ],
-    "type": "business",
-    "address": "2284 Chesapeake St, Yorktown, VA",
-    "emoji": "☕"
-  },
-  {
-    "id": "392",
-    "name": "Fitness Trail — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.251807,
-    "lng": -76.503597,
-    "tags": [
-      "outdoors",
-      "family"
-    ],
-    "type": "business",
-    "address": "3475 Colonial Pkwy, Yorktown, VA",
-    "emoji": "🎤"
-  },
-  {
-    "id": "393",
-    "name": "Boardwalk Segment — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.255324,
-    "lng": -76.498245,
-    "tags": [
-      "beach"
-    ],
-    "type": "business",
-    "address": "7580 Virginia St, Yorktown, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "394",
-    "name": "Beach Access — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.239141,
-    "lng": -76.525618,
-    "tags": [
-      "beach"
-    ],
-    "type": "business",
-    "address": "4027 Victory Pkwy, Yorktown, VA",
-    "emoji": "☕"
-  },
-  {
-    "id": "395",
-    "name": "Concert Hall — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.260148,
-    "lng": -76.533516,
-    "tags": [
-      "culture",
-      "family"
-    ],
-    "type": "business",
-    "address": "401 Hampton Rd, Yorktown, VA",
-    "emoji": "🥞"
-  },
-  {
-    "id": "396",
-    "name": "Heritage Center — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.223279,
-    "lng": -76.520009,
-    "tags": [
-      "culture",
-      "music"
-    ],
-    "type": "business",
-    "address": "4030 Ocean St, Yorktown, VA",
-    "emoji": "🏖️"
-  },
-  {
-    "id": "397",
-    "name": "Installation Art — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.217311,
-    "lng": -76.528766,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "2991 Atlantic Way, Yorktown, VA",
-    "emoji": "🎊"
-  },
-  {
-    "id": "398",
-    "name": "Barracks — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.253344,
-    "lng": -76.503877,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "1382 Ocean Ln, Yorktown, VA",
-    "emoji": "🎊"
-  },
-  {
-    "id": "399",
-    "name": "Canal Lock — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.223492,
-    "lng": -76.531743,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "2009 Ocean Way, Yorktown, VA",
-    "emoji": "🏖️"
-  },
-  {
-    "id": "400",
-    "name": "Plaza — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.256052,
-    "lng": -76.51044,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "5186 Virginia Ln, Yorktown, VA",
-    "emoji": "☕"
-  },
-  {
-    "id": "401",
-    "name": "Cinema — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.232951,
-    "lng": -76.532597,
-    "tags": [
-      "entertainment",
-      "family"
-    ],
-    "type": "business",
-    "address": "4584 Victory Ave, Yorktown, VA",
-    "emoji": "🌳"
-  },
-  {
-    "id": "402",
-    "name": "Slide Complex — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.256298,
-    "lng": -76.519885,
-    "tags": [
-      "entertainment",
-      "family"
-    ],
-    "type": "business",
-    "address": "2245 Atlantic St, Yorktown, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "403",
-    "name": "Drive-In Theater — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.245225,
-    "lng": -76.49489,
-    "tags": [
-      "entertainment",
-      "family"
-    ],
-    "type": "business",
-    "address": "5232 Colonial Ave, Yorktown, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "404",
-    "name": "Day Camp — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.23219,
-    "lng": -76.530842,
-    "tags": [
-      "family",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "5152 Shore Rd, Yorktown, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "405",
-    "name": "Playground — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.25465,
-    "lng": -76.519571,
-    "tags": [
-      "family",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "6748 Independence Pkwy, Yorktown, VA",
-    "emoji": "🌳"
-  },
-  {
-    "id": "406",
-    "name": "Spin Studio — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.218682,
-    "lng": -76.533312,
-    "tags": [
-      "sports",
-      "wellness"
-    ],
-    "type": "business",
-    "address": "5795 Virginia Rd, Yorktown, VA",
-    "emoji": "🌮"
-  },
-  {
-    "id": "407",
-    "name": "Table Tennis Club — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.215197,
-    "lng": -76.502901,
-    "tags": [
-      "sports",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "6638 Victory Blvd, Yorktown, VA",
-    "emoji": "🍕"
-  },
-  {
-    "id": "408",
-    "name": "Swim Club — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.240062,
-    "lng": -76.496831,
-    "tags": [
-      "sports",
-      "family"
-    ],
-    "type": "business",
-    "address": "1019 Ocean Dr, Yorktown, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "409",
-    "name": "IV Drip Bar — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.256966,
-    "lng": -76.5211,
-    "tags": [
-      "wellness"
-    ],
-    "type": "business",
-    "address": "1949 Hampton Ln, Yorktown, VA",
-    "emoji": "🏖️"
-  },
-  {
-    "id": "410",
-    "name": "Sound Bath — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.25736,
-    "lng": -76.522151,
-    "tags": [
-      "wellness"
-    ],
-    "type": "business",
-    "address": "6125 Ocean Pkwy, Yorktown, VA",
-    "emoji": "🏕️"
-  },
-  {
-    "id": "411",
-    "name": "Boutique — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.259233,
-    "lng": -76.531108,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "6516 Colonial Pkwy, Yorktown, VA",
-    "emoji": "🏕️"
-  },
-  {
-    "id": "412",
-    "name": "Antique Mall — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.252576,
-    "lng": -76.500239,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "2164 Atlantic Rd, Yorktown, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "413",
-    "name": "Electronic Venue — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.236368,
-    "lng": -76.511335,
-    "tags": [
-      "music",
-      "culture"
-    ],
-    "type": "business",
-    "address": "4384 Hampton Way, Yorktown, VA",
-    "emoji": "🏖️"
-  },
-  {
-    "id": "414",
-    "name": "Rooftop Stage — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.25252,
-    "lng": -76.528679,
-    "tags": [
-      "music",
-      "food"
-    ],
-    "type": "business",
-    "address": "7002 Main Way, Yorktown, VA",
-    "emoji": "🏛️"
-  },
-  {
-    "id": "415",
-    "name": "BBQ — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.128718,
-    "lng": -76.395781,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "5514 Ocean St, Poquoson, VA",
-    "emoji": "🎵"
-  },
-  {
-    "id": "416",
-    "name": "Cobbler Spot — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.114734,
-    "lng": -76.370469,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "1951 Victory St, Poquoson, VA",
-    "emoji": "☕"
-  },
-  {
-    "id": "417",
-    "name": "Bayfront Eats — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.125546,
-    "lng": -76.394933,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "2812 Chesapeake Ave, Poquoson, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "418",
-    "name": "Lobster Roll — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.141742,
-    "lng": -76.400154,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "6312 Shore Way, Poquoson, VA",
-    "emoji": "🧘"
-  },
-  {
-    "id": "419",
-    "name": "Rotisserie — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.112168,
-    "lng": -76.402412,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "1766 Shore Way, Poquoson, VA",
-    "emoji": "🥞"
-  },
-  {
-    "id": "420",
-    "name": "Ramen House — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.114383,
-    "lng": -76.370865,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "7927 Victory Dr, Poquoson, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "421",
-    "name": "Po Boy Shop — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.126126,
-    "lng": -76.373818,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "5506 Hampton Ave, Poquoson, VA",
-    "emoji": "⛵"
-  },
-  {
-    "id": "422",
-    "name": "Oyster Bar — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.122663,
-    "lng": -76.366842,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "2943 Chesapeake Rd, Poquoson, VA",
-    "emoji": "🍕"
-  },
-  {
-    "id": "423",
-    "name": "Chophouse — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.104632,
-    "lng": -76.381649,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "2196 Hampton Blvd, Poquoson, VA",
-    "emoji": "🌮"
-  },
-  {
-    "id": "424",
-    "name": "Raw Bar — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.117745,
-    "lng": -76.375541,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "1699 Main Way, Poquoson, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "425",
-    "name": "Wine Bar — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.141608,
-    "lng": -76.375587,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "6230 Shore Rd, Poquoson, VA",
-    "emoji": "🥗"
-  },
-  {
-    "id": "426",
-    "name": "Dockside Grill — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.128324,
-    "lng": -76.373888,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "7173 Shore Ln, Poquoson, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "427",
-    "name": "Cupping Room — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.141699,
-    "lng": -76.397823,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "7263 Shore Ln, Poquoson, VA",
-    "emoji": "⛵"
-  },
-  {
-    "id": "428",
-    "name": "Coffee Roasters — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.114298,
-    "lng": -76.383756,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "6348 Hampton Way, Poquoson, VA",
-    "emoji": "🍕"
-  },
-  {
-    "id": "429",
-    "name": "Brew Lab — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.10278,
-    "lng": -76.368074,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "2367 Victory St, Poquoson, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "430",
-    "name": "Cocktail Bar — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.1117,
-    "lng": -76.400331,
-    "tags": [
-      "nightlife",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "6125 Main Blvd, Poquoson, VA",
-    "emoji": "🍺"
-  },
-  {
-    "id": "431",
-    "name": "Barrel House — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.125665,
-    "lng": -76.379729,
-    "tags": [
-      "nightlife",
-      "food"
-    ],
-    "type": "business",
-    "address": "4890 Main Ln, Poquoson, VA",
-    "emoji": "🎤"
-  },
-  {
-    "id": "432",
-    "name": "Dance Club — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.106972,
-    "lng": -76.385932,
-    "tags": [
-      "nightlife",
-      "music"
-    ],
-    "type": "business",
-    "address": "7021 Ocean Blvd, Poquoson, VA",
-    "emoji": "🌮"
-  },
-  {
-    "id": "433",
-    "name": "Dive Bar — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.113411,
-    "lng": -76.379507,
-    "tags": [
-      "nightlife",
-      "food"
-    ],
-    "type": "business",
-    "address": "6426 Atlantic Rd, Poquoson, VA",
-    "emoji": "🌮"
-  },
-  {
-    "id": "434",
-    "name": "Hiking Trail — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.130667,
-    "lng": -76.400378,
-    "tags": [
-      "outdoors",
-      "beach"
-    ],
-    "type": "business",
-    "address": "744 Atlantic Pkwy, Poquoson, VA",
-    "emoji": "🎤"
-  },
-  {
-    "id": "435",
-    "name": "Nature Preserve — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.13127,
-    "lng": -76.394946,
-    "tags": [
-      "outdoors",
-      "beach"
-    ],
-    "type": "business",
-    "address": "5256 Hampton Pkwy, Poquoson, VA",
-    "emoji": "🥞"
-  },
-  {
-    "id": "436",
-    "name": "Shelter — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.125592,
-    "lng": -76.393115,
-    "tags": [
-      "outdoors",
-      "beach"
-    ],
-    "type": "business",
-    "address": "2794 Atlantic Way, Poquoson, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "437",
-    "name": "Forest Trail — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.140329,
-    "lng": -76.386414,
-    "tags": [
-      "outdoors",
-      "sports"
-    ],
-    "type": "business",
-    "address": "2635 Atlantic Ave, Poquoson, VA",
-    "emoji": "🌳"
-  },
-  {
-    "id": "438",
-    "name": "Fishing Pier — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.122874,
-    "lng": -76.366343,
-    "tags": [
-      "outdoors",
-      "sports"
-    ],
-    "type": "business",
-    "address": "1117 Colonial Way, Poquoson, VA",
-    "emoji": "🏛️"
-  },
-  {
-    "id": "439",
-    "name": "Beach Access — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.127015,
-    "lng": -76.372431,
-    "tags": [
-      "beach"
-    ],
-    "type": "business",
-    "address": "5954 Chesapeake Pkwy, Poquoson, VA",
-    "emoji": "🎨"
-  },
-  {
-    "id": "440",
-    "name": "Swimming Beach — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.105653,
-    "lng": -76.399496,
-    "tags": [
-      "beach"
-    ],
-    "type": "business",
-    "address": "1892 Atlantic Ln, Poquoson, VA",
-    "emoji": "🛍️"
-  },
-  {
-    "id": "441",
-    "name": "Photography Studio — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.110748,
-    "lng": -76.392758,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "1205 Colonial Dr, Poquoson, VA",
-    "emoji": "🏕️"
-  },
-  {
-    "id": "442",
-    "name": "Museum — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.134589,
-    "lng": -76.363135,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "3503 Ocean Blvd, Poquoson, VA",
-    "emoji": "🎤"
-  },
-  {
-    "id": "443",
-    "name": "Discovery Center — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.135426,
-    "lng": -76.396468,
-    "tags": [
-      "culture",
-      "music"
-    ],
-    "type": "business",
-    "address": "3165 Independence Ave, Poquoson, VA",
-    "emoji": "🏛️"
-  },
-  {
-    "id": "444",
-    "name": "Town Square — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.133233,
-    "lng": -76.39906,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "2679 Victory Blvd, Poquoson, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "445",
-    "name": "National Cemetery — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.134272,
-    "lng": -76.401103,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "1627 Independence St, Poquoson, VA",
-    "emoji": "👪"
-  },
-  {
-    "id": "446",
-    "name": "Courthouse — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.112094,
-    "lng": -76.389699,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "2564 Virginia St, Poquoson, VA",
-    "emoji": "☕"
-  },
-  {
-    "id": "447",
-    "name": "Water Park — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.123156,
-    "lng": -76.363126,
-    "tags": [
-      "entertainment",
-      "family"
-    ],
-    "type": "business",
-    "address": "5349 Ocean Rd, Poquoson, VA",
-    "emoji": "🍕"
-  },
-  {
-    "id": "448",
-    "name": "Glow Party — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.122942,
-    "lng": -76.384955,
-    "tags": [
-      "entertainment",
-      "family"
-    ],
-    "type": "business",
-    "address": "7629 Independence St, Poquoson, VA",
-    "emoji": "🛍️"
-  },
-  {
-    "id": "449",
-    "name": "Trivia Night — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.108049,
-    "lng": -76.377458,
-    "tags": [
-      "entertainment",
-      "family"
-    ],
-    "type": "business",
-    "address": "2411 Shore Ln, Poquoson, VA",
-    "emoji": "🏖️"
-  },
-  {
-    "id": "450",
-    "name": "Robotics Lab — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.139929,
-    "lng": -76.396898,
-    "tags": [
-      "family",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "1775 Atlantic Way, Poquoson, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "451",
-    "name": "Party Room — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.12277,
-    "lng": -76.40153,
-    "tags": [
-      "family",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "6817 Hampton Pkwy, Poquoson, VA",
-    "emoji": "👪"
-  },
-  {
-    "id": "452",
-    "name": "Triathlon Club — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.139908,
-    "lng": -76.373287,
-    "tags": [
-      "sports",
-      "family"
-    ],
-    "type": "business",
-    "address": "1157 Colonial Way, Poquoson, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "453",
-    "name": "Wrestling Club — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.106249,
-    "lng": -76.377839,
-    "tags": [
-      "sports",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "6138 Atlantic Way, Poquoson, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "454",
-    "name": "Color Run Spot — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.102443,
-    "lng": -76.371885,
-    "tags": [
-      "sports",
-      "family"
-    ],
-    "type": "business",
-    "address": "5294 Shore Pkwy, Poquoson, VA",
-    "emoji": "🥞"
-  },
-  {
-    "id": "455",
-    "name": "Holistic Health — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.104904,
-    "lng": -76.378986,
-    "tags": [
-      "wellness"
-    ],
-    "type": "business",
-    "address": "345 Main St, Poquoson, VA",
-    "emoji": "🏛️"
-  },
-  {
-    "id": "456",
-    "name": "Reiki Studio — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.115576,
-    "lng": -76.377061,
-    "tags": [
-      "wellness"
-    ],
-    "type": "business",
-    "address": "2939 Main Ln, Poquoson, VA",
-    "emoji": "🌳"
-  },
-  {
-    "id": "457",
-    "name": "Outlet Mall — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.134661,
-    "lng": -76.393847,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "6766 Hampton Ave, Poquoson, VA",
-    "emoji": "🥗"
-  },
-  {
-    "id": "458",
-    "name": "Shopping Center — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.120605,
-    "lng": -76.382535,
-    "tags": [
-      "culture",
-      "music"
-    ],
-    "type": "business",
-    "address": "5687 Shore Dr, Poquoson, VA",
-    "emoji": "🎤"
-  },
-  {
-    "id": "459",
-    "name": "Marching Band Field — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.119221,
-    "lng": -76.382171,
-    "tags": [
-      "music",
-      "food"
-    ],
-    "type": "business",
-    "address": "2675 Colonial Ave, Poquoson, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "460",
-    "name": "Rock Venue — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.102156,
-    "lng": -76.401067,
-    "tags": [
-      "music",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "7211 Ocean Ave, Poquoson, VA",
-    "emoji": "⛵"
-  },
-  {
-    "id": "461",
-    "name": "Harbor View Restaurant — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.978889,
-    "lng": -76.644787,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "5656 Main Blvd, Smithfield, VA",
-    "emoji": "🎢"
-  },
-  {
-    "id": "462",
-    "name": "Bakery — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.962777,
-    "lng": -76.636022,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "1550 Atlantic Ave, Smithfield, VA",
-    "emoji": "🥐"
-  },
-  {
-    "id": "463",
-    "name": "Donut Shop — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.973841,
-    "lng": -76.643768,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "140 Main Dr, Smithfield, VA",
-    "emoji": "🥐"
-  },
-  {
-    "id": "464",
-    "name": "Patisserie — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.973738,
-    "lng": -76.61923,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "6305 Victory Ln, Smithfield, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "465",
-    "name": "BBQ — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.971957,
-    "lng": -76.633214,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "6193 Atlantic Blvd, Smithfield, VA",
-    "emoji": "🎤"
-  },
-  {
-    "id": "466",
-    "name": "Bistro — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.985334,
-    "lng": -76.617296,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "1085 Main Blvd, Smithfield, VA",
-    "emoji": "🎵"
-  },
-  {
-    "id": "467",
-    "name": "Kitchen — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.963331,
-    "lng": -76.634591,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "2001 Main Way, Smithfield, VA",
-    "emoji": "🎤"
-  },
-  {
-    "id": "468",
-    "name": "Shaved Ice — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.969505,
-    "lng": -76.613975,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "7986 Virginia Way, Smithfield, VA",
-    "emoji": "🏖️"
-  },
-  {
-    "id": "469",
-    "name": "Chef Table — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.978949,
-    "lng": -76.61269,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "6135 Ocean Rd, Smithfield, VA",
-    "emoji": "🎵"
-  },
-  {
-    "id": "470",
-    "name": "Steakhouse — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.979554,
-    "lng": -76.612075,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "2688 Shore Ln, Smithfield, VA",
-    "emoji": "📍"
-  },
-  {
-    "id": "471",
-    "name": "Slushie Stand — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.967116,
-    "lng": -76.638012,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "2447 Ocean Rd, Smithfield, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "472",
-    "name": "Taco Stand — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.995844,
-    "lng": -76.64953,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "4864 Ocean Dr, Smithfield, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "473",
-    "name": "Cold Brew Lab — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.970768,
-    "lng": -76.640122,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "2869 Shore Way, Smithfield, VA",
-    "emoji": "⚽"
-  },
-  {
-    "id": "474",
-    "name": "Remote Work Cafe — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.986743,
-    "lng": -76.634948,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "3341 Independence Way, Smithfield, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "475",
-    "name": "Siphon Bar — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.979075,
-    "lng": -76.631039,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "3060 Independence Ln, Smithfield, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "476",
-    "name": "Neighborhood Bar — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 37.002226,
-    "lng": -76.639321,
-    "tags": [
-      "nightlife",
-      "food"
-    ],
-    "type": "business",
-    "address": "2139 Victory Ln, Smithfield, VA",
-    "emoji": "🏕️"
-  },
-  {
-    "id": "477",
-    "name": "Biergarten — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.994297,
-    "lng": -76.622645,
-    "tags": [
-      "nightlife",
-      "music"
-    ],
-    "type": "business",
-    "address": "4561 Atlantic Dr, Smithfield, VA",
-    "emoji": "🍕"
-  },
-  {
-    "id": "478",
-    "name": "DJ Lounge — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.999119,
-    "lng": -76.634679,
-    "tags": [
-      "nightlife",
-      "music"
-    ],
-    "type": "business",
-    "address": "2782 Main Blvd, Smithfield, VA",
-    "emoji": "🦅"
-  },
-  {
-    "id": "479",
-    "name": "Dock Bar — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.990953,
-    "lng": -76.622912,
-    "tags": [
-      "nightlife",
-      "food"
-    ],
-    "type": "business",
-    "address": "7086 Virginia Ave, Smithfield, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "480",
-    "name": "Wetlands Trail — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.977618,
-    "lng": -76.645159,
-    "tags": [
-      "outdoors",
-      "nature"
-    ],
-    "type": "business",
-    "address": "5540 Hampton Dr, Smithfield, VA",
-    "emoji": "🎨"
-  },
-  {
-    "id": "481",
-    "name": "Marina — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.986192,
-    "lng": -76.612654,
-    "tags": [
-      "outdoors",
-      "sports"
-    ],
-    "type": "business",
-    "address": "4306 Independence Dr, Smithfield, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "482",
-    "name": "Rock Climbing Wall — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.963336,
-    "lng": -76.638375,
-    "tags": [
-      "outdoors",
-      "sports"
-    ],
-    "type": "business",
-    "address": "7092 Independence St, Smithfield, VA",
-    "emoji": "🥞"
-  },
-  {
-    "id": "483",
-    "name": "Sports Complex — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.973288,
-    "lng": -76.634251,
-    "tags": [
-      "outdoors",
-      "beach"
-    ],
-    "type": "business",
-    "address": "3793 Victory Rd, Smithfield, VA",
-    "emoji": "🎬"
-  },
-  {
-    "id": "484",
-    "name": "Tree Climbing — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.970394,
-    "lng": -76.624266,
-    "tags": [
-      "outdoors",
-      "nature"
-    ],
-    "type": "business",
-    "address": "6242 Atlantic Ln, Smithfield, VA",
-    "emoji": "🏕️"
-  },
-  {
-    "id": "485",
-    "name": "River Beach — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.995229,
-    "lng": -76.628296,
-    "tags": [
-      "beach"
-    ],
-    "type": "business",
-    "address": "931 Ocean Pkwy, Smithfield, VA",
-    "emoji": "🧘"
-  },
-  {
-    "id": "486",
-    "name": "Beach Access — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.972142,
-    "lng": -76.634659,
-    "tags": [
-      "beach"
-    ],
-    "type": "business",
-    "address": "5481 Virginia Rd, Smithfield, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "487",
-    "name": "Metalworking — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.967524,
-    "lng": -76.644001,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "2477 Hampton Way, Smithfield, VA",
-    "emoji": "📍"
-  },
-  {
-    "id": "488",
-    "name": "Concert Hall — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.972797,
-    "lng": -76.633018,
-    "tags": [
-      "culture",
-      "family"
-    ],
-    "type": "business",
-    "address": "2331 Independence Way, Smithfield, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "489",
-    "name": "Science Center — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.991264,
-    "lng": -76.642643,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "1349 Colonial Ln, Smithfield, VA",
-    "emoji": "🎬"
-  },
-  {
-    "id": "490",
-    "name": "National Cemetery — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.989969,
-    "lng": -76.623395,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "189 Atlantic Ave, Smithfield, VA",
-    "emoji": "🥗"
-  },
-  {
-    "id": "491",
-    "name": "Church — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.977542,
-    "lng": -76.632993,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "7915 Independence Rd, Smithfield, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "492",
-    "name": "Old Jail — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.974173,
-    "lng": -76.614652,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "4594 Ocean Ave, Smithfield, VA",
-    "emoji": "👪"
-  },
-  {
-    "id": "493",
-    "name": "Racing Sim — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.975705,
-    "lng": -76.649488,
-    "tags": [
-      "entertainment",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "5835 Victory Ln, Smithfield, VA",
-    "emoji": "🎬"
-  },
-  {
-    "id": "494",
-    "name": "Trampoline Park — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.997294,
-    "lng": -76.628516,
-    "tags": [
-      "entertainment",
-      "family"
-    ],
-    "type": "business",
-    "address": "5751 Main Pkwy, Smithfield, VA",
-    "emoji": "🧘"
-  },
-  {
-    "id": "495",
-    "name": "Escape Room — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.978045,
-    "lng": -76.629211,
-    "tags": [
-      "entertainment",
-      "family"
-    ],
-    "type": "business",
-    "address": "1940 Ocean Blvd, Smithfield, VA",
-    "emoji": "🌳"
-  },
-  {
-    "id": "496",
-    "name": "Scout Camp — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.983272,
-    "lng": -76.63044,
-    "tags": [
-      "family",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "7372 Hampton Rd, Smithfield, VA",
-    "emoji": "🥞"
-  },
-  {
-    "id": "497",
-    "name": "Splash Park — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.991102,
-    "lng": -76.613465,
-    "tags": [
-      "family",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "3608 Victory Pkwy, Smithfield, VA",
-    "emoji": "🎨"
-  },
-  {
-    "id": "498",
-    "name": "Gym — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.987766,
-    "lng": -76.611975,
-    "tags": [
-      "sports",
-      "family"
-    ],
-    "type": "business",
-    "address": "1387 Shore Pkwy, Smithfield, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "499",
-    "name": "Tough Mudder Prep — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.987645,
-    "lng": -76.632961,
-    "tags": [
-      "sports",
-      "family"
-    ],
-    "type": "business",
-    "address": "6576 Virginia Dr, Smithfield, VA",
-    "emoji": "🎬"
-  },
-  {
-    "id": "500",
-    "name": "Dance Fitness — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.985046,
-    "lng": -76.637803,
-    "tags": [
-      "sports",
-      "wellness"
-    ],
-    "type": "business",
-    "address": "3085 Chesapeake Way, Smithfield, VA",
-    "emoji": "👪"
-  },
-  {
-    "id": "501",
-    "name": "Crystal Shop — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.994621,
-    "lng": -76.63894,
-    "tags": [
-      "wellness"
-    ],
-    "type": "business",
-    "address": "454 Colonial St, Smithfield, VA",
-    "emoji": "🏕️"
-  },
-  {
-    "id": "502",
-    "name": "Hammam — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.992605,
-    "lng": -76.629948,
-    "tags": [
-      "wellness"
-    ],
-    "type": "business",
-    "address": "851 Hampton Dr, Smithfield, VA",
-    "emoji": "🎤"
-  },
-  {
-    "id": "503",
-    "name": "Mall — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.978105,
-    "lng": -76.634024,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "4499 Shore St, Smithfield, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "504",
-    "name": "Night Market — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.973104,
-    "lng": -76.637391,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "7738 Independence St, Smithfield, VA",
-    "emoji": "🍺"
-  },
-  {
-    "id": "505",
-    "name": "Jazz Lounge — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.965226,
-    "lng": -76.635727,
-    "tags": [
-      "music",
-      "culture"
-    ],
-    "type": "business",
-    "address": "2982 Colonial Way, Smithfield, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "506",
-    "name": "Electronic Venue — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.974688,
-    "lng": -76.616834,
-    "tags": [
-      "music",
-      "food"
-    ],
-    "type": "business",
-    "address": "4307 Hampton Rd, Smithfield, VA",
-    "emoji": "🥗"
-  },
-  {
-    "id": "507",
-    "name": "Bayfront Eats — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.91252,
-    "lng": -76.718669,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "4592 Virginia Dr, Isle of Wight, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "508",
-    "name": "Rooftop Lounge — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.920153,
-    "lng": -76.705657,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "5027 Shore Ave, Isle of Wight, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "509",
-    "name": "Pop-Up Kitchen — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.905287,
-    "lng": -76.713993,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "5013 Colonial Pkwy, Isle of Wight, VA",
-    "emoji": "🎊"
-  },
-  {
-    "id": "510",
-    "name": "Shaved Ice — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.926551,
-    "lng": -76.732954,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "1770 Main Way, Isle of Wight, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "511",
-    "name": "Local Hangout — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.902049,
-    "lng": -76.746933,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "3382 Independence Rd, Isle of Wight, VA",
-    "emoji": "⛵"
-  },
-  {
-    "id": "512",
-    "name": "Chef Table — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.897553,
-    "lng": -76.712425,
-    "tags": [
-      "food",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "5711 Atlantic Ln, Isle of Wight, VA",
-    "emoji": "🌮"
-  },
-  {
-    "id": "513",
-    "name": "Seafood Market — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.891197,
-    "lng": -76.733313,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "6590 Virginia Pkwy, Isle of Wight, VA",
-    "emoji": "🥐"
-  },
-  {
-    "id": "514",
-    "name": "Corner Store — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.878097,
-    "lng": -76.717405,
-    "tags": [
-      "food",
-      "family"
-    ],
-    "type": "business",
-    "address": "3507 Ocean Rd, Isle of Wight, VA",
-    "emoji": "🎵"
-  },
-  {
-    "id": "515",
-    "name": "Patio Dining — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.908383,
-    "lng": -76.715297,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "4404 Atlantic St, Isle of Wight, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "516",
-    "name": "Charcuterie Board — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.889252,
-    "lng": -76.738069,
-    "tags": [
-      "food",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "887 Atlantic Dr, Isle of Wight, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "517",
-    "name": "Harbor View Restaurant — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.908739,
-    "lng": -76.713808,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "7429 Virginia Ln, Isle of Wight, VA",
-    "emoji": "🧘"
-  },
-  {
-    "id": "518",
-    "name": "Yacht Club Dining — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.929565,
-    "lng": -76.698648,
-    "tags": [
-      "food",
-      "coffee"
-    ],
-    "type": "business",
-    "address": "5768 Independence Ln, Isle of Wight, VA",
-    "emoji": "🦅"
-  },
-  {
-    "id": "519",
-    "name": "Pour Over Station — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.910972,
-    "lng": -76.735876,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "1789 Main Rd, Isle of Wight, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "520",
-    "name": "Cold Brew Lab — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.935123,
-    "lng": -76.70434,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "4671 Ocean Ave, Isle of Wight, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "521",
-    "name": "Music Cafe — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.899526,
-    "lng": -76.752175,
-    "tags": [
-      "coffee"
-    ],
-    "type": "business",
-    "address": "7180 Hampton Pkwy, Isle of Wight, VA",
-    "emoji": "🛍️"
-  },
-  {
-    "id": "522",
-    "name": "Tiki Bar — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.900147,
-    "lng": -76.747554,
-    "tags": [
-      "nightlife",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "7170 Ocean St, Isle of Wight, VA",
-    "emoji": "🏕️"
-  },
-  {
-    "id": "523",
-    "name": "Electronic Club — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.894618,
-    "lng": -76.700835,
-    "tags": [
-      "nightlife",
-      "food"
-    ],
-    "type": "business",
-    "address": "4216 Hampton Way, Isle of Wight, VA",
-    "emoji": "🏕️"
-  },
-  {
-    "id": "524",
-    "name": "Boardwalk Bar — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.894698,
-    "lng": -76.730784,
-    "tags": [
-      "nightlife",
-      "music"
-    ],
-    "type": "business",
-    "address": "3445 Chesapeake Ave, Isle of Wight, VA",
-    "emoji": "🏖️"
-  },
-  {
-    "id": "525",
-    "name": "Dive Bar — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.92415,
-    "lng": -76.706737,
-    "tags": [
-      "nightlife",
-      "entertainment"
-    ],
-    "type": "business",
-    "address": "948 Colonial Pkwy, Isle of Wight, VA",
-    "emoji": "🥗"
-  },
-  {
-    "id": "526",
-    "name": "Wetlands Trail — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.920287,
-    "lng": -76.714764,
-    "tags": [
-      "outdoors",
-      "family"
-    ],
-    "type": "business",
-    "address": "697 Independence Pkwy, Isle of Wight, VA",
-    "emoji": "🎊"
-  },
-  {
-    "id": "527",
-    "name": "Nature Trail — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.882929,
-    "lng": -76.745363,
-    "tags": [
-      "outdoors",
-      "beach"
-    ],
-    "type": "business",
-    "address": "5274 Victory St, Isle of Wight, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "528",
-    "name": "Picnic Area — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.937288,
-    "lng": -76.727181,
-    "tags": [
-      "outdoors",
-      "nature"
-    ],
-    "type": "business",
-    "address": "7994 Atlantic Pkwy, Isle of Wight, VA",
-    "emoji": "⚽"
-  },
-  {
-    "id": "529",
-    "name": "Arboretum — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.912428,
-    "lng": -76.717022,
-    "tags": [
-      "outdoors",
-      "nature"
-    ],
-    "type": "business",
-    "address": "4648 Shore Way, Isle of Wight, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "530",
-    "name": "Splash Pad — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.905681,
-    "lng": -76.744197,
-    "tags": [
-      "outdoors",
-      "sports"
-    ],
-    "type": "business",
-    "address": "3302 Atlantic Rd, Isle of Wight, VA",
-    "emoji": "⚽"
-  },
-  {
-    "id": "531",
-    "name": "Breakwater Path — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.899077,
-    "lng": -76.739957,
-    "tags": [
-      "beach"
-    ],
-    "type": "business",
-    "address": "4537 Colonial St, Isle of Wight, VA",
-    "emoji": "🏕️"
-  },
-  {
-    "id": "532",
-    "name": "Harbor Beach — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.929598,
-    "lng": -76.714965,
-    "tags": [
-      "beach"
-    ],
-    "type": "business",
-    "address": "4712 Victory Pkwy, Isle of Wight, VA",
-    "emoji": "🌳"
-  },
-  {
-    "id": "533",
-    "name": "Discovery Center — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.935655,
-    "lng": -76.74942,
-    "tags": [
-      "culture",
-      "music"
-    ],
-    "type": "business",
-    "address": "4303 Independence Pkwy, Isle of Wight, VA",
-    "emoji": "🥗"
-  },
-  {
-    "id": "534",
-    "name": "Film Lab — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.886444,
-    "lng": -76.730244,
-    "tags": [
-      "culture",
-      "music"
-    ],
-    "type": "business",
-    "address": "6096 Ocean Rd, Isle of Wight, VA",
-    "emoji": "🧘"
-  },
-  {
-    "id": "535",
-    "name": "Weaving Studio — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.933945,
-    "lng": -76.728502,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "3823 Victory Way, Isle of Wight, VA",
-    "emoji": "⚽"
-  },
-  {
-    "id": "536",
-    "name": "Keepers House — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.923849,
-    "lng": -76.69992,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "6623 Virginia Pkwy, Isle of Wight, VA",
-    "emoji": "🍕"
-  },
-  {
-    "id": "537",
-    "name": "National Cemetery — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.937448,
-    "lng": -76.746167,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "1367 Victory Way, Isle of Wight, VA",
-    "emoji": "🦅"
-  },
-  {
-    "id": "538",
-    "name": "Manor House — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.888069,
-    "lng": -76.734223,
-    "tags": [
-      "history"
-    ],
-    "type": "business",
-    "address": "1131 Independence Ave, Isle of Wight, VA",
-    "emoji": "🌳"
-  },
-  {
-    "id": "539",
-    "name": "Game Cafe — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.883219,
-    "lng": -76.736114,
-    "tags": [
-      "entertainment",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "651 Colonial Pkwy, Isle of Wight, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "540",
-    "name": "Lazy River — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.879314,
-    "lng": -76.714766,
-    "tags": [
-      "entertainment",
-      "family"
-    ],
-    "type": "business",
-    "address": "1367 Shore Dr, Isle of Wight, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "541",
-    "name": "Poetry Slam — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.923545,
-    "lng": -76.701225,
-    "tags": [
-      "entertainment",
-      "family"
-    ],
-    "type": "business",
-    "address": "1398 Virginia Pkwy, Isle of Wight, VA",
-    "emoji": "🎬"
-  },
-  {
-    "id": "542",
-    "name": "Parent Resource — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.903101,
-    "lng": -76.734267,
-    "tags": [
-      "family",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "7634 Main Ave, Isle of Wight, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "543",
-    "name": "Wading Pool — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.89742,
-    "lng": -76.713098,
-    "tags": [
-      "family",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "4108 Virginia St, Isle of Wight, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "544",
-    "name": "Dance Fitness — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.898214,
-    "lng": -76.698926,
-    "tags": [
-      "sports",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "6501 Hampton Rd, Isle of Wight, VA",
-    "emoji": "⚽"
-  },
-  {
-    "id": "545",
-    "name": "Figure Skating — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.928749,
-    "lng": -76.717836,
-    "tags": [
-      "sports",
-      "wellness"
-    ],
-    "type": "business",
-    "address": "710 Atlantic Blvd, Isle of Wight, VA",
-    "emoji": "🍺"
-  },
-  {
-    "id": "546",
-    "name": "Curling Club — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.927943,
-    "lng": -76.718646,
-    "tags": [
-      "sports",
-      "outdoors"
-    ],
-    "type": "business",
-    "address": "3018 Atlantic Rd, Isle of Wight, VA",
-    "emoji": "⛵"
-  },
-  {
-    "id": "547",
-    "name": "Massage Studio — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.936752,
-    "lng": -76.729823,
-    "tags": [
-      "wellness"
-    ],
-    "type": "business",
-    "address": "1894 Main St, Isle of Wight, VA",
-    "emoji": "🧘"
-  },
-  {
-    "id": "548",
-    "name": "Sound Bath — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.893729,
-    "lng": -76.695082,
-    "tags": [
-      "wellness"
-    ],
-    "type": "business",
-    "address": "1670 Colonial Way, Isle of Wight, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "549",
-    "name": "Boutique — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.936414,
-    "lng": -76.713311,
-    "tags": [
-      "culture",
-      "history"
-    ],
-    "type": "business",
-    "address": "5133 Main Ln, Isle of Wight, VA",
-    "emoji": "🥐"
-  },
-  {
-    "id": "550",
-    "name": "Night Market — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.901955,
-    "lng": -76.700211,
-    "tags": [
-      "culture",
-      "family"
-    ],
-    "type": "business",
-    "address": "6332 Virginia Blvd, Isle of Wight, VA",
-    "emoji": "🌅"
-  },
-  {
-    "id": "551",
-    "name": "Music Hall — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.906596,
-    "lng": -76.694365,
-    "tags": [
-      "music",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "7338 Shore Ln, Isle of Wight, VA",
-    "emoji": "⚽"
-  },
-  {
-    "id": "552",
-    "name": "Concert Venue — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.937139,
-    "lng": -76.720379,
-    "tags": [
-      "music",
-      "nightlife"
-    ],
-    "type": "business",
-    "address": "1378 Ocean Pkwy, Isle of Wight, VA",
-    "emoji": "🏛️"
-  },
-  {
-    "id": "553",
-    "name": "Cinco de Mayo Party — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.874738,
-    "lng": -76.279087,
-    "tags": [
-      "festival",
-      "food"
-    ],
-    "type": "event",
-    "address": "6513 Virginia Dr, Norfolk, VA",
-    "emoji": "🎬"
-  },
-  {
-    "id": "554",
-    "name": "St Patricks Day Parade — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.837775,
-    "lng": -76.316762,
-    "tags": [
-      "festival",
-      "culture"
-    ],
-    "type": "event",
-    "address": "3085 Atlantic Pkwy, Norfolk, VA",
-    "emoji": "📍"
-  },
-  {
-    "id": "555",
-    "name": "Clam Bake — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.873416,
-    "lng": -76.29526,
-    "tags": [
-      "festival",
-      "food"
-    ],
-    "type": "event",
-    "address": "1731 Chesapeake Ln, Norfolk, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "556",
-    "name": "Oktoberfest — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.853188,
-    "lng": -76.303727,
-    "tags": [
-      "festival",
-      "nightlife"
-    ],
-    "type": "event",
-    "address": "2568 Atlantic Pkwy, Norfolk, VA",
-    "emoji": "🥗"
-  },
-  {
-    "id": "557",
-    "name": "Cocktail Week — Norfolk",
-    "description": "A local favorite in Norfolk worth checking out.",
-    "lat": 36.888501,
-    "lng": -76.289199,
-    "tags": [
-      "festival",
-      "outdoors"
-    ],
-    "type": "event",
-    "address": "1561 Virginia Ave, Norfolk, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "558",
-    "name": "St Patricks Day Parade — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.859097,
-    "lng": -76.005664,
-    "tags": [
-      "festival",
-      "beach"
-    ],
-    "type": "event",
-    "address": "4694 Independence Ave, Virginia Beach, VA",
-    "emoji": "⚽"
-  },
-  {
-    "id": "559",
-    "name": "Spring Festival — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.860698,
-    "lng": -75.956258,
-    "tags": [
-      "festival",
-      "family"
-    ],
-    "type": "event",
-    "address": "6361 Shore Ave, Virginia Beach, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "560",
-    "name": "Earth Day Cleanup — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.812464,
-    "lng": -75.936385,
-    "tags": [
-      "festival",
-      "nightlife"
-    ],
-    "type": "event",
-    "address": "4222 Ocean Way, Virginia Beach, VA",
-    "emoji": "🎬"
-  },
-  {
-    "id": "561",
-    "name": "Labor Day BBQ — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.892644,
-    "lng": -75.989879,
-    "tags": [
-      "festival",
-      "nightlife"
-    ],
-    "type": "event",
-    "address": "7706 Chesapeake Dr, Virginia Beach, VA",
-    "emoji": "🎵"
-  },
-  {
-    "id": "562",
-    "name": "Pig Pickin — Virginia Beach",
-    "description": "A local favorite in Virginia Beach worth checking out.",
-    "lat": 36.910226,
-    "lng": -75.973561,
-    "tags": [
-      "festival",
-      "beach"
-    ],
-    "type": "event",
-    "address": "4344 Hampton Pkwy, Virginia Beach, VA",
-    "emoji": "🏖️"
-  },
-  {
-    "id": "563",
-    "name": "Cinco de Mayo Party — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.717462,
-    "lng": -76.199651,
-    "tags": [
-      "festival",
-      "music"
-    ],
-    "type": "event",
-    "address": "7013 Ocean Blvd, Chesapeake, VA",
-    "emoji": "🎨"
-  },
-  {
-    "id": "564",
-    "name": "Burger Battle — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.668009,
-    "lng": -76.259963,
-    "tags": [
-      "festival",
-      "nightlife"
-    ],
-    "type": "event",
-    "address": "5112 Virginia Ave, Chesapeake, VA",
-    "emoji": "🍣"
-  },
-  {
-    "id": "565",
-    "name": "Cocktail Week — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.706955,
-    "lng": -76.21154,
-    "tags": [
-      "festival",
-      "beach"
-    ],
-    "type": "event",
-    "address": "4921 Colonial St, Chesapeake, VA",
-    "emoji": "🦅"
-  },
-  {
-    "id": "566",
-    "name": "Oktoberfest — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.748688,
-    "lng": -76.226208,
-    "tags": [
-      "festival",
-      "family"
-    ],
-    "type": "event",
-    "address": "2870 Virginia Dr, Chesapeake, VA",
-    "emoji": "🍺"
-  },
-  {
-    "id": "567",
-    "name": "Blues Festival — Chesapeake",
-    "description": "A local favorite in Chesapeake worth checking out.",
-    "lat": 36.735106,
-    "lng": -76.216681,
-    "tags": [
-      "festival",
-      "outdoors"
-    ],
-    "type": "event",
-    "address": "5439 Independence Ln, Chesapeake, VA",
-    "emoji": "🏖️"
-  },
-  {
-    "id": "568",
-    "name": "Farm to Table Dinner — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.067168,
-    "lng": -76.337916,
-    "tags": [
-      "festival",
-      "family"
-    ],
-    "type": "event",
-    "address": "5436 Atlantic Ave, Hampton, VA",
-    "emoji": "🍺"
-  },
-  {
-    "id": "569",
-    "name": "Summer Solstice Party — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.046074,
-    "lng": -76.309181,
-    "tags": [
-      "festival",
-      "family"
-    ],
-    "type": "event",
-    "address": "5348 Atlantic Way, Hampton, VA",
-    "emoji": "🌮"
-  },
-  {
-    "id": "570",
-    "name": "Jazz Weekend — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.042585,
-    "lng": -76.321518,
-    "tags": [
-      "festival",
-      "beach"
-    ],
-    "type": "event",
-    "address": "5261 Virginia Pkwy, Hampton, VA",
-    "emoji": "🎤"
-  },
-  {
-    "id": "571",
-    "name": "Spring Festival — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.056076,
-    "lng": -76.323787,
-    "tags": [
-      "festival",
-      "family"
-    ],
-    "type": "event",
-    "address": "6258 Hampton Pkwy, Hampton, VA",
-    "emoji": "👪"
-  },
-  {
-    "id": "572",
-    "name": "Lowcountry Boil — Hampton",
-    "description": "A local favorite in Hampton worth checking out.",
-    "lat": 37.011957,
-    "lng": -76.375966,
-    "tags": [
-      "festival",
-      "culture"
-    ],
-    "type": "event",
-    "address": "6647 Virginia Rd, Hampton, VA",
-    "emoji": "🍺"
-  },
-  {
-    "id": "573",
-    "name": "Food Truck Rally — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.034565,
-    "lng": -76.437171,
-    "tags": [
-      "festival",
-      "family"
-    ],
-    "type": "event",
-    "address": "1422 Shore Ave, Newport News, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "574",
-    "name": "Crab Feast — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.070605,
-    "lng": -76.456604,
-    "tags": [
-      "festival",
-      "food"
-    ],
-    "type": "event",
-    "address": "5422 Colonial Pkwy, Newport News, VA",
-    "emoji": "🥐"
-  },
-  {
-    "id": "575",
-    "name": "Pop-Up Dinner — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.03602,
-    "lng": -76.494346,
-    "tags": [
-      "festival",
-      "nightlife"
-    ],
-    "type": "event",
-    "address": "3353 Hampton Pkwy, Newport News, VA",
-    "emoji": "🎬"
-  },
-  {
-    "id": "576",
-    "name": "Lunar New Year — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.070358,
-    "lng": -76.504976,
-    "tags": [
-      "festival",
-      "food"
-    ],
-    "type": "event",
-    "address": "3346 Hampton Ln, Newport News, VA",
-    "emoji": "🎨"
-  },
-  {
-    "id": "577",
-    "name": "Pizza Throwdown — Newport News",
-    "description": "A local favorite in Newport News worth checking out.",
-    "lat": 37.069304,
-    "lng": -76.503179,
-    "tags": [
-      "festival",
-      "food"
-    ],
-    "type": "event",
-    "address": "674 Colonial St, Newport News, VA",
-    "emoji": "🍩"
-  },
-  {
-    "id": "578",
-    "name": "Jazz Weekend — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.854196,
-    "lng": -76.27851,
-    "tags": [
-      "festival",
-      "beach"
-    ],
-    "type": "event",
-    "address": "1074 Chesapeake Blvd, Portsmouth, VA",
-    "emoji": "🎢"
-  },
-  {
-    "id": "579",
-    "name": "Fourth of July Fireworks — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.841585,
-    "lng": -76.304021,
-    "tags": [
-      "festival",
-      "beach"
-    ],
-    "type": "event",
-    "address": "1955 Victory Rd, Portsmouth, VA",
-    "emoji": "🎨"
-  },
-  {
-    "id": "580",
-    "name": "Classical Under the Stars — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.81128,
-    "lng": -76.292941,
-    "tags": [
-      "festival",
-      "culture"
-    ],
-    "type": "event",
-    "address": "6995 Main Pkwy, Portsmouth, VA",
-    "emoji": "🛍️"
-  },
-  {
-    "id": "581",
-    "name": "Lowcountry Boil — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.824864,
-    "lng": -76.285556,
-    "tags": [
-      "festival",
-      "beach"
-    ],
-    "type": "event",
-    "address": "2779 Ocean Dr, Portsmouth, VA",
-    "emoji": "🏕️"
-  },
-  {
-    "id": "582",
-    "name": "Memorial Day Ceremony — Portsmouth",
-    "description": "A local favorite in Portsmouth worth checking out.",
-    "lat": 36.862699,
-    "lng": -76.281673,
-    "tags": [
-      "festival",
-      "music"
-    ],
-    "type": "event",
-    "address": "5732 Main St, Portsmouth, VA",
-    "emoji": "🍺"
-  },
-  {
-    "id": "583",
-    "name": "Wine Harvest — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.746738,
-    "lng": -76.546102,
-    "tags": [
-      "festival",
-      "music"
-    ],
-    "type": "event",
-    "address": "6546 Atlantic Ln, Suffolk, VA",
-    "emoji": "🍽️"
-  },
-  {
-    "id": "584",
-    "name": "St Patricks Day Parade — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.734227,
-    "lng": -76.59648,
-    "tags": [
-      "festival",
-      "outdoors"
-    ],
-    "type": "event",
-    "address": "5255 Atlantic Blvd, Suffolk, VA",
-    "emoji": "🍕"
-  },
-  {
-    "id": "585",
-    "name": "Short Film Night — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.752917,
-    "lng": -76.579642,
-    "tags": [
-      "festival",
-      "beach"
-    ],
-    "type": "event",
-    "address": "920 Virginia Way, Suffolk, VA",
-    "emoji": "🌮"
-  },
-  {
-    "id": "586",
-    "name": "DIY Festival — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.749149,
-    "lng": -76.579017,
-    "tags": [
-      "festival",
-      "culture"
-    ],
-    "type": "event",
-    "address": "1520 Chesapeake Rd, Suffolk, VA",
-    "emoji": "🍷"
-  },
-  {
-    "id": "587",
-    "name": "Makers Faire — Suffolk",
-    "description": "A local favorite in Suffolk worth checking out.",
-    "lat": 36.691237,
-    "lng": -76.55369,
-    "tags": [
-      "festival",
-      "food"
-    ],
-    "type": "event",
-    "address": "3756 Independence St, Suffolk, VA",
-    "emoji": "⛵"
-  },
-  {
-    "id": "588",
-    "name": "Brunch Fest — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.251758,
-    "lng": -76.69226,
-    "tags": [
-      "festival",
-      "food"
-    ],
-    "type": "event",
-    "address": "8063 Virginia Pkwy, Williamsburg, VA",
-    "emoji": "🛍️"
-  },
-  {
-    "id": "589",
-    "name": "Holiday Market — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.254026,
-    "lng": -76.68649,
-    "tags": [
-      "festival",
-      "music"
-    ],
-    "type": "event",
-    "address": "515 Shore Rd, Williamsburg, VA",
-    "emoji": "🍺"
-  },
-  {
-    "id": "590",
-    "name": "Lowcountry Boil — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.289628,
-    "lng": -76.708887,
-    "tags": [
-      "festival",
-      "beach"
-    ],
-    "type": "event",
-    "address": "6748 Virginia Ln, Williamsburg, VA",
-    "emoji": "🍺"
-  },
-  {
-    "id": "591",
-    "name": "Cinco de Mayo Party — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.299142,
-    "lng": -76.685204,
-    "tags": [
-      "festival",
-      "outdoors"
-    ],
-    "type": "event",
-    "address": "7736 Colonial Blvd, Williamsburg, VA",
-    "emoji": "🧘"
-  },
-  {
-    "id": "592",
-    "name": "Thanksgiving Turkey Trot — Williamsburg",
-    "description": "A local favorite in Williamsburg worth checking out.",
-    "lat": 37.271281,
-    "lng": -76.71128,
-    "tags": [
-      "festival",
-      "family"
-    ],
-    "type": "event",
-    "address": "7012 Hampton Way, Williamsburg, VA",
-    "emoji": "👪"
-  },
-  {
-    "id": "593",
-    "name": "Spring Festival — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.245712,
-    "lng": -76.509923,
-    "tags": [
-      "festival",
-      "culture"
-    ],
-    "type": "event",
-    "address": "6115 Victory Blvd, Yorktown, VA",
-    "emoji": "☕"
-  },
-  {
-    "id": "594",
-    "name": "Summer Solstice Party — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.229186,
-    "lng": -76.519086,
-    "tags": [
-      "festival",
-      "culture"
-    ],
-    "type": "event",
-    "address": "7932 Main St, Yorktown, VA",
-    "emoji": "🏖️"
-  },
-  {
-    "id": "595",
-    "name": "Craft Beer Week — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.248043,
-    "lng": -76.530586,
-    "tags": [
-      "festival",
-      "outdoors"
-    ],
-    "type": "event",
-    "address": "701 Hampton Rd, Yorktown, VA",
-    "emoji": "🎵"
-  },
-  {
-    "id": "596",
-    "name": "Easter Egg Hunt — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.262233,
-    "lng": -76.521709,
-    "tags": [
-      "festival",
-      "nightlife"
-    ],
-    "type": "event",
-    "address": "687 Shore Ln, Yorktown, VA",
-    "emoji": "🦅"
-  },
-  {
-    "id": "597",
-    "name": "Holiday Market — Yorktown",
-    "description": "A local favorite in Yorktown worth checking out.",
-    "lat": 37.248449,
-    "lng": -76.491705,
-    "tags": [
-      "festival",
-      "food"
-    ],
-    "type": "event",
-    "address": "949 Hampton Ln, Yorktown, VA",
-    "emoji": "🎬"
-  },
-  {
-    "id": "598",
-    "name": "Shrimp Boil — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.123163,
-    "lng": -76.365262,
-    "tags": [
-      "festival",
-      "culture"
-    ],
-    "type": "event",
-    "address": "1884 Chesapeake Pkwy, Poquoson, VA",
-    "emoji": "🏖️"
-  },
-  {
-    "id": "599",
-    "name": "Valentines Dinner Dance — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.115329,
-    "lng": -76.36896,
-    "tags": [
-      "festival",
-      "beach"
-    ],
-    "type": "event",
-    "address": "6254 Colonial Way, Poquoson, VA",
-    "emoji": "🎤"
-  },
-  {
-    "id": "600",
-    "name": "May Day Festival — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.141728,
-    "lng": -76.387224,
-    "tags": [
-      "festival",
-      "outdoors"
-    ],
-    "type": "event",
-    "address": "307 Colonial Ave, Poquoson, VA",
-    "emoji": "🍦"
-  },
-  {
-    "id": "601",
-    "name": "Chicken Wing Fest — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.106735,
-    "lng": -76.377679,
-    "tags": [
-      "festival",
-      "family"
-    ],
-    "type": "event",
-    "address": "2872 Main Ln, Poquoson, VA",
-    "emoji": "🥐"
-  },
-  {
-    "id": "602",
-    "name": "Pop-Up Dinner — Poquoson",
-    "description": "A local favorite in Poquoson worth checking out.",
-    "lat": 37.114693,
-    "lng": -76.382614,
-    "tags": [
-      "festival",
-      "beach"
-    ],
-    "type": "event",
-    "address": "1255 Main Rd, Poquoson, VA",
-    "emoji": "🥐"
-  },
-  {
-    "id": "603",
-    "name": "Cinco de Mayo Party — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.962471,
-    "lng": -76.647719,
-    "tags": [
-      "festival",
-      "nightlife"
-    ],
-    "type": "event",
-    "address": "1197 Shore Ave, Smithfield, VA",
-    "emoji": "⛵"
-  },
-  {
-    "id": "604",
-    "name": "Spring Festival — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 37.001541,
-    "lng": -76.632177,
-    "tags": [
-      "festival",
-      "music"
-    ],
-    "type": "event",
-    "address": "2156 Colonial Dr, Smithfield, VA",
-    "emoji": "🛍️"
-  },
-  {
-    "id": "605",
-    "name": "Lowcountry Boil — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.985929,
-    "lng": -76.622865,
-    "tags": [
-      "festival",
-      "nightlife"
-    ],
-    "type": "event",
-    "address": "5432 Hampton Rd, Smithfield, VA",
-    "emoji": "🎊"
-  },
-  {
-    "id": "606",
-    "name": "Wine Harvest — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.986301,
-    "lng": -76.646644,
-    "tags": [
-      "festival",
-      "food"
-    ],
-    "type": "event",
-    "address": "7656 Virginia Blvd, Smithfield, VA",
-    "emoji": "🎬"
-  },
-  {
-    "id": "607",
-    "name": "Pizza Throwdown — Smithfield",
-    "description": "A local favorite in Smithfield worth checking out.",
-    "lat": 36.977294,
-    "lng": -76.63454,
-    "tags": [
-      "festival",
-      "culture"
-    ],
-    "type": "event",
-    "address": "7894 Virginia Ave, Smithfield, VA",
-    "emoji": "🧘"
-  },
-  {
-    "id": "608",
-    "name": "Summer Solstice Party — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.90857,
-    "lng": -76.698546,
-    "tags": [
-      "festival",
-      "beach"
-    ],
-    "type": "event",
-    "address": "7432 Shore Rd, Isle of Wight, VA",
-    "emoji": "👪"
-  },
-  {
-    "id": "609",
-    "name": "Pig Pickin — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.891045,
-    "lng": -76.707672,
-    "tags": [
-      "festival",
-      "culture"
-    ],
-    "type": "event",
-    "address": "4451 Virginia Pkwy, Isle of Wight, VA",
-    "emoji": "🍺"
-  },
-  {
-    "id": "610",
-    "name": "Spring Festival — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.887668,
-    "lng": -76.722692,
-    "tags": [
-      "festival",
-      "music"
-    ],
-    "type": "event",
-    "address": "6330 Victory Blvd, Isle of Wight, VA",
-    "emoji": "🎢"
-  },
-  {
-    "id": "611",
-    "name": "Tasting Tour — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.919305,
-    "lng": -76.6977,
-    "tags": [
-      "festival",
-      "food"
-    ],
-    "type": "event",
-    "address": "2310 Colonial Dr, Isle of Wight, VA",
-    "emoji": "🎢"
-  },
-  {
-    "id": "612",
-    "name": "Taco Tuesday Fest — Isle of Wight",
-    "description": "A local favorite in Isle of Wight worth checking out.",
-    "lat": 36.936215,
-    "lng": -76.750771,
-    "tags": [
-      "festival",
-      "food"
-    ],
-    "type": "event",
-    "address": "5530 Colonial Way, Isle of Wight, VA",
-    "emoji": "🛍️"
-  }
+    id: "1",
+    name: "Waterside District",
+    description: "Vibrant waterfront dining, shopping, and entertainment complex in downtown Norfolk.",
+    lat: 36.8447,
+    lng: -76.287,
+    tags: ["food", "entertainment"],
+    type: "business",
+    address: "333 Waterside Dr, Norfolk, VA 23510",
+    emoji: "🌊"
+  },
+  {
+    id: "2",
+    name: "Nauticus",
+    description: "Interactive maritime museum featuring the Battleship Wisconsin on the Elizabeth River.",
+    lat: 36.8486,
+    lng: -76.2934,
+    tags: ["history", "family"],
+    type: "business",
+    address: "1 Waterside Dr, Norfolk, VA 23510",
+    emoji: "⚓"
+  },
+  {
+    id: "3",
+    name: "Chrysler Museum of Art",
+    description: "World-class art museum with over 30,000 objects spanning 5,000 years of history.",
+    lat: 36.8556,
+    lng: -76.2922,
+    tags: ["culture", "history"],
+    type: "business",
+    address: "1 Memorial Pl, Norfolk, VA 23510",
+    emoji: "🎨"
+  },
+  {
+    id: "4",
+    name: "Norfolk Botanical Garden",
+    description: "175-acre garden with themed areas, tram tours, and seasonal events.",
+    lat: 36.9021,
+    lng: -76.2002,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "6700 Azalea Garden Rd, Norfolk, VA 23518",
+    emoji: "🌸"
+  },
+  {
+    id: "5",
+    name: "NEON District",
+    description: "Norfolk's arts district featuring vibrant murals, galleries, and creative spaces.",
+    lat: 36.8537,
+    lng: -76.2905,
+    tags: ["culture", "entertainment"],
+    type: "business",
+    address: "Granby St, Norfolk, VA 23510",
+    emoji: "🎭"
+  },
+  {
+    id: "6",
+    name: "Harbor Park",
+    description: "Minor league baseball stadium home to the Norfolk Tides along the Elizabeth River.",
+    lat: 36.8433,
+    lng: -76.2792,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "150 Park Ave, Norfolk, VA 23510",
+    emoji: "⚾"
+  },
+  {
+    id: "7",
+    name: "Chartway Arena at the Ted Constant Convocation Center",
+    description: "Multi-purpose arena hosting ODU basketball, concerts, and major events.",
+    lat: 36.8856,
+    lng: -76.3064,
+    tags: ["sports", "entertainment"],
+    type: "business",
+    address: "4320 Hampton Blvd, Norfolk, VA 23529",
+    emoji: "🏀"
+  },
+  {
+    id: "8",
+    name: "Town Point Park",
+    description: "Waterfront park in downtown Norfolk hosting festivals, concerts, and outdoor events.",
+    lat: 36.8443,
+    lng: -76.2883,
+    tags: ["outdoors", "festival"],
+    type: "business",
+    address: "113 Waterside Dr, Norfolk, VA 23510",
+    emoji: "🌳"
+  },
+  {
+    id: "9",
+    name: "Pagoda & Oriental Garden",
+    description: "Authentic Chinese pagoda and tea house on the Elizabeth River waterfront.",
+    lat: 36.8445,
+    lng: -76.295,
+    tags: ["culture", "outdoors"],
+    type: "business",
+    address: "265 W Tazewell St, Norfolk, VA 23510",
+    emoji: "⛩️"
+  },
+  {
+    id: "10",
+    name: "Slover Library",
+    description: "Historic and modern library with rooftop terrace, makerspace, and event spaces.",
+    lat: 36.8501,
+    lng: -76.292,
+    tags: ["culture", "entertainment"],
+    type: "business",
+    address: "235 E Plume St, Norfolk, VA 23510",
+    emoji: "📚"
+  },
+  {
+    id: "11",
+    name: "Smartmouth Brewing Company",
+    description: "Craft brewery in Norfolk's Park Place neighborhood with rotating taps and food trucks.",
+    lat: 36.8595,
+    lng: -76.2895,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "1309 Bard Ln, Norfolk, VA 23504",
+    emoji: "🍺"
+  },
+  {
+    id: "12",
+    name: "O'Connor Brewing Company",
+    description: "Spacious brewery and taproom in the Railroad District with live music.",
+    lat: 36.862,
+    lng: -76.2695,
+    tags: ["nightlife", "music"],
+    type: "business",
+    address: "211 W 24th St, Norfolk, VA 23517",
+    emoji: "🍻"
+  },
+  {
+    id: "13",
+    name: "The Birch",
+    description: "Popular craft beer bar in Norfolk's Ghent neighborhood with rotating taps.",
+    lat: 36.8555,
+    lng: -76.2928,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "1231 Colley Ave, Norfolk, VA 23507",
+    emoji: "🍺"
+  },
+  {
+    id: "14",
+    name: "The Handsome Biscuit",
+    description: "Beloved breakfast spot in Norfolk known for sweet potato biscuits and chicken.",
+    lat: 36.863,
+    lng: -76.295,
+    tags: ["food", "coffee"],
+    type: "business",
+    address: "2511 Colonial Ave, Norfolk, VA 23517",
+    emoji: "🥞"
+  },
+  {
+    id: "15",
+    name: "Freemason Abbey Restaurant",
+    description: "Historic church converted into a fine dining restaurant in Norfolk.",
+    lat: 36.8512,
+    lng: -76.296,
+    tags: ["food", "history"],
+    type: "business",
+    address: "209 W Freemason St, Norfolk, VA 23510",
+    emoji: "🍽️"
+  },
+  {
+    id: "16",
+    name: "No Frill Bar & Grill",
+    description: "Casual American eatery in Ghent known for comfort food and weekend brunch.",
+    lat: 36.855,
+    lng: -76.293,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "806 Spotswood Ave, Norfolk, VA 23507",
+    emoji: "🍳"
+  },
+  {
+    id: "17",
+    name: "Codfish Bar & Grill",
+    description: "Seafood restaurant in Norfolk's downtown with waterfront views.",
+    lat: 36.8502,
+    lng: -76.2875,
+    tags: ["food", "outdoors"],
+    type: "business",
+    address: "213 W York St, Norfolk, VA 23510",
+    emoji: "🦞"
+  },
+  {
+    id: "18",
+    name: "Granby Street Pizza",
+    description: "Late-night pizza spot popular with ODU students and downtown workers.",
+    lat: 36.852,
+    lng: -76.291,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "219 Granby St, Norfolk, VA 23510",
+    emoji: "🍕"
+  },
+  {
+    id: "19",
+    name: "Push Comedy Theater",
+    description: "Intimate comedy venue in downtown Norfolk featuring improv and stand-up shows.",
+    lat: 36.8508,
+    lng: -76.2895,
+    tags: ["entertainment", "nightlife"],
+    type: "business",
+    address: "240 Granby St, Norfolk, VA 23510",
+    emoji: "🎤"
+  },
+  {
+    id: "20",
+    name: "Bold Mariner Brewing Company",
+    description: "Norfolk brewery with nautical-themed beers and a relaxed taproom.",
+    lat: 36.8587,
+    lng: -76.292,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "1860 Bayville St, Norfolk, VA 23503",
+    emoji: "🍺"
+  },
+  {
+    id: "21",
+    name: "Virginia Beach Oceanfront",
+    description: "Three-mile boardwalk and beach with shops, restaurants, and seasonal events.",
+    lat: 36.8529,
+    lng: -75.978,
+    tags: ["beach", "outdoors"],
+    type: "business",
+    address: "Atlantic Ave, Virginia Beach, VA 23451",
+    emoji: "🏖️"
+  },
+  {
+    id: "22",
+    name: "Virginia Beach Town Center",
+    description: "Urban mixed-use district with dining, shopping, entertainment, and a central fountain plaza.",
+    lat: 36.8425,
+    lng: -76.1372,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "4525 Main St, Virginia Beach, VA 23462",
+    emoji: "🏙️"
+  },
+  {
+    id: "23",
+    name: "Mount Trashmore Park",
+    description: "165-acre park built on a former landfill, featuring two lakes, trails, and a skate park.",
+    lat: 36.8303,
+    lng: -76.1247,
+    tags: ["outdoors", "sports"],
+    type: "business",
+    address: "310 Edwin Dr, Virginia Beach, VA 23462",
+    emoji: "🏔️"
+  },
+  {
+    id: "24",
+    name: "First Landing State Park",
+    description: "2,888-acre state park with 19 miles of trails, beaches, and campgrounds.",
+    lat: 36.9186,
+    lng: -76.0514,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "2500 Shore Dr, Virginia Beach, VA 23451",
+    emoji: "🌲"
+  },
+  {
+    id: "25",
+    name: "Virginia Aquarium & Marine Science Center",
+    description: "800,000-gallon aquarium with sharks, sea turtles, and a nature trail.",
+    lat: 36.8183,
+    lng: -75.9789,
+    tags: ["family", "nature"],
+    type: "business",
+    address: "717 General Booth Blvd, Virginia Beach, VA 23451",
+    emoji: "🐠"
+  },
+  {
+    id: "26",
+    name: "Lynnhaven Mall",
+    description: "Largest indoor mall in Hampton Roads with over 180 stores and restaurants.",
+    lat: 36.856,
+    lng: -76.0825,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "701 Lynnhaven Pkwy, Virginia Beach, VA 23452",
+    emoji: "🛍️"
+  },
+  {
+    id: "27",
+    name: "Back Bay National Wildlife Refuge",
+    description: "9,000-acre freshwater refuge with hiking, biking, and beach access.",
+    lat: 36.635,
+    lng: -75.9167,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "4005 Sandpiper Rd, Virginia Beach, VA 23456",
+    emoji: "🦆"
+  },
+  {
+    id: "28",
+    name: "The Cavalier Hotel",
+    description: "Historic luxury hotel on the Virginia Beach Oceanfront, restored in 2018.",
+    lat: 36.857,
+    lng: -76.007,
+    tags: ["wellness", "history"],
+    type: "business",
+    address: "4200 Atlantic Ave, Virginia Beach, VA 23451",
+    emoji: "🏨"
+  },
+  {
+    id: "29",
+    name: "Waterman's Surfside Grille",
+    description: "Iconic oceanfront restaurant known for fresh seafood and orange crush cocktails.",
+    lat: 36.852,
+    lng: -75.978,
+    tags: ["food", "beach"],
+    type: "business",
+    address: "415 Atlantic Ave, Virginia Beach, VA 23451",
+    emoji: "🦐"
+  },
+  {
+    id: "30",
+    name: "Bay Local Eatery",
+    description: "Farm-to-table restaurant in Virginia Beach known for brunch and local ingredients.",
+    lat: 36.848,
+    lng: -75.975,
+    tags: ["food", "coffee"],
+    type: "business",
+    address: "972 Laskin Rd, Virginia Beach, VA 23451",
+    emoji: "🥗"
+  },
+  {
+    id: "31",
+    name: "Three Ships Coffee",
+    description: "Specialty coffee roaster with multiple Virginia Beach locations and a relaxed vibe.",
+    lat: 36.855,
+    lng: -75.982,
+    tags: ["coffee", "food"],
+    type: "business",
+    address: "607 19th St, Virginia Beach, VA 23451",
+    emoji: "☕"
+  },
+  {
+    id: "32",
+    name: "Commonwealth Brewing Company",
+    description: "Beach-adjacent brewery in a converted fire station with a large patio.",
+    lat: 36.78,
+    lng: -76.03,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "2444 Pleasure House Rd, Virginia Beach, VA 23455",
+    emoji: "🍺"
+  },
+  {
+    id: "33",
+    name: "Chick's Oyster Bar",
+    description: "Casual seafood spot on Lynnhaven Inlet with dockside dining.",
+    lat: 36.905,
+    lng: -76.135,
+    tags: ["food", "outdoors"],
+    type: "business",
+    address: "2143 Vista Cir, Virginia Beach, VA 23451",
+    emoji: "🦪"
+  },
+  {
+    id: "34",
+    name: "The Hunt Room",
+    description: "Upscale cocktail bar and restaurant inside the Cavalier Hotel.",
+    lat: 36.8572,
+    lng: -76.0075,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "4200 Atlantic Ave, Virginia Beach, VA 23451",
+    emoji: "🍸"
+  },
+  {
+    id: "35",
+    name: "Becca Restaurant",
+    description: "Fine dining in Virginia Beach Town Center with modern American cuisine.",
+    lat: 36.842,
+    lng: -76.138,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "4525 Main St, Virginia Beach, VA 23462",
+    emoji: "🍽️"
+  },
+  {
+    id: "36",
+    name: "Terrapin Restaurant",
+    description: "Farm-to-table dining in Virginia Beach Town Center with seasonal menus.",
+    lat: 36.8425,
+    lng: -76.1375,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "3102 Holly Rd, Virginia Beach, VA 23451",
+    emoji: "🥘"
+  },
+  {
+    id: "37",
+    name: "Rockafeller's Restaurant",
+    description: "Long-running seafood restaurant on the Virginia Beach Oceanfront.",
+    lat: 36.85,
+    lng: -76.01,
+    tags: ["food", "beach"],
+    type: "business",
+    address: "308 Mediterranean Ave, Virginia Beach, VA 23451",
+    emoji: "🦀"
+  },
+  {
+    id: "38",
+    name: "Commune",
+    description: "Sustainable cafe in Virginia Beach focusing on locally sourced, seasonal dishes.",
+    lat: 36.8485,
+    lng: -75.9785,
+    tags: ["coffee", "food"],
+    type: "business",
+    address: "501 Virginia Beach Blvd, Virginia Beach, VA 23451",
+    emoji: "🌱"
+  },
+  {
+    id: "39",
+    name: "Regent University",
+    description: "Private Christian university with a beautiful campus and performing arts center.",
+    lat: 36.8097,
+    lng: -76.1822,
+    tags: ["culture", "outdoors"],
+    type: "business",
+    address: "1000 Regent University Dr, Virginia Beach, VA 23464",
+    emoji: "🎓"
+  },
+  {
+    id: "40",
+    name: "Pungo Strawberry Festival Grounds",
+    description: "Annual festival grounds celebrating the area's strawberry farming heritage.",
+    lat: 36.77,
+    lng: -76.01,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "Pungo, Virginia Beach, VA 23457",
+    emoji: "🍓"
+  },
+  {
+    id: "41",
+    name: "Great Bridge Lock Park",
+    description: "Historic lock park along the Intracoastal Waterway with walking trails and fishing.",
+    lat: 36.743,
+    lng: -76.24,
+    tags: ["outdoors", "history"],
+    type: "business",
+    address: "100 Locks Rd, Chesapeake, VA 23320",
+    emoji: "🔒"
+  },
+  {
+    id: "42",
+    name: "Northwest River Park",
+    description: "763-acre park with trails, campgrounds, and a 40-acre lake for fishing.",
+    lat: 36.58,
+    lng: -76.38,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "1733 Indian Creek Rd, Chesapeake, VA 23322",
+    emoji: "🏕️"
+  },
+  {
+    id: "43",
+    name: "Chesapeake City Park",
+    description: "90-acre park with the Chesapeake Arboretum, trails, and sports fields.",
+    lat: 36.76,
+    lng: -76.24,
+    tags: ["outdoors", "family"],
+    type: "business",
+    address: "900 City Park Dr, Chesapeake, VA 23320",
+    emoji: "🌳"
+  },
+  {
+    id: "44",
+    name: "Greenbrier Mall",
+    description: "Major indoor mall in Chesapeake with department stores, dining, and a movie theater.",
+    lat: 36.778,
+    lng: -76.228,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "1401 Greenbrier Pkwy, Chesapeake, VA 23320",
+    emoji: "🛍️"
+  },
+  {
+    id: "45",
+    name: "Oak Grove Lake Park",
+    description: "65-acre park with a 1.5-mile trail around a scenic lake in Chesapeake.",
+    lat: 36.77,
+    lng: -76.22,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "409 Byron St, Chesapeake, VA 23320",
+    emoji: "🦆"
+  },
+  {
+    id: "46",
+    name: "Dismal Swamp Canal Trail",
+    description: "Paved trail through the historic Great Dismal Swamp for biking and hiking.",
+    lat: 36.6,
+    lng: -76.35,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "1200 Dismal Swamp Canal Trail, Chesapeake, VA 23323",
+    emoji: "🚴"
+  },
+  {
+    id: "47",
+    name: "Hot Rod Bar-B-Que",
+    description: "Popular barbecue restaurant in Chesapeake with smoked meats and Southern sides.",
+    lat: 36.768,
+    lng: -76.287,
+    tags: ["food", "family"],
+    type: "business",
+    address: "2005 Atlantic Ave, Chesapeake, VA 23324",
+    emoji: "🍖"
+  },
+  {
+    id: "48",
+    name: "Mo's Irish Pub",
+    description: "Authentic Irish pub in Chesapeake Greenbrier with live music and pub fare.",
+    lat: 36.777,
+    lng: -76.228,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "4017 Cedar Rd, Chesapeake, VA 23322",
+    emoji: "🍀"
+  },
+  {
+    id: "49",
+    name: "Firebrew Bar & Grill",
+    description: "Chesapeake restaurant with wood-fired pizzas, craft beers, and a patio.",
+    lat: 36.7785,
+    lng: -76.2275,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "1253 Greenbrier Pkwy, Chesapeake, VA 23320",
+    emoji: "🍕"
+  },
+  {
+    id: "50",
+    name: "Chesapeake Arboretum",
+    description: "48-acre botanical garden within Chesapeake City Park with native plants and trails.",
+    lat: 36.75,
+    lng: -76.26,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "624 Oak Grove Rd, Chesapeake, VA 23320",
+    emoji: "🌿"
+  },
+  {
+    id: "51",
+    name: "Virginia Air & Space Science Center",
+    description: "NASA visitor center with interactive exhibits, an IMAX theater, and aircraft displays.",
+    lat: 37.0217,
+    lng: -76.3436,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "600 Settlers Landing Rd, Hampton, VA 23669",
+    emoji: "🚀"
+  },
+  {
+    id: "52",
+    name: "Hampton Coliseum",
+    description: "Iconic domed arena hosting concerts, sporting events, and the annual Phish run.",
+    lat: 37.0325,
+    lng: -76.3842,
+    tags: ["entertainment", "music"],
+    type: "business",
+    address: "1000 Coliseum Dr, Hampton, VA 23666",
+    emoji: "🎸"
+  },
+  {
+    id: "53",
+    name: "Fort Monroe",
+    description: "Historic military fort with beaches, trails, and the Casemate Museum.",
+    lat: 37.0042,
+    lng: -76.3089,
+    tags: ["history", "outdoors"],
+    type: "business",
+    address: "20 Bernard Rd, Hampton, VA 23651",
+    emoji: "🏰"
+  },
+  {
+    id: "54",
+    name: "Hampton University",
+    description: "Historic HBCU with a beautiful waterfront campus and the Emancipation Oak.",
+    lat: 37.0219,
+    lng: -76.3376,
+    tags: ["culture", "history"],
+    type: "business",
+    address: "100 E Queen St, Hampton, VA 23668",
+    emoji: "🎓"
+  },
+  {
+    id: "55",
+    name: "Buckroe Beach",
+    description: "Family-friendly beach park in Hampton with a fishing pier and picnic areas.",
+    lat: 37.038,
+    lng: -76.304,
+    tags: ["beach", "family"],
+    type: "business",
+    address: "100 S First St, Hampton, VA 23664",
+    emoji: "🏖️"
+  },
+  {
+    id: "56",
+    name: "Sandy Bottom Nature Park",
+    description: "456-acre park with lakes, trails, and environmental education center in Hampton.",
+    lat: 37.068,
+    lng: -76.342,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "1255 Big Bethel Rd, Hampton, VA 23666",
+    emoji: "🦅"
+  },
+  {
+    id: "57",
+    name: "Bluebird Gap Farm",
+    description: "Free city farm in Hampton with animals, a playground, and farm-themed events.",
+    lat: 37.045,
+    lng: -76.37,
+    tags: ["family", "outdoors"],
+    type: "business",
+    address: "60 Pine Chapel Rd, Hampton, VA 23666",
+    emoji: "🐷"
+  },
+  {
+    id: "58",
+    name: "St. George Brewing Company",
+    description: "Long-running Hampton brewery with traditional English-style ales and lagers.",
+    lat: 37.03,
+    lng: -76.345,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "204 Challenger Way, Hampton, VA 23666",
+    emoji: "🍺"
+  },
+  {
+    id: "59",
+    name: "Sly Clyde Ciderworks",
+    description: "Hampton cidery in a repurposed garage with craft hard ciders and events.",
+    lat: 37.015,
+    lng: -76.33,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "123 E Mellen St, Hampton, VA 23663",
+    emoji: "🍎"
+  },
+  {
+    id: "60",
+    name: "Marker 20",
+    description: "Casual waterfront restaurant and bar in downtown Hampton.",
+    lat: 37.025,
+    lng: -76.342,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "21 E Queens Way, Hampton, VA 23669",
+    emoji: "🍔"
+  },
+  {
+    id: "61",
+    name: "The Mariners' Museum and Park",
+    description: "One of the world's largest maritime museums with a 550-acre park and lake.",
+    lat: 37.0719,
+    lng: -76.4886,
+    tags: ["culture", "history"],
+    type: "business",
+    address: "100 Museum Dr, Newport News, VA 23606",
+    emoji: "⚓"
+  },
+  {
+    id: "62",
+    name: "Virginia Living Museum",
+    description: "Native wildlife museum with indoor and outdoor exhibits, aquarium, and planetarium.",
+    lat: 37.0819,
+    lng: -76.4956,
+    tags: ["family", "nature"],
+    type: "business",
+    address: "524 J Clyde Morris Blvd, Newport News, VA 23601",
+    emoji: "🦎"
+  },
+  {
+    id: "63",
+    name: "City Center at Oyster Point",
+    description: "Upscale shopping and dining district in Newport News with a central fountain plaza.",
+    lat: 37.087,
+    lng: -76.473,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "701 Town Center Dr, Newport News, VA 23606",
+    emoji: "🏙️"
+  },
+  {
+    id: "64",
+    name: "Newport News Park",
+    description: "8,000-acre park with camping, archery, trails, and a golf course.",
+    lat: 37.145,
+    lng: -76.53,
+    tags: ["outdoors", "sports"],
+    type: "business",
+    address: "13560 Jefferson Ave, Newport News, VA 23603",
+    emoji: "🌲"
+  },
+  {
+    id: "65",
+    name: "Noland Trail",
+    description: "Five-mile loop trail around Lake Maury through wooded parkland in Newport News.",
+    lat: 37.07,
+    lng: -76.49,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "100 Museum Dr, Newport News, VA 23606",
+    emoji: "🥾"
+  },
+  {
+    id: "66",
+    name: "Lee Hall Mansion",
+    description: "Antebellum mansion and Civil War museum in Newport News.",
+    lat: 37.195,
+    lng: -76.575,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "163 Yorktown Rd, Newport News, VA 23608",
+    emoji: "🏛️"
+  },
+  {
+    id: "67",
+    name: "Endview Plantation",
+    description: "Historic plantation house with Civil War reenactments and educational programs.",
+    lat: 37.16,
+    lng: -76.535,
+    tags: ["history", "family"],
+    type: "business",
+    address: "362 Yorktown Rd, Newport News, VA 23603",
+    emoji: "🏠"
+  },
+  {
+    id: "68",
+    name: "Tradition Brewing Company",
+    description: "Newport News brewery with a taproom and live music in City Center.",
+    lat: 37.087,
+    lng: -76.4735,
+    tags: ["nightlife", "music"],
+    type: "business",
+    address: "700 Thimble Shoals Blvd, Newport News, VA 23606",
+    emoji: "🍺"
+  },
+  {
+    id: "69",
+    name: "Cozzy's Comedy Club",
+    description: "Long-running comedy venue in Newport News with national and local acts.",
+    lat: 37.085,
+    lng: -76.475,
+    tags: ["entertainment", "nightlife"],
+    type: "business",
+    address: "9700 Warwick Blvd, Newport News, VA 23601",
+    emoji: "🎤"
+  },
+  {
+    id: "70",
+    name: "Patrick Henry Mall",
+    description: "Indoor shopping mall in Newport News with major retail anchors and dining.",
+    lat: 37.115,
+    lng: -76.51,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "12300 Jefferson Ave, Newport News, VA 23602",
+    emoji: "🛍️"
+  },
+  {
+    id: "71",
+    name: "Children's Museum of Virginia",
+    description: "Largest children's museum in Virginia with hands-on exhibits and a planetarium.",
+    lat: 36.8354,
+    lng: -76.2983,
+    tags: ["family", "culture"],
+    type: "business",
+    address: "221 High St, Portsmouth, VA 23704",
+    emoji: "🧒"
+  },
+  {
+    id: "72",
+    name: "Portsmouth Naval Shipyard Museum",
+    description: "Museum chronicling the history of the Norfolk Naval Shipyard and Portsmouth.",
+    lat: 36.835,
+    lng: -76.297,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "2 High St, Portsmouth, VA 23704",
+    emoji: "⚓"
+  },
+  {
+    id: "73",
+    name: "Commodore Theatre",
+    description: "Restored 1945 movie palace with a full restaurant and bar.",
+    lat: 36.8355,
+    lng: -76.2975,
+    tags: ["entertainment", "food"],
+    type: "business",
+    address: "421 High St, Portsmouth, VA 23704",
+    emoji: "🎬"
+  },
+  {
+    id: "74",
+    name: "Hill House",
+    description: "Historic 1825 home and museum in Portsmouth's Old Towne.",
+    lat: 36.836,
+    lng: -76.2985,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "221 North St, Portsmouth, VA 23704",
+    emoji: "🏠"
+  },
+  {
+    id: "75",
+    name: "Old Towne Portsmouth",
+    description: "Historic district with antique shops, restaurants, and waterfront views.",
+    lat: 36.834685,
+    lng: -76.297365,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🏘️"
+  },
+  {
+    id: "76",
+    name: "Virginia Sports Hall of Fame",
+    description: "Interactive museum celebrating Virginia athletes and sports history.",
+    lat: 36.835,
+    lng: -76.3,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "206 High St, Portsmouth, VA 23704",
+    emoji: "🏆"
+  },
+  {
+    id: "77",
+    name: "Portsmouth Art & Cultural Center",
+    description: "Gallery and cultural venue in the historic Courthouse building.",
+    lat: 36.8355,
+    lng: -76.297,
+    tags: ["culture", "entertainment"],
+    type: "business",
+    address: "400 High St, Portsmouth, VA 23704",
+    emoji: "🎨"
+  },
+  {
+    id: "78",
+    name: "Hoffler Creek Wildlife Preserve",
+    description: "142-acre nature preserve with trails and kayaking in Portsmouth.",
+    lat: 36.82,
+    lng: -76.32,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "4510 Twin Pines Rd, Portsmouth, VA 23703",
+    emoji: "🦆"
+  },
+  {
+    id: "79",
+    name: "Bier Garden Portsmouth",
+    description: "German-style beer garden in Portsmouth's Old Towne with a large tap selection.",
+    lat: 36.834948,
+    lng: -76.297221,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "424 High St, Portsmouth, VA 23704",
+    emoji: "🍻"
+  },
+  {
+    id: "80",
+    name: "Gosport Tavern",
+    description: "Historic tavern in Portsmouth serving American fare and craft cocktails.",
+    lat: 36.835632,
+    lng: -76.297045,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "412 Court St, Portsmouth, VA 23704",
+    emoji: "🍔"
+  },
+  {
+    id: "81",
+    name: "Peanut Festival Park",
+    description: "Fairgrounds hosting the annual Suffolk Peanut Festival and other events.",
+    lat: 36.7282,
+    lng: -76.5836,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "3000 Jericho Rd, Suffolk, VA 23434",
+    emoji: "🥜"
+  },
+  {
+    id: "82",
+    name: "Suffolk Center for Cultural Arts",
+    description: "Performing arts venue in a restored 1920s high school building.",
+    lat: 36.728,
+    lng: -76.584,
+    tags: ["culture", "entertainment"],
+    type: "business",
+    address: "110 W Finney Ave, Suffolk, VA 23434",
+    emoji: "🎭"
+  },
+  {
+    id: "83",
+    name: "Riddick's Folly",
+    description: "Historic 1837 Greek Revival mansion and museum in Suffolk.",
+    lat: 36.73,
+    lng: -76.585,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "510 N Main St, Suffolk, VA 23434",
+    emoji: "🏛️"
+  },
+  {
+    id: "84",
+    name: "Great Dismal Swamp National Wildlife Refuge",
+    description: "112,000-acre protected wilderness with trails, boating, and wildlife viewing.",
+    lat: 36.52,
+    lng: -76.45,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "3100 Desert Rd, Suffolk, VA 23434",
+    emoji: "🐻"
+  },
+  {
+    id: "85",
+    name: "Sleepy Hole Golf Course",
+    description: "Public 18-hole golf course along the Nansemond River in Suffolk.",
+    lat: 36.75,
+    lng: -76.55,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "4700 Sleepy Hole Rd, Suffolk, VA 23435",
+    emoji: "⛳"
+  },
+  {
+    id: "86",
+    name: "Constant's Wharf",
+    description: "Waterfront marina and park in downtown Suffolk with dining and events.",
+    lat: 36.735,
+    lng: -76.58,
+    tags: ["outdoors", "food"],
+    type: "business",
+    address: "100 E Constance Rd, Suffolk, VA 23434",
+    emoji: "⚓"
+  },
+  {
+    id: "87",
+    name: "Harper's Table",
+    description: "Upscale Southern restaurant in Suffolk with farm-fresh ingredients.",
+    lat: 36.7285,
+    lng: -76.5845,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "7406 Harbour Towne Pkwy, Suffolk, VA 23435",
+    emoji: "🍽️"
+  },
+  {
+    id: "88",
+    name: "Baron's Pub",
+    description: "Neighborhood pub in Suffolk with craft beers and pub grub.",
+    lat: 36.729,
+    lng: -76.585,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "111 W Washington St, Suffolk, VA 23434",
+    emoji: "🍺"
+  },
+  {
+    id: "89",
+    name: "River Stone Chophouse",
+    description: "Steakhouse in Suffolk's Harbour View area with river views.",
+    lat: 36.728093,
+    lng: -76.583832,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "8032 Harbour View Blvd, Suffolk, VA 23435",
+    emoji: "🥩"
+  },
+  {
+    id: "90",
+    name: "Suffolk Farmers Market",
+    description: "Weekly farmers market in downtown Suffolk with local produce and crafts.",
+    lat: 36.728552,
+    lng: -76.584953,
+    tags: ["food", "shopping"],
+    type: "business",
+    address: "100 N Main St, Suffolk, VA 23434",
+    emoji: "🥕"
+  },
+  {
+    id: "91",
+    name: "Colonial Williamsburg",
+    description: "Living history museum recreating 18th-century Virginia with costumed interpreters.",
+    lat: 37.2707,
+    lng: -76.7075,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "101 Visitor Center Dr, Williamsburg, VA 23185",
+    emoji: "🏛️"
+  },
+  {
+    id: "92",
+    name: "Busch Gardens Williamsburg",
+    description: "European-themed amusement park with roller coasters, shows, and food festivals.",
+    lat: 37.2339,
+    lng: -76.6426,
+    tags: ["entertainment", "family"],
+    type: "business",
+    address: "1 Busch Gardens Blvd, Williamsburg, VA 23185",
+    emoji: "🎢"
+  },
+  {
+    id: "93",
+    name: "College of William & Mary",
+    description: "Second-oldest college in the US with a historic campus in Williamsburg.",
+    lat: 37.271,
+    lng: -76.7197,
+    tags: ["culture", "history"],
+    type: "business",
+    address: "200 Stadium Dr, Williamsburg, VA 23185",
+    emoji: "🎓"
+  },
+  {
+    id: "94",
+    name: "Jamestown Settlement",
+    description: "Living history museum with recreated fort, ships, and Powhatan village.",
+    lat: 37.21,
+    lng: -76.78,
+    tags: ["history", "family"],
+    type: "business",
+    address: "2110 Jamestown Rd, Williamsburg, VA 23185",
+    emoji: "⛵"
+  },
+  {
+    id: "95",
+    name: "Virginia Beer Company",
+    description: "Craft brewery in downtown Williamsburg with a dog-friendly taproom.",
+    lat: 37.28,
+    lng: -76.73,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "401 2nd St, Williamsburg, VA 23185",
+    emoji: "🍺"
+  },
+  {
+    id: "96",
+    name: "Alewerks Brewing Company",
+    description: "Williamsburg brewery known for seasonal ales and a large taproom.",
+    lat: 37.27,
+    lng: -76.71,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "189 Ewell Rd, Williamsburg, VA 23188",
+    emoji: "🍻"
+  },
+  {
+    id: "97",
+    name: "The Cheese Shop",
+    description: "Williamsburg institution serving sandwiches, wine, and gourmet cheeses since 1971.",
+    lat: 37.2705,
+    lng: -76.707,
+    tags: ["food", "shopping"],
+    type: "business",
+    address: "410 W Duke of Gloucester St, Williamsburg, VA 23185",
+    emoji: "🧀"
+  },
+  {
+    id: "98",
+    name: "Aromas Coffeehouse",
+    description: "Local coffee shop in Williamsburg with live music and a relaxed atmosphere.",
+    lat: 37.271,
+    lng: -76.708,
+    tags: ["coffee", "music"],
+    type: "business",
+    address: "431 Prince George St, Williamsburg, VA 23185",
+    emoji: "☕"
+  },
+  {
+    id: "99",
+    name: "Fat Canary",
+    description: "Upscale American restaurant in Williamsburg's Merchants Square.",
+    lat: 37.2708,
+    lng: -76.7075,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "410 W Duke of Gloucester St, Williamsburg, VA 23185",
+    emoji: "🍽️"
+  },
+  {
+    id: "100",
+    name: "Mermaid Books",
+    description: "Independent bookstore in Williamsburg with new, used, and rare books.",
+    lat: 37.2705,
+    lng: -76.7075,
+    tags: ["culture", "shopping"],
+    type: "business",
+    address: "419 W Duke of Gloucester St, Williamsburg, VA 23185",
+    emoji: "📚"
+  },
+  {
+    id: "101",
+    name: "Yorktown Battlefield",
+    description: "Historic site of the final major battle of the American Revolutionary War.",
+    lat: 37.2388,
+    lng: -76.5097,
+    tags: ["history", "outdoors"],
+    type: "business",
+    address: "1000 Colonial Pkwy, Yorktown, VA 23690",
+    emoji: "🏛️"
+  },
+  {
+    id: "102",
+    name: "American Revolution Museum at Yorktown",
+    description: "Living history museum with a Continental Army encampment and Revolution-era farm.",
+    lat: 37.24,
+    lng: -76.505,
+    tags: ["history", "family"],
+    type: "business",
+    address: "200 Water St, Yorktown, VA 23690",
+    emoji: "⚔️"
+  },
+  {
+    id: "103",
+    name: "Riverwalk Landing",
+    description: "Waterfront dining and shopping district in Yorktown with beach access.",
+    lat: 37.239,
+    lng: -76.51,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "Water St, Yorktown, VA 23690",
+    emoji: "🛍️"
+  },
+  {
+    id: "104",
+    name: "Yorktown Beach",
+    description: "Sandy beach on the York River with a fishing pier and picnic areas.",
+    lat: 37.2395,
+    lng: -76.508,
+    tags: ["beach", "family"],
+    type: "business",
+    address: "425 Water St, Yorktown, VA 23690",
+    emoji: "🏖️"
+  },
+  {
+    id: "105",
+    name: "Watermen's Museum",
+    description: "Museum celebrating the Chesapeake Bay watermen and their heritage.",
+    lat: 37.238796,
+    lng: -76.510092,
+    tags: ["culture", "history"],
+    type: "business",
+    address: "309 Water St, Yorktown, VA 23690",
+    emoji: "⚓"
+  },
+  {
+    id: "106",
+    name: "Carrot Tree Kitchens",
+    description: "Popular bakery and cafe in Yorktown known for carrot cake and comfort food.",
+    lat: 37.238822,
+    lng: -76.50965,
+    tags: ["food", "coffee"],
+    type: "business",
+    address: "406 Main St, Yorktown, VA 23690",
+    emoji: "🥕"
+  },
+  {
+    id: "107",
+    name: "Yorktown Pub",
+    description: "Casual waterfront pub in Yorktown with seafood and river views.",
+    lat: 37.2395,
+    lng: -76.509,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "540 Water St, Yorktown, VA 23690",
+    emoji: "🍺"
+  },
+  {
+    id: "108",
+    name: "Mobjack Bay Coffee Roasters",
+    description: "Specialty coffee roaster in Yorktown with fresh beans and a cozy atmosphere.",
+    lat: 37.2385,
+    lng: -76.5095,
+    tags: ["coffee", "food"],
+    type: "business",
+    address: "411 Main St, Yorktown, VA 23690",
+    emoji: "☕"
+  },
+  {
+    id: "109",
+    name: "Yorktown Victory Center",
+    description: "Historic site and museum exploring the impact of the American Revolution.",
+    lat: 37.240342,
+    lng: -76.504952,
+    tags: ["history", "family"],
+    type: "business",
+    address: "200 Water St, Yorktown, VA 23690",
+    emoji: "🇺🇸"
+  },
+  {
+    id: "110",
+    name: "Nelson House",
+    description: "Restored colonial home in Yorktown with period furnishings and gardens.",
+    lat: 37.239,
+    lng: -76.5085,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "Main St, Yorktown, VA 23690",
+    emoji: "🏠"
+  },
+  {
+    id: "111",
+    name: "Poquoson Museum",
+    description: "Local history museum preserving the maritime heritage of Poquoson.",
+    lat: 37.1223,
+    lng: -76.38,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "968 Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🏛️"
+  },
+  {
+    id: "112",
+    name: "Whitehouse Cove Marina",
+    description: "Full-service marina in Poquoson with boat slips and waterfront dining.",
+    lat: 37.125,
+    lng: -76.375,
+    tags: ["outdoors", "food"],
+    type: "business",
+    address: "425 Whitehouse Cove Dr, Poquoson, VA 23662",
+    emoji: "🛥️"
+  },
+  {
+    id: "113",
+    name: "Messick Point",
+    description: "Scenic waterfront area in Poquoson popular for fishing and crabbing.",
+    lat: 37.13,
+    lng: -76.37,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "Messick Point Rd, Poquoson, VA 23662",
+    emoji: "🦀"
+  },
+  {
+    id: "114",
+    name: "Poquoson City Park",
+    description: "Community park in Poquoson with sports fields and playgrounds.",
+    lat: 37.12,
+    lng: -76.382,
+    tags: ["outdoors", "family"],
+    type: "business",
+    address: "400 Wythe Creek Rd, Poquoson, VA 23662",
+    emoji: "🌳"
+  },
+  {
+    id: "115",
+    name: "Oddfella's Tapas",
+    description: "Cozy tapas restaurant in Poquoson with a varied wine list.",
+    lat: 37.122,
+    lng: -76.3805,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "50 Village Green, Poquoson, VA 23662",
+    emoji: "🍷"
+  },
+  {
+    id: "116",
+    name: "Smithfield Station",
+    description: "Waterfront hotel, restaurant, and marina on the Pagan River in Smithfield.",
+    lat: 36.9823,
+    lng: -76.6311,
+    tags: ["food", "wellness"],
+    type: "business",
+    address: "415 S Church St, Smithfield, VA 23430",
+    emoji: "🛥️"
+  },
+  {
+    id: "117",
+    name: "Windsor Castle Park",
+    description: "208-acre riverside park in Smithfield with trails, kayaking, and a dog park.",
+    lat: 36.98,
+    lng: -76.63,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "301 Jericho Rd, Smithfield, VA 23430",
+    emoji: "🏰"
+  },
+  {
+    id: "118",
+    name: "Smithfield Farmers Market",
+    description: "Weekly outdoor market in historic downtown Smithfield with local produce.",
+    lat: 36.983,
+    lng: -76.6315,
+    tags: ["food", "shopping"],
+    type: "business",
+    address: "115 Main St, Smithfield, VA 23430",
+    emoji: "🍎"
+  },
+  {
+    id: "119",
+    name: "Smithfield Winery",
+    description: "Local winery in Smithfield with tastings and vineyard tours.",
+    lat: 36.982,
+    lng: -76.6305,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "128 N Church St, Smithfield, VA 23430",
+    emoji: "🍷"
+  },
+  {
+    id: "120",
+    name: "Wharf Hill Brewing Company",
+    description: "Craft brewery in historic Smithfield with a riverside patio.",
+    lat: 36.9825,
+    lng: -76.631,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "25 Main St, Smithfield, VA 23430",
+    emoji: "🍺"
+  },
+  {
+    id: "121",
+    name: "Fort Boykin Historic Park",
+    description: "Civil War-era fort on the James River with walking trails and river views.",
+    lat: 36.9071,
+    lng: -76.7184,
+    tags: ["history", "outdoors"],
+    type: "business",
+    address: "7417 Fort Boykin Trail, Smithfield, VA 23430",
+    emoji: "🏰"
+  },
+  {
+    id: "122",
+    name: "Carrollton Nike Park",
+    description: "Large county park in Carrollton with sports fields, trails, and a disc golf course.",
+    lat: 36.95,
+    lng: -76.55,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "13036 Nike Park Rd, Carrollton, VA 23314",
+    emoji: "🥏"
+  },
+  {
+    id: "123",
+    name: "Reynolds Store",
+    description: "Historic country store in Isle of Wight County serving Southern comfort food.",
+    lat: 36.91,
+    lng: -76.715,
+    tags: ["food", "history"],
+    type: "business",
+    address: "13007 Reynolds Store Rd, Smithfield, VA 23430",
+    emoji: "🏪"
+  },
+  {
+    id: "124",
+    name: "Windsor Castle Park Trails",
+    description: "Extensive trail system through Smithfield's Windsor Castle Park along the Pagan River.",
+    lat: 36.980216,
+    lng: -76.630175,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "301 Jericho Rd, Smithfield, VA 23430",
+    emoji: "🥾"
+  },
+  {
+    id: "125",
+    name: "Isle of Wight County Museum",
+    description: "Local history museum with exhibits on agriculture, the peanut industry, and ham curing.",
+    lat: 36.982,
+    lng: -76.632,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "103 Main St, Smithfield, VA 23430",
+    emoji: "🏛️"
+  },
+  {
+    id: "126",
+    name: "The Veil Brewing Co.",
+    description: "Trendy Richmond-born brewery with a Norfolk outpost and experimental beers.",
+    lat: 36.853,
+    lng: -76.292,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "118 Granby St, Norfolk, VA 23510",
+    emoji: "🍺"
+  },
+  {
+    id: "127",
+    name: "Ghent Bar and Grill",
+    description: "Neighborhood bar in Norfolk's Ghent area with a patio and weekend brunch.",
+    lat: 36.856,
+    lng: -76.294,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "1329 Colley Ave, Norfolk, VA 23507",
+    emoji: "🍔"
+  },
+  {
+    id: "128",
+    name: "Le Grand Kitchen",
+    description: "French-inspired bistro in Norfolk with a seasonal menu and craft cocktails.",
+    lat: 36.85,
+    lng: -76.293,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "345 Granby St, Norfolk, VA 23510",
+    emoji: "🥐"
+  },
+  {
+    id: "129",
+    name: "Norfolk Scope Arena",
+    description: "Major indoor arena hosting concerts, sports, and large-scale events.",
+    lat: 36.8526,
+    lng: -76.2878,
+    tags: ["entertainment", "sports"],
+    type: "business",
+    address: "201 E Brambleton Ave, Norfolk, VA 23510",
+    emoji: "🏟️"
+  },
+  {
+    id: "130",
+    name: "MacArthur Center",
+    description: "Major indoor shopping mall in downtown Norfolk with over 140 stores.",
+    lat: 36.8502,
+    lng: -76.2889,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "300 Monticello Ave, Norfolk, VA 23510",
+    emoji: "🛍️"
+  },
+  {
+    id: "131",
+    name: "Croakers Spot Virginia Beach",
+    description: "Beachside restaurant known for fried seafood and river views.",
+    lat: 36.848,
+    lng: -75.9785,
+    tags: ["food", "beach"],
+    type: "business",
+    address: "910 Atlantic Ave, Virginia Beach, VA 23451",
+    emoji: "🦐"
+  },
+  {
+    id: "132",
+    name: "The Shack on 8th",
+    description: "Beach casual eatery in Virginia Beach with tacos and cold drinks.",
+    lat: 36.855,
+    lng: -75.98,
+    tags: ["food", "beach"],
+    type: "business",
+    address: "8th St, Virginia Beach, VA 23451",
+    emoji: "🌮"
+  },
+  {
+    id: "133",
+    name: "Pleasure House Brewing",
+    description: "Neighborhood brewery in Virginia Beach with a dog-friendly patio.",
+    lat: 36.9,
+    lng: -76.12,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "1209 Pleasure House Rd, Virginia Beach, VA 23455",
+    emoji: "🍻"
+  },
+  {
+    id: "134",
+    name: "Flip Flop Grill",
+    description: "Casual beachfront grill in Virginia Beach with burgers and seafood.",
+    lat: 36.853,
+    lng: -75.979,
+    tags: ["food", "beach"],
+    type: "business",
+    address: "2113 Atlantic Ave, Virginia Beach, VA 23451",
+    emoji: "🍔"
+  },
+  {
+    id: "135",
+    name: "Sandbridge Beach",
+    description: "Quiet residential beach community in southern Virginia Beach with natural dunes.",
+    lat: 36.735,
+    lng: -75.96,
+    tags: ["beach", "nature"],
+    type: "business",
+    address: "Sandbridge Rd, Virginia Beach, VA 23456",
+    emoji: "🏖️"
+  },
+  {
+    id: "136",
+    name: "Twisted Biscuit Diner",
+    description: "Chesapeake diner known for oversized biscuits and Southern breakfast plates.",
+    lat: 36.765,
+    lng: -76.285,
+    tags: ["food", "coffee"],
+    type: "business",
+    address: "1521 Sams Cir, Chesapeake, VA 23320",
+    emoji: "🥞"
+  },
+  {
+    id: "137",
+    name: "Taste Unlimited Chesapeake",
+    description: "Local sandwich and catering chain with fresh soups and salads in Chesapeake.",
+    lat: 36.77,
+    lng: -76.28,
+    tags: ["food", "coffee"],
+    type: "business",
+    address: "1412 Greenbrier Pkwy, Chesapeake, VA 23320",
+    emoji: "🥪"
+  },
+  {
+    id: "138",
+    name: "Chesapeake Conference Center",
+    description: "Event venue in Chesapeake hosting conferences, weddings, and trade shows.",
+    lat: 36.765,
+    lng: -76.235,
+    tags: ["entertainment", "food"],
+    type: "business",
+    address: "900 Greenbrier Pkwy, Chesapeake, VA 23320",
+    emoji: "🏢"
+  },
+  {
+    id: "139",
+    name: "Great Bridge Battlefield & Waterways History Foundation",
+    description: "Historic site commemorating the Revolutionary War battle at Great Bridge.",
+    lat: 36.74,
+    lng: -76.245,
+    tags: ["history", "outdoors"],
+    type: "business",
+    address: "1775 Historic Way, Chesapeake, VA 23320",
+    emoji: "⚔️"
+  },
+  {
+    id: "140",
+    name: "Chesapeake Golf Club",
+    description: "Public 18-hole golf course in Chesapeake with scenic water features.",
+    lat: 36.75,
+    lng: -76.25,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "1001 Golf Club Rd, Chesapeake, VA 23320",
+    emoji: "⛳"
+  },
+  {
+    id: "141",
+    name: "Phoebus Auction Gallery",
+    description: "Historic auction house in Phoebus, Hampton with regular estate sales.",
+    lat: 37.0195,
+    lng: -76.319,
+    tags: ["shopping", "history"],
+    type: "business",
+    address: "18 E Mellen St, Hampton, VA 23663",
+    emoji: "🖼️"
+  },
+  {
+    id: "142",
+    name: "Venture Kitchen & Bar",
+    description: "Upscale New American restaurant in Hampton with craft cocktails.",
+    lat: 37.0255,
+    lng: -76.343,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "9 E Queens Way, Hampton, VA 23669",
+    emoji: "🍽️"
+  },
+  {
+    id: "143",
+    name: "Bull Island Brewing Company",
+    description: "Craft brewery in Hampton with a focus on Belgian-style beers and ales.",
+    lat: 37.02,
+    lng: -76.34,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "24 E Queens Way, Hampton, VA 23669",
+    emoji: "🍺"
+  },
+  {
+    id: "144",
+    name: "Casemate Museum at Fort Monroe",
+    description: "Museum inside Fort Monroe exploring the fort's military and African American history.",
+    lat: 37.003754,
+    lng: -76.308976,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "20 Bernard Rd, Hampton, VA 23651",
+    emoji: "🏰"
+  },
+  {
+    id: "145",
+    name: "Emancipation Oak at Hampton University",
+    description: "Historic live oak tree where the first Southern reading of the Emancipation Proclamation occurred.",
+    lat: 37.021725,
+    lng: -76.337613,
+    tags: ["history", "outdoors"],
+    type: "business",
+    address: "100 E Queen St, Hampton, VA 23668",
+    emoji: "🌳"
+  },
+  {
+    id: "146",
+    name: "Huntington Park Beach",
+    description: "Sandy beach on the James River in Newport News with a fishing pier.",
+    lat: 37,
+    lng: -76.43,
+    tags: ["beach", "outdoors"],
+    type: "business",
+    address: "9009 River Rd, Newport News, VA 23607",
+    emoji: "🏖️"
+  },
+  {
+    id: "147",
+    name: "Kiln Creek Golf Club & Resort",
+    description: "Public golf course and resort in Newport News with a clubhouse and dining.",
+    lat: 37.11,
+    lng: -76.47,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "1003 Brick Kiln Blvd, Newport News, VA 23602",
+    emoji: "⛳"
+  },
+  {
+    id: "148",
+    name: "Port Warwick",
+    description: "Mixed-use development in Newport News with dining, shopping, and town squares.",
+    lat: 37.08,
+    lng: -76.48,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "12350 Jefferson Ave, Newport News, VA 23602",
+    emoji: "🏙️"
+  },
+  {
+    id: "149",
+    name: "Ferguson Center for the Arts",
+    description: "Performing arts center at Christopher Newport University with world-class acoustics.",
+    lat: 37.062,
+    lng: -76.493,
+    tags: ["culture", "music"],
+    type: "business",
+    address: "1 Avenue of the Arts, Newport News, VA 23606",
+    emoji: "🎭"
+  },
+  {
+    id: "150",
+    name: "The Alley",
+    description: "Bowling alley and entertainment center in Newport News with arcade and bar.",
+    lat: 37.085,
+    lng: -76.47,
+    tags: ["entertainment", "nightlife"],
+    type: "business",
+    address: "12530 Jefferson Ave, Newport News, VA 23602",
+    emoji: "🎳"
+  },
+  {
+    id: "151",
+    name: "Leopold's Ice Cream",
+    description: "Historic ice cream parlor in Ghent since 1919, famous for handmade scoops.",
+    lat: 36.8565,
+    lng: -76.2935,
+    tags: ["food", "family"],
+    type: "business",
+    address: "2019 Colley Ave, Norfolk, VA 23517",
+    emoji: "🍦"
+  },
+  {
+    id: "152",
+    name: "The Grilled Cheese Bistro",
+    description: "Gourmet grilled cheese sandwiches and craft beers in Norfolk.",
+    lat: 36.853465,
+    lng: -76.291822,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "345 Granby St, Norfolk, VA 23510",
+    emoji: "🧀"
+  },
+  {
+    id: "153",
+    name: "Field Guide",
+    description: "Seasonal American restaurant in Norfolk with a focus on local ingredients.",
+    lat: 36.855,
+    lng: -76.294,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "809 Colley Ave, Norfolk, VA 23507",
+    emoji: "🌿"
+  },
+  {
+    id: "154",
+    name: "Luna Maya",
+    description: "Authentic Mexican restaurant in Norfolk with handmade tortillas and fresh salsas.",
+    lat: 36.854,
+    lng: -76.293,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "200 W 21st St, Norfolk, VA 23517",
+    emoji: "🌮"
+  },
+  {
+    id: "155",
+    name: "No. 5",
+    description: "Upscale cocktail bar in Norfolk with creative drinks and small plates.",
+    lat: 36.852,
+    lng: -76.2915,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "244 W Olney Rd, Norfolk, VA 23510",
+    emoji: "🍸"
+  },
+  {
+    id: "156",
+    name: "Toast",
+    description: "Popular brunch spot in Norfolk known for creative breakfast dishes and mimosas.",
+    lat: 36.857,
+    lng: -76.2935,
+    tags: ["food", "coffee"],
+    type: "business",
+    address: "741 W 21st St, Norfolk, VA 23517",
+    emoji: "🍞"
+  },
+  {
+    id: "157",
+    name: "Yorgo's Bageldashery",
+    description: "Local bagel shop in Norfolk with fresh-baked bagels and sandwiches.",
+    lat: 36.858,
+    lng: -76.292,
+    tags: ["food", "coffee"],
+    type: "business",
+    address: "212 W 21st St, Norfolk, VA 23517",
+    emoji: "🥯"
+  },
+  {
+    id: "158",
+    name: "Cogan's Pizza",
+    description: "Late-night pizza joint in Norfolk popular with college students.",
+    lat: 36.8545,
+    lng: -76.293,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "331 W 21st St, Norfolk, VA 23517",
+    emoji: "🍕"
+  },
+  {
+    id: "159",
+    name: "The Ten Top",
+    description: "Cozy Norfolk restaurant with an ever-changing menu of comfort food.",
+    lat: 36.8561,
+    lng: -76.293846,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "748 Shirley Ave, Norfolk, VA 23517",
+    emoji: "🍽️"
+  },
+  {
+    id: "160",
+    name: "Colley Cantina",
+    description: "Mexican restaurant and tequila bar on Colley Avenue in Norfolk.",
+    lat: 36.8555,
+    lng: -76.2935,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "1220 Colley Ave, Norfolk, VA 23507",
+    emoji: "🌯"
+  },
+  {
+    id: "161",
+    name: "Doumar's Cones and BBQ",
+    description: "Historic drive-in restaurant in Norfolk famous for handmade ice cream cones since 1904.",
+    lat: 36.863,
+    lng: -76.278,
+    tags: ["food", "history"],
+    type: "business",
+    address: "1919 Monticello Ave, Norfolk, VA 23517",
+    emoji: "🍦"
+  },
+  {
+    id: "162",
+    name: "The Plot",
+    description: "Plant-based restaurant in Norfolk with a creative vegan menu.",
+    lat: 36.853,
+    lng: -76.2925,
+    tags: ["food", "wellness"],
+    type: "business",
+    address: "204 W Olney Rd, Norfolk, VA 23510",
+    emoji: "🥗"
+  },
+  {
+    id: "163",
+    name: "Bar-Q",
+    description: "BBQ restaurant in Norfolk with smoked meats and Southern sides.",
+    lat: 36.854,
+    lng: -76.291,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "123 E Virginia Beach Blvd, Norfolk, VA 23510",
+    emoji: "🍖"
+  },
+  {
+    id: "164",
+    name: "The Dirty Buffalo",
+    description: "Wing joint in Norfolk with house-made sauces and sports on TV.",
+    lat: 36.8525,
+    lng: -76.2905,
+    tags: ["food", "sports"],
+    type: "business",
+    address: "4117 Colley Ave, Norfolk, VA 23508",
+    emoji: "🍗"
+  },
+  {
+    id: "165",
+    name: "Monroe's Lounge",
+    description: "Cocktail lounge in Norfolk with live jazz and a sophisticated vibe.",
+    lat: 36.851,
+    lng: -76.291,
+    tags: ["nightlife", "music"],
+    type: "business",
+    address: "2400 Colonial Ave, Norfolk, VA 23517",
+    emoji: "🎷"
+  },
+  {
+    id: "166",
+    name: "Grace O'Malley's Irish Pub",
+    description: "Traditional Irish pub in Norfolk with live music and pints.",
+    lat: 36.8535,
+    lng: -76.292,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "211 W 21st St, Norfolk, VA 23517",
+    emoji: "🍺"
+  },
+  {
+    id: "167",
+    name: "Cafe Stella",
+    description: "European-style cafe in Norfolk with espresso, pastries, and outdoor seating.",
+    lat: 36.854619,
+    lng: -76.293316,
+    tags: ["coffee", "food"],
+    type: "business",
+    address: "1907 Colonial Ave, Norfolk, VA 23517",
+    emoji: "☕"
+  },
+  {
+    id: "168",
+    name: "The Naro Expanded Cinema",
+    description: "Independent movie theater in Norfolk showing art house and classic films.",
+    lat: 36.855953,
+    lng: -76.294209,
+    tags: ["entertainment", "culture"],
+    type: "business",
+    address: "1507 Colley Ave, Norfolk, VA 23517",
+    emoji: "🎬"
+  },
+  {
+    id: "169",
+    name: "Virginia Stage Company",
+    description: "Professional theater company at the Wells Theatre in Norfolk.",
+    lat: 36.8505,
+    lng: -76.2915,
+    tags: ["entertainment", "culture"],
+    type: "business",
+    address: "108 E Tazewell St, Norfolk, VA 23510",
+    emoji: "🎭"
+  },
+  {
+    id: "170",
+    name: "Attucks Theatre",
+    description: "Historic African American theater in Norfolk with performances and events.",
+    lat: 36.851,
+    lng: -76.288,
+    tags: ["entertainment", "history"],
+    type: "business",
+    address: "1010 Church St, Norfolk, VA 23510",
+    emoji: "🎭"
+  },
+  {
+    id: "171",
+    name: "Hermitage Museum and Gardens",
+    description: "Art museum and gardens in Norfolk on the Lafayette River.",
+    lat: 36.885,
+    lng: -76.3,
+    tags: ["culture", "nature"],
+    type: "business",
+    address: "7637 N Shore Rd, Norfolk, VA 23505",
+    emoji: "🎨"
+  },
+  {
+    id: "172",
+    name: "Hunter House Victorian Museum",
+    description: "Restored 1894 Victorian home museum in Norfolk.",
+    lat: 36.86,
+    lng: -76.29,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "240 W Freemason St, Norfolk, VA 23510",
+    emoji: "🏠"
+  },
+  {
+    id: "173",
+    name: "Willoughby-Baylor House",
+    description: "Historic house museum in Norfolk with period furnishings.",
+    lat: 36.851,
+    lng: -76.296,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "601 E Freemason St, Norfolk, VA 23510",
+    emoji: "🏛️"
+  },
+  {
+    id: "174",
+    name: "Ocean View Beach Park",
+    description: "Public beach park in Norfolk's Ocean View neighborhood.",
+    lat: 36.93,
+    lng: -76.25,
+    tags: ["beach", "outdoors"],
+    type: "business",
+    address: "100 E Ocean View Ave, Norfolk, VA 23503",
+    emoji: "🏖️"
+  },
+  {
+    id: "175",
+    name: "Northside Park",
+    description: "Large park in Norfolk with sports fields, trails, and a skate park.",
+    lat: 36.9,
+    lng: -76.26,
+    tags: ["outdoors", "sports"],
+    type: "business",
+    address: "8400 Tidewater Dr, Norfolk, VA 23503",
+    emoji: "🛹"
+  },
+  {
+    id: "176",
+    name: "Lafayette Park",
+    description: "Riverside park in Norfolk with walking trails and picnic areas.",
+    lat: 36.88,
+    lng: -76.295,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "5201 Granby St, Norfolk, VA 23505",
+    emoji: "🌳"
+  },
+  {
+    id: "177",
+    name: "Barraud Park",
+    description: "Neighborhood park in Norfolk with a playground and basketball courts.",
+    lat: 36.87,
+    lng: -76.28,
+    tags: ["outdoors", "family"],
+    type: "business",
+    address: "2800 Tait Ter, Norfolk, VA 23509",
+    emoji: "🏀"
+  },
+  {
+    id: "178",
+    name: "Military Highway Shopping Center",
+    description: "Retail shopping center in Norfolk with anchor stores and dining.",
+    lat: 36.865,
+    lng: -76.24,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "1220 N Military Hwy, Norfolk, VA 23502",
+    emoji: "🛍️"
+  },
+  {
+    id: "179",
+    name: "Janaf Shopping Yard",
+    description: "Long-running open-air shopping center in Norfolk.",
+    lat: 36.86,
+    lng: -76.235,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "5900 E Virginia Beach Blvd, Norfolk, VA 23502",
+    emoji: "🛒"
+  },
+  {
+    id: "180",
+    name: "Waterside Festival Marketplace",
+    description: "Waterfront shopping and dining complex in Norfolk.",
+    lat: 36.844,
+    lng: -76.287,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "333 Waterside Dr, Norfolk, VA 23510",
+    emoji: "🏬"
+  },
+  {
+    id: "181",
+    name: "Old Dominion University",
+    description: "Major public research university in Norfolk with sports and events.",
+    lat: 36.885817,
+    lng: -76.305967,
+    tags: ["culture", "sports"],
+    type: "business",
+    address: "5115 Hampton Blvd, Norfolk, VA 23529",
+    emoji: "🎓"
+  },
+  {
+    id: "182",
+    name: "Sentara Norfolk General Hospital",
+    description: "Major medical center and trauma center in Norfolk.",
+    lat: 36.86,
+    lng: -76.305,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "600 Gresham Dr, Norfolk, VA 23507",
+    emoji: "🏥"
+  },
+  {
+    id: "183",
+    name: "Eastern Virginia Medical School",
+    description: "Medical school and research center in Norfolk's Ghent area.",
+    lat: 36.858,
+    lng: -76.305,
+    tags: ["culture", "wellness"],
+    type: "business",
+    address: "825 Fairfax Ave, Norfolk, VA 23507",
+    emoji: "🎓"
+  },
+  {
+    id: "184",
+    name: "Norfolk Fitness and Wellness Center",
+    description: "Public fitness facility in Norfolk with pools and gyms.",
+    lat: 36.875,
+    lng: -76.28,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "7300 Newport Ave, Norfolk, VA 23505",
+    emoji: "💪"
+  },
+  {
+    id: "185",
+    name: "Little Creek Athletic Complex",
+    description: "Multi-sport athletic complex in Norfolk.",
+    lat: 36.92,
+    lng: -76.2,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "7900 Diven St, Norfolk, VA 23505",
+    emoji: "⚽"
+  },
+  {
+    id: "186",
+    name: "Norfolk International Airport",
+    description: "Regional airport serving Hampton Roads with domestic flights.",
+    lat: 36.8947,
+    lng: -76.2012,
+    tags: ["entertainment", "family"],
+    type: "business",
+    address: "2200 Norview Ave, Norfolk, VA 23518",
+    emoji: "✈️"
+  },
+  {
+    id: "187",
+    name: "Norfolk Amtrak Station",
+    description: "Train station in Norfolk with service along the Northeast Corridor.",
+    lat: 36.847,
+    lng: -76.276,
+    tags: ["entertainment", "family"],
+    type: "business",
+    address: "280 Park Ave, Norfolk, VA 23510",
+    emoji: "🚆"
+  },
+  {
+    id: "188",
+    name: "MacArthur Memorial",
+    description: "Museum and burial site of General Douglas MacArthur in Norfolk.",
+    lat: 36.848,
+    lng: -76.288,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "198 Bank St, Norfolk, VA 23510",
+    emoji: "⚔️"
+  },
+  {
+    id: "189",
+    name: "Moses Myers House",
+    description: "Historic 1792 Jewish merchant's home museum in Norfolk.",
+    lat: 36.851,
+    lng: -76.295,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "331 Bank St, Norfolk, VA 23510",
+    emoji: "🏠"
+  },
+  {
+    id: "190",
+    name: "St. Paul's Episcopal Church",
+    description: "Historic church in Norfolk, the only building to survive the British bombardment of 1776.",
+    lat: 36.85,
+    lng: -76.292,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "228 W Freemason St, Norfolk, VA 23510",
+    emoji: "⛪"
+  },
+  {
+    id: "191",
+    name: "D'Art Center",
+    description: "Working artist studios and gallery space in Norfolk.",
+    lat: 36.844,
+    lng: -76.2875,
+    tags: ["culture", "entertainment"],
+    type: "business",
+    address: "740 Boush St, Norfolk, VA 23510",
+    emoji: "🎨"
+  },
+  {
+    id: "192",
+    name: "Generic Theater",
+    description: "Underground theater company in Norfolk producing edgy, contemporary works.",
+    lat: 36.85,
+    lng: -76.291,
+    tags: ["entertainment", "culture"],
+    type: "business",
+    address: "215 St Paul's Blvd, Norfolk, VA 23510",
+    emoji: "🎭"
+  },
+  {
+    id: "193",
+    name: "Tidewater Community College - Norfolk Campus",
+    description: "Community college campus in downtown Norfolk.",
+    lat: 36.85,
+    lng: -76.29,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "121 College Pl, Norfolk, VA 23510",
+    emoji: "🎓"
+  },
+  {
+    id: "194",
+    name: "Norfolk Public Library - Slover",
+    description: "Main public library branch in downtown Norfolk.",
+    lat: 36.850061,
+    lng: -76.291819,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "235 E Plume St, Norfolk, VA 23510",
+    emoji: "📚"
+  },
+  {
+    id: "195",
+    name: "Norfolk Botanical Garden - Butterfly House",
+    description: "Seasonal butterfly exhibit within the botanical gardens.",
+    lat: 36.902,
+    lng: -76.2,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "6700 Azalea Garden Rd, Norfolk, VA 23518",
+    emoji: "🦋"
+  },
+  {
+    id: "196",
+    name: "Elizabeth River Trail",
+    description: "10.5-mile trail along the Elizabeth River connecting Norfolk neighborhoods.",
+    lat: 36.845,
+    lng: -76.29,
+    tags: ["outdoors", "sports"],
+    type: "business",
+    address: "Elizabeth River Trail, Norfolk, VA 23510",
+    emoji: "🚴"
+  },
+  {
+    id: "197",
+    name: "Larchmont Park",
+    description: "Neighborhood park in Norfolk with tennis courts and a playground.",
+    lat: 36.87,
+    lng: -76.305,
+    tags: ["outdoors", "sports"],
+    type: "business",
+    address: "1201 Larchmont Cres, Norfolk, VA 23508",
+    emoji: "🎾"
+  },
+  {
+    id: "198",
+    name: "Talbot Park",
+    description: "Community park in Norfolk with baseball fields and picnic shelters.",
+    lat: 36.86,
+    lng: -76.27,
+    tags: ["outdoors", "family"],
+    type: "business",
+    address: "6100 Newport Ave, Norfolk, VA 23505",
+    emoji: "⚾"
+  },
+  {
+    id: "199",
+    name: "Fairmount Park",
+    description: "Park in Norfolk with basketball courts and a community center.",
+    lat: 36.88,
+    lng: -76.26,
+    tags: ["outdoors", "family"],
+    type: "business",
+    address: "6300 Hampton Blvd, Norfolk, VA 23508",
+    emoji: "🏀"
+  },
+  {
+    id: "200",
+    name: "Tidewater Park",
+    description: "Riverside park in Norfolk with fishing access and walking paths.",
+    lat: 36.84,
+    lng: -76.28,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "Tidewater Dr, Norfolk, VA 23504",
+    emoji: "🎣"
+  },
+  {
+    id: "201",
+    name: "Berkley Park",
+    description: "Waterfront park in Norfolk's Berkley neighborhood.",
+    lat: 36.84,
+    lng: -76.27,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "100 Berkley Ave, Norfolk, VA 23523",
+    emoji: "🌊"
+  },
+  {
+    id: "202",
+    name: "The Atlantic",
+    description: "Upscale oceanfront restaurant in Virginia Beach with seafood and steaks.",
+    lat: 36.852973,
+    lng: -75.979472,
+    tags: ["food", "beach"],
+    type: "business",
+    address: "3004 Atlantic Ave, Virginia Beach, VA 23451",
+    emoji: "🦞"
+  },
+  {
+    id: "203",
+    name: "Doc Taylor's",
+    description: "Beloved Virginia Beach breakfast spot with creative omelets and pancakes.",
+    lat: 36.851848,
+    lng: -75.978108,
+    tags: ["food", "coffee"],
+    type: "business",
+    address: "207 23rd St, Virginia Beach, VA 23451",
+    emoji: "🥞"
+  },
+  {
+    id: "204",
+    name: "Murphy's Irish Pub",
+    description: "Authentic Irish pub in Virginia Beach with live music and hearty fare.",
+    lat: 36.851,
+    lng: -75.977,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "2914 Pacific Ave, Virginia Beach, VA 23451",
+    emoji: "🍀"
+  },
+  {
+    id: "205",
+    name: "Tautog's Restaurant",
+    description: "Cozy Virginia Beach restaurant with seafood and a patio garden.",
+    lat: 36.850874,
+    lng: -75.976591,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "205 23rd St, Virginia Beach, VA 23451",
+    emoji: "🦀"
+  },
+  {
+    id: "206",
+    name: "The Beached Whale",
+    description: "Casual oceanfront bar and grill in Virginia Beach.",
+    lat: 36.85,
+    lng: -75.976,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "2200 Pacific Ave, Virginia Beach, VA 23451",
+    emoji: "🐋"
+  },
+  {
+    id: "207",
+    name: "Pocahontas Pancake and Waffle House",
+    description: "Virginia Beach institution serving breakfast all day since 1974.",
+    lat: 36.849,
+    lng: -75.975,
+    tags: ["food", "coffee"],
+    type: "business",
+    address: "3420 Atlantic Ave, Virginia Beach, VA 23451",
+    emoji: "🧇"
+  },
+  {
+    id: "208",
+    name: "Il Giardino Ristorante",
+    description: "Italian restaurant in Virginia Beach with house-made pasta and wine.",
+    lat: 36.848,
+    lng: -75.974,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "910 Atlantic Ave, Virginia Beach, VA 23451",
+    emoji: "🍝"
+  },
+  {
+    id: "209",
+    name: "Blue Moon Cafe",
+    description: "Virginia Beach cafe with eclectic decor and a varied menu.",
+    lat: 36.850289,
+    lng: -75.975953,
+    tags: ["food", "coffee"],
+    type: "business",
+    address: "2105 Arctic Ave, Virginia Beach, VA 23451",
+    emoji: "🌙"
+  },
+  {
+    id: "210",
+    name: "Bellytimber Tavern",
+    description: "Casual Virginia Beach tavern with burgers, beers, and a patio.",
+    lat: 36.855,
+    lng: -76.03,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "211 21st St, Virginia Beach, VA 23451",
+    emoji: "🍔"
+  },
+  {
+    id: "211",
+    name: "Sanctuary Brewing",
+    description: "Virginia Beach brewery with a taproom and live music events.",
+    lat: 36.85,
+    lng: -76.02,
+    tags: ["nightlife", "music"],
+    type: "business",
+    address: "2978 Shorehaven Dr, Virginia Beach, VA 23454",
+    emoji: "🍺"
+  },
+  {
+    id: "212",
+    name: "Brew Republic Bierwerks",
+    description: "Virginia Beach brewery with a patriotic theme and a large tap list.",
+    lat: 36.850198,
+    lng: -76.020258,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "1524 Pleasure House Rd, Virginia Beach, VA 23455",
+    emoji: "🍺"
+  },
+  {
+    id: "213",
+    name: "The Lucky Oyster",
+    description: "Oyster bar in Virginia Beach with fresh seafood and craft cocktails.",
+    lat: 36.851584,
+    lng: -75.978048,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "2503 Pacific Ave, Virginia Beach, VA 23451",
+    emoji: "🦪"
+  },
+  {
+    id: "214",
+    name: "Mahi's",
+    description: "Virginia Beach oceanfront restaurant with seafood and tropical drinks.",
+    lat: 36.850816,
+    lng: -75.976931,
+    tags: ["food", "beach"],
+    type: "business",
+    address: "2100 Pacific Ave, Virginia Beach, VA 23451",
+    emoji: "🍹"
+  },
+  {
+    id: "215",
+    name: "Rudee Inlet",
+    description: "Boating and fishing inlet in Virginia Beach with charter boats and jet skis.",
+    lat: 36.83,
+    lng: -75.97,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "Rudee Inlet, Virginia Beach, VA 23451",
+    emoji: "🎣"
+  },
+  {
+    id: "216",
+    name: "False Cape State Park",
+    description: "Remote barrier island park in Virginia Beach with pristine beaches and trails.",
+    lat: 36.62,
+    lng: -75.92,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "4001 Sandpiper Rd, Virginia Beach, VA 23456",
+    emoji: "🏝️"
+  },
+  {
+    id: "217",
+    name: "Pleasure House Point Natural Area",
+    description: "122-acre natural preserve in Virginia Beach with trails and kayaking.",
+    lat: 36.9,
+    lng: -76.13,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "Pleasure House Rd, Virginia Beach, VA 23455",
+    emoji: "🦆"
+  },
+  {
+    id: "218",
+    name: "Stumpy Lake Natural Area",
+    description: "278-acre lake in Virginia Beach with a golf course and nature trails.",
+    lat: 36.82,
+    lng: -76.08,
+    tags: ["nature", "sports"],
+    type: "business",
+    address: "4793 Indian River Rd, Virginia Beach, VA 23456",
+    emoji: "🦅"
+  },
+  {
+    id: "219",
+    name: "Munden Point Park",
+    description: "Waterfront park in Virginia Beach with a boat ramp and fishing pier.",
+    lat: 36.6,
+    lng: -76.1,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "2001 Pefley Blvd, Virginia Beach, VA 23464",
+    emoji: "🎣"
+  },
+  {
+    id: "220",
+    name: "Kempsville Recreation Center",
+    description: "Community recreation center in Virginia Beach with pools and gyms.",
+    lat: 36.8,
+    lng: -76.17,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "800 Monmouth Ln, Virginia Beach, VA 23464",
+    emoji: "🏊"
+  },
+  {
+    id: "221",
+    name: "Princess Anne Recreation Center",
+    description: "Indoor recreation facility in Virginia Beach.",
+    lat: 36.75,
+    lng: -76.06,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "1400 Nimmo Pkwy, Virginia Beach, VA 23456",
+    emoji: "🏋️"
+  },
+  {
+    id: "222",
+    name: "Great Neck Park",
+    description: "Waterfront park in Virginia Beach with tennis courts and playgrounds.",
+    lat: 36.85,
+    lng: -76.05,
+    tags: ["outdoors", "sports"],
+    type: "business",
+    address: "2511 Shorehaven Dr, Virginia Beach, VA 23454",
+    emoji: "🎾"
+  },
+  {
+    id: "223",
+    name: "Red Wing Park",
+    description: "Park in Virginia Beach with a dog park, skate park, and walking trails.",
+    lat: 36.85,
+    lng: -76.03,
+    tags: ["outdoors", "family"],
+    type: "business",
+    address: "1398 General Booth Blvd, Virginia Beach, VA 23451",
+    emoji: "🛹"
+  },
+  {
+    id: "224",
+    name: "Woodstock Park",
+    description: "Community park in Virginia Beach with sports fields and a playground.",
+    lat: 36.83,
+    lng: -76.04,
+    tags: ["outdoors", "sports"],
+    type: "business",
+    address: "5709 Providence Rd, Virginia Beach, VA 23464",
+    emoji: "⚽"
+  },
+  {
+    id: "225",
+    name: "Lynnhaven River Park",
+    description: "Riverfront park in Virginia Beach with a boat ramp and fishing.",
+    lat: 36.900475,
+    lng: -76.119873,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "2236 Lishelle Pl, Virginia Beach, VA 23454",
+    emoji: "🎣"
+  },
+  {
+    id: "226",
+    name: "Pungo Ridge Natural Area Preserve",
+    description: "Protected natural area in southern Virginia Beach with trails.",
+    lat: 36.72,
+    lng: -76,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "Pungo, Virginia Beach, VA 23457",
+    emoji: "🌾"
+  },
+  {
+    id: "227",
+    name: "Virginia Beach Convention Center",
+    description: "Large convention center hosting expos, concerts, and events.",
+    lat: 36.84,
+    lng: -76.13,
+    tags: ["entertainment", "food"],
+    type: "business",
+    address: "1000 19th St, Virginia Beach, VA 23451",
+    emoji: "🏢"
+  },
+  {
+    id: "228",
+    name: "Sandler Center for the Performing Arts",
+    description: "Performing arts venue in Virginia Beach Town Center.",
+    lat: 36.842116,
+    lng: -76.137905,
+    tags: ["entertainment", "culture"],
+    type: "business",
+    address: "201 Market St, Virginia Beach, VA 23462",
+    emoji: "🎭"
+  },
+  {
+    id: "229",
+    name: "Funny Bone Comedy Club",
+    description: "Comedy club in Virginia Beach Town Center with national acts.",
+    lat: 36.841567,
+    lng: -76.138261,
+    tags: ["entertainment", "nightlife"],
+    type: "business",
+    address: "217 Central Park Ave, Virginia Beach, VA 23462",
+    emoji: "🎤"
+  },
+  {
+    id: "230",
+    name: "FunVille",
+    description: "Family fun center in Virginia Beach with arcade games and indoor play.",
+    lat: 36.83995,
+    lng: -76.130184,
+    tags: ["family", "entertainment"],
+    type: "business",
+    address: "2333 Virginia Beach Blvd, Virginia Beach, VA 23454",
+    emoji: "🎮"
+  },
+  {
+    id: "231",
+    name: "Topgolf Virginia Beach",
+    description: "High-tech driving range and entertainment venue in Virginia Beach.",
+    lat: 36.83,
+    lng: -76.12,
+    tags: ["sports", "entertainment"],
+    type: "business",
+    address: "5444 Greenwich Rd, Virginia Beach, VA 23462",
+    emoji: "⛳"
+  },
+  {
+    id: "232",
+    name: "AMC Lynnhaven 18",
+    description: "Movie theater in Virginia Beach with IMAX and Dolby Cinema.",
+    lat: 36.855,
+    lng: -76.08,
+    tags: ["entertainment", "family"],
+    type: "business",
+    address: "1001 Lynnhaven Pkwy, Virginia Beach, VA 23452",
+    emoji: "🎬"
+  },
+  {
+    id: "233",
+    name: "Regal Columbus",
+    description: "Movie theater in Virginia Beach with recliner seating.",
+    lat: 36.84,
+    lng: -76.12,
+    tags: ["entertainment", "family"],
+    type: "business",
+    address: "104 Constitution Dr, Virginia Beach, VA 23462",
+    emoji: "🎥"
+  },
+  {
+    id: "234",
+    name: "Edgar Cayce's A.R.E.",
+    description: "Holistic health center and library founded by psychic Edgar Cayce.",
+    lat: 36.9,
+    lng: -76.06,
+    tags: ["wellness", "culture"],
+    type: "business",
+    address: "215 67th St, Virginia Beach, VA 23451",
+    emoji: "🧘"
+  },
+  {
+    id: "235",
+    name: "Chicks Beach",
+    description: "Quiet neighborhood beach in Virginia Beach on the Chesapeake Bay.",
+    lat: 36.9,
+    lng: -76.08,
+    tags: ["beach", "outdoors"],
+    type: "business",
+    address: "Chick's Beach, Virginia Beach, VA 23455",
+    emoji: "🏖️"
+  },
+  {
+    id: "236",
+    name: "The Rustic Spoon",
+    description: "Farm-to-table restaurant in Virginia Beach with seasonal American fare.",
+    lat: 36.842297,
+    lng: -76.137604,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "2105 Princess Anne Rd, Virginia Beach, VA 23456",
+    emoji: "🍽️"
+  },
+  {
+    id: "237",
+    name: "The Bearded Bird",
+    description: "Coffee shop and roaster in Virginia Beach with a laid-back vibe.",
+    lat: 36.855038,
+    lng: -76.029815,
+    tags: ["coffee", "food"],
+    type: "business",
+    address: "319 Virginia Beach Blvd, Virginia Beach, VA 23451",
+    emoji: "☕"
+  },
+  {
+    id: "238",
+    name: "Black Widow Tattoo and Piercing",
+    description: "Custom tattoo shop in Virginia Beach with award-winning artists.",
+    lat: 36.854889,
+    lng: -75.980473,
+    tags: ["culture", "entertainment"],
+    type: "business",
+    address: "207 23rd St, Virginia Beach, VA 23451",
+    emoji: "🖌️"
+  },
+  {
+    id: "239",
+    name: "The Westin Virginia Beach Town Center",
+    description: "Upscale hotel at Virginia Beach Town Center.",
+    lat: 36.843,
+    lng: -76.137,
+    tags: ["wellness", "food"],
+    type: "business",
+    address: "4535 Commerce St, Virginia Beach, VA 23462",
+    emoji: "🏨"
+  },
+  {
+    id: "240",
+    name: "Oceanaire Resort Hotel",
+    description: "Oceanfront hotel in Virginia Beach with dining and spa.",
+    lat: 36.855,
+    lng: -76.007,
+    tags: ["wellness", "beach"],
+    type: "business",
+    address: "3421 Atlantic Ave, Virginia Beach, VA 23451",
+    emoji: "🏨"
+  },
+  {
+    id: "241",
+    name: "Hilton Virginia Beach Oceanfront",
+    description: "Beachfront Hilton with rooftop bar and event space.",
+    lat: 36.856,
+    lng: -76.008,
+    tags: ["wellness", "beach"],
+    type: "business",
+    address: "3001 Atlantic Ave, Virginia Beach, VA 23451",
+    emoji: "🏨"
+  },
+  {
+    id: "242",
+    name: "The Founders Inn and Spa",
+    description: "Colonial-style resort in Virginia Beach with a spa and gardens.",
+    lat: 36.829938,
+    lng: -76.119547,
+    tags: ["wellness", "nature"],
+    type: "business",
+    address: "5641 Indian River Rd, Virginia Beach, VA 23464",
+    emoji: "🏨"
+  },
+  {
+    id: "243",
+    name: "Hyatt House Virginia Beach / Oceanfront",
+    description: "Oceanfront suite hotel in Virginia Beach.",
+    lat: 36.858,
+    lng: -76.008,
+    tags: ["wellness", "beach"],
+    type: "business",
+    address: "2705 Atlantic Ave, Virginia Beach, VA 23451",
+    emoji: "🏨"
+  },
+  {
+    id: "244",
+    name: "Comfort Inn and Suites Virginia Beach",
+    description: "Beachside hotel in Virginia Beach with ocean views.",
+    lat: 36.852626,
+    lng: -76.003029,
+    tags: ["wellness", "beach"],
+    type: "business",
+    address: "2015 Atlantic Ave, Virginia Beach, VA 23451",
+    emoji: "🏨"
+  },
+  {
+    id: "245",
+    name: "Delta Hotels Virginia Beach Bayfront Suites",
+    description: "Bayfront suites hotel in Virginia Beach.",
+    lat: 36.848,
+    lng: -76,
+    tags: ["wellness", "outdoors"],
+    type: "business",
+    address: "2800 Shore Dr, Virginia Beach, VA 23451",
+    emoji: "🏨"
+  },
+  {
+    id: "246",
+    name: "Tidewater Community College - Virginia Beach Campus",
+    description: "Community college campus in Virginia Beach.",
+    lat: 36.799816,
+    lng: -76.169847,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "1700 College Cres, Virginia Beach, VA 23453",
+    emoji: "🎓"
+  },
+  {
+    id: "247",
+    name: "Virginia Wesleyan University",
+    description: "Private liberal arts university in Virginia Beach.",
+    lat: 36.86,
+    lng: -76.19,
+    tags: ["culture", "sports"],
+    type: "business",
+    address: "1584 Wesleyan Dr, Virginia Beach, VA 23455",
+    emoji: "🎓"
+  },
+  {
+    id: "248",
+    name: "Virginia Beach Sportsplex",
+    description: "Multi-purpose sports complex in Virginia Beach hosting tournaments.",
+    lat: 36.8,
+    lng: -76.2,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "2181 Landstown Rd, Virginia Beach, VA 23456",
+    emoji: "🏟️"
+  },
+  {
+    id: "249",
+    name: "Virginia Beach National Golf Club",
+    description: "Championship golf course in Virginia Beach designed by Pete Dye.",
+    lat: 36.78,
+    lng: -76.08,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "2500 Tournament Dr, Virginia Beach, VA 23456",
+    emoji: "⛳"
+  },
+  {
+    id: "250",
+    name: "Honeybee Golf Club",
+    description: "Public golf course in Virginia Beach with scenic water features.",
+    lat: 36.83,
+    lng: -76.13,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "2500 Tournament Dr, Virginia Beach, VA 23456",
+    emoji: "⛳"
+  },
+  {
+    id: "251",
+    name: "Kempsville Greens Golf Course",
+    description: "Public golf course in Virginia Beach.",
+    lat: 36.8,
+    lng: -76.15,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "4840 Princess Anne Rd, Virginia Beach, VA 23462",
+    emoji: "⛳"
+  },
+  {
+    id: "252",
+    name: "Bowlmor Virginia Beach",
+    description: "Upscale bowling alley in Virginia Beach with arcade and bar.",
+    lat: 36.840467,
+    lng: -76.119918,
+    tags: ["entertainment", "food"],
+    type: "business",
+    address: "1624 Laskin Rd, Virginia Beach, VA 23451",
+    emoji: "🎳"
+  },
+  {
+    id: "253",
+    name: "Escape Room Virginia Beach",
+    description: "Puzzle-based escape room experience in Virginia Beach.",
+    lat: 36.842131,
+    lng: -76.137974,
+    tags: ["entertainment", "family"],
+    type: "business",
+    address: "5249 Cleveland St, Virginia Beach, VA 23462",
+    emoji: "🧩"
+  },
+  {
+    id: "254",
+    name: "iFLY Virginia Beach",
+    description: "Indoor skydiving facility in Virginia Beach.",
+    lat: 36.829532,
+    lng: -76.120203,
+    tags: ["entertainment", "sports"],
+    type: "business",
+    address: "2412 Pacific Ave, Virginia Beach, VA 23451",
+    emoji: "🪂"
+  },
+  {
+    id: "255",
+    name: "Adventure Park at the Virginia Aquarium",
+    description: "Treetop adventure course with zip lines near the aquarium.",
+    lat: 36.818241,
+    lng: -75.979047,
+    tags: ["family", "sports"],
+    type: "business",
+    address: "717 General Booth Blvd, Virginia Beach, VA 23451",
+    emoji: "🌲"
+  },
+  {
+    id: "256",
+    name: "Great Bridge Battlefield and Waterways History Foundation",
+    description: "Historic site commemorating the Revolutionary War battle at Great Bridge.",
+    lat: 36.740367,
+    lng: -76.244652,
+    tags: ["history", "outdoors"],
+    type: "business",
+    address: "1775 Historic Way, Chesapeake, VA 23320",
+    emoji: "⚔️"
+  },
+  {
+    id: "257",
+    name: "Chesapeake Planetarium",
+    description: "Public planetarium in Chesapeake with free astronomy shows.",
+    lat: 36.750023,
+    lng: -76.24982,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "310 Shea Dr, Chesapeake, VA 23322",
+    emoji: "🪐"
+  },
+  {
+    id: "258",
+    name: "South Norfolk Memorial Library",
+    description: "Public library in Chesapeake's South Norfolk neighborhood.",
+    lat: 36.82,
+    lng: -76.27,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "801 Poindexter St, Chesapeake, VA 23324",
+    emoji: "📚"
+  },
+  {
+    id: "259",
+    name: "Chesapeake Central Library",
+    description: "Main library branch in Chesapeake with extensive collections.",
+    lat: 36.75,
+    lng: -76.24,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "298 Cedar Rd, Chesapeake, VA 23322",
+    emoji: "📚"
+  },
+  {
+    id: "260",
+    name: "Firebrew Bar and Grill",
+    description: "Chesapeake restaurant with wood-fired pizzas, craft beers, and a patio.",
+    lat: 36.778305,
+    lng: -76.227957,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "1253 Greenbrier Pkwy, Chesapeake, VA 23320",
+    emoji: "🍕"
+  },
+  {
+    id: "261",
+    name: "Chesapeake Regional Medical Center",
+    description: "Full-service hospital serving Chesapeake and surrounding areas.",
+    lat: 36.78,
+    lng: -76.24,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "736 Battlefield Blvd N, Chesapeake, VA 23320",
+    emoji: "🏥"
+  },
+  {
+    id: "262",
+    name: "Chesapeake Square Mall",
+    description: "Indoor shopping mall in Chesapeake with retail stores and dining.",
+    lat: 36.78,
+    lng: -76.4,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "4200 Portsmouth Blvd, Chesapeake, VA 23321",
+    emoji: "🛍️"
+  },
+  {
+    id: "263",
+    name: "Tidewater Community College - Chesapeake Campus",
+    description: "Community college campus in Chesapeake.",
+    lat: 36.779938,
+    lng: -76.240138,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "1428 Cedar Rd, Chesapeake, VA 23322",
+    emoji: "🎓"
+  },
+  {
+    id: "264",
+    name: "Chesapeake Skate Park",
+    description: "Public skate park in Chesapeake with ramps and rails.",
+    lat: 36.760012,
+    lng: -76.239521,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "900 City Park Dr, Chesapeake, VA 23320",
+    emoji: "🛹"
+  },
+  {
+    id: "265",
+    name: "Chesapeake Community Center",
+    description: "Recreation center in Chesapeake with fitness facilities and classes.",
+    lat: 36.760174,
+    lng: -76.239935,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "201 Dinwiddie St, Chesapeake, VA 23324",
+    emoji: "🏋️"
+  },
+  {
+    id: "266",
+    name: "Chesapeake Icebreaker",
+    description: "Indoor ice skating rink in Chesapeake.",
+    lat: 36.780123,
+    lng: -76.240397,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "900 Greenbrier Pkwy, Chesapeake, VA 23320",
+    emoji: "⛸️"
+  },
+  {
+    id: "267",
+    name: "Chesapeake Beach",
+    description: "Small public beach on the Elizabeth River in Chesapeake.",
+    lat: 36.819679,
+    lng: -76.27002,
+    tags: ["beach", "outdoors"],
+    type: "business",
+    address: "Chesapeake Beach, Chesapeake, VA 23324",
+    emoji: "🏖️"
+  },
+  {
+    id: "268",
+    name: "Western Branch Park",
+    description: "Community park in Chesapeake with ball fields and picnic areas.",
+    lat: 36.779827,
+    lng: -76.399764,
+    tags: ["outdoors", "sports"],
+    type: "business",
+    address: "4300 Portsmouth Blvd, Chesapeake, VA 23321",
+    emoji: "⚾"
+  },
+  {
+    id: "269",
+    name: "Deep Creek Park",
+    description: "Park in Chesapeake with a playground and sports facilities.",
+    lat: 36.74,
+    lng: -76.34,
+    tags: ["outdoors", "family"],
+    type: "business",
+    address: "108 Old Dr, Chesapeake, VA 23323",
+    emoji: "🌳"
+  },
+  {
+    id: "270",
+    name: "Hickory Park",
+    description: "Neighborhood park in Chesapeake with walking trails.",
+    lat: 36.73,
+    lng: -76.28,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "2001 S Military Hwy, Chesapeake, VA 23320",
+    emoji: "🌲"
+  },
+  {
+    id: "271",
+    name: "Grassfield Park",
+    description: "Park in Chesapeake with sports fields and a playground.",
+    lat: 36.72,
+    lng: -76.28,
+    tags: ["outdoors", "sports"],
+    type: "business",
+    address: "2312 Bainbridge Blvd, Chesapeake, VA 23324",
+    emoji: "⚽"
+  },
+  {
+    id: "272",
+    name: "Brite Park",
+    description: "Community park in Chesapeake with basketball courts.",
+    lat: 36.75,
+    lng: -76.23,
+    tags: ["outdoors", "sports"],
+    type: "business",
+    address: "1701 Brite Rd, Chesapeake, VA 23323",
+    emoji: "🏀"
+  },
+  {
+    id: "273",
+    name: "Cascade Park",
+    description: "Neighborhood park in Chesapeake with a playground.",
+    lat: 36.76,
+    lng: -76.22,
+    tags: ["outdoors", "family"],
+    type: "business",
+    address: "200 Cascade Blvd, Chesapeake, VA 23320",
+    emoji: "🌳"
+  },
+  {
+    id: "274",
+    name: "Crestwood Park",
+    description: "Park in Chesapeake with a community garden and walking paths.",
+    lat: 36.74,
+    lng: -76.24,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "1401 Crestwood Dr, Chesapeake, VA 23320",
+    emoji: "🌿"
+  },
+  {
+    id: "275",
+    name: "Chesapeake Bay Bridge-Tunnel",
+    description: "17.6-mile bridge-tunnel connecting Virginia Beach to the Eastern Shore.",
+    lat: 36.96,
+    lng: -76.11,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "Chesapeake Bay Bridge-Tunnel, Chesapeake, VA",
+    emoji: "🌉"
+  },
+  {
+    id: "276",
+    name: "Chesapeake Bay Academy",
+    description: "Independent school in Chesapeake serving students with learning differences.",
+    lat: 36.780442,
+    lng: -76.239956,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "821 Baker Rd, Chesapeake, VA 23322",
+    emoji: "🎓"
+  },
+  {
+    id: "277",
+    name: "Greenbrier Country Club",
+    description: "Private country club in Chesapeake with golf and tennis.",
+    lat: 36.78,
+    lng: -76.22,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "1351 Greenbrier Pkwy, Chesapeake, VA 23320",
+    emoji: "⛳"
+  },
+  {
+    id: "278",
+    name: "Chesapeake Sports Club",
+    description: "Fitness club in Chesapeake with pools and group classes.",
+    lat: 36.780143,
+    lng: -76.240051,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "1428 Cedar Rd, Chesapeake, VA 23322",
+    emoji: "🏋️"
+  },
+  {
+    id: "279",
+    name: "Studio X Dance Fitness",
+    description: "Dance fitness studio in Chesapeake offering Zumba and barre classes.",
+    lat: 36.779515,
+    lng: -76.240145,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "1401 Greenbrier Pkwy, Chesapeake, VA 23320",
+    emoji: "💃"
+  },
+  {
+    id: "280",
+    name: "Chesapeake Yoga Bar",
+    description: "Yoga studio in Chesapeake with heated and non-heated classes.",
+    lat: 36.779928,
+    lng: -76.240096,
+    tags: ["wellness", "sports"],
+    type: "business",
+    address: "1401 Greenbrier Pkwy, Chesapeake, VA 23320",
+    emoji: "🧘"
+  },
+  {
+    id: "281",
+    name: "Pure Barre Chesapeake",
+    description: "Boutique fitness studio in Chesapeake specializing in barre workouts.",
+    lat: 36.778424,
+    lng: -76.227709,
+    tags: ["wellness", "sports"],
+    type: "business",
+    address: "1401 Greenbrier Pkwy, Chesapeake, VA 23320",
+    emoji: "🩰"
+  },
+  {
+    id: "282",
+    name: "Orangetheory Fitness Chesapeake",
+    description: "High-intensity interval training gym in Chesapeake.",
+    lat: 36.778018,
+    lng: -76.227837,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "1401 Greenbrier Pkwy, Chesapeake, VA 23320",
+    emoji: "🍊"
+  },
+  {
+    id: "283",
+    name: "Planet Fitness Chesapeake",
+    description: "Budget-friendly gym in Chesapeake open 24/7.",
+    lat: 36.779725,
+    lng: -76.240424,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "1521 Sams Cir, Chesapeake, VA 23320",
+    emoji: "🏋️"
+  },
+  {
+    id: "284",
+    name: "Chesapeake Public Library - Major Hillard",
+    description: "Public library branch in Chesapeake.",
+    lat: 36.779972,
+    lng: -76.240146,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "824 Old George Washington Hwy N, Chesapeake, VA 23323",
+    emoji: "📚"
+  },
+  {
+    id: "285",
+    name: "Chesapeake Public Library - Russell Memorial",
+    description: "Public library branch in Chesapeake.",
+    lat: 36.740091,
+    lng: -76.339514,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "2808 Taylor Rd, Chesapeake, VA 23321",
+    emoji: "📚"
+  },
+  {
+    id: "286",
+    name: "Chesapeake Public Library - South Norfolk",
+    description: "Public library branch in Chesapeake's South Norfolk area.",
+    lat: 36.820118,
+    lng: -76.269921,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "801 Poindexter St, Chesapeake, VA 23324",
+    emoji: "📚"
+  },
+  {
+    id: "287",
+    name: "Chesapeake Public Library - Dr. Clarence V. Cuffee",
+    description: "Public library branch in Chesapeake.",
+    lat: 36.760067,
+    lng: -76.240446,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "2726 Border Rd, Chesapeake, VA 23324",
+    emoji: "📚"
+  },
+  {
+    id: "288",
+    name: "Chesapeake Public Library - Indian River",
+    description: "Public library branch in the Indian River area of Chesapeake.",
+    lat: 36.82,
+    lng: -76.2,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "2000 Saunders Rd, Chesapeake, VA 23325",
+    emoji: "📚"
+  },
+  {
+    id: "289",
+    name: "Chesapeake Public Library - Mildred W. Glover",
+    description: "Public library branch in Chesapeake.",
+    lat: 36.779739,
+    lng: -76.240018,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "900 Clemson Dr, Chesapeake, VA 23322",
+    emoji: "📚"
+  },
+  {
+    id: "290",
+    name: "Chesapeake City Hall",
+    description: "City government building in Chesapeake with public meeting spaces.",
+    lat: 36.75985,
+    lng: -76.239687,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "306 Cedar Rd, Chesapeake, VA 23322",
+    emoji: "🏛️"
+  },
+  {
+    id: "291",
+    name: "Chesapeake Courthouse",
+    description: "Historic courthouse in Chesapeake.",
+    lat: 36.760403,
+    lng: -76.239985,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "307 Albemarle Dr, Chesapeake, VA 23322",
+    emoji: "⚖️"
+  },
+  {
+    id: "292",
+    name: "Chesapeake Jubilee",
+    description: "Annual festival in Chesapeake with live music, food, and fireworks.",
+    lat: 36.760147,
+    lng: -76.240131,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "900 City Park Dr, Chesapeake, VA 23320",
+    emoji: "🎆"
+  },
+  {
+    id: "293",
+    name: "Chesapeake Wine Festival",
+    description: "Annual wine tasting event in Chesapeake.",
+    lat: 36.759517,
+    lng: -76.240092,
+    tags: ["festival", "nightlife"],
+    type: "business",
+    address: "900 City Park Dr, Chesapeake, VA 23320",
+    emoji: "🍷"
+  },
+  {
+    id: "294",
+    name: "Chesapeake Rotary Club Farmers Market",
+    description: "Weekly farmers market in Chesapeake with local produce.",
+    lat: 36.759914,
+    lng: -76.240035,
+    tags: ["food", "shopping"],
+    type: "business",
+    address: "900 City Park Dr, Chesapeake, VA 23320",
+    emoji: "🥕"
+  },
+  {
+    id: "295",
+    name: "Chesapeake Bay Wine Trail",
+    description: "Scenic wine trail through Chesapeake and surrounding areas.",
+    lat: 36.760465,
+    lng: -76.23977,
+    tags: ["nightlife", "nature"],
+    type: "business",
+    address: "Chesapeake, VA",
+    emoji: "🍇"
+  },
+  {
+    id: "296",
+    name: "Chesapeake Regional Airport",
+    description: "Regional airport in Chesapeake for general aviation.",
+    lat: 36.66,
+    lng: -76.32,
+    tags: ["entertainment", "family"],
+    type: "business",
+    address: "900 Greenbrier Pkwy, Chesapeake, VA 23320",
+    emoji: "✈️"
+  },
+  {
+    id: "297",
+    name: "Chesapeake Park Place",
+    description: "Shopping and dining center in Chesapeake.",
+    lat: 36.77,
+    lng: -76.23,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "1200 Greenbrier Pkwy, Chesapeake, VA 23320",
+    emoji: "🛍️"
+  },
+  {
+    id: "298",
+    name: "Chesapeake Square",
+    description: "Shopping center in Chesapeake with major retailers.",
+    lat: 36.78002,
+    lng: -76.399866,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "4200 Portsmouth Blvd, Chesapeake, VA 23321",
+    emoji: "🛒"
+  },
+  {
+    id: "299",
+    name: "Great Bridge Shopping Center",
+    description: "Retail center in Chesapeake near the Great Bridge area.",
+    lat: 36.739652,
+    lng: -76.240378,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "100 Locks Rd, Chesapeake, VA 23320",
+    emoji: "🛍️"
+  },
+  {
+    id: "300",
+    name: "Chesapeake Health and Fitness",
+    description: "Full-service gym in Chesapeake with personal training.",
+    lat: 36.779995,
+    lng: -76.240146,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "1428 Cedar Rd, Chesapeake, VA 23322",
+    emoji: "💪"
+  },
+  {
+    id: "301",
+    name: "Chesapeake Family YMCA",
+    description: "Community YMCA in Chesapeake with fitness and aquatic programs.",
+    lat: 36.780172,
+    lng: -76.239524,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "900 Greenbrier Pkwy, Chesapeake, VA 23320",
+    emoji: "🏊"
+  },
+  {
+    id: "302",
+    name: "Chesapeake Sports and Social Club",
+    description: "Adult recreational sports league in Chesapeake.",
+    lat: 36.780067,
+    lng: -76.239907,
+    tags: ["sports", "nightlife"],
+    type: "business",
+    address: "900 City Park Dr, Chesapeake, VA 23320",
+    emoji: "⚽"
+  },
+  {
+    id: "303",
+    name: "Chesapeake Youth Soccer Association",
+    description: "Youth soccer organization in Chesapeake.",
+    lat: 36.759802,
+    lng: -76.240024,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "900 City Park Dr, Chesapeake, VA 23320",
+    emoji: "⚽"
+  },
+  {
+    id: "304",
+    name: "Chesapeake High School Football Stadium",
+    description: "High school football stadium in Chesapeake.",
+    lat: 36.779885,
+    lng: -76.23962,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "900 Greenbrier Pkwy, Chesapeake, VA 23320",
+    emoji: "🏈"
+  },
+  {
+    id: "305",
+    name: "Chesapeake Tennis Association",
+    description: "Tennis organization in Chesapeake with courts and programs.",
+    lat: 36.780351,
+    lng: -76.240004,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "900 City Park Dr, Chesapeake, VA 23320",
+    emoji: "🎾"
+  },
+  {
+    id: "306",
+    name: "Chesapeake Rowing Club",
+    description: "Rowing club on the Elizabeth River in Chesapeake.",
+    lat: 36.820143,
+    lng: -76.270212,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "Chesapeake Beach, Chesapeake, VA 23324",
+    emoji: "🚣"
+  },
+  {
+    id: "307",
+    name: "Chesapeake Sailing Association",
+    description: "Sailing club in Chesapeake with lessons and races.",
+    lat: 36.819536,
+    lng: -76.270045,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "Chesapeake Beach, Chesapeake, VA 23324",
+    emoji: "⛵"
+  },
+  {
+    id: "308",
+    name: "Chesapeake Bay Fishing Charters",
+    description: "Fishing charter service in Chesapeake.",
+    lat: 36.819901,
+    lng: -76.269965,
+    tags: ["outdoors", "sports"],
+    type: "business",
+    address: "Chesapeake Beach, Chesapeake, VA 23324",
+    emoji: "🎣"
+  },
+  {
+    id: "309",
+    name: "Chesapeake Kayak Adventures",
+    description: "Kayak rental and tour company in Chesapeake.",
+    lat: 36.820489,
+    lng: -76.269833,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "Chesapeake Beach, Chesapeake, VA 23324",
+    emoji: "🛶"
+  },
+  {
+    id: "310",
+    name: "Chesapeake Paddle Board Company",
+    description: "Paddleboard rental and lessons in Chesapeake.",
+    lat: 36.820029,
+    lng: -76.269907,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "Chesapeake Beach, Chesapeake, VA 23324",
+    emoji: "🏄"
+  },
+  {
+    id: "311",
+    name: "Chesapeake Nature Photography Tours",
+    description: "Guided photography tours of natural areas in Chesapeake.",
+    lat: 36.599591,
+    lng: -76.350321,
+    tags: ["nature", "culture"],
+    type: "business",
+    address: "Dismal Swamp Canal Trail, Chesapeake, VA 23323",
+    emoji: "📸"
+  },
+  {
+    id: "312",
+    name: "Chesapeake Bird Watching Club",
+    description: "Bird watching group exploring Chesapeake's natural areas.",
+    lat: 36.60001,
+    lng: -76.350137,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "Dismal Swamp Canal Trail, Chesapeake, VA 23323",
+    emoji: "🦅"
+  },
+  {
+    id: "313",
+    name: "Chesapeake Wildlife Rehabilitation Center",
+    description: "Wildlife rescue and rehabilitation facility in Chesapeake.",
+    lat: 36.750252,
+    lng: -76.239552,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "900 City Park Dr, Chesapeake, VA 23320",
+    emoji: "🦌"
+  },
+  {
+    id: "314",
+    name: "Chesapeake Farmers Market Association",
+    description: "Organization supporting local farmers markets in Chesapeake.",
+    lat: 36.760024,
+    lng: -76.239896,
+    tags: ["food", "shopping"],
+    type: "business",
+    address: "900 City Park Dr, Chesapeake, VA 23320",
+    emoji: "🥬"
+  },
+  {
+    id: "315",
+    name: "Venture Kitchen and Bar",
+    description: "Upscale New American restaurant in Hampton with craft cocktails.",
+    lat: 37.025428,
+    lng: -76.343494,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "9 E Queens Way, Hampton, VA 23669",
+    emoji: "🍽️"
+  },
+  {
+    id: "316",
+    name: "Phoebus Coffee and Books",
+    description: "Cozy coffee shop in Hampton's Phoebus neighborhood with used books.",
+    lat: 37.019,
+    lng: -76.319,
+    tags: ["coffee", "culture"],
+    type: "business",
+    address: "1 E Mellen St, Hampton, VA 23663",
+    emoji: "☕"
+  },
+  {
+    id: "317",
+    name: "Queen Street Bakery",
+    description: "Local bakery in Hampton with fresh pastries and breads.",
+    lat: 37.024864,
+    lng: -76.342034,
+    tags: ["food", "coffee"],
+    type: "business",
+    address: "12 E Queens Way, Hampton, VA 23669",
+    emoji: "🥐"
+  },
+  {
+    id: "318",
+    name: "The Point at Phoebus",
+    description: "Upscale restaurant in Hampton's Phoebus neighborhood with seafood and steaks.",
+    lat: 37.0195,
+    lng: -76.3195,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "30 E Mellen St, Hampton, VA 23663",
+    emoji: "🦞"
+  },
+  {
+    id: "319",
+    name: "Taste Unlimited Hampton",
+    description: "Local sandwich shop in Hampton with fresh soups and salads.",
+    lat: 37.024932,
+    lng: -76.341565,
+    tags: ["food", "coffee"],
+    type: "business",
+    address: "1 E Queens Way, Hampton, VA 23669",
+    emoji: "🥪"
+  },
+  {
+    id: "320",
+    name: "Hampton Roads Convention Center",
+    description: "Large convention center in Hampton hosting expos and events.",
+    lat: 37.03029,
+    lng: -76.345013,
+    tags: ["entertainment", "food"],
+    type: "business",
+    address: "1610 Coliseum Dr, Hampton, VA 23666",
+    emoji: "🏢"
+  },
+  {
+    id: "321",
+    name: "Hampton University Museum",
+    description: "Museum at Hampton University with African American and African art collections.",
+    lat: 37.022028,
+    lng: -76.33789,
+    tags: ["culture", "history"],
+    type: "business",
+    address: "100 E Queen St, Hampton, VA 23668",
+    emoji: "🎨"
+  },
+  {
+    id: "322",
+    name: "Virginia Air and Space Science Center - IMAX",
+    description: "Giant screen IMAX theater at the Air and Space Center.",
+    lat: 37.021271,
+    lng: -76.343606,
+    tags: ["entertainment", "family"],
+    type: "business",
+    address: "600 Settlers Landing Rd, Hampton, VA 23669",
+    emoji: "🎬"
+  },
+  {
+    id: "323",
+    name: "Mill Point Park",
+    description: "Waterfront park in Hampton with a stage for concerts and events.",
+    lat: 37.025,
+    lng: -76.34,
+    tags: ["outdoors", "music"],
+    type: "business",
+    address: "100 Eaton St, Hampton, VA 23669",
+    emoji: "🌳"
+  },
+  {
+    id: "324",
+    name: "Downtown Hampton",
+    description: "Historic downtown district in Hampton with shops, dining, and museums.",
+    lat: 37.024893,
+    lng: -76.341889,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "E Queens Way, Hampton, VA 23669",
+    emoji: "🏘️"
+  },
+  {
+    id: "325",
+    name: "Hampton Marina",
+    description: "Full-service marina in Hampton with boat slips and waterfront dining.",
+    lat: 37.025494,
+    lng: -76.339894,
+    tags: ["outdoors", "food"],
+    type: "business",
+    address: "710 Settlers Landing Rd, Hampton, VA 23669",
+    emoji: "⚓"
+  },
+  {
+    id: "326",
+    name: "Hampton Roads History Museum",
+    description: "Museum exploring the history of the Hampton Roads region.",
+    lat: 37.025041,
+    lng: -76.34196,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "101 E Queens Way, Hampton, VA 23669",
+    emoji: "🏛️"
+  },
+  {
+    id: "327",
+    name: "Hampton Coliseum - Box Office",
+    description: "Ticket office for Hampton Coliseum events and concerts.",
+    lat: 37.032044,
+    lng: -76.384457,
+    tags: ["entertainment", "music"],
+    type: "business",
+    address: "1000 Coliseum Dr, Hampton, VA 23666",
+    emoji: "🎫"
+  },
+  {
+    id: "328",
+    name: "Peninsula Town Center",
+    description: "Open-air shopping and dining district in Hampton.",
+    lat: 37.03,
+    lng: -76.38,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "1238 Merchants Ln, Hampton, VA 23666",
+    emoji: "🏙️"
+  },
+  {
+    id: "329",
+    name: "Comfort Inn Hampton",
+    description: "Budget-friendly hotel in Hampton near major attractions.",
+    lat: 37.029923,
+    lng: -76.380047,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "2000 W Mercury Blvd, Hampton, VA 23666",
+    emoji: "🏨"
+  },
+  {
+    id: "330",
+    name: "Hampton Public Library",
+    description: "Main public library in Hampton with community programs.",
+    lat: 37.025102,
+    lng: -76.34236,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "4207 Victoria Blvd, Hampton, VA 23669",
+    emoji: "📚"
+  },
+  {
+    id: "331",
+    name: "Hampton Public Library - Phoebus",
+    description: "Public library branch in Hampton's Phoebus neighborhood.",
+    lat: 37.019121,
+    lng: -76.318978,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "1 S Mallory St, Hampton, VA 23663",
+    emoji: "📚"
+  },
+  {
+    id: "332",
+    name: "Hampton Public Library - Willow Oaks",
+    description: "Public library branch in Hampton's Willow Oaks area.",
+    lat: 37.029891,
+    lng: -76.379811,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "227 Fox Hill Rd, Hampton, VA 23669",
+    emoji: "📚"
+  },
+  {
+    id: "333",
+    name: "Hampton Public Library - Northampton",
+    description: "Public library branch in Hampton.",
+    lat: 37.030481,
+    lng: -76.37995,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "25 Bernard Dr, Hampton, VA 23666",
+    emoji: "📚"
+  },
+  {
+    id: "334",
+    name: "Bethel Park",
+    description: "Community park in Hampton with sports fields and a playground.",
+    lat: 37.030054,
+    lng: -76.380022,
+    tags: ["outdoors", "sports"],
+    type: "business",
+    address: "1994 Big Bethel Rd, Hampton, VA 23666",
+    emoji: "🌳"
+  },
+  {
+    id: "335",
+    name: "Darling Stadium",
+    description: "High school football stadium in Hampton also used for community events.",
+    lat: 37.029513,
+    lng: -76.38019,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "1994 Big Bethel Rd, Hampton, VA 23666",
+    emoji: "🏈"
+  },
+  {
+    id: "336",
+    name: "Hampton Soccer Complex",
+    description: "Multi-field soccer complex in Hampton for leagues and tournaments.",
+    lat: 37.030012,
+    lng: -76.380084,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "1994 Big Bethel Rd, Hampton, VA 23666",
+    emoji: "⚽"
+  },
+  {
+    id: "337",
+    name: "Hampton Tennis Center",
+    description: "Public tennis facility in Hampton with multiple courts.",
+    lat: 37.030391,
+    lng: -76.37965,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "1994 Big Bethel Rd, Hampton, VA 23666",
+    emoji: "🎾"
+  },
+  {
+    id: "338",
+    name: "Hampton Roads Bridge-Tunnel",
+    description: "Major bridge-tunnel connecting Hampton to Norfolk across the harbor.",
+    lat: 37,
+    lng: -76.33,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "Hampton Roads Bridge-Tunnel, Hampton, VA",
+    emoji: "🌉"
+  },
+  {
+    id: "339",
+    name: "Fort Wool",
+    description: "Historic fort on a man-made island in Hampton Roads, visible from Fort Monroe.",
+    lat: 37,
+    lng: -76.3,
+    tags: ["history", "outdoors"],
+    type: "business",
+    address: "Fort Wool, Hampton, VA 23651",
+    emoji: "🏰"
+  },
+  {
+    id: "340",
+    name: "Hampton History Museum",
+    description: "Museum exploring the 400-year history of Hampton.",
+    lat: 37.024967,
+    lng: -76.341894,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "120 Old Hampton Ln, Hampton, VA 23669",
+    emoji: "🏛️"
+  },
+  {
+    id: "341",
+    name: "Hampton Carousel",
+    description: "Historic wooden carousel in downtown Hampton built in 1920.",
+    lat: 37.024773,
+    lng: -76.342468,
+    tags: ["entertainment", "family"],
+    type: "business",
+    address: "602 Settlers Landing Rd, Hampton, VA 23669",
+    emoji: "🎠"
+  },
+  {
+    id: "342",
+    name: "The American Theatre",
+    description: "Historic theater in Hampton hosting concerts, plays, and films.",
+    lat: 37.024975,
+    lng: -76.342059,
+    tags: ["entertainment", "culture"],
+    type: "business",
+    address: "125 E Mellen St, Hampton, VA 23663",
+    emoji: "🎭"
+  },
+  {
+    id: "343",
+    name: "Hampton Jazz Festival",
+    description: "Annual jazz festival held at Hampton Coliseum since 1968.",
+    lat: 37.032556,
+    lng: -76.383705,
+    tags: ["music", "festival"],
+    type: "business",
+    address: "1000 Coliseum Dr, Hampton, VA 23666",
+    emoji: "🎷"
+  },
+  {
+    id: "344",
+    name: "Hampton Roads Philharmonic",
+    description: "Professional orchestra performing in Hampton and the surrounding area.",
+    lat: 37.025156,
+    lng: -76.342009,
+    tags: ["music", "culture"],
+    type: "business",
+    address: "120 Old Hampton Ln, Hampton, VA 23669",
+    emoji: "🎻"
+  },
+  {
+    id: "345",
+    name: "Hampton Roads Youth Orchestra",
+    description: "Youth orchestra program based in Hampton.",
+    lat: 37.025064,
+    lng: -76.342418,
+    tags: ["music", "family"],
+    type: "business",
+    address: "120 Old Hampton Ln, Hampton, VA 23669",
+    emoji: "🎺"
+  },
+  {
+    id: "346",
+    name: "Hampton University - Convocation Center",
+    description: "Multi-purpose arena at Hampton University for sports and events.",
+    lat: 37.021582,
+    lng: -76.337559,
+    tags: ["sports", "entertainment"],
+    type: "business",
+    address: "100 E Queen St, Hampton, VA 23668",
+    emoji: "🏟️"
+  },
+  {
+    id: "347",
+    name: "Hampton University - Armstrong Stadium",
+    description: "Football stadium at Hampton University.",
+    lat: 37.021799,
+    lng: -76.337335,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "100 E Queen St, Hampton, VA 23668",
+    emoji: "🏈"
+  },
+  {
+    id: "348",
+    name: "Langley Speedway",
+    description: "Short-track NASCAR-sanctioned racetrack in Hampton.",
+    lat: 37.04,
+    lng: -76.38,
+    tags: ["sports", "entertainment"],
+    type: "business",
+    address: "3165 N Armistead Ave, Hampton, VA 23666",
+    emoji: "🏎️"
+  },
+  {
+    id: "349",
+    name: "Hampton Roads Iceplex",
+    description: "Indoor ice skating rink in Hampton.",
+    lat: 37.03045,
+    lng: -76.379998,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "1994 Big Bethel Rd, Hampton, VA 23666",
+    emoji: "⛸️"
+  },
+  {
+    id: "350",
+    name: "Hampton Family YMCA",
+    description: "Community YMCA in Hampton with fitness and aquatic programs.",
+    lat: 37.030064,
+    lng: -76.380092,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "1994 Big Bethel Rd, Hampton, VA 23666",
+    emoji: "🏊"
+  },
+  {
+    id: "351",
+    name: "Hampton Roads Community Health Center",
+    description: "Community health clinic in Hampton.",
+    lat: 37.029501,
+    lng: -76.380123,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "1510 Hardy Cash Dr, Hampton, VA 23666",
+    emoji: "🏥"
+  },
+  {
+    id: "352",
+    name: "Hampton Roads Veterinary Hospice",
+    description: "Veterinary hospice and palliative care in Hampton.",
+    lat: 37.030004,
+    lng: -76.380041,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "1 S Mallory St, Hampton, VA 23663",
+    emoji: "🐾"
+  },
+  {
+    id: "353",
+    name: "Hampton Roads Whalers",
+    description: "Youth hockey organization based in Hampton.",
+    lat: 37.030442,
+    lng: -76.379715,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "1994 Big Bethel Rd, Hampton, VA 23666",
+    emoji: "🏒"
+  },
+  {
+    id: "354",
+    name: "Hampton Roads Chamber of Commerce",
+    description: "Business organization supporting the Hampton Roads region.",
+    lat: 37.024954,
+    lng: -76.341906,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "500 E Main St, Hampton, VA 23669",
+    emoji: "🏢"
+  },
+  {
+    id: "355",
+    name: "Hampton Roads Workforce Development",
+    description: "Job training and workforce services in Hampton.",
+    lat: 37.024699,
+    lng: -76.342429,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "600 Butler Farm Rd, Hampton, VA 23666",
+    emoji: "💼"
+  },
+  {
+    id: "356",
+    name: "Hampton Roads Transit",
+    description: "Regional public transportation serving Hampton and surrounding cities.",
+    lat: 37.025018,
+    lng: -76.342068,
+    tags: ["entertainment", "family"],
+    type: "business",
+    address: "3400 W Mercury Blvd, Hampton, VA 23666",
+    emoji: "🚌"
+  },
+  {
+    id: "357",
+    name: "Hampton University Proton Therapy Institute",
+    description: "Advanced cancer treatment center in Hampton.",
+    lat: 37.022028,
+    lng: -76.337102,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "100 E Queen St, Hampton, VA 23668",
+    emoji: "🏥"
+  },
+  {
+    id: "358",
+    name: "Sentara CarePlex Hospital",
+    description: "Full-service hospital in Hampton with emergency and specialty care.",
+    lat: 37.030091,
+    lng: -76.379998,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "3000 Coliseum Dr, Hampton, VA 23666",
+    emoji: "🏥"
+  },
+  {
+    id: "359",
+    name: "Bon Secours Hampton Roads",
+    description: "Catholic health system with facilities in Hampton.",
+    lat: 37.030015,
+    lng: -76.380463,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "2 Bernardine Dr, Hampton, VA 23666",
+    emoji: "🏥"
+  },
+  {
+    id: "360",
+    name: "Riverside Regional Medical Center - Hampton",
+    description: "Medical campus in Hampton with outpatient services.",
+    lat: 37.02475,
+    lng: -76.341951,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "500 J Clyde Morris Blvd, Hampton, VA 23666",
+    emoji: "🏥"
+  },
+  {
+    id: "361",
+    name: "Hampton University - College of Pharmacy",
+    description: "Pharmacy school at Hampton University.",
+    lat: 37.021816,
+    lng: -76.337264,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "100 E Queen St, Hampton, VA 23668",
+    emoji: "💊"
+  },
+  {
+    id: "362",
+    name: "Hampton University - School of Business",
+    description: "Business school at Hampton University.",
+    lat: 37.022304,
+    lng: -76.337636,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "100 E Queen St, Hampton, VA 23668",
+    emoji: "💼"
+  },
+  {
+    id: "363",
+    name: "Hampton University - School of Engineering",
+    description: "Engineering school at Hampton University.",
+    lat: 37.021971,
+    lng: -76.337765,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "100 E Queen St, Hampton, VA 23668",
+    emoji: "⚙️"
+  },
+  {
+    id: "364",
+    name: "Kiln Creek Golf Club and Resort",
+    description: "Public golf course and resort in Newport News with a clubhouse and dining.",
+    lat: 37.109508,
+    lng: -76.47006,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "1003 Brick Kiln Blvd, Newport News, VA 23602",
+    emoji: "⛳"
+  },
+  {
+    id: "365",
+    name: "Christopher Newport University",
+    description: "Public liberal arts university in Newport News with a beautiful campus.",
+    lat: 37.061992,
+    lng: -76.492987,
+    tags: ["culture", "sports"],
+    type: "business",
+    address: "1 Avenue of the Arts, Newport News, VA 23606",
+    emoji: "🎓"
+  },
+  {
+    id: "366",
+    name: "Newport News/Williamsburg International Airport",
+    description: "Regional airport serving Newport News and Williamsburg.",
+    lat: 37.13,
+    lng: -76.49,
+    tags: ["entertainment", "family"],
+    type: "business",
+    address: "900 Bland Blvd, Newport News, VA 23602",
+    emoji: "✈️"
+  },
+  {
+    id: "367",
+    name: "Riverside Regional Medical Center",
+    description: "Major hospital in Newport News with comprehensive medical services.",
+    lat: 37.085479,
+    lng: -76.469785,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "500 J Clyde Morris Blvd, Newport News, VA 23601",
+    emoji: "🏥"
+  },
+  {
+    id: "368",
+    name: "Sentara Hospital - Newport News",
+    description: "Full-service hospital in Newport News.",
+    lat: 37.08495,
+    lng: -76.469929,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "1000 Bland Blvd, Newport News, VA 23602",
+    emoji: "🏥"
+  },
+  {
+    id: "369",
+    name: "Bon Secours Mary Immaculate Hospital",
+    description: "Catholic hospital in Newport News.",
+    lat: 37.084632,
+    lng: -76.470376,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "2 Bernardine Dr, Newport News, VA 23602",
+    emoji: "🏥"
+  },
+  {
+    id: "370",
+    name: "Denbigh Community Center",
+    description: "Recreation center in Newport News with fitness and aquatic facilities.",
+    lat: 37.115051,
+    lng: -76.510071,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "15198 Warwick Blvd, Newport News, VA 23608",
+    emoji: "🏋️"
+  },
+  {
+    id: "371",
+    name: "Newport News Aquatic Center",
+    description: "Indoor aquatic facility in Newport News with competition pools.",
+    lat: 37.085203,
+    lng: -76.469518,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "1000 Bland Blvd, Newport News, VA 23602",
+    emoji: "🏊"
+  },
+  {
+    id: "372",
+    name: "Hampton Roads IcePlex - Newport News",
+    description: "Indoor ice skating rink in Newport News.",
+    lat: 37.08503,
+    lng: -76.469986,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "1000 Bland Blvd, Newport News, VA 23602",
+    emoji: "⛸️"
+  },
+  {
+    id: "373",
+    name: "Newport News Youth Soccer",
+    description: "Youth soccer organization in Newport News.",
+    lat: 37.084956,
+    lng: -76.47049,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "1000 Bland Blvd, Newport News, VA 23602",
+    emoji: "⚽"
+  },
+  {
+    id: "374",
+    name: "Newport News Golf Club at Deer Run",
+    description: "Public golf course in Newport News.",
+    lat: 37.114821,
+    lng: -76.509951,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "901 Cherry Cove Dr, Newport News, VA 23602",
+    emoji: "⛳"
+  },
+  {
+    id: "375",
+    name: "Kiln Creek Golf Club",
+    description: "Public golf course in Newport News.",
+    lat: 37.109945,
+    lng: -76.469602,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "1003 Brick Kiln Blvd, Newport News, VA 23602",
+    emoji: "⛳"
+  },
+  {
+    id: "376",
+    name: "The Hamlet Golf Course",
+    description: "Public golf course in Newport News.",
+    lat: 37.085345,
+    lng: -76.470064,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "1000 Bland Blvd, Newport News, VA 23602",
+    emoji: "⛳"
+  },
+  {
+    id: "377",
+    name: "Newport News Public Library - Main",
+    description: "Main public library in Newport News.",
+    lat: 37.08507,
+    lng: -76.470239,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "110 Main St, Newport News, VA 23601",
+    emoji: "📚"
+  },
+  {
+    id: "378",
+    name: "Newport News Public Library - Virgil I. Grissom",
+    description: "Public library branch in Newport News.",
+    lat: 37.084533,
+    lng: -76.470003,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "366 De Shazor Dr, Newport News, VA 23608",
+    emoji: "📚"
+  },
+  {
+    id: "379",
+    name: "Newport News Public Library - West Avenue",
+    description: "Public library branch in Newport News.",
+    lat: 37.08498,
+    lng: -76.469924,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "30th St, Newport News, VA 23607",
+    emoji: "📚"
+  },
+  {
+    id: "380",
+    name: "Newport News Public Library - Pearl Bailey",
+    description: "Public library branch in Newport News.",
+    lat: 37.085497,
+    lng: -76.469857,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "2510 Wickham Ave, Newport News, VA 23607",
+    emoji: "📚"
+  },
+  {
+    id: "381",
+    name: "Newport News Public Library - South Morrison",
+    description: "Public library branch in Newport News.",
+    lat: 37.084953,
+    lng: -76.469964,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "746 Adams Dr, Newport News, VA 23601",
+    emoji: "📚"
+  },
+  {
+    id: "382",
+    name: "Newport News Public Library - Hilton",
+    description: "Public library branch in Newport News.",
+    lat: 37.084576,
+    lng: -76.470312,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "200 James River Dr, Newport News, VA 23601",
+    emoji: "📚"
+  },
+  {
+    id: "383",
+    name: "Newport News Public Library - East End",
+    description: "Public library branch in Newport News.",
+    lat: 37.085073,
+    lng: -76.470066,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "1108 16th St, Newport News, VA 23607",
+    emoji: "📚"
+  },
+  {
+    id: "384",
+    name: "Newport News City Hall",
+    description: "City government building in Newport News.",
+    lat: 37.085275,
+    lng: -76.469551,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "2400 Washington Ave, Newport News, VA 23607",
+    emoji: "🏛️"
+  },
+  {
+    id: "385",
+    name: "Newport News Courthouse",
+    description: "Historic courthouse in Newport News.",
+    lat: 37.084978,
+    lng: -76.469975,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "2500 Washington Ave, Newport News, VA 23607",
+    emoji: "⚖️"
+  },
+  {
+    id: "386",
+    name: "Newport News Shipbuilding",
+    description: "Major shipyard in Newport News building aircraft carriers and submarines.",
+    lat: 37.26,
+    lng: -76.58,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "4101 Washington Ave, Newport News, VA 23607",
+    emoji: "⚓"
+  },
+  {
+    id: "387",
+    name: "The Mariners' Museum Park",
+    description: "550-acre park surrounding the Mariners' Museum in Newport News.",
+    lat: 37.071791,
+    lng: -76.4891,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "100 Museum Dr, Newport News, VA 23606",
+    emoji: "🌳"
+  },
+  {
+    id: "388",
+    name: "Lake Maury",
+    description: "Scenic lake in Newport News surrounded by the Noland Trail.",
+    lat: 37.069893,
+    lng: -76.489957,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "100 Museum Dr, Newport News, VA 23606",
+    emoji: "🦆"
+  },
+  {
+    id: "389",
+    name: "Deer Park",
+    description: "Neighborhood park in Newport News with sports fields.",
+    lat: 37.084985,
+    lng: -76.469554,
+    tags: ["outdoors", "sports"],
+    type: "business",
+    address: "1000 Bland Blvd, Newport News, VA 23602",
+    emoji: "🌳"
+  },
+  {
+    id: "390",
+    name: "Morrison Park",
+    description: "Community park in Newport News with a playground.",
+    lat: 37.085277,
+    lng: -76.47008,
+    tags: ["outdoors", "family"],
+    type: "business",
+    address: "1000 Bland Blvd, Newport News, VA 23602",
+    emoji: "🌳"
+  },
+  {
+    id: "391",
+    name: "King-Lincoln Park",
+    description: "Waterfront park in Newport News with a beach and fishing pier.",
+    lat: 37.00006,
+    lng: -76.43031,
+    tags: ["beach", "outdoors"],
+    type: "business",
+    address: "600 Jefferson Ave, Newport News, VA 23607",
+    emoji: "🏖️"
+  },
+  {
+    id: "392",
+    name: "Riverview Farm Park",
+    description: "Farm-themed park in Newport News with a playground and sports fields.",
+    lat: 37.084574,
+    lng: -76.469955,
+    tags: ["outdoors", "family"],
+    type: "business",
+    address: "1000 Bland Blvd, Newport News, VA 23602",
+    emoji: "🌾"
+  },
+  {
+    id: "393",
+    name: "Newport News Victory Arch",
+    description: "Historic arch in Newport News commemorating returning WWI soldiers.",
+    lat: 37.025,
+    lng: -76.345,
+    tags: ["history", "outdoors"],
+    type: "business",
+    address: "25th St, Newport News, VA 23607",
+    emoji: "🏛️"
+  },
+  {
+    id: "394",
+    name: "Newport News Tourism Development Office",
+    description: "Visitor information center in Newport News.",
+    lat: 37.08497,
+    lng: -76.469856,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "2400 Washington Ave, Newport News, VA 23607",
+    emoji: "🏢"
+  },
+  {
+    id: "395",
+    name: "Newport News/Williamsburg International Airport - Terminal",
+    description: "Airport terminal in Newport News.",
+    lat: 37.130498,
+    lng: -76.489927,
+    tags: ["entertainment", "family"],
+    type: "business",
+    address: "900 Bland Blvd, Newport News, VA 23602",
+    emoji: "✈️"
+  },
+  {
+    id: "396",
+    name: "Newport News Marriott at City Center",
+    description: "Upscale hotel in Newport News City Center.",
+    lat: 37.086962,
+    lng: -76.473009,
+    tags: ["wellness", "food"],
+    type: "business",
+    address: "740 Town Center Dr, Newport News, VA 23606",
+    emoji: "🏨"
+  },
+  {
+    id: "397",
+    name: "Newport News Fishing Pier",
+    description: "Public fishing pier in Newport News on the James River.",
+    lat: 37.000087,
+    lng: -76.430027,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "9009 River Rd, Newport News, VA 23607",
+    emoji: "🎣"
+  },
+  {
+    id: "398",
+    name: "Newport News Park Golf Course",
+    description: "Public golf course within Newport News Park.",
+    lat: 37.145401,
+    lng: -76.529663,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "13560 Jefferson Ave, Newport News, VA 23603",
+    emoji: "⛳"
+  },
+  {
+    id: "399",
+    name: "Newport News Park Campground",
+    description: "Campground within Newport News Park with tent and RV sites.",
+    lat: 37.144904,
+    lng: -76.529965,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "13560 Jefferson Ave, Newport News, VA 23603",
+    emoji: "🏕️"
+  },
+  {
+    id: "400",
+    name: "Newport News Park Archery Range",
+    description: "Public archery range in Newport News Park.",
+    lat: 37.144752,
+    lng: -76.530463,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "13560 Jefferson Ave, Newport News, VA 23603",
+    emoji: "🏹"
+  },
+  {
+    id: "401",
+    name: "Newport News Park Discovery Center",
+    description: "Nature education center in Newport News Park.",
+    lat: 37.145021,
+    lng: -76.52998,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "13560 Jefferson Ave, Newport News, VA 23603",
+    emoji: "🔬"
+  },
+  {
+    id: "402",
+    name: "Newport News Park Boating",
+    description: "Boat rentals on the lake in Newport News Park.",
+    lat: 37.145093,
+    lng: -76.529504,
+    tags: ["outdoors", "sports"],
+    type: "business",
+    address: "13560 Jefferson Ave, Newport News, VA 23603",
+    emoji: "🛶"
+  },
+  {
+    id: "403",
+    name: "Newport News Greenways",
+    description: "Network of trails connecting parks and neighborhoods in Newport News.",
+    lat: 37.085127,
+    lng: -76.470086,
+    tags: ["outdoors", "sports"],
+    type: "business",
+    address: "Newport News, VA",
+    emoji: "🚴"
+  },
+  {
+    id: "404",
+    name: "Newport News Bikeways",
+    description: "Designated bike routes throughout Newport News.",
+    lat: 37.08501,
+    lng: -76.470426,
+    tags: ["outdoors", "sports"],
+    type: "business",
+    address: "Newport News, VA",
+    emoji: "🚲"
+  },
+  {
+    id: "405",
+    name: "Newport News Dog Park",
+    description: "Off-leash dog park in Newport News.",
+    lat: 37.084698,
+    lng: -76.469893,
+    tags: ["outdoors", "family"],
+    type: "business",
+    address: "900 City Park Dr, Newport News, VA 23606",
+    emoji: "🐕"
+  },
+  {
+    id: "406",
+    name: "Portsmouth Art and Cultural Center",
+    description: "Gallery and cultural venue in the historic Courthouse building.",
+    lat: 36.835943,
+    lng: -76.297048,
+    tags: ["culture", "entertainment"],
+    type: "business",
+    address: "400 High St, Portsmouth, VA 23704",
+    emoji: "🎨"
+  },
+  {
+    id: "407",
+    name: "Portsmouth Public Library - Main",
+    description: "Main public library in Portsmouth.",
+    lat: 36.834986,
+    lng: -76.297124,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "601 Court St, Portsmouth, VA 23704",
+    emoji: "📚"
+  },
+  {
+    id: "408",
+    name: "Portsmouth Public Library - Churchland",
+    description: "Public library branch in Portsmouth's Churchland area.",
+    lat: 36.85,
+    lng: -76.35,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "4934 High St W, Portsmouth, VA 23703",
+    emoji: "📚"
+  },
+  {
+    id: "409",
+    name: "Portsmouth Public Library - Cradock",
+    description: "Public library branch in Portsmouth's Cradock neighborhood.",
+    lat: 36.82,
+    lng: -76.31,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "28 Prospect Pkwy, Portsmouth, VA 23702",
+    emoji: "📚"
+  },
+  {
+    id: "410",
+    name: "Portsmouth Public Library - Manor",
+    description: "Public library branch in Portsmouth.",
+    lat: 36.83,
+    lng: -76.29,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "1401 Elmhurst Ln, Portsmouth, VA 23701",
+    emoji: "📚"
+  },
+  {
+    id: "411",
+    name: "Portsmouth City Hall",
+    description: "City government building in Portsmouth.",
+    lat: 36.834503,
+    lng: -76.297089,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "801 Crawford St, Portsmouth, VA 23704",
+    emoji: "🏛️"
+  },
+  {
+    id: "412",
+    name: "Portsmouth Courthouse",
+    description: "Historic courthouse in Portsmouth.",
+    lat: 36.835082,
+    lng: -76.296991,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "134 Court St, Portsmouth, VA 23704",
+    emoji: "⚖️"
+  },
+  {
+    id: "413",
+    name: "Portsmouth Naval Hospital",
+    description: "Major naval hospital serving the Hampton Roads military community.",
+    lat: 36.82,
+    lng: -76.3,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "620 John Paul Jones Cir, Portsmouth, VA 23708",
+    emoji: "🏥"
+  },
+  {
+    id: "414",
+    name: "Maryview Medical Center",
+    description: "Full-service hospital in Portsmouth.",
+    lat: 36.84,
+    lng: -76.32,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "3636 High St, Portsmouth, VA 23707",
+    emoji: "🏥"
+  },
+  {
+    id: "415",
+    name: "Portsmouth Community Health Center",
+    description: "Community health clinic in Portsmouth.",
+    lat: 36.835447,
+    lng: -76.296734,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "801 Crawford St, Portsmouth, VA 23704",
+    emoji: "🏥"
+  },
+  {
+    id: "416",
+    name: "Portsmouth YMCA",
+    description: "Community YMCA in Portsmouth with fitness and aquatic programs.",
+    lat: 36.834884,
+    lng: -76.296972,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "4900 High St W, Portsmouth, VA 23703",
+    emoji: "🏊"
+  },
+  {
+    id: "417",
+    name: "Portsmouth Ice Sports Center",
+    description: "Indoor ice skating rink in Portsmouth.",
+    lat: 36.834685,
+    lng: -76.297419,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "900 City Park Dr, Portsmouth, VA 23704",
+    emoji: "⛸️"
+  },
+  {
+    id: "418",
+    name: "Portsmouth Sports Complex",
+    description: "Multi-sport athletic complex in Portsmouth.",
+    lat: 36.820073,
+    lng: -76.299992,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "900 City Park Dr, Portsmouth, VA 23704",
+    emoji: "⚽"
+  },
+  {
+    id: "419",
+    name: "Portsmouth Golf Course",
+    description: "Public golf course in Portsmouth.",
+    lat: 36.850156,
+    lng: -76.349506,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "4934 High St W, Portsmouth, VA 23703",
+    emoji: "⛳"
+  },
+  {
+    id: "420",
+    name: "Portsmouth Tennis Center",
+    description: "Public tennis facility in Portsmouth.",
+    lat: 36.835053,
+    lng: -76.297077,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "900 City Park Dr, Portsmouth, VA 23704",
+    emoji: "🎾"
+  },
+  {
+    id: "421",
+    name: "Portsmouth Dog Park",
+    description: "Off-leash dog park in Portsmouth.",
+    lat: 36.83497,
+    lng: -76.297464,
+    tags: ["outdoors", "family"],
+    type: "business",
+    address: "900 City Park Dr, Portsmouth, VA 23704",
+    emoji: "🐕"
+  },
+  {
+    id: "422",
+    name: "Portsmouth Farmers Market",
+    description: "Weekly farmers market in Portsmouth with local produce.",
+    lat: 36.834979,
+    lng: -76.296654,
+    tags: ["food", "shopping"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🥕"
+  },
+  {
+    id: "423",
+    name: "Portsmouth Flea Market",
+    description: "Weekend flea market in Portsmouth with antiques and collectibles.",
+    lat: 36.835391,
+    lng: -76.297094,
+    tags: ["shopping", "culture"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🛍️"
+  },
+  {
+    id: "424",
+    name: "Portsmouth Seafood Festival",
+    description: "Annual seafood festival in Portsmouth with fresh catches and live music.",
+    lat: 36.834996,
+    lng: -76.297189,
+    tags: ["festival", "food"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🦐"
+  },
+  {
+    id: "425",
+    name: "Portsmouth Wine Festival",
+    description: "Annual wine tasting event in Portsmouth.",
+    lat: 36.834514,
+    lng: -76.297018,
+    tags: ["festival", "nightlife"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🍷"
+  },
+  {
+    id: "426",
+    name: "Portsmouth Art Festival",
+    description: "Annual art show in Portsmouth featuring local artists.",
+    lat: 36.835072,
+    lng: -76.296946,
+    tags: ["festival", "culture"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🎨"
+  },
+  {
+    id: "427",
+    name: "Portsmouth Maritime Festival",
+    description: "Annual celebration of Portsmouth's naval and maritime heritage.",
+    lat: 36.835478,
+    lng: -76.296812,
+    tags: ["festival", "history"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "⚓"
+  },
+  {
+    id: "428",
+    name: "Portsmouth Jazz Festival",
+    description: "Annual jazz event in Portsmouth with local and regional musicians.",
+    lat: 36.834875,
+    lng: -76.296988,
+    tags: ["music", "festival"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🎷"
+  },
+  {
+    id: "429",
+    name: "Portsmouth Blues Festival",
+    description: "Annual blues music festival in Portsmouth.",
+    lat: 36.834625,
+    lng: -76.29736,
+    tags: ["music", "festival"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🎸"
+  },
+  {
+    id: "430",
+    name: "Portsmouth Gospel Festival",
+    description: "Annual gospel music celebration in Portsmouth.",
+    lat: 36.835113,
+    lng: -76.296999,
+    tags: ["music", "family"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🎤"
+  },
+  {
+    id: "431",
+    name: "Portsmouth Juneteenth Celebration",
+    description: "Annual Juneteenth commemoration in Portsmouth.",
+    lat: 36.835222,
+    lng: -76.296527,
+    tags: ["history", "festival"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🎉"
+  },
+  {
+    id: "432",
+    name: "Portsmouth Kwanzaa Festival",
+    description: "Annual Kwanzaa celebration in Portsmouth.",
+    lat: 36.834984,
+    lng: -76.297065,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🕯️"
+  },
+  {
+    id: "433",
+    name: "Portsmouth MLK Day Parade",
+    description: "Annual Martin Luther King Jr. Day parade in Portsmouth.",
+    lat: 36.83492,
+    lng: -76.297486,
+    tags: ["history", "family"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "✊"
+  },
+  {
+    id: "434",
+    name: "Portsmouth Veterans Day Parade",
+    description: "Annual Veterans Day parade honoring military service.",
+    lat: 36.834852,
+    lng: -76.296874,
+    tags: ["history", "family"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🎖️"
+  },
+  {
+    id: "435",
+    name: "Portsmouth Memorial Day Ceremony",
+    description: "Annual Memorial Day observance in Portsmouth.",
+    lat: 36.835,
+    lng: -76.296599,
+    tags: ["history", "family"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🇺🇸"
+  },
+  {
+    id: "436",
+    name: "Portsmouth Fourth of July Fireworks",
+    description: "Annual Independence Day fireworks display in Portsmouth.",
+    lat: 36.835326,
+    lng: -76.297129,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🎆"
+  },
+  {
+    id: "437",
+    name: "Portsmouth Halloween Parade",
+    description: "Annual Halloween parade and costume contest in Portsmouth.",
+    lat: 36.835,
+    lng: -76.297254,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🎃"
+  },
+  {
+    id: "438",
+    name: "Portsmouth Holiday Boat Parade",
+    description: "Annual decorated boat parade on the Elizabeth River.",
+    lat: 36.834544,
+    lng: -76.296953,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🎄"
+  },
+  {
+    id: "439",
+    name: "Portsmouth Christmas Tree Lighting",
+    description: "Annual tree lighting ceremony in downtown Portsmouth.",
+    lat: 36.835058,
+    lng: -76.296893,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🎄"
+  },
+  {
+    id: "440",
+    name: "Portsmouth New Year's Eve Bash",
+    description: "Annual New Year's Eve celebration in Portsmouth.",
+    lat: 36.835491,
+    lng: -76.296892,
+    tags: ["festival", "nightlife"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🎉"
+  },
+  {
+    id: "441",
+    name: "Portsmouth Farmers Market Association",
+    description: "Organization supporting local farmers markets in Portsmouth.",
+    lat: 36.834876,
+    lng: -76.297014,
+    tags: ["food", "shopping"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🥬"
+  },
+  {
+    id: "442",
+    name: "Portsmouth Main Street Association",
+    description: "Organization promoting downtown Portsmouth businesses and events.",
+    lat: 36.834576,
+    lng: -76.29729,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🏢"
+  },
+  {
+    id: "443",
+    name: "Portsmouth Historical Association",
+    description: "Organization preserving and promoting Portsmouth's history.",
+    lat: 36.835142,
+    lng: -76.297,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🏛️"
+  },
+  {
+    id: "444",
+    name: "Portsmouth Arts and Cultural Foundation",
+    description: "Organization supporting arts and culture in Portsmouth.",
+    lat: 36.835286,
+    lng: -76.296566,
+    tags: ["culture", "entertainment"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🎭"
+  },
+  {
+    id: "445",
+    name: "Portsmouth Economic Development Authority",
+    description: "Organization promoting business growth in Portsmouth.",
+    lat: 36.834924,
+    lng: -76.297052,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "801 Crawford St, Portsmouth, VA 23704",
+    emoji: "🏢"
+  },
+  {
+    id: "446",
+    name: "Portsmouth Tourism Bureau",
+    description: "Visitor information and promotion for Portsmouth.",
+    lat: 36.834864,
+    lng: -76.297491,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🏢"
+  },
+  {
+    id: "447",
+    name: "Portsmouth Convention and Visitors Bureau",
+    description: "Organization promoting Portsmouth as a visitor destination.",
+    lat: 36.834931,
+    lng: -76.296879,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🏢"
+  },
+  {
+    id: "448",
+    name: "Portsmouth Sister Cities Association",
+    description: "Organization promoting international cultural exchange.",
+    lat: 36.83503,
+    lng: -76.296557,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🌍"
+  },
+  {
+    id: "449",
+    name: "Portsmouth Environmental Partnership",
+    description: "Organization promoting environmental sustainability in Portsmouth.",
+    lat: 36.835251,
+    lng: -76.297151,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🌿"
+  },
+  {
+    id: "450",
+    name: "Portsmouth Greenway Initiative",
+    description: "Project developing trails and green spaces in Portsmouth.",
+    lat: 36.834997,
+    lng: -76.297317,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🌳"
+  },
+  {
+    id: "451",
+    name: "Portsmouth Riverfront Heritage Trail",
+    description: "Walking trail along the Elizabeth River in Portsmouth.",
+    lat: 36.834591,
+    lng: -76.296898,
+    tags: ["outdoors", "history"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🚶"
+  },
+  {
+    id: "452",
+    name: "Portsmouth Waterfront Walking Tour",
+    description: "Self-guided tour of Portsmouth's historic waterfront.",
+    lat: 36.835045,
+    lng: -76.296835,
+    tags: ["history", "outdoors"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🚶"
+  },
+  {
+    id: "453",
+    name: "Portsmouth Ghost Walk",
+    description: "Evening walking tour of Portsmouth's haunted historic sites.",
+    lat: 36.835486,
+    lng: -76.296969,
+    tags: ["history", "entertainment"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "👻"
+  },
+  {
+    id: "454",
+    name: "Portsmouth Historic Home Tour",
+    description: "Annual tour of historic homes in Portsmouth.",
+    lat: 36.834884,
+    lng: -76.297049,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🏠"
+  },
+  {
+    id: "455",
+    name: "Portsmouth Garden Tour",
+    description: "Annual tour of private gardens in Portsmouth.",
+    lat: 36.834541,
+    lng: -76.297211,
+    tags: ["nature", "culture"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🌸"
+  },
+  {
+    id: "456",
+    name: "Portsmouth Holiday Home Tour",
+    description: "Annual tour of decorated historic homes during the holidays.",
+    lat: 36.835158,
+    lng: -76.296993,
+    tags: ["history", "family"],
+    type: "business",
+    address: "High St, Portsmouth, VA 23704",
+    emoji: "🏠"
+  },
+  {
+    id: "457",
+    name: "Suffolk Public Library - Morgan Memorial",
+    description: "Main public library in Suffolk.",
+    lat: 36.728346,
+    lng: -76.58362,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "443 W Washington St, Suffolk, VA 23434",
+    emoji: "📚"
+  },
+  {
+    id: "458",
+    name: "Suffolk Public Library - North Suffolk",
+    description: "Public library branch in North Suffolk.",
+    lat: 36.8,
+    lng: -76.5,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "2000 Bennett's Creek Pkwy, Suffolk, VA 23435",
+    emoji: "📚"
+  },
+  {
+    id: "459",
+    name: "Suffolk Public Library - Chuckatuck",
+    description: "Public library branch in Suffolk's Chuckatuck area.",
+    lat: 36.749875,
+    lng: -76.55004,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "5881 Godwin Blvd, Suffolk, VA 23432",
+    emoji: "📚"
+  },
+  {
+    id: "460",
+    name: "Suffolk City Hall",
+    description: "City government building in Suffolk.",
+    lat: 36.727804,
+    lng: -76.584477,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "441 W Washington St, Suffolk, VA 23434",
+    emoji: "🏛️"
+  },
+  {
+    id: "461",
+    name: "Suffolk Courthouse",
+    description: "Historic courthouse in Suffolk.",
+    lat: 36.728006,
+    lng: -76.583889,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "150 N Main St, Suffolk, VA 23434",
+    emoji: "⚖️"
+  },
+  {
+    id: "462",
+    name: "Suffolk Seaboard Station",
+    description: "Historic train station museum in Suffolk.",
+    lat: 36.72807,
+    lng: -76.583529,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "326 N Main St, Suffolk, VA 23434",
+    emoji: "🚂"
+  },
+  {
+    id: "463",
+    name: "Suffolk Visitor Center",
+    description: "Tourist information center in historic downtown Suffolk.",
+    lat: 36.728171,
+    lng: -76.584162,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "524 N Main St, Suffolk, VA 23434",
+    emoji: "🏢"
+  },
+  {
+    id: "464",
+    name: "Suffolk-Nansemond Historical Society",
+    description: "Organization preserving Suffolk's history.",
+    lat: 36.727986,
+    lng: -76.584373,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "524 N Main St, Suffolk, VA 23434",
+    emoji: "🏛️"
+  },
+  {
+    id: "465",
+    name: "Suffolk Economic Development",
+    description: "Organization promoting business growth in Suffolk.",
+    lat: 36.727653,
+    lng: -76.583855,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "441 W Washington St, Suffolk, VA 23434",
+    emoji: "🏢"
+  },
+  {
+    id: "466",
+    name: "Suffolk Chamber of Commerce",
+    description: "Business organization supporting Suffolk.",
+    lat: 36.728036,
+    lng: -76.583774,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "524 N Main St, Suffolk, VA 23434",
+    emoji: "🏢"
+  },
+  {
+    id: "467",
+    name: "Suffolk Tourism",
+    description: "Visitor promotion organization for Suffolk.",
+    lat: 36.728463,
+    lng: -76.584041,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "524 N Main St, Suffolk, VA 23434",
+    emoji: "🏢"
+  },
+  {
+    id: "468",
+    name: "Suffolk Peanut Company",
+    description: "Historic peanut processing facility and museum in Suffolk.",
+    lat: 36.727896,
+    lng: -76.584093,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🥜"
+  },
+  {
+    id: "469",
+    name: "Suffolk Ham Shop",
+    description: "Local shop specializing in Smithfield hams and Virginia peanuts.",
+    lat: 36.727521,
+    lng: -76.584129,
+    tags: ["food", "shopping"],
+    type: "business",
+    address: "N Main St, Suffolk, VA 23434",
+    emoji: "🍖"
+  },
+  {
+    id: "470",
+    name: "Suffolk Peanut Shop",
+    description: "Store selling Virginia peanuts and peanut products.",
+    lat: 36.728164,
+    lng: -76.583976,
+    tags: ["food", "shopping"],
+    type: "business",
+    address: "N Main St, Suffolk, VA 23434",
+    emoji: "🥜"
+  },
+  {
+    id: "471",
+    name: "Suffolk Peanut Butter Company",
+    description: "Local peanut butter producer in Suffolk.",
+    lat: 36.728397,
+    lng: -76.583688,
+    tags: ["food", "shopping"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🥜"
+  },
+  {
+    id: "472",
+    name: "Suffolk Peanut Oil Company",
+    description: "Historic peanut oil processing facility.",
+    lat: 36.727838,
+    lng: -76.584032,
+    tags: ["history", "food"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🥜"
+  },
+  {
+    id: "473",
+    name: "Suffolk Peanut Festival - Annual",
+    description: "Annual festival celebrating Suffolk's peanut farming heritage.",
+    lat: 36.727943,
+    lng: -76.584044,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "3000 Jericho Rd, Suffolk, VA 23434",
+    emoji: "🥜"
+  },
+  {
+    id: "474",
+    name: "Suffolk Wine Festival",
+    description: "Annual wine tasting event in Suffolk.",
+    lat: 36.728074,
+    lng: -76.583904,
+    tags: ["festival", "nightlife"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🍷"
+  },
+  {
+    id: "475",
+    name: "Suffolk Beer Festival",
+    description: "Annual craft beer festival in Suffolk.",
+    lat: 36.728118,
+    lng: -76.583518,
+    tags: ["festival", "nightlife"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🍺"
+  },
+  {
+    id: "476",
+    name: "Suffolk Food Truck Rally",
+    description: "Monthly gathering of food trucks in Suffolk.",
+    lat: 36.728088,
+    lng: -76.584163,
+    tags: ["food", "festival"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🚚"
+  },
+  {
+    id: "477",
+    name: "Suffolk BBQ Cook-Off",
+    description: "Annual barbecue competition in Suffolk.",
+    lat: 36.727965,
+    lng: -76.584418,
+    tags: ["festival", "food"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🍖"
+  },
+  {
+    id: "478",
+    name: "Suffolk Chili Cook-Off",
+    description: "Annual chili cooking competition in Suffolk.",
+    lat: 36.727726,
+    lng: -76.583824,
+    tags: ["festival", "food"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🌶️"
+  },
+  {
+    id: "479",
+    name: "Suffolk Seafood Festival",
+    description: "Annual seafood celebration in Suffolk.",
+    lat: 36.728031,
+    lng: -76.583714,
+    tags: ["festival", "food"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🦐"
+  },
+  {
+    id: "480",
+    name: "Suffolk Blues and Jazz Festival",
+    description: "Annual music festival in Suffolk.",
+    lat: 36.728422,
+    lng: -76.584104,
+    tags: ["music", "festival"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🎷"
+  },
+  {
+    id: "481",
+    name: "Suffolk Gospel Fest",
+    description: "Annual gospel music celebration in Suffolk.",
+    lat: 36.727911,
+    lng: -76.584144,
+    tags: ["music", "family"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🎤"
+  },
+  {
+    id: "482",
+    name: "Suffolk Fourth of July Celebration",
+    description: "Annual Independence Day festivities in Suffolk.",
+    lat: 36.727519,
+    lng: -76.584047,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🎆"
+  },
+  {
+    id: "483",
+    name: "Suffolk Christmas Parade",
+    description: "Annual holiday parade in downtown Suffolk.",
+    lat: 36.72816,
+    lng: -76.583951,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "N Main St, Suffolk, VA 23434",
+    emoji: "🎄"
+  },
+  {
+    id: "484",
+    name: "Suffolk Holiday Craft Fair",
+    description: "Annual holiday craft market in Suffolk.",
+    lat: 36.728436,
+    lng: -76.583766,
+    tags: ["shopping", "family"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🎁"
+  },
+  {
+    id: "485",
+    name: "Suffolk Spring Fling",
+    description: "Annual spring festival in Suffolk.",
+    lat: 36.727813,
+    lng: -76.584031,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🌸"
+  },
+  {
+    id: "486",
+    name: "Suffolk Fall Festival",
+    description: "Annual autumn celebration in Suffolk.",
+    lat: 36.727685,
+    lng: -76.584395,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🍂"
+  },
+  {
+    id: "487",
+    name: "Suffolk Halloween Spooktacular",
+    description: "Annual Halloween event in Suffolk.",
+    lat: 36.728132,
+    lng: -76.583919,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🎃"
+  },
+  {
+    id: "488",
+    name: "Suffolk Easter Egg Hunt",
+    description: "Annual Easter event for children in Suffolk.",
+    lat: 36.728172,
+    lng: -76.583525,
+    tags: ["family", "festival"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🐰"
+  },
+  {
+    id: "489",
+    name: "Suffolk Turkey Trot",
+    description: "Annual Thanksgiving Day race in Suffolk.",
+    lat: 36.728007,
+    lng: -76.584155,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🏃"
+  },
+  {
+    id: "490",
+    name: "Suffolk Polar Plunge",
+    description: "Annual winter charity swim event in Suffolk.",
+    lat: 36.727934,
+    lng: -76.584451,
+    tags: ["sports", "festival"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🏊"
+  },
+  {
+    id: "491",
+    name: "Suffolk 5K and Fun Run",
+    description: "Annual road race in Suffolk.",
+    lat: 36.727807,
+    lng: -76.583805,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🏃"
+  },
+  {
+    id: "492",
+    name: "Suffolk Half Marathon",
+    description: "Annual half marathon through Suffolk.",
+    lat: 36.728034,
+    lng: -76.583658,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🏃"
+  },
+  {
+    id: "493",
+    name: "Suffolk Cycling Classic",
+    description: "Annual bike race in Suffolk.",
+    lat: 36.728365,
+    lng: -76.584157,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🚴"
+  },
+  {
+    id: "494",
+    name: "Suffolk Triathlon",
+    description: "Annual triathlon event in Suffolk.",
+    lat: 36.727926,
+    lng: -76.584199,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🏃"
+  },
+  {
+    id: "495",
+    name: "Suffolk Senior Games",
+    description: "Annual sports competition for seniors in Suffolk.",
+    lat: 36.727536,
+    lng: -76.583969,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🏅"
+  },
+  {
+    id: "496",
+    name: "Suffolk Youth Sports Complex",
+    description: "Multi-sport facility for youth athletics in Suffolk.",
+    lat: 36.728149,
+    lng: -76.583916,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "⚽"
+  },
+  {
+    id: "497",
+    name: "Suffolk Pop Warner Football",
+    description: "Youth football league in Suffolk.",
+    lat: 36.727801,
+    lng: -76.584038,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🏈"
+  },
+  {
+    id: "498",
+    name: "Suffolk Cheerleading Association",
+    description: "Youth cheerleading organization in Suffolk.",
+    lat: 36.727633,
+    lng: -76.584331,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "📣"
+  },
+  {
+    id: "499",
+    name: "Suffolk Swim Team",
+    description: "Competitive swimming organization in Suffolk.",
+    lat: 36.728228,
+    lng: -76.583551,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🏊"
+  },
+  {
+    id: "500",
+    name: "Suffolk Tennis Association",
+    description: "Tennis organization in Suffolk with courts and programs.",
+    lat: 36.727932,
+    lng: -76.584141,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🎾"
+  },
+  {
+    id: "501",
+    name: "Suffolk Golf Association",
+    description: "Golf organization in Suffolk with courses and tournaments.",
+    lat: 36.749896,
+    lng: -76.550467,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "⛳"
+  },
+  {
+    id: "502",
+    name: "Suffolk Hunting Club",
+    description: "Local hunting and conservation organization in Suffolk.",
+    lat: 36.728045,
+    lng: -76.583611,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🦌"
+  },
+  {
+    id: "503",
+    name: "Suffolk Garden Club",
+    description: "Organization promoting gardening and horticulture in Suffolk.",
+    lat: 36.728295,
+    lng: -76.584196,
+    tags: ["nature", "culture"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🌷"
+  },
+  {
+    id: "504",
+    name: "Suffolk Clean Up Day",
+    description: "Annual community clean-up event in Suffolk.",
+    lat: 36.72757,
+    lng: -76.583898,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🧹"
+  },
+  {
+    id: "505",
+    name: "Suffolk Animal Shelter",
+    description: "Animal adoption and care facility in Suffolk.",
+    lat: 36.728469,
+    lng: -76.583935,
+    tags: ["family", "wellness"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🐾"
+  },
+  {
+    id: "506",
+    name: "Suffolk SPCA",
+    description: "Society for the Prevention of Cruelty to Animals in Suffolk.",
+    lat: 36.727591,
+    lng: -76.584256,
+    tags: ["family", "wellness"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🐈"
+  },
+  {
+    id: "507",
+    name: "Suffolk Pet Adoption Center",
+    description: "Animal adoption facility in Suffolk.",
+    lat: 36.728211,
+    lng: -76.58394,
+    tags: ["family", "wellness"],
+    type: "business",
+    address: "Suffolk, VA 23434",
+    emoji: "🐾"
+  },
+  {
+    id: "508",
+    name: "College of William and Mary",
+    description: "Second-oldest college in the US with a historic campus in Williamsburg.",
+    lat: 37.271283,
+    lng: -76.719294,
+    tags: ["culture", "history"],
+    type: "business",
+    address: "200 Stadium Dr, Williamsburg, VA 23185",
+    emoji: "🎓"
+  },
+  {
+    id: "509",
+    name: "Williamsburg Winery",
+    description: "Award-winning winery in Williamsburg with tours and tastings.",
+    lat: 37.25,
+    lng: -76.68,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "5800 Wessex Hundred, Williamsburg, VA 23185",
+    emoji: "🍷"
+  },
+  {
+    id: "510",
+    name: "Williamsburg Botanical Garden",
+    description: "Public garden in Williamsburg with native plants and walking paths.",
+    lat: 37.27,
+    lng: -76.7,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "5537 Centerville Rd, Williamsburg, VA 23188",
+    emoji: "🌿"
+  },
+  {
+    id: "511",
+    name: "York River State Park",
+    description: "State park near Williamsburg with hiking, fishing, and boating.",
+    lat: 37.28,
+    lng: -76.75,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "9801 York River Park Rd, Williamsburg, VA 23188",
+    emoji: "🌲"
+  },
+  {
+    id: "512",
+    name: "Williamsburg Premium Outlets",
+    description: "Outdoor shopping mall in Williamsburg with designer brands.",
+    lat: 37.279866,
+    lng: -76.730124,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "5715 Richmond Rd, Williamsburg, VA 23188",
+    emoji: "🛍️"
+  },
+  {
+    id: "513",
+    name: "Merchants Square",
+    description: "Historic shopping and dining district in Colonial Williamsburg.",
+    lat: 37.27055,
+    lng: -76.707967,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "Duke of Gloucester St, Williamsburg, VA 23185",
+    emoji: "🏘️"
+  },
+  {
+    id: "514",
+    name: "Williamsburg Public Library",
+    description: "Main public library in Williamsburg.",
+    lat: 37.269977,
+    lng: -76.709803,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "515 Scotland St, Williamsburg, VA 23185",
+    emoji: "📚"
+  },
+  {
+    id: "515",
+    name: "Williamsburg Regional Library - James City County",
+    description: "Public library branch in Williamsburg.",
+    lat: 37.270066,
+    lng: -76.709575,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "7770 Croaker Rd, Williamsburg, VA 23188",
+    emoji: "📚"
+  },
+  {
+    id: "516",
+    name: "Williamsburg-James City County Courthouse",
+    description: "Historic courthouse in Williamsburg.",
+    lat: 37.270215,
+    lng: -76.710223,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "5201 Monticello Ave, Williamsburg, VA 23188",
+    emoji: "⚖️"
+  },
+  {
+    id: "517",
+    name: "Williamsburg City Hall",
+    description: "City government building in Williamsburg.",
+    lat: 37.269942,
+    lng: -76.710309,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "401 Lafayette St, Williamsburg, VA 23185",
+    emoji: "🏛️"
+  },
+  {
+    id: "518",
+    name: "Williamsburg Visitor Center",
+    description: "Main visitor information center for Colonial Williamsburg.",
+    lat: 37.270322,
+    lng: -76.707337,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "101 Visitor Center Dr, Williamsburg, VA 23185",
+    emoji: "🏢"
+  },
+  {
+    id: "519",
+    name: "Williamsburg Hospitality House",
+    description: "Hotel and conference center in Williamsburg.",
+    lat: 37.270115,
+    lng: -76.709825,
+    tags: ["wellness", "food"],
+    type: "business",
+    address: "415 Richmond Rd, Williamsburg, VA 23185",
+    emoji: "🏨"
+  },
+  {
+    id: "520",
+    name: "Williamsburg Lodge",
+    description: "Colonial-style hotel in the heart of Williamsburg.",
+    lat: 37.27046,
+    lng: -76.710018,
+    tags: ["wellness", "food"],
+    type: "business",
+    address: "310 S England St, Williamsburg, VA 23185",
+    emoji: "🏨"
+  },
+  {
+    id: "521",
+    name: "Williamsburg Inn",
+    description: "Luxury historic hotel in Williamsburg.",
+    lat: 37.269808,
+    lng: -76.710079,
+    tags: ["wellness", "food"],
+    type: "business",
+    address: "136 E Francis St, Williamsburg, VA 23185",
+    emoji: "🏨"
+  },
+  {
+    id: "522",
+    name: "Williamsburg Woodlands Hotel and Suites",
+    description: "Family-friendly hotel near Busch Gardens.",
+    lat: 37.233462,
+    lng: -76.642773,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "105 Visitor Center Dr, Williamsburg, VA 23185",
+    emoji: "🏨"
+  },
+  {
+    id: "523",
+    name: "Great Wolf Lodge Williamsburg",
+    description: "Indoor water park resort in Williamsburg.",
+    lat: 37.280231,
+    lng: -76.729942,
+    tags: ["family", "wellness"],
+    type: "business",
+    address: "549 E Rochambeau Dr, Williamsburg, VA 23188",
+    emoji: "🏨"
+  },
+  {
+    id: "524",
+    name: "Kingsmill Resort",
+    description: "Luxury golf resort on the James River in Williamsburg.",
+    lat: 37.22,
+    lng: -76.65,
+    tags: ["wellness", "sports"],
+    type: "business",
+    address: "1010 Kingsmill Rd, Williamsburg, VA 23185",
+    emoji: "🏨"
+  },
+  {
+    id: "525",
+    name: "Williamsburg Resort Hotel",
+    description: "Resort hotel in Williamsburg with golf and spa.",
+    lat: 37.270334,
+    lng: -76.709653,
+    tags: ["wellness", "sports"],
+    type: "business",
+    address: "2000 Richmond Rd, Williamsburg, VA 23185",
+    emoji: "🏨"
+  },
+  {
+    id: "526",
+    name: "Williamsburg Campground",
+    description: "RV and tent campground near Colonial Williamsburg.",
+    lat: 37.269548,
+    lng: -76.710085,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "4000 Newman Rd, Williamsburg, VA 23188",
+    emoji: "🏕️"
+  },
+  {
+    id: "527",
+    name: "Williamsburg KOA",
+    description: "Kampgrounds of America location in Williamsburg.",
+    lat: 37.270238,
+    lng: -76.709936,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "4000 Newman Rd, Williamsburg, VA 23188",
+    emoji: "🏕️"
+  },
+  {
+    id: "528",
+    name: "Williamsburg RV Resort",
+    description: "RV park and resort in Williamsburg.",
+    lat: 37.270378,
+    lng: -76.709725,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "4000 Newman Rd, Williamsburg, VA 23188",
+    emoji: "🚐"
+  },
+  {
+    id: "529",
+    name: "Williamsburg National Golf Club",
+    description: "Public golf course in Williamsburg.",
+    lat: 37.26977,
+    lng: -76.710092,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "3700 Centerville Rd, Williamsburg, VA 23188",
+    emoji: "⛳"
+  },
+  {
+    id: "530",
+    name: "Kingsmill Golf Club",
+    description: "Private golf club at the Kingsmill Resort.",
+    lat: 37.219749,
+    lng: -76.650412,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "1010 Kingsmill Rd, Williamsburg, VA 23185",
+    emoji: "⛳"
+  },
+  {
+    id: "531",
+    name: "Golden Horseshoe Golf Club",
+    description: "Public golf course in Williamsburg.",
+    lat: 37.270131,
+    lng: -76.709833,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "401 S England St, Williamsburg, VA 23185",
+    emoji: "⛳"
+  },
+  {
+    id: "532",
+    name: "Williamsburg Tennis Club",
+    description: "Private tennis facility in Williamsburg.",
+    lat: 37.270132,
+    lng: -76.709547,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "2000 Richmond Rd, Williamsburg, VA 23185",
+    emoji: "🎾"
+  },
+  {
+    id: "533",
+    name: "Williamsburg Sports Club",
+    description: "Fitness club in Williamsburg with pools and classes.",
+    lat: 37.270042,
+    lng: -76.710237,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "2000 Richmond Rd, Williamsburg, VA 23185",
+    emoji: "🏋️"
+  },
+  {
+    id: "534",
+    name: "Williamsburg YMCA",
+    description: "Community YMCA in Williamsburg.",
+    lat: 37.26993,
+    lng: -76.710396,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "2000 Richmond Rd, Williamsburg, VA 23185",
+    emoji: "🏊"
+  },
+  {
+    id: "535",
+    name: "Williamsburg Ice Skating Rink",
+    description: "Indoor ice skating rink in Williamsburg.",
+    lat: 37.269765,
+    lng: -76.709754,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "2000 Richmond Rd, Williamsburg, VA 23185",
+    emoji: "⛸️"
+  },
+  {
+    id: "536",
+    name: "Williamsburg Aquatic Center",
+    description: "Public swimming facility in Williamsburg.",
+    lat: 37.270086,
+    lng: -76.709724,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "2000 Richmond Rd, Williamsburg, VA 23185",
+    emoji: "🏊"
+  },
+  {
+    id: "537",
+    name: "Williamsburg Dog Park",
+    description: "Off-leash dog park in Williamsburg.",
+    lat: 37.270387,
+    lng: -76.710164,
+    tags: ["outdoors", "family"],
+    type: "business",
+    address: "2000 Richmond Rd, Williamsburg, VA 23185",
+    emoji: "🐕"
+  },
+  {
+    id: "538",
+    name: "Williamsburg Farmers Market",
+    description: "Weekly farmers market in Merchants Square.",
+    lat: 37.270251,
+    lng: -76.707498,
+    tags: ["food", "shopping"],
+    type: "business",
+    address: "Duke of Gloucester St, Williamsburg, VA 23185",
+    emoji: "🥕"
+  },
+  {
+    id: "539",
+    name: "Williamsburg Christmas Market",
+    description: "Annual holiday market in Colonial Williamsburg.",
+    lat: 37.270934,
+    lng: -76.707421,
+    tags: ["shopping", "family"],
+    type: "business",
+    address: "Duke of Gloucester St, Williamsburg, VA 23185",
+    emoji: "🎄"
+  },
+  {
+    id: "540",
+    name: "Williamsburg Fall Festival",
+    description: "Annual autumn celebration in Williamsburg.",
+    lat: 37.271111,
+    lng: -76.707306,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "Williamsburg, VA 23185",
+    emoji: "🍂"
+  },
+  {
+    id: "541",
+    name: "Williamsburg Spring Festival",
+    description: "Annual spring celebration in Williamsburg.",
+    lat: 37.270442,
+    lng: -76.707582,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "Williamsburg, VA 23185",
+    emoji: "🌸"
+  },
+  {
+    id: "542",
+    name: "Williamsburg Fourth of July Celebration",
+    description: "Annual Independence Day festivities.",
+    lat: 37.2704,
+    lng: -76.707859,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "Williamsburg, VA 23185",
+    emoji: "🎆"
+  },
+  {
+    id: "543",
+    name: "Williamsburg Grand Illumination",
+    description: "Annual holiday lighting ceremony in Colonial Williamsburg.",
+    lat: 37.270894,
+    lng: -76.707353,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "Duke of Gloucester St, Williamsburg, VA 23185",
+    emoji: "🎄"
+  },
+  {
+    id: "544",
+    name: "Williamsburg Ghost Tours",
+    description: "Evening walking tours of haunted historic sites.",
+    lat: 37.270874,
+    lng: -76.707059,
+    tags: ["history", "entertainment"],
+    type: "business",
+    address: "Duke of Gloucester St, Williamsburg, VA 23185",
+    emoji: "👻"
+  },
+  {
+    id: "545",
+    name: "Williamsburg Carriage Rides",
+    description: "Horse-drawn carriage tours of historic Williamsburg.",
+    lat: 37.270656,
+    lng: -76.707728,
+    tags: ["history", "entertainment"],
+    type: "business",
+    address: "Duke of Gloucester St, Williamsburg, VA 23185",
+    emoji: "🐴"
+  },
+  {
+    id: "546",
+    name: "Williamsburg Fife and Drum Corps",
+    description: "Historic music performance group in Colonial Williamsburg.",
+    lat: 37.27061,
+    lng: -76.707922,
+    tags: ["music", "culture"],
+    type: "business",
+    address: "Duke of Gloucester St, Williamsburg, VA 23185",
+    emoji: "🥁"
+  },
+  {
+    id: "547",
+    name: "Williamsburg Blacksmith Shop",
+    description: "Working blacksmith demonstration in Colonial Williamsburg.",
+    lat: 37.27055,
+    lng: -76.707234,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "Duke of Gloucester St, Williamsburg, VA 23185",
+    emoji: "🔨"
+  },
+  {
+    id: "548",
+    name: "Williamsburg Cabinetmaker Shop",
+    description: "Historic woodworking demonstration in Williamsburg.",
+    lat: 37.270779,
+    lng: -76.707177,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "Duke of Gloucester St, Williamsburg, VA 23185",
+    emoji: "🪚"
+  },
+  {
+    id: "549",
+    name: "Williamsburg Silversmith Shop",
+    description: "Historic silversmithing demonstration in Williamsburg.",
+    lat: 37.271027,
+    lng: -76.70772,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "Duke of Gloucester St, Williamsburg, VA 23185",
+    emoji: "🥈"
+  },
+  {
+    id: "550",
+    name: "Williamsburg Wigmaker Shop",
+    description: "Historic wig-making demonstration in Williamsburg.",
+    lat: 37.270563,
+    lng: -76.707697,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "Duke of Gloucester St, Williamsburg, VA 23185",
+    emoji: "💇"
+  },
+  {
+    id: "551",
+    name: "Williamsburg Printer and Bookbinder",
+    description: "Historic printing press demonstration in Williamsburg.",
+    lat: 37.270271,
+    lng: -76.707415,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "Duke of Gloucester St, Williamsburg, VA 23185",
+    emoji: "📰"
+  },
+  {
+    id: "552",
+    name: "Williamsburg Weaving Shop",
+    description: "Historic textile weaving demonstration in Williamsburg.",
+    lat: 37.27092,
+    lng: -76.707398,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "Duke of Gloucester St, Williamsburg, VA 23185",
+    emoji: "🧵"
+  },
+  {
+    id: "553",
+    name: "Williamsburg Brickyard",
+    description: "Historic brick-making demonstration in Williamsburg.",
+    lat: 37.27113,
+    lng: -76.707394,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "Duke of Gloucester St, Williamsburg, VA 23185",
+    emoji: "🧱"
+  },
+  {
+    id: "554",
+    name: "Yorktown Sailing Charters",
+    description: "Sailing charter company on the York River.",
+    lat: 37.238729,
+    lng: -76.510079,
+    tags: ["outdoors", "sports"],
+    type: "business",
+    address: "Water St, Yorktown, VA 23690",
+    emoji: "⛵"
+  },
+  {
+    id: "555",
+    name: "Yorktown Fishing Pier",
+    description: "Public fishing pier on the York River.",
+    lat: 37.239156,
+    lng: -76.508292,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "425 Water St, Yorktown, VA 23690",
+    emoji: "🎣"
+  },
+  {
+    id: "556",
+    name: "Yorktown Public Library",
+    description: "Public library in Yorktown.",
+    lat: 37.239243,
+    lng: -76.509873,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "8500 George Washington Memorial Hwy, Yorktown, VA 23692",
+    emoji: "📚"
+  },
+  {
+    id: "557",
+    name: "Yorktown Battlefield Visitor Center",
+    description: "Visitor center at Yorktown Battlefield with exhibits and films.",
+    lat: 37.23902,
+    lng: -76.509288,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "1000 Colonial Pkwy, Yorktown, VA 23690",
+    emoji: "🏛️"
+  },
+  {
+    id: "558",
+    name: "Yorktown National Cemetery",
+    description: "National cemetery honoring Civil War soldiers in Yorktown.",
+    lat: 37.238677,
+    lng: -76.509911,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "1000 Colonial Pkwy, Yorktown, VA 23690",
+    emoji: "🪦"
+  },
+  {
+    id: "559",
+    name: "Yorktown Victory Monument",
+    description: "Tall monument commemorating the American victory at Yorktown.",
+    lat: 37.238683,
+    lng: -76.510134,
+    tags: ["history", "outdoors"],
+    type: "business",
+    address: "1000 Colonial Pkwy, Yorktown, VA 23690",
+    emoji: "🗼"
+  },
+  {
+    id: "560",
+    name: "Yorktown French Memorial",
+    description: "Memorial honoring French allies in the Battle of Yorktown.",
+    lat: 37.238739,
+    lng: -76.509427,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "1000 Colonial Pkwy, Yorktown, VA 23690",
+    emoji: "🇫🇷"
+  },
+  {
+    id: "561",
+    name: "Yorktown Historical Society",
+    description: "Organization preserving Yorktown's history.",
+    lat: 37.239253,
+    lng: -76.510263,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "Main St, Yorktown, VA 23690",
+    emoji: "🏛️"
+  },
+  {
+    id: "562",
+    name: "Yorktown Farmers Market",
+    description: "Weekly farmers market in Yorktown.",
+    lat: 37.238882,
+    lng: -76.510243,
+    tags: ["food", "shopping"],
+    type: "business",
+    address: "Main St, Yorktown, VA 23690",
+    emoji: "🥕"
+  },
+  {
+    id: "563",
+    name: "Yorktown Wine Festival",
+    description: "Annual wine tasting event in Yorktown.",
+    lat: 37.238609,
+    lng: -76.50984,
+    tags: ["festival", "nightlife"],
+    type: "business",
+    address: "Main St, Yorktown, VA 23690",
+    emoji: "🍷"
+  },
+  {
+    id: "564",
+    name: "Yorktown Fourth of July Fireworks",
+    description: "Annual Independence Day fireworks at Yorktown Beach.",
+    lat: 37.2397,
+    lng: -76.507867,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "425 Water St, Yorktown, VA 23690",
+    emoji: "🎆"
+  },
+  {
+    id: "565",
+    name: "Yorktown Christmas Market",
+    description: "Annual holiday market in Yorktown.",
+    lat: 37.239433,
+    lng: -76.509984,
+    tags: ["shopping", "family"],
+    type: "business",
+    address: "Main St, Yorktown, VA 23690",
+    emoji: "🎄"
+  },
+  {
+    id: "566",
+    name: "Yorktown Ghost Walks",
+    description: "Evening tours of haunted historic Yorktown.",
+    lat: 37.238349,
+    lng: -76.510296,
+    tags: ["history", "entertainment"],
+    type: "business",
+    address: "Main St, Yorktown, VA 23690",
+    emoji: "👻"
+  },
+  {
+    id: "567",
+    name: "Yorktown Trolley",
+    description: "Free trolley service around Yorktown.",
+    lat: 37.239279,
+    lng: -76.50989,
+    tags: ["entertainment", "family"],
+    type: "business",
+    address: "Main St, Yorktown, VA 23690",
+    emoji: "🚎"
+  },
+  {
+    id: "568",
+    name: "Yorktown Riverfront Walk",
+    description: "Scenic walking path along the York River.",
+    lat: 37.239266,
+    lng: -76.509634,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "Water St, Yorktown, VA 23690",
+    emoji: "🚶"
+  },
+  {
+    id: "569",
+    name: "Yorktown Battlefield Driving Tour",
+    description: "Self-guided driving tour of Yorktown Battlefield.",
+    lat: 37.238607,
+    lng: -76.509889,
+    tags: ["history", "outdoors"],
+    type: "business",
+    address: "1000 Colonial Pkwy, Yorktown, VA 23690",
+    emoji: "🚗"
+  },
+  {
+    id: "570",
+    name: "Yorktown Battlefield Bicycle Tour",
+    description: "Cycling route through Yorktown Battlefield.",
+    lat: 37.238649,
+    lng: -76.510129,
+    tags: ["sports", "history"],
+    type: "business",
+    address: "1000 Colonial Pkwy, Yorktown, VA 23690",
+    emoji: "🚴"
+  },
+  {
+    id: "571",
+    name: "Yorktown Earthworks",
+    description: "Revolutionary War-era fortifications at Yorktown.",
+    lat: 37.238828,
+    lng: -76.509432,
+    tags: ["history", "outdoors"],
+    type: "business",
+    address: "1000 Colonial Pkwy, Yorktown, VA 23690",
+    emoji: "🏰"
+  },
+  {
+    id: "572",
+    name: "Yorktown Redoubt 9",
+    description: "Restored Revolutionary War fortification.",
+    lat: 37.238889,
+    lng: -76.509307,
+    tags: ["history", "outdoors"],
+    type: "business",
+    address: "1000 Colonial Pkwy, Yorktown, VA 23690",
+    emoji: "🏰"
+  },
+  {
+    id: "573",
+    name: "Yorktown Redoubt 10",
+    description: "Historic fortification stormed by Alexander Hamilton's troops.",
+    lat: 37.23897,
+    lng: -76.509991,
+    tags: ["history", "outdoors"],
+    type: "business",
+    address: "1000 Colonial Pkwy, Yorktown, VA 23690",
+    emoji: "🏰"
+  },
+  {
+    id: "574",
+    name: "Yorktown Moore House",
+    description: "Site where British surrender terms were negotiated.",
+    lat: 37.238697,
+    lng: -76.509988,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "1000 Colonial Pkwy, Yorktown, VA 23690",
+    emoji: "🏠"
+  },
+  {
+    id: "575",
+    name: "Yorktown Surrender Field",
+    description: "Field where British forces formally surrendered.",
+    lat: 37.238463,
+    lng: -76.509476,
+    tags: ["history", "outdoors"],
+    type: "business",
+    address: "1000 Colonial Pkwy, Yorktown, VA 23690",
+    emoji: "🏳️"
+  },
+  {
+    id: "576",
+    name: "Yorktown Civil War Battlefield",
+    description: "Site of Civil War skirmishes during the Peninsula Campaign.",
+    lat: 37.238977,
+    lng: -76.50953,
+    tags: ["history", "outdoors"],
+    type: "business",
+    address: "1000 Colonial Pkwy, Yorktown, VA 23690",
+    emoji: "⚔️"
+  },
+  {
+    id: "577",
+    name: "Yorktown Nature Trail",
+    description: "Wooded trail through historic Yorktown.",
+    lat: 37.23922,
+    lng: -76.509771,
+    tags: ["nature", "history"],
+    type: "business",
+    address: "1000 Colonial Pkwy, Yorktown, VA 23690",
+    emoji: "🥾"
+  },
+  {
+    id: "578",
+    name: "Yorktown Birding Trail",
+    description: "Trail for bird watching in Yorktown.",
+    lat: 37.238538,
+    lng: -76.509797,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "1000 Colonial Pkwy, Yorktown, VA 23690",
+    emoji: "🦅"
+  },
+  {
+    id: "579",
+    name: "Yorktown Kayak Rentals",
+    description: "Kayak rental service on the York River.",
+    lat: 37.238597,
+    lng: -76.510126,
+    tags: ["outdoors", "sports"],
+    type: "business",
+    address: "Water St, Yorktown, VA 23690",
+    emoji: "🛶"
+  },
+  {
+    id: "580",
+    name: "Yorktown Paddle Board Rentals",
+    description: "Stand-up paddleboard rentals on the York River.",
+    lat: 37.2393,
+    lng: -76.509902,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "Water St, Yorktown, VA 23690",
+    emoji: "🏄"
+  },
+  {
+    id: "581",
+    name: "Yorktown Boat Tours",
+    description: "Guided boat tours of the York River.",
+    lat: 37.239308,
+    lng: -76.509696,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "Water St, Yorktown, VA 23690",
+    emoji: "🛥️"
+  },
+  {
+    id: "582",
+    name: "Yorktown Fishing Charters",
+    description: "Deep-sea fishing charters from Yorktown.",
+    lat: 37.238749,
+    lng: -76.510164,
+    tags: ["outdoors", "sports"],
+    type: "business",
+    address: "Water St, Yorktown, VA 23690",
+    emoji: "🎣"
+  },
+  {
+    id: "583",
+    name: "Yorktown Whale Watching",
+    description: "Whale watching tours from Yorktown.",
+    lat: 37.23881,
+    lng: -76.510407,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "Water St, Yorktown, VA 23690",
+    emoji: "🐋"
+  },
+  {
+    id: "584",
+    name: "Yorktown Dolphin Watching",
+    description: "Dolphin watching tours on the York River.",
+    lat: 37.239112,
+    lng: -76.509747,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "Water St, Yorktown, VA 23690",
+    emoji: "🐬"
+  },
+  {
+    id: "585",
+    name: "Yorktown Sunset Cruises",
+    description: "Evening cruises on the York River.",
+    lat: 37.239107,
+    lng: -76.509591,
+    tags: ["outdoors", "nightlife"],
+    type: "business",
+    address: "Water St, Yorktown, VA 23690",
+    emoji: "🌅"
+  },
+  {
+    id: "586",
+    name: "Yorktown Dinner Cruises",
+    description: "Dining cruises on the York River.",
+    lat: 37.239081,
+    lng: -76.510305,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "Water St, Yorktown, VA 23690",
+    emoji: "🍽️"
+  },
+  {
+    id: "587",
+    name: "Yorktown Wedding Chapel",
+    description: "Historic chapel for weddings and events.",
+    lat: 37.238906,
+    lng: -76.510327,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "Main St, Yorktown, VA 23690",
+    emoji: "💒"
+  },
+  {
+    id: "588",
+    name: "Yorktown Event Center",
+    description: "Venue for weddings and events in Yorktown.",
+    lat: 37.238732,
+    lng: -76.509725,
+    tags: ["entertainment", "family"],
+    type: "business",
+    address: "Main St, Yorktown, VA 23690",
+    emoji: "🏢"
+  },
+  {
+    id: "589",
+    name: "Yorktown Community Center",
+    description: "Recreation center in Yorktown.",
+    lat: 37.239152,
+    lng: -76.509789,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "Main St, Yorktown, VA 23690",
+    emoji: "🏋️"
+  },
+  {
+    id: "590",
+    name: "Yorktown Dog Park",
+    description: "Off-leash dog park in Yorktown.",
+    lat: 37.239389,
+    lng: -76.510152,
+    tags: ["outdoors", "family"],
+    type: "business",
+    address: "Main St, Yorktown, VA 23690",
+    emoji: "🐕"
+  },
+  {
+    id: "591",
+    name: "Yorktown Basketball Courts",
+    description: "Public basketball courts in Yorktown.",
+    lat: 37.238588,
+    lng: -76.510036,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "Main St, Yorktown, VA 23690",
+    emoji: "🏀"
+  },
+  {
+    id: "592",
+    name: "Yorktown Running Trail",
+    description: "Paved trail for running and walking in Yorktown.",
+    lat: 37.239189,
+    lng: -76.50977,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "Main St, Yorktown, VA 23690",
+    emoji: "🏃"
+  },
+  {
+    id: "593",
+    name: "Yorktown Bike Trail",
+    description: "Paved bike trail in Yorktown.",
+    lat: 37.239132,
+    lng: -76.509589,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "Main St, Yorktown, VA 23690",
+    emoji: "🚴"
+  },
+  {
+    id: "594",
+    name: "Yorktown Hiking Trail",
+    description: "Natural surface hiking trail in Yorktown.",
+    lat: 37.238791,
+    lng: -76.510005,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "1000 Colonial Pkwy, Yorktown, VA 23690",
+    emoji: "🥾"
+  },
+  {
+    id: "595",
+    name: "Yorktown Fitness Trail",
+    description: "Outdoor fitness stations along a trail in Yorktown.",
+    lat: 37.238907,
+    lng: -76.510359,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "Main St, Yorktown, VA 23690",
+    emoji: "💪"
+  },
+  {
+    id: "596",
+    name: "Yorktown Martial Arts",
+    description: "Martial arts training center in Yorktown.",
+    lat: 37.239342,
+    lng: -76.510223,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "Main St, Yorktown, VA 23690",
+    emoji: "🥋"
+  },
+  {
+    id: "597",
+    name: "Yorktown Dance Studio",
+    description: "Dance studio offering classes in Yorktown.",
+    lat: 37.238783,
+    lng: -76.510147,
+    tags: ["sports", "culture"],
+    type: "business",
+    address: "Main St, Yorktown, VA 23690",
+    emoji: "💃"
+  },
+  {
+    id: "598",
+    name: "Yorktown Art Classes",
+    description: "Art instruction and workshops in Yorktown.",
+    lat: 37.239672,
+    lng: -76.509758,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "Main St, Yorktown, VA 23690",
+    emoji: "🎨"
+  },
+  {
+    id: "599",
+    name: "Yorktown Photography Studio",
+    description: "Professional photography services in Yorktown.",
+    lat: 37.238676,
+    lng: -76.510121,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "Main St, Yorktown, VA 23690",
+    emoji: "📸"
+  },
+  {
+    id: "600",
+    name: "Poquoson Seafood Market",
+    description: "Local seafood market in Poquoson with fresh Chesapeake Bay catches.",
+    lat: 37.122029,
+    lng: -76.380312,
+    tags: ["food", "shopping"],
+    type: "business",
+    address: "968 Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🦐"
+  },
+  {
+    id: "601",
+    name: "Poquoson Farmers Market",
+    description: "Weekly farmers market in Poquoson with local produce.",
+    lat: 37.122554,
+    lng: -76.379796,
+    tags: ["food", "shopping"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🥕"
+  },
+  {
+    id: "602",
+    name: "Poquoson Public Library",
+    description: "Public library in Poquoson.",
+    lat: 37.122463,
+    lng: -76.379604,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "📚"
+  },
+  {
+    id: "603",
+    name: "Poquoson City Hall",
+    description: "City government building in Poquoson.",
+    lat: 37.122202,
+    lng: -76.380293,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "🏛️"
+  },
+  {
+    id: "604",
+    name: "Poquoson Elementary School",
+    description: "Public elementary school in Poquoson.",
+    lat: 37.122199,
+    lng: -76.38038,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🎓"
+  },
+  {
+    id: "605",
+    name: "Poquoson Middle School",
+    description: "Public middle school in Poquoson.",
+    lat: 37.122199,
+    lng: -76.379668,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🎓"
+  },
+  {
+    id: "606",
+    name: "Poquoson High School",
+    description: "Public high school in Poquoson with sports and events.",
+    lat: 37.122413,
+    lng: -76.37971,
+    tags: ["culture", "sports"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🎓"
+  },
+  {
+    id: "607",
+    name: "Poquoson Volunteer Fire Department",
+    description: "Community fire station in Poquoson.",
+    lat: 37.122579,
+    lng: -76.380282,
+    tags: ["family", "wellness"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🚒"
+  },
+  {
+    id: "608",
+    name: "Poquoson Rescue Squad",
+    description: "Emergency medical services in Poquoson.",
+    lat: 37.122111,
+    lng: -76.38018,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🚑"
+  },
+  {
+    id: "609",
+    name: "Poquoson Police Department",
+    description: "Law enforcement in Poquoson.",
+    lat: 37.121918,
+    lng: -76.37986,
+    tags: ["family", "wellness"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "👮"
+  },
+  {
+    id: "610",
+    name: "Poquoson Yacht Club",
+    description: "Yacht club in Poquoson with sailing events.",
+    lat: 37.125283,
+    lng: -76.374893,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "Whitehouse Cove Dr, Poquoson, VA 23662",
+    emoji: "⛵"
+  },
+  {
+    id: "611",
+    name: "Poquoson Crabbing Dock",
+    description: "Public dock for crabbing in Poquoson.",
+    lat: 37.129693,
+    lng: -76.370243,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "Messick Point Rd, Poquoson, VA 23662",
+    emoji: "🦀"
+  },
+  {
+    id: "612",
+    name: "Poquoson Kayak Launch",
+    description: "Public kayak launch in Poquoson.",
+    lat: 37.125306,
+    lng: -76.374825,
+    tags: ["outdoors", "sports"],
+    type: "business",
+    address: "Whitehouse Cove Dr, Poquoson, VA 23662",
+    emoji: "🛶"
+  },
+  {
+    id: "613",
+    name: "Poquoson Nature Trail",
+    description: "Walking trail through natural areas in Poquoson.",
+    lat: 37.120198,
+    lng: -76.381636,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "Wythe Creek Rd, Poquoson, VA 23662",
+    emoji: "🥾"
+  },
+  {
+    id: "614",
+    name: "Poquoson Bird Sanctuary",
+    description: "Protected area for bird watching in Poquoson.",
+    lat: 37.119821,
+    lng: -76.382272,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "Wythe Creek Rd, Poquoson, VA 23662",
+    emoji: "🦅"
+  },
+  {
+    id: "615",
+    name: "Poquoson Wildlife Area",
+    description: "Natural habitat preservation area in Poquoson.",
+    lat: 37.119884,
+    lng: -76.382387,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "Wythe Creek Rd, Poquoson, VA 23662",
+    emoji: "🦌"
+  },
+  {
+    id: "616",
+    name: "Poquoson Community Center",
+    description: "Recreation center in Poquoson.",
+    lat: 37.12229,
+    lng: -76.379662,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "🏋️"
+  },
+  {
+    id: "617",
+    name: "Poquoson Pool",
+    description: "Public swimming pool in Poquoson.",
+    lat: 37.122504,
+    lng: -76.380326,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "🏊"
+  },
+  {
+    id: "618",
+    name: "Poquoson Little League",
+    description: "Youth baseball organization in Poquoson.",
+    lat: 37.122139,
+    lng: -76.380216,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "⚾"
+  },
+  {
+    id: "619",
+    name: "Poquoson Swim Team",
+    description: "Competitive swimming in Poquoson.",
+    lat: 37.122558,
+    lng: -76.379873,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🏊"
+  },
+  {
+    id: "620",
+    name: "Poquoson Tennis Association",
+    description: "Tennis programs in Poquoson.",
+    lat: 37.122685,
+    lng: -76.380036,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🎾"
+  },
+  {
+    id: "621",
+    name: "Poquoson Basketball League",
+    description: "Youth basketball in Poquoson.",
+    lat: 37.121964,
+    lng: -76.3801,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🏀"
+  },
+  {
+    id: "622",
+    name: "Poquoson Football League",
+    description: "Youth football in Poquoson.",
+    lat: 37.121964,
+    lng: -76.380163,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🏈"
+  },
+  {
+    id: "623",
+    name: "Poquoson Cheerleading Squad",
+    description: "Youth cheerleading in Poquoson.",
+    lat: 37.122642,
+    lng: -76.379852,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "📣"
+  },
+  {
+    id: "624",
+    name: "Poquoson 4-H Club",
+    description: "Youth development organization in Poquoson.",
+    lat: 37.122534,
+    lng: -76.379684,
+    tags: ["family", "nature"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🍀"
+  },
+  {
+    id: "625",
+    name: "Poquoson Boy Scouts",
+    description: "Scouting organization in Poquoson.",
+    lat: 37.122049,
+    lng: -76.380243,
+    tags: ["family", "outdoors"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🏕️"
+  },
+  {
+    id: "626",
+    name: "Poquoson Girl Scouts",
+    description: "Girl scouting organization in Poquoson.",
+    lat: 37.122161,
+    lng: -76.380379,
+    tags: ["family", "outdoors"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🍪"
+  },
+  {
+    id: "627",
+    name: "Poquoson Historical Society",
+    description: "Organization preserving Poquoson's maritime history.",
+    lat: 37.1224,
+    lng: -76.379654,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🏛️"
+  },
+  {
+    id: "628",
+    name: "Poquoson Civic Association",
+    description: "Community organization in Poquoson.",
+    lat: 37.12242,
+    lng: -76.380354,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🏢"
+  },
+  {
+    id: "629",
+    name: "Poquoson Lions Club",
+    description: "Service organization in Poquoson.",
+    lat: 37.122164,
+    lng: -76.380252,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🦁"
+  },
+  {
+    id: "630",
+    name: "Poquoson Rotary Club",
+    description: "Service organization in Poquoson.",
+    lat: 37.122014,
+    lng: -76.379717,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🔄"
+  },
+  {
+    id: "631",
+    name: "Poquoson Chamber of Commerce",
+    description: "Business organization in Poquoson.",
+    lat: 37.122527,
+    lng: -76.379848,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🏢"
+  },
+  {
+    id: "632",
+    name: "Poquoson Tourism Bureau",
+    description: "Visitor information for Poquoson.",
+    lat: 37.122669,
+    lng: -76.380124,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🏢"
+  },
+  {
+    id: "633",
+    name: "Poquoson Economic Development",
+    description: "Business growth organization in Poquoson.",
+    lat: 37.121978,
+    lng: -76.380101,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "🏢"
+  },
+  {
+    id: "634",
+    name: "Poquoson Planning Commission",
+    description: "Urban planning organization in Poquoson.",
+    lat: 37.121946,
+    lng: -76.380075,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "🏢"
+  },
+  {
+    id: "635",
+    name: "Poquoson Zoning Board",
+    description: "Zoning and development board in Poquoson.",
+    lat: 37.122663,
+    lng: -76.379875,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "🏢"
+  },
+  {
+    id: "636",
+    name: "Poquoson School Board",
+    description: "Education governing body in Poquoson.",
+    lat: 37.122568,
+    lng: -76.379747,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "🎓"
+  },
+  {
+    id: "637",
+    name: "Poquoson Public Works",
+    description: "Infrastructure maintenance in Poquoson.",
+    lat: 37.122133,
+    lng: -76.380355,
+    tags: ["family", "wellness"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "🚧"
+  },
+  {
+    id: "638",
+    name: "Poquoson Utilities Department",
+    description: "Water and sewer services in Poquoson.",
+    lat: 37.122467,
+    lng: -76.379689,
+    tags: ["family", "wellness"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "💧"
+  },
+  {
+    id: "639",
+    name: "Poquoson Waste Management",
+    description: "Trash and recycling services in Poquoson.",
+    lat: 37.122405,
+    lng: -76.379642,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "♻️"
+  },
+  {
+    id: "640",
+    name: "Poquoson Senior Center",
+    description: "Senior activities and programs in Poquoson.",
+    lat: 37.122184,
+    lng: -76.380284,
+    tags: ["family", "wellness"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "👵"
+  },
+  {
+    id: "641",
+    name: "Poquoson Youth Center",
+    description: "Youth programs and activities in Poquoson.",
+    lat: 37.122083,
+    lng: -76.379665,
+    tags: ["family", "culture"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "🧒"
+  },
+  {
+    id: "642",
+    name: "Poquoson Teen Center",
+    description: "Teen activities and programs in Poquoson.",
+    lat: 37.122495,
+    lng: -76.379818,
+    tags: ["family", "culture"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "🧑"
+  },
+  {
+    id: "643",
+    name: "Poquoson Photography Club",
+    description: "Photography enthusiasts group in Poquoson.",
+    lat: 37.122238,
+    lng: -76.380364,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "📸"
+  },
+  {
+    id: "644",
+    name: "Poquoson Power Squadron",
+    description: "Boating safety organization in Poquoson.",
+    lat: 37.124771,
+    lng: -76.375258,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "Whitehouse Cove Dr, Poquoson, VA 23662",
+    emoji: "🛥️"
+  },
+  {
+    id: "645",
+    name: "Poquoson Coast Guard Auxiliary",
+    description: "Maritime safety organization in Poquoson.",
+    lat: 37.12531,
+    lng: -76.374752,
+    tags: ["family", "wellness"],
+    type: "business",
+    address: "Whitehouse Cove Dr, Poquoson, VA 23662",
+    emoji: "🚢"
+  },
+  {
+    id: "646",
+    name: "Poquoson Veterans Memorial",
+    description: "Memorial honoring local veterans in Poquoson.",
+    lat: 37.122438,
+    lng: -76.379661,
+    tags: ["history", "family"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🎖️"
+  },
+  {
+    id: "647",
+    name: "Poquoson September 11 Memorial",
+    description: "Memorial remembering 9/11 victims in Poquoson.",
+    lat: 37.122149,
+    lng: -76.380348,
+    tags: ["history", "family"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🕯️"
+  },
+  {
+    id: "648",
+    name: "Poquoson Community Garden",
+    description: "Public garden plots for residents of Poquoson.",
+    lat: 37.122202,
+    lng: -76.380325,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🌻"
+  },
+  {
+    id: "649",
+    name: "Poquoson Dog Park",
+    description: "Off-leash area for dogs in Poquoson.",
+    lat: 37.122251,
+    lng: -76.37961,
+    tags: ["outdoors", "family"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🐕"
+  },
+  {
+    id: "650",
+    name: "Poquoson Basketball Courts",
+    description: "Public basketball courts in Poquoson.",
+    lat: 37.122636,
+    lng: -76.379901,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🏀"
+  },
+  {
+    id: "651",
+    name: "Poquoson Fitness Trail",
+    description: "Outdoor exercise stations in Poquoson.",
+    lat: 37.122463,
+    lng: -76.379693,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "💪"
+  },
+  {
+    id: "652",
+    name: "Poquoson Waterfront Walk",
+    description: "Scenic walk along the water in Poquoson.",
+    lat: 37.125112,
+    lng: -76.37473,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "Whitehouse Cove Dr, Poquoson, VA 23662",
+    emoji: "🌊"
+  },
+  {
+    id: "653",
+    name: "Poquoson Marsh Overlook",
+    description: "Viewing area for salt marsh wildlife in Poquoson.",
+    lat: 37.120151,
+    lng: -76.382382,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "Wythe Creek Rd, Poquoson, VA 23662",
+    emoji: "🦆"
+  },
+  {
+    id: "654",
+    name: "Poquoson Oyster Reef",
+    description: "Restored oyster habitat in Poquoson waters.",
+    lat: 37.124808,
+    lng: -76.375176,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "Whitehouse Cove Dr, Poquoson, VA 23662",
+    emoji: "🦪"
+  },
+  {
+    id: "655",
+    name: "Poquoson Seagrass Bed",
+    description: "Protected underwater seagrass habitat in Poquoson.",
+    lat: 37.124715,
+    lng: -76.37473,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "Whitehouse Cove Dr, Poquoson, VA 23662",
+    emoji: "🌿"
+  },
+  {
+    id: "656",
+    name: "Poquoson Dune Restoration",
+    description: "Beach dune restoration project in Poquoson.",
+    lat: 37.125326,
+    lng: -76.375087,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "Whitehouse Cove Dr, Poquoson, VA 23662",
+    emoji: "🏖️"
+  },
+  {
+    id: "657",
+    name: "Poquoson Coastal Cleanup",
+    description: "Annual beach and waterway cleanup in Poquoson.",
+    lat: 37.12461,
+    lng: -76.375103,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "Whitehouse Cove Dr, Poquoson, VA 23662",
+    emoji: "🧹"
+  },
+  {
+    id: "658",
+    name: "Poquoson Environmental Council",
+    description: "Environmental advocacy group in Poquoson.",
+    lat: 37.12202,
+    lng: -76.38011,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "🌿"
+  },
+  {
+    id: "659",
+    name: "Poquoson Solar Co-op",
+    description: "Community solar energy program in Poquoson.",
+    lat: 37.12249,
+    lng: -76.379741,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "☀️"
+  },
+  {
+    id: "660",
+    name: "Poquoson Rain Garden Project",
+    description: "Stormwater management garden in Poquoson.",
+    lat: 37.121995,
+    lng: -76.380286,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "🌧️"
+  },
+  {
+    id: "661",
+    name: "Poquoson Tree Planting Day",
+    description: "Annual tree planting event in Poquoson.",
+    lat: 37.122187,
+    lng: -76.380319,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🌳"
+  },
+  {
+    id: "662",
+    name: "Poquoson Adopt-a-Highway",
+    description: "Road cleanup volunteer program in Poquoson.",
+    lat: 37.122432,
+    lng: -76.379618,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🛣️"
+  },
+  {
+    id: "663",
+    name: "Poquoson Neighborhood Watch",
+    description: "Community safety program in Poquoson.",
+    lat: 37.122397,
+    lng: -76.379712,
+    tags: ["family", "wellness"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "👁️"
+  },
+  {
+    id: "664",
+    name: "Poquoson Emergency Preparedness",
+    description: "Disaster readiness program in Poquoson.",
+    lat: 37.122367,
+    lng: -76.380409,
+    tags: ["family", "wellness"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "🚨"
+  },
+  {
+    id: "665",
+    name: "Poquoson CERT",
+    description: "Community Emergency Response Team in Poquoson.",
+    lat: 37.122144,
+    lng: -76.380203,
+    tags: ["family", "wellness"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "🆘"
+  },
+  {
+    id: "666",
+    name: "Poquoson Blood Drive",
+    description: "Monthly blood donation event in Poquoson.",
+    lat: 37.122071,
+    lng: -76.379664,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "🩸"
+  },
+  {
+    id: "667",
+    name: "Poquoson Food Bank",
+    description: "Community food assistance in Poquoson.",
+    lat: 37.122566,
+    lng: -76.379879,
+    tags: ["food", "family"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "🥫"
+  },
+  {
+    id: "668",
+    name: "Poquoson Clothing Drive",
+    description: "Charity clothing collection in Poquoson.",
+    lat: 37.122608,
+    lng: -76.380176,
+    tags: ["family", "shopping"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "👕"
+  },
+  {
+    id: "669",
+    name: "Poquoson Toy Drive",
+    description: "Holiday toy collection for children in Poquoson.",
+    lat: 37.121928,
+    lng: -76.380092,
+    tags: ["family", "shopping"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "🧸"
+  },
+  {
+    id: "670",
+    name: "Poquoson Scholarship Fund",
+    description: "Educational scholarship program in Poquoson.",
+    lat: 37.122006,
+    lng: -76.380023,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "🎓"
+  },
+  {
+    id: "671",
+    name: "Poquoson Education Foundation",
+    description: "Support for local schools in Poquoson.",
+    lat: 37.122716,
+    lng: -76.37986,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "500 City Hall Ave, Poquoson, VA 23662",
+    emoji: "📚"
+  },
+  {
+    id: "672",
+    name: "Poquoson Parent Teacher Association",
+    description: "School support organization in Poquoson.",
+    lat: 37.122516,
+    lng: -76.379803,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "👨‍👩‍👧‍👦"
+  },
+  {
+    id: "673",
+    name: "Poquoson Alumni Association",
+    description: "Graduate network for Poquoson schools.",
+    lat: 37.121937,
+    lng: -76.380245,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🎓"
+  },
+  {
+    id: "674",
+    name: "Poquoson Arts Boosters",
+    description: "Visual arts program support in Poquoson.",
+    lat: 37.122278,
+    lng: -76.380419,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🎨"
+  },
+  {
+    id: "675",
+    name: "Smithfield Ham Shop",
+    description: "Famous shop selling Virginia hams and local specialties in Smithfield.",
+    lat: 36.982875,
+    lng: -76.631728,
+    tags: ["food", "shopping"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🍖"
+  },
+  {
+    id: "676",
+    name: "Smithfield Ice Cream Parlor",
+    description: "Local ice cream shop in downtown Smithfield.",
+    lat: 36.982839,
+    lng: -76.631113,
+    tags: ["food", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🍦"
+  },
+  {
+    id: "677",
+    name: "Smithfield Bakery",
+    description: "Fresh bread and pastries in Smithfield.",
+    lat: 36.983224,
+    lng: -76.63136,
+    tags: ["food", "coffee"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🥐"
+  },
+  {
+    id: "678",
+    name: "Smithfield Coffee House",
+    description: "Local coffee shop in Smithfield.",
+    lat: 36.983276,
+    lng: -76.631758,
+    tags: ["coffee", "food"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "☕"
+  },
+  {
+    id: "679",
+    name: "Smithfield Tea Room",
+    description: "Traditional tea room in Smithfield.",
+    lat: 36.982659,
+    lng: -76.63159,
+    tags: ["food", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🍵"
+  },
+  {
+    id: "680",
+    name: "Smithfield Public Library",
+    description: "Public library in Smithfield.",
+    lat: 36.982703,
+    lng: -76.631433,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "255 James St, Smithfield, VA 23430",
+    emoji: "📚"
+  },
+  {
+    id: "681",
+    name: "Smithfield City Hall",
+    description: "City government building in Smithfield.",
+    lat: 36.983418,
+    lng: -76.631389,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "310 Main St, Smithfield, VA 23430",
+    emoji: "🏛️"
+  },
+  {
+    id: "682",
+    name: "Smithfield Courthouse",
+    description: "Historic courthouse in Smithfield.",
+    lat: 36.983239,
+    lng: -76.631377,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "⚖️"
+  },
+  {
+    id: "683",
+    name: "Smithfield Police Department",
+    description: "Law enforcement in Smithfield.",
+    lat: 36.982594,
+    lng: -76.631702,
+    tags: ["family", "wellness"],
+    type: "business",
+    address: "310 Main St, Smithfield, VA 23430",
+    emoji: "👮"
+  },
+  {
+    id: "684",
+    name: "Smithfield Volunteer Fire Department",
+    description: "Community fire station in Smithfield.",
+    lat: 36.982849,
+    lng: -76.631754,
+    tags: ["family", "wellness"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🚒"
+  },
+  {
+    id: "685",
+    name: "Smithfield Rescue Squad",
+    description: "Emergency medical services in Smithfield.",
+    lat: 36.983295,
+    lng: -76.631178,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🚑"
+  },
+  {
+    id: "686",
+    name: "Smithfield Health Department",
+    description: "Public health services in Smithfield.",
+    lat: 36.983091,
+    lng: -76.631207,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "310 Main St, Smithfield, VA 23430",
+    emoji: "🏥"
+  },
+  {
+    id: "687",
+    name: "Smithfield Social Services",
+    description: "Social service agency in Smithfield.",
+    lat: 36.982888,
+    lng: -76.631912,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "310 Main St, Smithfield, VA 23430",
+    emoji: "🏢"
+  },
+  {
+    id: "688",
+    name: "Smithfield Chamber of Commerce",
+    description: "Business organization in Smithfield.",
+    lat: 36.9829,
+    lng: -76.631748,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🏢"
+  },
+  {
+    id: "689",
+    name: "Smithfield Tourism Bureau",
+    description: "Visitor information for Smithfield.",
+    lat: 36.982918,
+    lng: -76.631079,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🏢"
+  },
+  {
+    id: "690",
+    name: "Smithfield Historical Society",
+    description: "Organization preserving Smithfield's history.",
+    lat: 36.983181,
+    lng: -76.631337,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🏛️"
+  },
+  {
+    id: "691",
+    name: "Smithfield Arts Center",
+    description: "Arts programs and classes in Smithfield.",
+    lat: 36.983228,
+    lng: -76.631829,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🎨"
+  },
+  {
+    id: "692",
+    name: "Smithfield Swim Team",
+    description: "Competitive swimming in Smithfield.",
+    lat: 36.982568,
+    lng: -76.631661,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🏊"
+  },
+  {
+    id: "693",
+    name: "Smithfield Nature Conservancy",
+    description: "Environmental preservation in Smithfield.",
+    lat: 36.982739,
+    lng: -76.631259,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🌿"
+  },
+  {
+    id: "694",
+    name: "Smithfield Clean Up Day",
+    description: "Community cleanup in Smithfield.",
+    lat: 36.983263,
+    lng: -76.631547,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🧹"
+  },
+  {
+    id: "695",
+    name: "Smithfield Pet Adoption",
+    description: "Animal adoption in Smithfield.",
+    lat: 36.983115,
+    lng: -76.631256,
+    tags: ["family", "wellness"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🐾"
+  },
+  {
+    id: "696",
+    name: "Smithfield Farmers Co-op",
+    description: "Agricultural cooperative in Smithfield.",
+    lat: 36.98272,
+    lng: -76.631858,
+    tags: ["food", "shopping"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🚜"
+  },
+  {
+    id: "697",
+    name: "Smithfield Peanut Company",
+    description: "Peanut processing in Smithfield.",
+    lat: 36.982926,
+    lng: -76.631762,
+    tags: ["food", "shopping"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🥜"
+  },
+  {
+    id: "698",
+    name: "Smithfield Pork Products",
+    description: "Pork processing in Smithfield.",
+    lat: 36.983092,
+    lng: -76.631062,
+    tags: ["food", "shopping"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🍖"
+  },
+  {
+    id: "699",
+    name: "Smithfield Antique Mall",
+    description: "Antique shopping in Smithfield.",
+    lat: 36.982778,
+    lng: -76.631183,
+    tags: ["shopping", "culture"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🏺"
+  },
+  {
+    id: "700",
+    name: "Smithfield Craft Fair",
+    description: "Annual craft market in Smithfield.",
+    lat: 36.983337,
+    lng: -76.631427,
+    tags: ["shopping", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🎨"
+  },
+  {
+    id: "701",
+    name: "Smithfield Flea Market",
+    description: "Weekend flea market in Smithfield.",
+    lat: 36.983259,
+    lng: -76.631636,
+    tags: ["shopping", "culture"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🛍️"
+  },
+  {
+    id: "702",
+    name: "Smithfield Christmas Parade",
+    description: "Annual holiday parade in Smithfield.",
+    lat: 36.982568,
+    lng: -76.631593,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🎄"
+  },
+  {
+    id: "703",
+    name: "Smithfield Fourth of July Celebration",
+    description: "Annual Independence Day festivities.",
+    lat: 36.982786,
+    lng: -76.631555,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🎆"
+  },
+  {
+    id: "704",
+    name: "Smithfield Peanut Festival",
+    description: "Annual celebration of Smithfield's peanut heritage.",
+    lat: 36.983442,
+    lng: -76.631314,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🥜"
+  },
+  {
+    id: "705",
+    name: "Smithfield Ham Festival",
+    description: "Annual celebration of Smithfield ham.",
+    lat: 36.983133,
+    lng: -76.631303,
+    tags: ["festival", "food"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🍖"
+  },
+  {
+    id: "706",
+    name: "Smithfield Wine Festival",
+    description: "Annual wine tasting in Smithfield.",
+    lat: 36.98265,
+    lng: -76.631815,
+    tags: ["festival", "nightlife"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🍷"
+  },
+  {
+    id: "707",
+    name: "Smithfield Beer Festival",
+    description: "Annual craft beer event in Smithfield.",
+    lat: 36.982926,
+    lng: -76.631752,
+    tags: ["festival", "nightlife"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🍺"
+  },
+  {
+    id: "708",
+    name: "Smithfield Music Festival",
+    description: "Annual music event in Smithfield.",
+    lat: 36.98318,
+    lng: -76.631079,
+    tags: ["music", "festival"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🎵"
+  },
+  {
+    id: "709",
+    name: "Smithfield Blues Festival",
+    description: "Annual blues event in Smithfield.",
+    lat: 36.98308,
+    lng: -76.631279,
+    tags: ["music", "festival"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🎸"
+  },
+  {
+    id: "710",
+    name: "Smithfield Jazz Festival",
+    description: "Annual jazz event in Smithfield.",
+    lat: 36.983014,
+    lng: -76.631952,
+    tags: ["music", "festival"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🎷"
+  },
+  {
+    id: "711",
+    name: "Smithfield Gospel Fest",
+    description: "Annual gospel celebration in Smithfield.",
+    lat: 36.982838,
+    lng: -76.631643,
+    tags: ["music", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🎤"
+  },
+  {
+    id: "712",
+    name: "Smithfield Folk Festival",
+    description: "Annual folk music and crafts event.",
+    lat: 36.982831,
+    lng: -76.63112,
+    tags: ["music", "festival"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🪕"
+  },
+  {
+    id: "713",
+    name: "Smithfield BBQ Cook-Off",
+    description: "Annual barbecue competition in Smithfield.",
+    lat: 36.98329,
+    lng: -76.631423,
+    tags: ["festival", "food"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🍖"
+  },
+  {
+    id: "714",
+    name: "Smithfield Chili Cook-Off",
+    description: "Annual chili competition in Smithfield.",
+    lat: 36.983242,
+    lng: -76.631722,
+    tags: ["festival", "food"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🌶️"
+  },
+  {
+    id: "715",
+    name: "Smithfield Seafood Festival",
+    description: "Annual seafood celebration in Smithfield.",
+    lat: 36.981892,
+    lng: -76.63117,
+    tags: ["festival", "food"],
+    type: "business",
+    address: "415 S Church St, Smithfield, VA 23430",
+    emoji: "🦐"
+  },
+  {
+    id: "716",
+    name: "Smithfield Fall Festival",
+    description: "Annual autumn celebration in Smithfield.",
+    lat: 36.982775,
+    lng: -76.631472,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🍂"
+  },
+  {
+    id: "717",
+    name: "Smithfield Spring Festival",
+    description: "Annual spring celebration in Smithfield.",
+    lat: 36.983457,
+    lng: -76.63136,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🌸"
+  },
+  {
+    id: "718",
+    name: "Smithfield Summer Concert Series",
+    description: "Free outdoor concerts in Smithfield.",
+    lat: 36.983153,
+    lng: -76.631362,
+    tags: ["music", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🎵"
+  },
+  {
+    id: "719",
+    name: "Smithfield Movie Night",
+    description: "Outdoor movie screenings in Smithfield.",
+    lat: 36.982594,
+    lng: -76.631765,
+    tags: ["entertainment", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🎬"
+  },
+  {
+    id: "720",
+    name: "Smithfield Halloween Event",
+    description: "Annual Halloween celebration in Smithfield.",
+    lat: 36.982919,
+    lng: -76.631728,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🎃"
+  },
+  {
+    id: "721",
+    name: "Smithfield Easter Egg Hunt",
+    description: "Annual Easter event in Smithfield.",
+    lat: 36.983263,
+    lng: -76.631109,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🐰"
+  },
+  {
+    id: "722",
+    name: "Smithfield Turkey Trot",
+    description: "Annual Thanksgiving race in Smithfield.",
+    lat: 36.983062,
+    lng: -76.631273,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🏃"
+  },
+  {
+    id: "723",
+    name: "Smithfield 5K",
+    description: "Annual road race in Smithfield.",
+    lat: 36.982928,
+    lng: -76.631958,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🏃"
+  },
+  {
+    id: "724",
+    name: "Smithfield Half Marathon",
+    description: "Annual half marathon in Smithfield.",
+    lat: 36.98288,
+    lng: -76.631662,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🏃"
+  },
+  {
+    id: "725",
+    name: "Smithfield Triathlon",
+    description: "Annual triathlon in Smithfield.",
+    lat: 36.982896,
+    lng: -76.631072,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🏃"
+  },
+  {
+    id: "726",
+    name: "Smithfield Cycling Classic",
+    description: "Annual bike race in Smithfield.",
+    lat: 36.983239,
+    lng: -76.631413,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🚴"
+  },
+  {
+    id: "727",
+    name: "Smithfield Senior Games",
+    description: "Senior sports competition in Smithfield.",
+    lat: 36.983211,
+    lng: -76.631801,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🏅"
+  },
+  {
+    id: "728",
+    name: "Smithfield Youth Sports Complex",
+    description: "Youth athletics facility in Smithfield.",
+    lat: 36.982629,
+    lng: -76.631556,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "⚽"
+  },
+  {
+    id: "729",
+    name: "Smithfield Community Center",
+    description: "Recreation center in Smithfield.",
+    lat: 36.982773,
+    lng: -76.631385,
+    tags: ["sports", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🏋️"
+  },
+  {
+    id: "730",
+    name: "Smithfield Martial Arts",
+    description: "Martial arts training in Smithfield.",
+    lat: 36.983337,
+    lng: -76.631152,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🥋"
+  },
+  {
+    id: "731",
+    name: "Smithfield Music Lessons",
+    description: "Music instruction in Smithfield.",
+    lat: 36.982841,
+    lng: -76.631947,
+    tags: ["music", "culture"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🎵"
+  },
+  {
+    id: "732",
+    name: "Smithfield Art Classes",
+    description: "Art instruction in Smithfield.",
+    lat: 36.982917,
+    lng: -76.631678,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "🎨"
+  },
+  {
+    id: "733",
+    name: "Smithfield Photography Studio",
+    description: "Professional photography in Smithfield.",
+    lat: 36.982971,
+    lng: -76.63104,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "Main St, Smithfield, VA 23430",
+    emoji: "📸"
+  },
+  {
+    id: "734",
+    name: "Isle of Wight Courthouse",
+    description: "Historic courthouse in Isle of Wight County.",
+    lat: 36.982186,
+    lng: -76.631898,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "⚖️"
+  },
+  {
+    id: "735",
+    name: "Isle of Wight County Fairgrounds",
+    description: "Fairgrounds hosting annual county fair and events.",
+    lat: 36.982166,
+    lng: -76.632369,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "13007 Fairground Ave, Smithfield, VA 23430",
+    emoji: "🎡"
+  },
+  {
+    id: "736",
+    name: "Isle of Wight County Fair",
+    description: "Annual county fair with rides, food, and agricultural exhibits.",
+    lat: 36.981676,
+    lng: -76.63205,
+    tags: ["festival", "family"],
+    type: "business",
+    address: "13007 Fairground Ave, Smithfield, VA 23430",
+    emoji: "🎠"
+  },
+  {
+    id: "737",
+    name: "Isle of Wight County Schools",
+    description: "Public school district offices.",
+    lat: 36.982436,
+    lng: -76.631932,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🎓"
+  },
+  {
+    id: "738",
+    name: "Isle of Wight County Sheriff's Office",
+    description: "Law enforcement in Isle of Wight County.",
+    lat: 36.982184,
+    lng: -76.632011,
+    tags: ["family", "wellness"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "👮"
+  },
+  {
+    id: "739",
+    name: "Isle of Wight County Fire and Rescue",
+    description: "Emergency services in Isle of Wight County.",
+    lat: 36.981531,
+    lng: -76.632161,
+    tags: ["family", "wellness"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🚒"
+  },
+  {
+    id: "740",
+    name: "Isle of Wight County Social Services",
+    description: "Social services in Isle of Wight County.",
+    lat: 36.98189,
+    lng: -76.632139,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🏢"
+  },
+  {
+    id: "741",
+    name: "Isle of Wight County Health Department",
+    description: "Public health in Isle of Wight County.",
+    lat: 36.982398,
+    lng: -76.631703,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🏥"
+  },
+  {
+    id: "742",
+    name: "Isle of Wight County Library",
+    description: "Public library system in Isle of Wight County.",
+    lat: 36.982051,
+    lng: -76.631793,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "📚"
+  },
+  {
+    id: "743",
+    name: "Isle of Wight County Historical Society",
+    description: "Organization preserving county history.",
+    lat: 36.981757,
+    lng: -76.63242,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "103 Main St, Smithfield, VA 23430",
+    emoji: "🏛️"
+  },
+  {
+    id: "744",
+    name: "Isle of Wight County Chamber of Commerce",
+    description: "Business organization in Isle of Wight County.",
+    lat: 36.981946,
+    lng: -76.632188,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "103 Main St, Smithfield, VA 23430",
+    emoji: "🏢"
+  },
+  {
+    id: "745",
+    name: "Isle of Wight County Tourism",
+    description: "Visitor promotion for Isle of Wight County.",
+    lat: 36.982052,
+    lng: -76.631527,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "103 Main St, Smithfield, VA 23430",
+    emoji: "🏢"
+  },
+  {
+    id: "746",
+    name: "Isle of Wight County Economic Development",
+    description: "Business growth in Isle of Wight County.",
+    lat: 36.982136,
+    lng: -76.631882,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🏢"
+  },
+  {
+    id: "747",
+    name: "Isle of Wight County Planning Commission",
+    description: "Urban planning in Isle of Wight County.",
+    lat: 36.982109,
+    lng: -76.632424,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🏢"
+  },
+  {
+    id: "748",
+    name: "Isle of Wight County Zoning Board",
+    description: "Zoning and development in Isle of Wight County.",
+    lat: 36.98173,
+    lng: -76.632053,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🏢"
+  },
+  {
+    id: "749",
+    name: "Isle of Wight County School Board",
+    description: "Education governing body.",
+    lat: 36.981806,
+    lng: -76.631718,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🎓"
+  },
+  {
+    id: "750",
+    name: "Isle of Wight County Parks",
+    description: "Park management in Isle of Wight County.",
+    lat: 36.982402,
+    lng: -76.631957,
+    tags: ["outdoors", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🌳"
+  },
+  {
+    id: "751",
+    name: "Isle of Wight County Public Works",
+    description: "Infrastructure in Isle of Wight County.",
+    lat: 36.98219,
+    lng: -76.632095,
+    tags: ["family", "wellness"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🚧"
+  },
+  {
+    id: "752",
+    name: "Isle of Wight County Utilities",
+    description: "Water and sewer services.",
+    lat: 36.981527,
+    lng: -76.632112,
+    tags: ["family", "wellness"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "💧"
+  },
+  {
+    id: "753",
+    name: "Isle of Wight County Waste Management",
+    description: "Trash and recycling services.",
+    lat: 36.981874,
+    lng: -76.632076,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "♻️"
+  },
+  {
+    id: "754",
+    name: "Isle of Wight County Veterans Memorial",
+    description: "Memorial honoring local veterans.",
+    lat: 36.98185,
+    lng: -76.631925,
+    tags: ["history", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🎖️"
+  },
+  {
+    id: "755",
+    name: "Isle of Wight County September 11 Memorial",
+    description: "Memorial remembering 9/11 victims.",
+    lat: 36.982485,
+    lng: -76.631872,
+    tags: ["history", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🕯️"
+  },
+  {
+    id: "756",
+    name: "Isle of Wight County Dog Park",
+    description: "Off-leash area for dogs.",
+    lat: 36.981562,
+    lng: -76.632271,
+    tags: ["outdoors", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🐕"
+  },
+  {
+    id: "757",
+    name: "Isle of Wight County Basketball Courts",
+    description: "Public basketball courts.",
+    lat: 36.981898,
+    lng: -76.632089,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🏀"
+  },
+  {
+    id: "758",
+    name: "Isle of Wight County Fitness Trail",
+    description: "Outdoor exercise stations.",
+    lat: 36.981848,
+    lng: -76.631843,
+    tags: ["sports", "wellness"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "💪"
+  },
+  {
+    id: "759",
+    name: "Isle of Wight County Waterfront Walk",
+    description: "Scenic walk along the water.",
+    lat: 36.981526,
+    lng: -76.632209,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🌊"
+  },
+  {
+    id: "760",
+    name: "Isle of Wight County Marsh Overlook",
+    description: "Viewing area for salt marsh wildlife.",
+    lat: 36.981972,
+    lng: -76.632126,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🦆"
+  },
+  {
+    id: "761",
+    name: "Isle of Wight County Oyster Reef",
+    description: "Restored oyster habitat.",
+    lat: 36.982369,
+    lng: -76.631641,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🦪"
+  },
+  {
+    id: "762",
+    name: "Isle of Wight County Seagrass Bed",
+    description: "Protected underwater seagrass habitat.",
+    lat: 36.982002,
+    lng: -76.631851,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🌿"
+  },
+  {
+    id: "763",
+    name: "Isle of Wight County Dune Restoration",
+    description: "Beach dune restoration project.",
+    lat: 36.981946,
+    lng: -76.632102,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🏖️"
+  },
+  {
+    id: "764",
+    name: "Isle of Wight County Coastal Cleanup",
+    description: "Annual beach and waterway cleanup.",
+    lat: 36.98202,
+    lng: -76.631515,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🧹"
+  },
+  {
+    id: "765",
+    name: "Isle of Wight County Environmental Council",
+    description: "Environmental advocacy group.",
+    lat: 36.982177,
+    lng: -76.631968,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🌿"
+  },
+  {
+    id: "766",
+    name: "Isle of Wight County Solar Co-op",
+    description: "Community solar energy program.",
+    lat: 36.981669,
+    lng: -76.631996,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "☀️"
+  },
+  {
+    id: "767",
+    name: "Isle of Wight County Rain Garden Project",
+    description: "Stormwater management garden.",
+    lat: 36.981856,
+    lng: -76.631763,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🌧️"
+  },
+  {
+    id: "768",
+    name: "Isle of Wight County Tree Planting Day",
+    description: "Annual tree planting event.",
+    lat: 36.982453,
+    lng: -76.631967,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🌳"
+  },
+  {
+    id: "769",
+    name: "Isle of Wight County Adopt-a-Highway",
+    description: "Road cleanup volunteer program.",
+    lat: 36.982108,
+    lng: -76.632057,
+    tags: ["nature", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🛣️"
+  },
+  {
+    id: "770",
+    name: "Isle of Wight County Neighborhood Watch",
+    description: "Community safety program.",
+    lat: 36.981508,
+    lng: -76.632147,
+    tags: ["family", "wellness"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "👁️"
+  },
+  {
+    id: "771",
+    name: "Isle of Wight County Emergency Preparedness",
+    description: "Disaster readiness program.",
+    lat: 36.981962,
+    lng: -76.63208,
+    tags: ["family", "wellness"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🚨"
+  },
+  {
+    id: "772",
+    name: "Isle of Wight County CERT",
+    description: "Community Emergency Response Team.",
+    lat: 36.982426,
+    lng: -76.6317,
+    tags: ["family", "wellness"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🆘"
+  },
+  {
+    id: "773",
+    name: "Isle of Wight County Blood Drive",
+    description: "Monthly blood donation event.",
+    lat: 36.981992,
+    lng: -76.631864,
+    tags: ["wellness", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🩸"
+  },
+  {
+    id: "774",
+    name: "Isle of Wight County Food Bank",
+    description: "Community food assistance.",
+    lat: 36.981724,
+    lng: -76.632435,
+    tags: ["food", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🥫"
+  },
+  {
+    id: "775",
+    name: "Isle of Wight County Clothing Drive",
+    description: "Charity clothing collection.",
+    lat: 36.981985,
+    lng: -76.632112,
+    tags: ["family", "shopping"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "👕"
+  },
+  {
+    id: "776",
+    name: "Isle of Wight County Toy Drive",
+    description: "Holiday toy collection for children.",
+    lat: 36.982096,
+    lng: -76.631506,
+    tags: ["family", "shopping"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🧸"
+  },
+  {
+    id: "777",
+    name: "Isle of Wight County Scholarship Fund",
+    description: "Educational scholarship program.",
+    lat: 36.982117,
+    lng: -76.631956,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🎓"
+  },
+  {
+    id: "778",
+    name: "Isle of Wight County Education Foundation",
+    description: "Support for local schools.",
+    lat: 36.982053,
+    lng: -76.632449,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "📚"
+  },
+  {
+    id: "779",
+    name: "Isle of Wight County Parent Teacher Association",
+    description: "School support organization.",
+    lat: 36.981732,
+    lng: -76.63199,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "👨‍👩‍👧‍👦"
+  },
+  {
+    id: "780",
+    name: "Isle of Wight County Alumni Association",
+    description: "Graduate network for county schools.",
+    lat: 36.981875,
+    lng: -76.631687,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "13007 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🎓"
+  },
+  {
+    id: "781",
+    name: "The Commodore Theatre",
+    description: "Art deco movie theater in Portsmouth showing first-run films with dining service.",
+    lat: 36.8345,
+    lng: -76.3005,
+    tags: ["entertainment", "culture"],
+    type: "business",
+    address: "421 High St, Portsmouth, VA 23704",
+    emoji: "🎬"
+  },
+  {
+    id: "782",
+    name: "Bodega Norfolk",
+    description: "Lively Latin street food restaurant and bar with tacos and margaritas.",
+    lat: 36.853,
+    lng: -76.291,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "255 W Olney Rd, Norfolk, VA 23510",
+    emoji: "🌮"
+  },
+  {
+    id: "783",
+    name: "Codex",
+    description: "Cocktail bar in Norfolk with literary-themed drinks and a speakeasy vibe.",
+    lat: 36.8525,
+    lng: -76.292,
+    tags: ["nightlife", "culture"],
+    type: "business",
+    address: "811 Shirley Ave, Norfolk, VA 23517",
+    emoji: "📖"
+  },
+  {
+    id: "784",
+    name: "O'Connor Brewing",
+    description: "Local Norfolk brewery with a large taproom and frequent food truck partnerships.",
+    lat: 36.868,
+    lng: -76.267,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "211 W 24th St, Norfolk, VA 23517",
+    emoji: "🍺"
+  },
+  {
+    id: "785",
+    name: "The Rookery Cafe",
+    description: "Coffee shop and cafe in Norfolk serving locally roasted beans and light bites.",
+    lat: 36.8535,
+    lng: -76.2905,
+    tags: ["coffee", "food"],
+    type: "business",
+    address: "340 W 21st St, Norfolk, VA 23517",
+    emoji: "☕"
+  },
+  {
+    id: "786",
+    name: "Coaster Coffee",
+    description: "Specialty coffee roaster and cafe in Norfolk with single-origin options.",
+    lat: 36.8515,
+    lng: -76.2915,
+    tags: ["coffee"],
+    type: "business",
+    address: "244 W Olney Rd, Norfolk, VA 23510",
+    emoji: "☕"
+  },
+  {
+    id: "787",
+    name: "The NorVa",
+    description: "Historic concert venue in downtown Norfolk hosting national touring acts.",
+    lat: 36.8505,
+    lng: -76.293,
+    tags: ["music", "entertainment"],
+    type: "business",
+    address: "317 Monticello Ave, Norfolk, VA 23510",
+    emoji: "🎸"
+  },
+  {
+    id: "788",
+    name: "The Main",
+    description: "Luxury hotel and entertainment complex in Norfolk with rooftop bar and bowling.",
+    lat: 36.84356,
+    lng: -76.287998,
+    tags: ["nightlife", "entertainment"],
+    type: "business",
+    address: "100 E Main St, Norfolk, VA 23510",
+    emoji: "🏨"
+  },
+  {
+    id: "789",
+    name: "Village Coffee Roastery",
+    description: "Local coffee roaster and shop in Norfolk's Larchmont neighborhood.",
+    lat: 36.952,
+    lng: -76.26,
+    tags: ["coffee"],
+    type: "business",
+    address: "5401 Hampton Blvd, Norfolk, VA 23508",
+    emoji: "☕"
+  },
+  {
+    id: "790",
+    name: "Doumar's Cones and Barbecue",
+    description: "Historic drive-in in Norfolk famous for handmade waffle cones and pulled pork.",
+    lat: 36.866,
+    lng: -76.285,
+    tags: ["food", "history"],
+    type: "business",
+    address: "1919 Monticello Ave, Norfolk, VA 23517",
+    emoji: "🍦"
+  },
+  {
+    id: "791",
+    name: "Regal MacArthur Center",
+    description: "Modern multiplex cinema in Norfolk's MacArthur Center mall.",
+    lat: 36.8535,
+    lng: -76.288,
+    tags: ["entertainment"],
+    type: "business",
+    address: "300 Monticello Ave, Norfolk, VA 23510",
+    emoji: "🎬"
+  },
+  {
+    id: "792",
+    name: "The Muse Writer's Center",
+    description: "Community writing center in Norfolk offering workshops and readings.",
+    lat: 36.8565,
+    lng: -76.2945,
+    tags: ["culture"],
+    type: "business",
+    address: "2200 Colonial Ave, Norfolk, VA 23517",
+    emoji: "✍️"
+  },
+  {
+    id: "793",
+    name: "The Hurrah Players",
+    description: "Community theater company in Norfolk performing musicals and plays year-round.",
+    lat: 36.851,
+    lng: -76.289,
+    tags: ["culture", "entertainment"],
+    type: "business",
+    address: "1405 Victoria Blvd, Norfolk, VA 23505",
+    emoji: "🎭"
+  },
+  {
+    id: "794",
+    name: "Norfolk State University Planetarium",
+    description: "Public planetarium on the Norfolk State campus with astronomy shows.",
+    lat: 36.847,
+    lng: -76.262,
+    tags: ["family", "culture"],
+    type: "business",
+    address: "700 Park Ave, Norfolk, VA 23504",
+    emoji: "🪐"
+  },
+  {
+    id: "795",
+    name: "The Birch Barley",
+    description: "Gastropub in Norfolk with craft cocktails and elevated comfort food.",
+    lat: 36.8545,
+    lng: -76.292,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "1231 Granby St, Norfolk, VA 23510",
+    emoji: "🍽️"
+  },
+  {
+    id: "796",
+    name: "The Barrel Room",
+    description: "Wine bar and small plates in Norfolk's Ghent neighborhood.",
+    lat: 36.8555,
+    lng: -76.294,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "700 W 21st St, Norfolk, VA 23517",
+    emoji: "🍷"
+  },
+  {
+    id: "797",
+    name: "Chrysler Hall",
+    description: "Performing arts venue in Norfolk home to the Virginia Symphony Orchestra.",
+    lat: 36.85,
+    lng: -76.289,
+    tags: ["music", "culture"],
+    type: "business",
+    address: "215 St Pauls Blvd, Norfolk, VA 23510",
+    emoji: "🎼"
+  },
+  {
+    id: "798",
+    name: "Virginia Zoo",
+    description: "Zoological park in Norfolk featuring over 500 animals from around the world.",
+    lat: 36.877,
+    lng: -76.275,
+    tags: ["family", "nature"],
+    type: "business",
+    address: "3500 Granby St, Norfolk, VA 23504",
+    emoji: "🦁"
+  },
+  {
+    id: "799",
+    name: "The Atlantic Wildfowl Heritage Museum",
+    description: "Museum in Virginia Beach's historic de Witt cottage showcasing decoy art.",
+    lat: 36.851963,
+    lng: -75.97832,
+    tags: ["culture", "history"],
+    type: "business",
+    address: "1106 Atlantic Ave, Virginia Beach, VA 23451",
+    emoji: "🦆"
+  },
+  {
+    id: "800",
+    name: "Pungo Pizza",
+    description: "Local pizza restaurant in Virginia Beach's rural Pungo area.",
+    lat: 36.78,
+    lng: -76.01,
+    tags: ["food", "family"],
+    type: "business",
+    address: "1812 Princess Anne Rd, Virginia Beach, VA 23456",
+    emoji: "🍕"
+  },
+  {
+    id: "801",
+    name: "The Beach Bully",
+    description: "Local surf shop and cafe in Virginia Beach near the oceanfront.",
+    lat: 36.855,
+    lng: -75.975,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "1800 Mediterranean Ave, Virginia Beach, VA 23451",
+    emoji: "🏄"
+  },
+  {
+    id: "802",
+    name: "Veterans United Home Loans Amphitheater",
+    description: "Large outdoor concert venue in Virginia Beach hosting major touring acts.",
+    lat: 36.75,
+    lng: -76.03,
+    tags: ["music", "entertainment"],
+    type: "business",
+    address: "3550 Cellar Door Way, Virginia Beach, VA 23456",
+    emoji: "🎤"
+  },
+  {
+    id: "803",
+    name: "Military Aviation Museum",
+    description: "Vintage aircraft museum in Virginia Beach with one of the world's largest flying collections.",
+    lat: 36.78,
+    lng: -75.95,
+    tags: ["history", "family"],
+    type: "business",
+    address: "1341 Princess Anne Rd, Virginia Beach, VA 23457",
+    emoji: "✈️"
+  },
+  {
+    id: "804",
+    name: "Pungo Strawberry Festival",
+    description: "Annual festival in Virginia Beach celebrating local agriculture and strawberries.",
+    lat: 36.775,
+    lng: -76,
+    tags: ["festival", "family", "food"],
+    type: "event",
+    address: "1801 Princess Anne Rd, Virginia Beach, VA 23456",
+    emoji: "🍓"
+  },
+  {
+    id: "805",
+    name: "Virginia Beach Neptune Festival Boardwalk Weekend",
+    description: "Annual oceanfront festival in Virginia Beach with arts, music, and sand sculpting.",
+    lat: 36.85,
+    lng: -75.978,
+    tags: ["festival", "beach", "music"],
+    type: "event",
+    address: "2100 Parks Ave, Virginia Beach, VA 23451",
+    emoji: "🌊"
+  },
+  {
+    id: "806",
+    name: "Something in the Water Festival",
+    description: "Pharrell Williams-founded music festival on the Virginia Beach oceanfront.",
+    lat: 36.852,
+    lng: -75.98,
+    tags: ["music", "festival", "beach"],
+    type: "event",
+    address: "1700 Atlantic Ave, Virginia Beach, VA 23451",
+    emoji: "🎵"
+  },
+  {
+    id: "807",
+    name: "Red Mill Commons",
+    description: "Outdoor shopping center in Virginia Beach with retail and dining.",
+    lat: 36.82,
+    lng: -76.12,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "1301 Fordham Dr, Virginia Beach, VA 23464",
+    emoji: "🛍️"
+  },
+  {
+    id: "808",
+    name: "Landstown Commons",
+    description: "Shopping and dining center in Virginia Beach near the municipal center.",
+    lat: 36.79,
+    lng: -76.11,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "3312 Princess Anne Rd, Virginia Beach, VA 23456",
+    emoji: "🛍️"
+  },
+  {
+    id: "809",
+    name: "Pembroke Mall",
+    description: "Indoor shopping mall in Virginia Beach with department stores and dining.",
+    lat: 36.840174,
+    lng: -76.129365,
+    tags: ["shopping"],
+    type: "business",
+    address: "4500 Virginia Beach Blvd, Virginia Beach, VA 23462",
+    emoji: "🛍️"
+  },
+  {
+    id: "810",
+    name: "Agriculture Park at the Pavilion",
+    description: "Agricultural fairgrounds and event space in Virginia Beach.",
+    lat: 36.800094,
+    lng: -76.169769,
+    tags: ["outdoors", "family"],
+    type: "business",
+    address: "2449 Dam Neck Rd, Virginia Beach, VA 23453",
+    emoji: "🌾"
+  },
+  {
+    id: "811",
+    name: "Pleasure House Oysters",
+    description: "Oyster farm and waterfront tasting room in Virginia Beach's Linkhorn Bay.",
+    lat: 36.900092,
+    lng: -76.120637,
+    tags: ["food", "outdoors"],
+    type: "business",
+    address: "2700 Pleasure House Rd, Virginia Beach, VA 23455",
+    emoji: "🦪"
+  },
+  {
+    id: "812",
+    name: "Croakers Spot",
+    description: "Popular Virginia Beach restaurant serving Southern seafood and soul food.",
+    lat: 36.855,
+    lng: -76.01,
+    tags: ["food", "family"],
+    type: "business",
+    address: "3601 Pacific Ave, Virginia Beach, VA 23451",
+    emoji: "🦐"
+  },
+  {
+    id: "813",
+    name: "The Butcher's Son",
+    description: "Gourmet butcher shop and steakhouse in Chesapeake's Great Bridge area.",
+    lat: 36.72,
+    lng: -76.24,
+    tags: ["food"],
+    type: "business",
+    address: "200 Volvo Pkwy, Chesapeake, VA 23320",
+    emoji: "🥩"
+  },
+  {
+    id: "814",
+    name: "Tidewater Community College Chesapeake",
+    description: "Community college campus in Chesapeake offering two-year degrees and workforce training.",
+    lat: 36.72,
+    lng: -76.23,
+    tags: ["culture"],
+    type: "business",
+    address: "1428 Cedar Rd, Chesapeake, VA 23322",
+    emoji: "🎓"
+  },
+  {
+    id: "815",
+    name: "Mo's Irish Pub Chesapeake",
+    description: "Irish pub in Chesapeake with Guinness, fish and chips, and live music.",
+    lat: 36.76,
+    lng: -76.23,
+    tags: ["nightlife", "food", "music"],
+    type: "business",
+    address: "1401 Greenbrier Pkwy, Chesapeake, VA 23320",
+    emoji: "🍺"
+  },
+  {
+    id: "816",
+    name: "Fort Monroe Casemate Museum",
+    description: "Museum inside Fort Monroe exploring the fort's military and African American history.",
+    lat: 37.003943,
+    lng: -76.309007,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "20 Bernard Rd, Hampton, VA 23651",
+    emoji: "🏰"
+  },
+  {
+    id: "817",
+    name: "Emancipation Oak",
+    description: "Historic live oak tree at Hampton University where the Emancipation Proclamation was first read in the South.",
+    lat: 37.021629,
+    lng: -76.337111,
+    tags: ["history", "outdoors"],
+    type: "business",
+    address: "100 E Queen St, Hampton, VA 23668",
+    emoji: "🌳"
+  },
+  {
+    id: "818",
+    name: "Phoebus Historical Society",
+    description: "Local history museum in Hampton's Phoebus neighborhood.",
+    lat: 37.02,
+    lng: -76.32,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "1 S Mallory St, Hampton, VA 23663",
+    emoji: "🏛️"
+  },
+  {
+    id: "819",
+    name: "The Vanguard Brewpub",
+    description: "Craft brewery and pub in Hampton with house-made beers and pub fare.",
+    lat: 37.025463,
+    lng: -76.344966,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "504 King St, Hampton, VA 23669",
+    emoji: "🍺"
+  },
+  {
+    id: "820",
+    name: "Bull Island Brewing",
+    description: "Craft brewery in Hampton with Belgian-style beers and a waterfront taproom.",
+    lat: 37.020317,
+    lng: -76.340235,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "24 E Queens Way, Hampton, VA 23669",
+    emoji: "🍻"
+  },
+  {
+    id: "821",
+    name: "Air Power Park",
+    description: "Outdoor aviation museum in Hampton with Cold War-era aircraft and missiles.",
+    lat: 37.03,
+    lng: -76.35,
+    tags: ["history", "family"],
+    type: "business",
+    address: "413 W Mercury Blvd, Hampton, VA 23666",
+    emoji: "✈️"
+  },
+  {
+    id: "822",
+    name: "Grandview Nature Preserve",
+    description: "Coastal nature preserve in Hampton with beaches, dunes, and bird watching.",
+    lat: 37.06,
+    lng: -76.29,
+    tags: ["nature", "beach", "outdoors"],
+    type: "business",
+    address: "15411 Fort Monroe, Hampton, VA 23651",
+    emoji: "🐦"
+  },
+  {
+    id: "823",
+    name: "Jazz Cafe",
+    description: "Jazz club and restaurant in Newport News with live music and Southern cuisine.",
+    lat: 37.075,
+    lng: -76.47,
+    tags: ["music", "food", "nightlife"],
+    type: "business",
+    address: "2703 Washington Ave, Newport News, VA 23607",
+    emoji: "🎷"
+  },
+  {
+    id: "824",
+    name: "Second Street Restaurant",
+    description: "American bistro in Newport News with craft beers and a relaxed atmosphere.",
+    lat: 37.08,
+    lng: -76.47,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "115 Arthur Way, Newport News, VA 23602",
+    emoji: "🍔"
+  },
+  {
+    id: "825",
+    name: "Paradise Creek Nature Park",
+    description: "Urban wetland park in Portsmouth with trails and environmental education.",
+    lat: 36.81938,
+    lng: -76.30007,
+    tags: ["nature", "outdoors", "family"],
+    type: "business",
+    address: "1141 Victory Blvd, Portsmouth, VA 23702",
+    emoji: "🌿"
+  },
+  {
+    id: "826",
+    name: "Portsmouth City Park",
+    description: "Large park in Portsmouth with a golf course, trails, and water access.",
+    lat: 36.86,
+    lng: -76.33,
+    tags: ["outdoors", "sports", "family"],
+    type: "business",
+    address: "1001 City Park Ave, Portsmouth, VA 23701",
+    emoji: "🌳"
+  },
+  {
+    id: "827",
+    name: "Cedar Grove Cemetery",
+    description: "Historic cemetery in Portsmouth dating to the early 1800s.",
+    lat: 36.84,
+    lng: -76.3,
+    tags: ["history", "outdoors"],
+    type: "business",
+    address: "300 Fort Ln, Portsmouth, VA 23704",
+    emoji: "⚰️"
+  },
+  {
+    id: "828",
+    name: "Portsmouth Naval Shipyard",
+    description: "Historic naval shipyard in Portsmouth, one of the oldest in the United States.",
+    lat: 36.819755,
+    lng: -76.300037,
+    tags: ["history"],
+    type: "business",
+    address: "1 Dry Dock Dr, Portsmouth, VA 23709",
+    emoji: "⚓"
+  },
+  {
+    id: "829",
+    name: "Trinity Episcopal Church",
+    description: "Historic church in Portsmouth with beautiful stained glass and architecture.",
+    lat: 36.835653,
+    lng: -76.299782,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "500 Court St, Portsmouth, VA 23704",
+    emoji: "⛪"
+  },
+  {
+    id: "830",
+    name: "Obici House",
+    description: "Historic Italianate mansion in Suffolk built by Planters Peanuts founder Amedeo Obici.",
+    lat: 36.73,
+    lng: -76.58,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "701 N Main St, Suffolk, VA 23434",
+    emoji: "🏠"
+  },
+  {
+    id: "831",
+    name: "Planters Peanut Center",
+    description: "Gift shop and visitor center in Suffolk celebrating the city's peanut heritage.",
+    lat: 36.730121,
+    lng: -76.579763,
+    tags: ["shopping", "history"],
+    type: "business",
+    address: "307 W Washington St, Suffolk, VA 23434",
+    emoji: "🥜"
+  },
+  {
+    id: "832",
+    name: "Colonial Parkway",
+    description: "Scenic parkway connecting Jamestown, Williamsburg, and Yorktown.",
+    lat: 37.26,
+    lng: -76.7,
+    tags: ["outdoors", "history"],
+    type: "business",
+    address: "Colonial Pkwy, Williamsburg, VA 23185",
+    emoji: "🛣️"
+  },
+  {
+    id: "833",
+    name: "Governor's Palace",
+    description: "Reconstructed colonial governor's residence in Colonial Williamsburg.",
+    lat: 37.275,
+    lng: -76.705,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "300 Palace Green St, Williamsburg, VA 23185",
+    emoji: "🏰"
+  },
+  {
+    id: "834",
+    name: "Water Country USA",
+    description: "Water park in Williamsburg with slides, wave pools, and lazy rivers.",
+    lat: 37.23,
+    lng: -76.64,
+    tags: ["family", "entertainment"],
+    type: "business",
+    address: "176 Water Country Pkwy, Williamsburg, VA 23185",
+    emoji: "💦"
+  },
+  {
+    id: "835",
+    name: "Bruton Parish Episcopal Church",
+    description: "Active colonial church in Williamsburg dating to 1715 with historic architecture.",
+    lat: 37.27,
+    lng: -76.705,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "331 W Duke of Gloucester St, Williamsburg, VA 23185",
+    emoji: "⛪"
+  },
+  {
+    id: "836",
+    name: "Kimball Theatre",
+    description: "Historic movie theater and performance venue in Williamsburg's Merchants Square.",
+    lat: 37.27,
+    lng: -76.707,
+    tags: ["entertainment", "culture"],
+    type: "business",
+    address: "428 W Duke of Gloucester St, Williamsburg, VA 23185",
+    emoji: "🎬"
+  },
+  {
+    id: "837",
+    name: "Ripley's Believe It or Not!",
+    description: "Oddities museum in Williamsburg with interactive exhibits.",
+    lat: 37.269466,
+    lng: -76.700425,
+    tags: ["entertainment", "family"],
+    type: "business",
+    address: "1735 Richmond Rd, Williamsburg, VA 23185",
+    emoji: "🤯"
+  },
+  {
+    id: "838",
+    name: "Cole Digges House",
+    description: "Historic colonial home in Yorktown dating to the early 1700s.",
+    lat: 37.235,
+    lng: -76.505,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "228 Main St, Yorktown, VA 23690",
+    emoji: "🏛️"
+  },
+  {
+    id: "839",
+    name: "The Smithfield Inn",
+    description: "Historic bed and breakfast in Smithfield dating to 1752 with a restaurant.",
+    lat: 36.979966,
+    lng: -76.630309,
+    tags: ["history", "food"],
+    type: "business",
+    address: "112 Main St, Smithfield, VA 23430",
+    emoji: "🏨"
+  },
+  {
+    id: "840",
+    name: "St. Luke's Historic Church",
+    description: "Oldest surviving English-built church in Virginia, dating to 1632 in Smithfield.",
+    lat: 36.98,
+    lng: -76.65,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "14477 Benns Church Blvd, Smithfield, VA 23430",
+    emoji: "⛪"
+  },
+  {
+    id: "841",
+    name: "Smithfield Packing Plant Tour",
+    description: "Visitor experience at the historic Smithfield ham processing facility.",
+    lat: 36.980296,
+    lng: -76.6294,
+    tags: ["history", "food"],
+    type: "business",
+    address: "601 N Church St, Smithfield, VA 23430",
+    emoji: "🍖"
+  },
+  {
+    id: "842",
+    name: "Poquoson Seafood",
+    description: "Local seafood market and restaurant in Poquoson serving fresh Chesapeake Bay catches.",
+    lat: 37.12,
+    lng: -76.38,
+    tags: ["food"],
+    type: "business",
+    address: "1013 Poquoson Ave, Poquoson, VA 23662",
+    emoji: "🦀"
+  },
+  {
+    id: "843",
+    name: "Back River Brewing",
+    description: "Small craft brewery in Poquoson with a taproom and river views.",
+    lat: 37.120049,
+    lng: -76.379744,
+    tags: ["nightlife"],
+    type: "business",
+    address: "500 Wythe Creek Rd, Poquoson, VA 23662",
+    emoji: "🍺"
+  },
+  {
+    id: "844",
+    name: "Poquoson Flats",
+    description: "Wetland flats in Poquoson popular for kayaking and bird watching.",
+    lat: 37.13,
+    lng: -76.36,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "Poquoson Flats, Poquoson, VA 23662",
+    emoji: "🦆"
+  },
+  {
+    id: "845",
+    name: "Poquoson Creek",
+    description: "Scenic creek in Poquoson with fishing, paddling, and wildlife viewing.",
+    lat: 37.12,
+    lng: -76.39,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "Poquoson Creek, Poquoson, VA 23662",
+    emoji: "🛶"
+  },
+  {
+    id: "846",
+    name: "Fort Boykin",
+    description: "Historic Civil War fort in Isle of Wight County with riverfront earthworks.",
+    lat: 37,
+    lng: -76.7,
+    tags: ["history", "outdoors"],
+    type: "business",
+    address: "7410 Fort Boykin Trail, Smithfield, VA 23430",
+    emoji: "🏰"
+  },
+  {
+    id: "847",
+    name: "St. Luke's Church",
+    description: "Historic 1632 church in Smithfield, the oldest surviving English church in Virginia.",
+    lat: 36.97998,
+    lng: -76.650663,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "14477 Benns Church Blvd, Smithfield, VA 23430",
+    emoji: "⛪"
+  },
+  {
+    id: "848",
+    name: "Old County Road",
+    description: "Scenic historic road in Isle of Wight County with rural landscapes and farm stands.",
+    lat: 36.95,
+    lng: -76.7,
+    tags: ["outdoors", "history"],
+    type: "business",
+    address: "Old County Rd, Smithfield, VA 23430",
+    emoji: "🛣️"
+  },
+  {
+    id: "849",
+    name: "James River Bridge",
+    description: "Historic drawbridge connecting Isle of Wight County to Newport News over the James River.",
+    lat: 37,
+    lng: -76.6,
+    tags: ["history", "outdoors"],
+    type: "business",
+    address: "James River Bridge, Smithfield, VA 23430",
+    emoji: "🌉"
+  },
+  {
+    id: "850",
+    name: "Rescue Volunteer Fire Department Museum",
+    description: "Small museum in Isle of Wight County with vintage firefighting equipment.",
+    lat: 36.95,
+    lng: -76.65,
+    tags: ["history"],
+    type: "business",
+    address: "13375 Bookers Springs Rd, Smithfield, VA 23430",
+    emoji: "🚒"
+  },
+  {
+    id: "851",
+    name: "Schoolhouse Museum",
+    description: "One-room schoolhouse museum in Isle of Wight County preserving early education history.",
+    lat: 36.97982,
+    lng: -76.630136,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "13000 Courthouse Ave, Smithfield, VA 23430",
+    emoji: "🏫"
+  },
+  {
+    id: "852",
+    name: "Hampton Roads Bridge-Tunnel 10K",
+    description: "Annual 10K race through the Hampton Roads Bridge-Tunnel, a rare chance to run through it.",
+    lat: 36.999802,
+    lng: -76.299426,
+    tags: ["sports", "family"],
+    type: "event",
+    address: "Hampton Roads Bridge-Tunnel, Hampton, VA 23651",
+    emoji: "🏃"
+  },
+  {
+    id: "853",
+    name: "Virginia Beach Neptune Festival",
+    description: "Annual boardwalk festival in Virginia Beach celebrating the city's namesake god of the sea.",
+    lat: 36.850384,
+    lng: -75.977963,
+    tags: ["festival", "beach", "music"],
+    type: "event",
+    address: "Virginia Beach Oceanfront, Virginia Beach, VA 23451",
+    emoji: "🌊"
+  },
+  {
+    id: "854",
+    name: "Norfolk Harborfest",
+    description: "Annual waterfront festival in Norfolk with tall ships, fireworks, and live music.",
+    lat: 36.844996,
+    lng: -76.287354,
+    tags: ["festival", "music", "family"],
+    type: "event",
+    address: "Town Point Park, Norfolk, VA 23510",
+    emoji: "⛵"
+  },
+  {
+    id: "855",
+    name: "Suffolk Peanut Festival",
+    description: "Annual festival in Suffolk celebrating the region's peanut farming heritage with rides and concerts.",
+    lat: 36.73,
+    lng: -76.57,
+    tags: ["festival", "food", "family"],
+    type: "event",
+    address: "Peanut Festival Park, Suffolk, VA 23434",
+    emoji: "🥜"
+  },
+  {
+    id: "856",
+    name: "Williamsburg Harvest Celebration",
+    description: "Autumn festival in Williamsburg with colonial food, crafts, and harvest activities.",
+    lat: 37.269425,
+    lng: -76.707031,
+    tags: ["festival", "history", "family"],
+    type: "event",
+    address: "Colonial Williamsburg, Williamsburg, VA 23185",
+    emoji: "🍂"
+  },
+  {
+    id: "857",
+    name: "Poquoson Seafood Festival",
+    description: "Community festival in Poquoson celebrating the city's seafood and watermen heritage.",
+    lat: 37.119736,
+    lng: -76.37992,
+    tags: ["festival", "food", "family"],
+    type: "event",
+    address: "Poquoson City Park, Poquoson, VA 23662",
+    emoji: "🦀"
+  },
+  {
+    id: "858",
+    name: "Smithfield Ham & Yam Festival",
+    description: "Annual festival in Smithfield celebrating the city's famous hams and sweet potatoes.",
+    lat: 36.980666,
+    lng: -76.629856,
+    tags: ["festival", "food", "family"],
+    type: "event",
+    address: "Main Street, Smithfield, VA 23430",
+    emoji: "🍠"
+  },
+  {
+    id: "859",
+    name: "Norfolk NATO Festival",
+    description: "Annual festival in Norfolk celebrating the city's NATO alliance with international food and parades.",
+    lat: 36.850151,
+    lng: -76.289844,
+    tags: ["festival", "culture", "family"],
+    type: "event",
+    address: "Town Point Park, Norfolk, VA 23510",
+    emoji: "🌍"
+  },
+  {
+    id: "860",
+    name: "Virginia Beach Boardwalk Art Show",
+    description: "Juried art show on the Virginia Beach boardwalk featuring artists from across the country.",
+    lat: 36.849393,
+    lng: -75.978342,
+    tags: ["culture", "festival", "beach"],
+    type: "event",
+    address: "Virginia Beach Boardwalk, Virginia Beach, VA 23451",
+    emoji: "🎨"
+  },
+  {
+    id: "861",
+    name: "Newport News Fall Festival of Folklife",
+    description: "Annual festival in Newport News celebrating Appalachian and Southern folk traditions.",
+    lat: 37.07,
+    lng: -76.47,
+    tags: ["festival", "culture", "family"],
+    type: "event",
+    address: "Newport News Park, Newport News, VA 23603",
+    emoji: "🪕"
+  },
+  {
+    id: "862",
+    name: "Chesapeake Bay Foundation Clean the Bay Day",
+    description: "Annual volunteer event across Hampton Roads cleaning up the Chesapeake Bay watershed.",
+    lat: 36.849957,
+    lng: -76.290279,
+    tags: ["nature", "family"],
+    type: "event",
+    address: "Multiple locations, Hampton Roads, VA",
+    emoji: "🌊"
+  },
+  {
+    id: "863",
+    name: "Hampton Bay Days",
+    description: "Annual waterfront festival in Hampton with live music, food, and fireworks over the bay.",
+    lat: 37.02541,
+    lng: -76.344455,
+    tags: ["festival", "music", "family"],
+    type: "event",
+    address: "Downtown Hampton, Hampton, VA 23669",
+    emoji: "🎆"
+  },
+  {
+    id: "864",
+    name: "Yorktown Fourth of July Celebration",
+    description: "Patriotic celebration in Yorktown with parade, ceremonies, and fireworks.",
+    lat: 37.24,
+    lng: -76.51,
+    tags: ["festival", "history", "family"],
+    type: "event",
+    address: "Yorktown Battlefield, Yorktown, VA 23690",
+    emoji: "🎆"
+  },
+  {
+    id: "865",
+    name: "The Grain",
+    description: "Craft beer bar and gastropub in Norfolk with rotating taps and pub fare.",
+    lat: 36.854,
+    lng: -76.292,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "820 Shirley Ave, Norfolk, VA 23517",
+    emoji: "🍺"
+  },
+  {
+    id: "866",
+    name: "Streats",
+    description: "Global street food restaurant in Norfolk with tacos, bowls, and craft cocktails.",
+    lat: 36.853,
+    lng: -76.29,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "255 W Olney Rd, Norfolk, VA 23510",
+    emoji: "🌮"
+  },
+  {
+    id: "867",
+    name: "Esoteric",
+    description: "Hip coffee shop and cocktail bar in Norfolk with a creative seasonal menu.",
+    lat: 36.856,
+    lng: -76.293,
+    tags: ["coffee", "nightlife"],
+    type: "business",
+    address: "501 Colonial Ave, Norfolk, VA 23507",
+    emoji: "☕"
+  },
+  {
+    id: "868",
+    name: "Cure Coffeehouse",
+    description: "Specialty coffee shop in Norfolk with pour-overs, espresso, and light bites.",
+    lat: 36.853017,
+    lng: -76.290731,
+    tags: ["coffee"],
+    type: "business",
+    address: "503 Colonial Ave, Norfolk, VA 23507",
+    emoji: "☕"
+  },
+  {
+    id: "869",
+    name: "Norfolk Academy of Arts",
+    description: "Art school and gallery in Norfolk offering classes and community exhibitions.",
+    lat: 36.85486,
+    lng: -76.294662,
+    tags: ["culture"],
+    type: "business",
+    address: "7400 Granby St, Norfolk, VA 23505",
+    emoji: "🎨"
+  },
+  {
+    id: "870",
+    name: "The Venue on 35th",
+    description: "Intimate live music venue in Norfolk with local and regional acts.",
+    lat: 36.86989,
+    lng: -76.280166,
+    tags: ["music", "nightlife"],
+    type: "business",
+    address: "106 W 35th St, Norfolk, VA 23508",
+    emoji: "🎵"
+  },
+  {
+    id: "871",
+    name: "Granby Theater",
+    description: "Historic theater turned nightclub and concert venue in downtown Norfolk.",
+    lat: 36.852,
+    lng: -76.292,
+    tags: ["nightlife", "music", "entertainment"],
+    type: "business",
+    address: "162 Granby St, Norfolk, VA 23510",
+    emoji: "🎭"
+  },
+  {
+    id: "872",
+    name: "Toast Kitchen & Bar",
+    description: "Brunch-focused restaurant in Norfolk with creative breakfast cocktails and dishes.",
+    lat: 36.857,
+    lng: -76.294,
+    tags: ["food", "coffee"],
+    type: "business",
+    address: "741 W 21st St, Norfolk, VA 23517",
+    emoji: "🍞"
+  },
+  {
+    id: "873",
+    name: "Mermaid Factory",
+    description: "Art studio in Norfolk creating custom mermaid sculptures and offering painting classes.",
+    lat: 36.843891,
+    lng: -76.286365,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "330 W 22nd St, Norfolk, VA 23517",
+    emoji: "🧜"
+  },
+  {
+    id: "874",
+    name: "Selden Market",
+    description: "Retail incubator in downtown Norfolk with rotating local vendors and pop-ups.",
+    lat: 36.846,
+    lng: -76.289,
+    tags: ["shopping", "culture"],
+    type: "business",
+    address: "208 E Main St, Norfolk, VA 23510",
+    emoji: "🛍️"
+  },
+  {
+    id: "875",
+    name: "Croaker's Spot",
+    description: "Norfolk location of the popular Southern seafood restaurant with soul food sides.",
+    lat: 36.852299,
+    lng: -76.291949,
+    tags: ["food", "family"],
+    type: "business",
+    address: "4020 Granby St, Norfolk, VA 23504",
+    emoji: "🦐"
+  },
+  {
+    id: "876",
+    name: "Harrison Opera House",
+    description: "Historic performing arts venue in Norfolk home to the Virginia Opera.",
+    lat: 36.850256,
+    lng: -76.292462,
+    tags: ["culture", "music"],
+    type: "business",
+    address: "160 W Virginia Beach Blvd, Norfolk, VA 23510",
+    emoji: "🎭"
+  },
+  {
+    id: "877",
+    name: "Wells Theater",
+    description: "Historic theater in Norfolk hosting live performances and community events.",
+    lat: 36.84949,
+    lng: -76.292007,
+    tags: ["culture", "entertainment"],
+    type: "business",
+    address: "110 E Tazewell St, Norfolk, VA 23510",
+    emoji: "🎬"
+  },
+  {
+    id: "878",
+    name: "The Grocery Store",
+    description: "Neighborhood market and deli in Norfolk with local produce and prepared foods.",
+    lat: 36.85573,
+    lng: -76.292799,
+    tags: ["food", "shopping"],
+    type: "business",
+    address: "741 Shirley Ave, Norfolk, VA 23517",
+    emoji: "🛒"
+  },
+  {
+    id: "879",
+    name: "D'Egg Diner",
+    description: "Classic American diner in Norfolk known for breakfast all day and huge omelets.",
+    lat: 36.850652,
+    lng: -76.289921,
+    tags: ["food", "family"],
+    type: "business",
+    address: "150 W Brambleton Ave, Norfolk, VA 23510",
+    emoji: "🍳"
+  },
+  {
+    id: "880",
+    name: "Mojo Bones",
+    description: "BBQ and bourbon bar in Norfolk with smoked meats and a large whiskey selection.",
+    lat: 36.85018,
+    lng: -76.291942,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "1817 Colley Ave, Norfolk, VA 23517",
+    emoji: "🥃"
+  },
+  {
+    id: "881",
+    name: "Supper",
+    description: "Modern Southern restaurant in Norfolk with seasonal menus and craft cocktails.",
+    lat: 36.852343,
+    lng: -76.292256,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "319 W 21st St, Norfolk, VA 23517",
+    emoji: "🍽️"
+  },
+  {
+    id: "882",
+    name: "Press 626",
+    description: "Wine bar and cafe in Norfolk with small plates and curated wine flights.",
+    lat: 36.855938,
+    lng: -76.293229,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "626 W Olney Rd, Norfolk, VA 23507",
+    emoji: "🍷"
+  },
+  {
+    id: "883",
+    name: "Bardo",
+    description: "Farm-to-table restaurant in Norfolk with an ever-changing menu and local sourcing.",
+    lat: 36.85551,
+    lng: -76.292528,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "727 Shirley Ave, Norfolk, VA 23517",
+    emoji: "🌱"
+  },
+  {
+    id: "884",
+    name: "The Lizard's Tale",
+    description: "Quirky art gallery and gift shop in Norfolk featuring local artists and makers.",
+    lat: 36.856,
+    lng: -76.292732,
+    tags: ["culture", "shopping"],
+    type: "business",
+    address: "825 Shirley Ave, Norfolk, VA 23517",
+    emoji: "🦎"
+  },
+  {
+    id: "885",
+    name: "Alkaline",
+    description: "Ramen shop in Norfolk with house-made noodles and Japanese-inspired small plates.",
+    lat: 36.852739,
+    lng: -76.292636,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "741 W 21st St, Norfolk, VA 23517",
+    emoji: "🍜"
+  },
+  {
+    id: "886",
+    name: "Judy Bo's",
+    description: "Cajun and Creole restaurant in Norfolk with po'boys, gumbo, and live music.",
+    lat: 36.851949,
+    lng: -76.291193,
+    tags: ["food", "music"],
+    type: "business",
+    address: "214 W 24th St, Norfolk, VA 23517",
+    emoji: "🦐"
+  },
+  {
+    id: "887",
+    name: "The Birch Bar",
+    description: "Craft beer bar in Norfolk with a curated selection of local and regional brews.",
+    lat: 36.853995,
+    lng: -76.292328,
+    tags: ["nightlife"],
+    type: "business",
+    address: "1231 Granby St, Norfolk, VA 23510",
+    emoji: "🍺"
+  },
+  {
+    id: "888",
+    name: "Crudo Nudo",
+    description: "Italian-inspired raw bar and restaurant in Norfolk with fresh seafood and pasta.",
+    lat: 36.855214,
+    lng: -76.292926,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "416 W 21st St, Norfolk, VA 23517",
+    emoji: "🦪"
+  },
+  {
+    id: "889",
+    name: "The Stockpot",
+    description: "Fast-casual restaurant in Norfolk with soups, salads, and sandwiches made from scratch.",
+    lat: 36.853196,
+    lng: -76.292554,
+    tags: ["food"],
+    type: "business",
+    address: "900 Granby St, Norfolk, VA 23510",
+    emoji: "🍲"
+  },
+  {
+    id: "890",
+    name: "Vessel Craft Coffee",
+    description: "Specialty coffee roaster in Norfolk with a focus on single-origin beans.",
+    lat: 36.852569,
+    lng: -76.291997,
+    tags: ["coffee"],
+    type: "business",
+    address: "742 W 21st St, Norfolk, VA 23517",
+    emoji: "☕"
+  },
+  {
+    id: "891",
+    name: "Fiddler's Green",
+    description: "Irish pub in Norfolk with traditional music, whiskey, and hearty pub fare.",
+    lat: 36.851739,
+    lng: -76.290681,
+    tags: ["nightlife", "food", "music"],
+    type: "business",
+    address: "210 W 24th St, Norfolk, VA 23517",
+    emoji: "🍀"
+  },
+  {
+    id: "892",
+    name: "Rebel Raw",
+    description: "Raw bar and seafood restaurant in Virginia Beach with fresh local oysters.",
+    lat: 36.855614,
+    lng: -75.979974,
+    tags: ["food", "beach"],
+    type: "business",
+    address: "2201 W Great Neck Rd, Virginia Beach, VA 23454",
+    emoji: "🦪"
+  },
+  {
+    id: "893",
+    name: "Beach Brewing Company",
+    description: "Craft brewery in Virginia Beach with a beachy vibe and rotating seasonal beers.",
+    lat: 36.85,
+    lng: -76.13,
+    tags: ["nightlife"],
+    type: "business",
+    address: "892 Air Rail Ave, Virginia Beach, VA 23455",
+    emoji: "🍻"
+  },
+  {
+    id: "894",
+    name: "Back Bay Brewing",
+    description: "Craft brewery in Virginia Beach with a focus on IPAs and community events.",
+    lat: 36.85,
+    lng: -75.98,
+    tags: ["nightlife"],
+    type: "business",
+    address: "614 Norfolk Ave, Virginia Beach, VA 23451",
+    emoji: "🍺"
+  },
+  {
+    id: "895",
+    name: "Lynnhaven Coffee Company",
+    description: "Local coffee roaster in Virginia Beach with a laid-back atmosphere.",
+    lat: 36.9,
+    lng: -76.1,
+    tags: ["coffee"],
+    type: "business",
+    address: "1413 N Great Neck Rd, Virginia Beach, VA 23454",
+    emoji: "☕"
+  },
+  {
+    id: "896",
+    name: "Three Ships Coffee Roasters",
+    description: "Virginia Beach-based specialty coffee roaster with multiple locations and a flagship cafe.",
+    lat: 36.852204,
+    lng: -75.980051,
+    tags: ["coffee"],
+    type: "business",
+    address: "607 18th St, Virginia Beach, VA 23451",
+    emoji: "☕"
+  },
+  {
+    id: "897",
+    name: "Catch 31",
+    description: "Upscale seafood restaurant on the Virginia Beach oceanfront with patio dining.",
+    lat: 36.84932,
+    lng: -75.978172,
+    tags: ["food", "beach", "nightlife"],
+    type: "business",
+    address: "3001 Atlantic Ave, Virginia Beach, VA 23451",
+    emoji: "🐟"
+  },
+  {
+    id: "898",
+    name: "The Atlantic on Pacific",
+    description: "Upscale restaurant in Virginia Beach with coastal American cuisine and craft cocktails.",
+    lat: 36.854913,
+    lng: -75.98016,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "3004 Pacific Ave, Virginia Beach, VA 23451",
+    emoji: "🍽️"
+  },
+  {
+    id: "899",
+    name: "Birch Abbey",
+    description: "Wine bar and small plates in Virginia Beach with a curated selection of international wines.",
+    lat: 36.855592,
+    lng: -75.979612,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "2105 Atlantic Ave, Virginia Beach, VA 23451",
+    emoji: "🍷"
+  },
+  {
+    id: "900",
+    name: "Wasserhund Brewing",
+    description: "German-style brewery in Virginia Beach with lagers, pretzels, and a biergarten.",
+    lat: 36.85,
+    lng: -76.12,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "3320 Holland Rd, Virginia Beach, VA 23452",
+    emoji: "🍺"
+  },
+  {
+    id: "901",
+    name: "Smartmouth Brewing Virginia Beach",
+    description: "Norfolk-based brewery's Virginia Beach taproom with flagship beers and seasonal releases.",
+    lat: 36.854997,
+    lng: -75.979751,
+    tags: ["nightlife"],
+    type: "business",
+    address: "2400 Pacific Ave, Virginia Beach, VA 23451",
+    emoji: "🍻"
+  },
+  {
+    id: "902",
+    name: "Blue Pete's Restaurant",
+    description: "Waterfront seafood restaurant in Virginia Beach's Pungo area with dockside dining.",
+    lat: 36.779624,
+    lng: -76.010586,
+    tags: ["food", "outdoors"],
+    type: "business",
+    address: "1400 Muddy Creek Rd, Virginia Beach, VA 23456",
+    emoji: "🦐"
+  },
+  {
+    id: "903",
+    name: "Witch of Pungo",
+    description: "Local legend site in Virginia Beach marking the historic Grace Sherwood witch trial.",
+    lat: 36.78,
+    lng: -76,
+    tags: ["history", "outdoors"],
+    type: "business",
+    address: "Witchduck Rd, Virginia Beach, VA 23462",
+    emoji: "🧙"
+  },
+  {
+    id: "904",
+    name: "Virginia Beach Fishing Pier",
+    description: "Public fishing pier on the Virginia Beach oceanfront with bait shop and rentals.",
+    lat: 36.849995,
+    lng: -75.978212,
+    tags: ["outdoors", "beach"],
+    type: "business",
+    address: "15th St, Virginia Beach, VA 23451",
+    emoji: "🎣"
+  },
+  {
+    id: "905",
+    name: "Ocean Breeze Waterpark",
+    description: "Family water park in Virginia Beach with slides, wave pool, and lazy river.",
+    lat: 36.84,
+    lng: -76.01,
+    tags: ["family", "entertainment"],
+    type: "business",
+    address: "849 General Booth Blvd, Virginia Beach, VA 23451",
+    emoji: "💦"
+  },
+  {
+    id: "906",
+    name: "Virginia Beach Amphitheater",
+    description: "Large outdoor concert venue in Virginia Beach hosting national touring acts.",
+    lat: 36.750108,
+    lng: -76.029319,
+    tags: ["music", "entertainment"],
+    type: "business",
+    address: "3550 Cellar Door Way, Virginia Beach, VA 23456",
+    emoji: "🎤"
+  },
+  {
+    id: "907",
+    name: "The Funny Bone Comedy Club",
+    description: "National comedy club chain in Virginia Beach with touring stand-up comedians.",
+    lat: 36.850133,
+    lng: -76.129899,
+    tags: ["entertainment", "nightlife"],
+    type: "business",
+    address: "2170 General Booth Blvd, Virginia Beach, VA 23454",
+    emoji: "🎤"
+  },
+  {
+    id: "908",
+    name: "Regal Virginia Beach",
+    description: "Modern multiplex cinema in Virginia Beach with IMAX and recliner seating.",
+    lat: 36.850119,
+    lng: -76.120625,
+    tags: ["entertainment"],
+    type: "business",
+    address: "3550 S Plaza Trl, Virginia Beach, VA 23452",
+    emoji: "🎬"
+  },
+  {
+    id: "909",
+    name: "Princess Anne Country Club",
+    description: "Historic country club in Virginia Beach with golf, tennis, and dining.",
+    lat: 36.849657,
+    lng: -76.05,
+    tags: ["sports", "food"],
+    type: "business",
+    address: "3800 Pacific Ave, Virginia Beach, VA 23451",
+    emoji: "⛳"
+  },
+  {
+    id: "910",
+    name: "Great Bridge Battlefield & Waterways Museum",
+    description: "Museum in Chesapeake dedicated to the Revolutionary War battle at Great Bridge.",
+    lat: 36.719767,
+    lng: -76.23957,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "1775 Historic Way, Chesapeake, VA 23320",
+    emoji: "⚔️"
+  },
+  {
+    id: "911",
+    name: "Chesapeake Municipal Center",
+    description: "Government complex in Chesapeake with parks and community event space.",
+    lat: 36.760554,
+    lng: -76.240013,
+    tags: ["outdoors", "family"],
+    type: "business",
+    address: "306 Cedar Rd, Chesapeake, VA 23322",
+    emoji: "🏛️"
+  },
+  {
+    id: "912",
+    name: "Butts Road Bridge",
+    description: "Historic bridge in Chesapeake with views of the Northwest River.",
+    lat: 36.68,
+    lng: -76.3,
+    tags: ["history", "outdoors"],
+    type: "business",
+    address: "Butts Rd, Chesapeake, VA 23322",
+    emoji: "🌉"
+  },
+  {
+    id: "913",
+    name: "Chesapeake Dog Park",
+    description: "Off-leash dog park in Chesapeake with separate areas for large and small dogs.",
+    lat: 36.760218,
+    lng: -76.240166,
+    tags: ["outdoors", "family"],
+    type: "business",
+    address: "900 City Park Dr, Chesapeake, VA 23320",
+    emoji: "🐕"
+  },
+  {
+    id: "914",
+    name: "Chesapeake Public Library",
+    description: "Public library in Chesapeake with books, media, and community programs.",
+    lat: 36.759324,
+    lng: -76.240095,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "298 Cedar Rd, Chesapeake, VA 23322",
+    emoji: "📚"
+  },
+  {
+    id: "915",
+    name: "Fort Monroe Visitor & Education Center",
+    description: "Visitor center at Fort Monroe with exhibits on the fort's 400-year history.",
+    lat: 37.004,
+    lng: -76.309,
+    tags: ["history", "family"],
+    type: "business",
+    address: "30 Bernard Rd, Hampton, VA 23651",
+    emoji: "🏰"
+  },
+  {
+    id: "916",
+    name: "The Vanguard",
+    description: "Craft brewery and music venue in Hampton with house-made beers and live shows.",
+    lat: 37.024885,
+    lng: -76.345074,
+    tags: ["nightlife", "music"],
+    type: "business",
+    address: "504 King St, Hampton, VA 23669",
+    emoji: "🍺"
+  },
+  {
+    id: "917",
+    name: "Phoebus Historic District",
+    description: "Historic neighborhood in Hampton with Victorian architecture, shops, and restaurants.",
+    lat: 37.020651,
+    lng: -76.319703,
+    tags: ["history", "shopping", "food"],
+    type: "business",
+    address: "Mellen St, Hampton, VA 23663",
+    emoji: "🏛️"
+  },
+  {
+    id: "918",
+    name: "Charles Taylor Arts Center",
+    description: "Art gallery and education center in Hampton with rotating exhibitions and classes.",
+    lat: 37.025,
+    lng: -76.343,
+    tags: ["culture"],
+    type: "business",
+    address: "4205 Victoria Blvd, Hampton, VA 23669",
+    emoji: "🎨"
+  },
+  {
+    id: "919",
+    name: "Phoebus Bakery",
+    description: "Local bakery in Hampton's Phoebus neighborhood with fresh bread and pastries.",
+    lat: 37.020006,
+    lng: -76.319788,
+    tags: ["food"],
+    type: "business",
+    address: "300 E Mellen St, Hampton, VA 23663",
+    emoji: "🥐"
+  },
+  {
+    id: "920",
+    name: "The Deadrise",
+    description: "Casual waterfront restaurant in Hampton with seafood and dockside dining.",
+    lat: 37.024519,
+    lng: -76.343517,
+    tags: ["food", "outdoors"],
+    type: "business",
+    address: "1540 Settlers Landing Rd, Hampton, VA 23669",
+    emoji: "🦐"
+  },
+  {
+    id: "921",
+    name: "Brown Chicken Brown Cow",
+    description: "Burger and bourbon bar in Hampton with gourmet burgers and whiskey flights.",
+    lat: 37.025027,
+    lng: -76.34322,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "17 E Queens Way, Hampton, VA 23669",
+    emoji: "🍔"
+  },
+  {
+    id: "922",
+    name: "The Mariners' Museum",
+    description: "Maritime museum in Newport News with one of the world's largest collections of ship models.",
+    lat: 37.055,
+    lng: -76.485,
+    tags: ["history", "culture", "family"],
+    type: "business",
+    address: "100 Museum Dr, Newport News, VA 23606",
+    emoji: "⛵"
+  },
+  {
+    id: "923",
+    name: "Peninsula Fine Arts Center",
+    description: "Art museum and education center in Newport News with rotating exhibitions.",
+    lat: 37.07,
+    lng: -76.48,
+    tags: ["culture"],
+    type: "business",
+    address: "101 Museum Dr, Newport News, VA 23606",
+    emoji: "🎨"
+  },
+  {
+    id: "924",
+    name: "Denbigh Park",
+    description: "Waterfront park in Newport News with a boat ramp, fishing pier, and trails.",
+    lat: 37.12,
+    lng: -76.53,
+    tags: ["outdoors", "nature"],
+    type: "business",
+    address: "14302 Old Courthouse Way, Newport News, VA 23602",
+    emoji: "🎣"
+  },
+  {
+    id: "925",
+    name: "Newport News Green Foundation",
+    description: "Conservation organization in Newport News maintaining urban green spaces and trails.",
+    lat: 37.070225,
+    lng: -76.469336,
+    tags: ["nature", "outdoors"],
+    type: "business",
+    address: "739 Thimble Shoals Blvd, Newport News, VA 23606",
+    emoji: "🌿"
+  },
+  {
+    id: "926",
+    name: "Sushi King",
+    description: "Popular sushi restaurant in Newport News with fresh fish and creative rolls.",
+    lat: 37.08006,
+    lng: -76.469872,
+    tags: ["food"],
+    type: "business",
+    address: "12515 Jefferson Ave, Newport News, VA 23602",
+    emoji: "🍣"
+  },
+  {
+    id: "927",
+    name: "Smoke BBQ Restaurant & Bar",
+    description: "BBQ joint in Newport News with smoked meats, ribs, and a full bar.",
+    lat: 37.09,
+    lng: -76.47,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "12472 Warwick Blvd, Newport News, VA 23606",
+    emoji: "🍖"
+  },
+  {
+    id: "928",
+    name: "Cohen's Bagel Company",
+    description: "New York-style bagel shop in Newport News with fresh bagels and deli sandwiches.",
+    lat: 37.080026,
+    lng: -76.470671,
+    tags: ["food"],
+    type: "business",
+    address: "11712 Jefferson Ave, Newport News, VA 23606",
+    emoji: "🥯"
+  },
+  {
+    id: "929",
+    name: "Taco Mexico",
+    description: "Authentic Mexican taqueria in Newport News with tacos, burritos, and margaritas.",
+    lat: 37.089749,
+    lng: -76.470015,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "980 J Clyde Morris Blvd, Newport News, VA 23602",
+    emoji: "🌮"
+  },
+  {
+    id: "930",
+    name: "Thai Erawan",
+    description: "Thai restaurant in Newport News with curries, noodles, and traditional dishes.",
+    lat: 37.079813,
+    lng: -76.469472,
+    tags: ["food"],
+    type: "business",
+    address: "1036 J Clyde Morris Blvd, Newport News, VA 23602",
+    emoji: "🍜"
+  },
+  {
+    id: "931",
+    name: "The Point at Newport News",
+    description: "Shopping center in Newport News with retail, dining, and entertainment.",
+    lat: 37.12,
+    lng: -76.5,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "12150 Jefferson Ave, Newport News, VA 23602",
+    emoji: "🛍️"
+  },
+  {
+    id: "932",
+    name: "The Bier Garden",
+    description: "Large German beer hall in Portsmouth with outdoor seating and live music.",
+    lat: 36.835477,
+    lng: -76.300036,
+    tags: ["nightlife", "food", "music"],
+    type: "business",
+    address: "238 High St, Portsmouth, VA 23704",
+    emoji: "🍺"
+  },
+  {
+    id: "933",
+    name: "Union Bank & Trust Pavilion",
+    description: "Outdoor concert venue in Portsmouth on the waterfront hosting summer concerts.",
+    lat: 36.835218,
+    lng: -76.300283,
+    tags: ["music", "entertainment"],
+    type: "business",
+    address: "16 Crawford Pkwy, Portsmouth, VA 23704",
+    emoji: "🎵"
+  },
+  {
+    id: "934",
+    name: "Seaboard Cafe",
+    description: "Casual cafe in Portsmouth with sandwiches, coffee, and local art on the walls.",
+    lat: 36.834354,
+    lng: -76.300028,
+    tags: ["food", "coffee"],
+    type: "business",
+    address: "221 High St, Portsmouth, VA 23704",
+    emoji: "☕"
+  },
+  {
+    id: "935",
+    name: "The Coffee Shoppe",
+    description: "Independent coffee shop in Portsmouth with fresh-roasted beans and pastries.",
+    lat: 36.83486,
+    lng: -76.299975,
+    tags: ["coffee", "food"],
+    type: "business",
+    address: "802 Caroline St, Portsmouth, VA 23704",
+    emoji: "☕"
+  },
+  {
+    id: "936",
+    name: "High Street Landing",
+    description: "Waterfront park in Portsmouth with boat slips, events, and dining.",
+    lat: 36.835685,
+    lng: -76.299795,
+    tags: ["outdoors", "food"],
+    type: "business",
+    address: " Crawford Pkwy, Portsmouth, VA 23704",
+    emoji: "⚓"
+  },
+  {
+    id: "937",
+    name: "Portsmouth Public Library",
+    description: "Main library in Portsmouth with books, programs, and community meeting spaces.",
+    lat: 36.835025,
+    lng: -76.299843,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "601 Court St, Portsmouth, VA 23704",
+    emoji: "📚"
+  },
+  {
+    id: "938",
+    name: "Portsmouth Community Concerts",
+    description: "Community concert series in Portsmouth featuring local and regional musicians.",
+    lat: 36.83443,
+    lng: -76.300433,
+    tags: ["music", "culture"],
+    type: "business",
+    address: "701 Crawford St, Portsmouth, VA 23704",
+    emoji: "🎤"
+  },
+  {
+    id: "939",
+    name: "Willett Hall",
+    description: "Performing arts center in Portsmouth hosting concerts, theater, and community events.",
+    lat: 36.835043,
+    lng: -76.300212,
+    tags: ["entertainment", "culture"],
+    type: "business",
+    address: "3701 Willett Dr, Portsmouth, VA 23701",
+    emoji: "🎭"
+  },
+  {
+    id: "940",
+    name: "Lake Meade Park",
+    description: "Park in Suffolk with a lake, fishing, trails, and a playground.",
+    lat: 36.75034,
+    lng: -76.549378,
+    tags: ["outdoors", "family", "nature"],
+    type: "business",
+    address: "2000 Holland Rd, Suffolk, VA 23434",
+    emoji: "🌳"
+  },
+  {
+    id: "941",
+    name: "Suffolk Art Gallery",
+    description: "Gallery in Suffolk showcasing local and regional artists with rotating exhibitions.",
+    lat: 36.73,
+    lng: -76.579849,
+    tags: ["culture"],
+    type: "business",
+    address: "118 Bosley Ave, Suffolk, VA 23434",
+    emoji: "🎨"
+  },
+  {
+    id: "942",
+    name: "Suffolk Golf Course",
+    description: "Public golf course in Suffolk with 18 holes and a clubhouse.",
+    lat: 36.749922,
+    lng: -76.550692,
+    tags: ["sports", "outdoors"],
+    type: "business",
+    address: "4700 Sleepy Hole Rd, Suffolk, VA 23435",
+    emoji: "⛳"
+  },
+  {
+    id: "943",
+    name: "Suffolk Public Library",
+    description: "Public library in Suffolk with books, events, and community resources.",
+    lat: 36.72984,
+    lng: -76.580036,
+    tags: ["culture", "family"],
+    type: "business",
+    address: "443 W Washington St, Suffolk, VA 23434",
+    emoji: "📚"
+  },
+  {
+    id: "944",
+    name: "Suffolk Community Theatre",
+    description: "Community theater in Suffolk producing plays and musicals with local talent.",
+    lat: 36.729878,
+    lng: -76.579394,
+    tags: ["culture", "entertainment"],
+    type: "business",
+    address: "110 W Finney Ave, Suffolk, VA 23434",
+    emoji: "🎭"
+  },
+  {
+    id: "945",
+    name: "Harbour View",
+    description: "Master-planned community in Suffolk with shopping, dining, and residential areas.",
+    lat: 36.76,
+    lng: -76.53,
+    tags: ["shopping", "food"],
+    type: "business",
+    address: "5800 Harbour View Blvd, Suffolk, VA 23435",
+    emoji: "🏘️"
+  },
+  {
+    id: "946",
+    name: "Driver Village",
+    description: "Historic village in Suffolk with antique shops, restaurants, and local businesses.",
+    lat: 36.76,
+    lng: -76.55,
+    tags: ["shopping", "history", "food"],
+    type: "business",
+    address: "Driver Ln, Suffolk, VA 23435",
+    emoji: "🏘️"
+  },
+  {
+    id: "947",
+    name: "Suffolk Visitor Center Peanut Monument",
+    description: "Giant peanut statue at the Suffolk Visitor Center celebrating the city's peanut legacy.",
+    lat: 36.730387,
+    lng: -76.580045,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "524 N Main St, Suffolk, VA 23434",
+    emoji: "🥜"
+  },
+  {
+    id: "948",
+    name: "Colonial Williamsburg Governor's Palace Gardens",
+    description: "Formal gardens surrounding the reconstructed Governor's Palace.",
+    lat: 37.275202,
+    lng: -76.705395,
+    tags: ["nature", "history"],
+    type: "business",
+    address: "300 Palace Green St, Williamsburg, VA 23185",
+    emoji: "🌷"
+  },
+  {
+    id: "949",
+    name: "Waller Mill Park",
+    description: "Park in Williamsburg with a reservoir, fishing, trails, and picnic areas.",
+    lat: 37.3,
+    lng: -76.72,
+    tags: ["outdoors", "family", "nature"],
+    type: "business",
+    address: "901 Airport Rd, Williamsburg, VA 23188",
+    emoji: "🌳"
+  },
+  {
+    id: "950",
+    name: "New Quarter Park",
+    description: "Park in Williamsburg with hiking, mountain biking, and equestrian trails.",
+    lat: 37.32,
+    lng: -76.68,
+    tags: ["outdoors", "sports", "nature"],
+    type: "business",
+    address: "1000 Lakeshead Dr, Williamsburg, VA 23185",
+    emoji: "🐴"
+  },
+  {
+    id: "951",
+    name: "The Hounds Tale",
+    description: "Casual restaurant in Williamsburg with burgers, sandwiches, and craft beers.",
+    lat: 37.269407,
+    lng: -76.706975,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "480 Prince George St, Williamsburg, VA 23185",
+    emoji: "🍔"
+  },
+  {
+    id: "952",
+    name: "DoG Street Pub",
+    description: "Brewpub in Williamsburg with house-made beers and wood-fired pizzas.",
+    lat: 37.26984,
+    lng: -76.706867,
+    tags: ["nightlife", "food"],
+    type: "business",
+    address: "401 W Duke of Gloucester St, Williamsburg, VA 23185",
+    emoji: "🍺"
+  },
+  {
+    id: "953",
+    name: "The Virginia Room",
+    description: "Cocktail bar in Williamsburg with craft drinks and a speakeasy atmosphere.",
+    lat: 37.270691,
+    lng: -76.706883,
+    tags: ["nightlife"],
+    type: "business",
+    address: "412 W Duke of Gloucester St, Williamsburg, VA 23185",
+    emoji: "🍸"
+  },
+  {
+    id: "954",
+    name: "Second Street",
+    description: "American bistro in Williamsburg with seasonal menus and an extensive wine list.",
+    lat: 37.270049,
+    lng: -76.706916,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "140 Second St, Williamsburg, VA 23185",
+    emoji: "🍽️"
+  },
+  {
+    id: "955",
+    name: "Trellis Restaurant",
+    description: "Fine dining restaurant in Williamsburg with a focus on regional cuisine.",
+    lat: 37.269362,
+    lng: -76.707339,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "403 W Duke of Gloucester St, Williamsburg, VA 23185",
+    emoji: "🍷"
+  },
+  {
+    id: "956",
+    name: "The Whaling Company",
+    description: "Seafood restaurant in Williamsburg with a nautical theme and waterfront views.",
+    lat: 37.27,
+    lng: -76.69,
+    tags: ["food", "outdoors"],
+    type: "business",
+    address: "494 McLaws Cir, Williamsburg, VA 23185",
+    emoji: "🐋"
+  },
+  {
+    id: "957",
+    name: "King's Arms Tavern",
+    description: "Colonial-themed restaurant in Williamsburg serving 18th-century-inspired dishes.",
+    lat: 37.270045,
+    lng: -76.705188,
+    tags: ["food", "history"],
+    type: "business",
+    address: "416 E Duke of Gloucester St, Williamsburg, VA 23185",
+    emoji: "🍗"
+  },
+  {
+    id: "958",
+    name: "Chowning's Tavern",
+    description: "Casual colonial tavern in Williamsburg with sandwiches, ale, and evening gambols.",
+    lat: 37.270447,
+    lng: -76.704442,
+    tags: ["food", "history", "nightlife"],
+    type: "business",
+    address: "109 E Duke of Gloucester St, Williamsburg, VA 23185",
+    emoji: "🍻"
+  },
+  {
+    id: "959",
+    name: "Christian's Brick Oven Pizza",
+    description: "Wood-fired pizza restaurant in Williamsburg with fresh ingredients and craft beers.",
+    lat: 37.269954,
+    lng: -76.706834,
+    tags: ["food"],
+    type: "business",
+    address: "3011 Richmond Rd, Williamsburg, VA 23185",
+    emoji: "🍕"
+  },
+  {
+    id: "960",
+    name: "The Blue Talon Bistro",
+    description: "French-American bistro in Williamsburg with a casual fine dining atmosphere.",
+    lat: 37.269811,
+    lng: -76.707685,
+    tags: ["food", "nightlife"],
+    type: "business",
+    address: "420 Prince George St, Williamsburg, VA 23185",
+    emoji: "🥘"
+  },
+  {
+    id: "961",
+    name: "Blackbird Bakery",
+    description: "Local bakery in Williamsburg with fresh bread, pastries, and custom cakes.",
+    lat: 37.269924,
+    lng: -76.707062,
+    tags: ["food"],
+    type: "business",
+    address: "510 Prince George St, Williamsburg, VA 23185",
+    emoji: "🥐"
+  },
+  {
+    id: "962",
+    name: "The Coffeehouse",
+    description: "Cozy coffee shop in Williamsburg with espresso drinks, teas, and light bites.",
+    lat: 37.269959,
+    lng: -76.706337,
+    tags: ["coffee"],
+    type: "business",
+    address: "432 Prince George St, Williamsburg, VA 23185",
+    emoji: "☕"
+  },
+  {
+    id: "963",
+    name: "Yorktown Freight Shed",
+    description: "Historic freight shed in Yorktown now used as an event and exhibition space.",
+    lat: 37.240291,
+    lng: -76.510041,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "331 Water St, Yorktown, VA 23690",
+    emoji: "🏚️"
+  },
+  {
+    id: "964",
+    name: "Yorktown Onion",
+    description: "Sculpture in Yorktown commemorating the historic wild onion that once grew in the area.",
+    lat: 37.240169,
+    lng: -76.510496,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "Main St, Yorktown, VA 23690",
+    emoji: "🧅"
+  },
+  {
+    id: "965",
+    name: "Yorktown Custom House",
+    description: "Historic custom house in Yorktown where taxes were collected during the colonial era.",
+    lat: 37.235,
+    lng: -76.51,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "100 Main St, Yorktown, VA 23690",
+    emoji: "🏛️"
+  },
+  {
+    id: "966",
+    name: "Yorktown Arts Foundation",
+    description: "Arts organization in Yorktown promoting local artists and cultural events.",
+    lat: 37.23448,
+    lng: -76.509937,
+    tags: ["culture"],
+    type: "business",
+    address: "121 Alexander Hamilton Blvd, Yorktown, VA 23690",
+    emoji: "🎨"
+  },
+  {
+    id: "967",
+    name: "Yorktown Ghost Walk",
+    description: "Guided ghost tour in Yorktown exploring the historic area's haunted legends.",
+    lat: 37.239831,
+    lng: -76.509754,
+    tags: ["entertainment", "history"],
+    type: "business",
+    address: "300 Main St, Yorktown, VA 23690",
+    emoji: "👻"
+  },
+  {
+    id: "968",
+    name: "Yorktown Riverfront",
+    description: "Scenic riverfront area in Yorktown with walking paths, benches, and historic views.",
+    lat: 37.240671,
+    lng: -76.509962,
+    tags: ["outdoors", "history"],
+    type: "business",
+    address: "Water St, Yorktown, VA 23690",
+    emoji: "🌅"
+  },
+  {
+    id: "969",
+    name: "Yorktown Historical Museum",
+    description: "Museum in Yorktown with exhibits on the Revolutionary War and local history.",
+    lat: 37.235075,
+    lng: -76.510004,
+    tags: ["history", "culture"],
+    type: "business",
+    address: "301 Main St, Yorktown, VA 23690",
+    emoji: "🏛️"
+  },
+  {
+    id: "970",
+    name: "Smithfield Antique Gallery",
+    description: "Antique shop in Smithfield with vintage furniture, collectibles, and local memorabilia.",
+    lat: 36.979319,
+    lng: -76.630241,
+    tags: ["shopping", "history"],
+    type: "business",
+    address: "108 Main St, Smithfield, VA 23430",
+    emoji: "🏺"
+  },
+  {
+    id: "971",
+    name: "Smithfield Coffee Shop",
+    description: "Cozy coffee shop in Smithfield with espresso drinks and homemade pastries.",
+    lat: 36.980035,
+    lng: -76.630146,
+    tags: ["coffee", "food"],
+    type: "business",
+    address: "110 Main St, Smithfield, VA 23430",
+    emoji: "☕"
+  },
+  {
+    id: "972",
+    name: "Smithfield Ice Cream Shoppe",
+    description: "Family-owned ice cream shop in Smithfield with seasonal flavors and waffle cones.",
+    lat: 36.980541,
+    lng: -76.629523,
+    tags: ["food", "family"],
+    type: "business",
+    address: "115 Main St, Smithfield, VA 23430",
+    emoji: "🍨"
+  },
+  {
+    id: "973",
+    name: "Smithfield Wine Shop",
+    description: "Wine shop in Smithfield with tastings, events, and a curated selection of Virginia wines.",
+    lat: 36.979924,
+    lng: -76.629832,
+    tags: ["shopping", "nightlife"],
+    type: "business",
+    address: "120 Main St, Smithfield, VA 23430",
+    emoji: "🍷"
+  },
+  {
+    id: "974",
+    name: "Virginia Beach Restaurant Week",
+    description: "Annual event in Virginia Beach with prix-fixe menus at participating restaurants.",
+    lat: 36.849698,
+    lng: -75.978652,
+    tags: ["food", "festival"],
+    type: "event",
+    address: "Virginia Beach, VA 23451",
+    emoji: "🍽️"
+  },
+  {
+    id: "975",
+    name: "Williamsburg Film Festival",
+    description: "Annual film festival in Williamsburg showcasing independent and regional films.",
+    lat: 37.269998,
+    lng: -76.707087,
+    tags: ["entertainment", "culture", "festival"],
+    type: "event",
+    address: "Kimball Theatre, Williamsburg, VA 23185",
+    emoji: "🎬"
+  },
+  {
+    id: "976",
+    name: "Hampton Roads Beer Fest",
+    description: "Annual craft beer festival in Hampton Roads featuring local and regional breweries.",
+    lat: 36.844753,
+    lng: -76.286307,
+    tags: ["festival", "nightlife"],
+    type: "event",
+    address: "Town Point Park, Norfolk, VA 23510",
+    emoji: "🍻"
+  },
+  {
+    id: "977",
+    name: "Norfolk Jazz Festival",
+    description: "Annual jazz festival in Norfolk with local and national performers at outdoor venues.",
+    lat: 36.850192,
+    lng: -76.290026,
+    tags: ["music", "festival", "culture"],
+    type: "event",
+    address: "Town Point Park, Norfolk, VA 23510",
+    emoji: "🎷"
+  },
+  {
+    id: "978",
+    name: "Virginia Beach Craft Beer Festival",
+    description: "Annual beer festival at the Virginia Beach oceanfront with tastings and live music.",
+    lat: 36.850118,
+    lng: -75.978581,
+    tags: ["festival", "nightlife", "music"],
+    type: "event",
+    address: "Virginia Beach Oceanfront, Virginiaburg, VA 23451",
+    emoji: "🍺"
+  },
+  {
+    id: "979",
+    name: "Suffolk Peanut Fest 5K",
+    description: "Annual 5K race during the Suffolk Peanut Festival with a fun run for kids.",
+    lat: 36.729569,
+    lng: -76.569915,
+    tags: ["sports", "family", "festival"],
+    type: "event",
+    address: "Peanut Festival Park, Suffolk, VA 23434",
+    emoji: "🏃"
+  },
+  {
+    id: "980",
+    name: "Williamsburg Harvest Festival",
+    description: "Annual harvest celebration in Williamsburg with colonial-era food, music, and crafts.",
+    lat: 37.269836,
+    lng: -76.706644,
+    tags: ["festival", "history", "family"],
+    type: "event",
+    address: "Colonial Williamsburg, Williamsburg, VA 23185",
+    emoji: "🍂"
+  },
+  {
+    id: "981",
+    name: "Yorktown Food and Wine Festival",
+    description: "Annual culinary event in Yorktown featuring local chefs, wineries, and live music.",
+    lat: 37.240626,
+    lng: -76.510029,
+    tags: ["festival", "food", "music"],
+    type: "event",
+    address: "Riverwalk Landing, Yorktown, VA 23690",
+    emoji: "🍷"
+  },
+  {
+    id: "982",
+    name: "Smithfield 4th of July Parade",
+    description: "Annual patriotic parade in Smithfield with floats, marching bands, and community groups.",
+    lat: 36.980098,
+    lng: -76.630104,
+    tags: ["festival", "family", "history"],
+    type: "event",
+    address: "Main Street, Smithfield, VA 23430",
+    emoji: "🇺🇸"
+  },
+  {
+    id: "983",
+    name: "Isle of Wight County Heritage Festival",
+    description: "Annual heritage festival in Isle of Wight County celebrating local history and culture.",
+    lat: 36.979302,
+    lng: -76.630144,
+    tags: ["festival", "history", "family"],
+    type: "event",
+    address: "Historic Courthouse, Smithfield, VA 23430",
+    emoji: "🏛️"
+  },
+  {
+    id: "984",
+    name: "Poquoson Seafood Festival Cook-Off",
+    description: "Annual seafood cooking competition in Poquoson with local chefs and food tastings.",
+    lat: 37.120016,
+    lng: -76.380086,
+    tags: ["festival", "food", "family"],
+    type: "event",
+    address: "Poquoson City Park, Poquoson, VA 23662",
+    emoji: "🦐"
+  },
+  {
+    id: "985",
+    name: "Hampton Roads Pride Festival",
+    description: "Annual LGBTQ+ pride festival in Norfolk with parade, performances, and community vendors.",
+    lat: 36.845316,
+    lng: -76.286618,
+    tags: ["festival", "music", "family"],
+    type: "event",
+    address: "Town Point Park, Norfolk, VA 23510",
+    emoji: "🏳️‍🌈"
+  },
+  {
+    id: "986",
+    name: "Virginia Beach Boardwalk Weekend",
+    description: "Summer festival series on the Virginia Beach boardwalk with concerts and street performers.",
+    lat: 36.84991,
+    lng: -75.977844,
+    tags: ["festival", "music", "beach"],
+    type: "event",
+    address: "Virginia Beach Boardwalk, Virginia Beach, VA 23451",
+    emoji: "🎵"
+  },
+  {
+    id: "987",
+    name: "Norfolk St. Patrick's Day Parade",
+    description: "Annual St. Patrick's Day parade in downtown Norfolk with floats and Irish-themed festivities.",
+    lat: 36.849591,
+    lng: -76.290594,
+    tags: ["festival", "culture", "family"],
+    type: "event",
+    address: "Granby St, Norfolk, VA 23510",
+    emoji: "☘️"
+  },
+  {
+    id: "988",
+    name: "Chesapeake Bay Seafood Festival",
+    description: "Annual seafood festival celebrating Chesapeake Bay cuisine with fresh catches and live music.",
+    lat: 36.844757,
+    lng: -76.287107,
+    tags: ["festival", "food", "music"],
+    type: "event",
+    address: "Town Point Park, Norfolk, VA 23510",
+    emoji: "🦀"
+  },
+  {
+    id: "989",
+    name: "Williamsburg Book Festival",
+    description: "Annual literary festival in Williamsburg with author readings, signings, and workshops.",
+    lat: 37.270156,
+    lng: -76.706303,
+    tags: ["culture", "festival", "family"],
+    type: "event",
+    address: "Squires Student Center, Williamsburg, VA 23185",
+    emoji: "📚"
+  },
+  {
+    id: "990",
+    name: "Yorktown Arts Stroll",
+    description: "Quarterly art walk in Yorktown with gallery openings, live music, and local artists.",
+    lat: 37.240098,
+    lng: -76.510004,
+    tags: ["culture", "festival"],
+    type: "event",
+    address: "Main Street, Yorktown, VA 23690",
+    emoji: "🎨"
+  },
+  {
+    id: "991",
+    name: "Hampton Roads International Auto Show",
+    description: "Annual auto show in Hampton Roads featuring new cars, trucks, and concept vehicles.",
+    lat: 37.02505,
+    lng: -76.345646,
+    tags: ["family", "festival"],
+    type: "event",
+    address: "Hampton Roads Convention Center, Hampton, VA 23666",
+    emoji: "🚗"
+  },
+  {
+    id: "992",
+    name: "Virginia Beach Oceanfront Concert Series",
+    description: "Free summer concert series on the Virginia Beach oceanfront with local and regional bands.",
+    lat: 36.849669,
+    lng: -75.977908,
+    tags: ["music", "festival", "beach"],
+    type: "event",
+    address: "31st St Stage, Virginia Beach, VA 23451",
+    emoji: "🎤"
+  },
+  {
+    id: "993",
+    name: "Norfolk Latino Festival",
+    description: "Annual celebration of Latino culture in Norfolk with music, dance, food, and arts.",
+    lat: 36.844556,
+    lng: -76.286541,
+    tags: ["culture", "festival", "music"],
+    type: "event",
+    address: "Town Point Park, Norfolk, VA 23510",
+    emoji: "💃"
+  },
+  {
+    id: "994",
+    name: "Williamsburg Run the DOG Street 5K",
+    description: "Annual 5K race through Colonial Williamsburg's historic Duke of Gloucester Street.",
+    lat: 37.270558,
+    lng: -76.707081,
+    tags: ["sports", "family", "history"],
+    type: "event",
+    address: "Colonial Williamsburg, Williamsburg, VA 23185",
+    emoji: "🏃"
+  },
+  {
+    id: "995",
+    name: "Hampton Roads Black Restaurant Week",
+    description: "Annual event celebrating Black-owned restaurants across Hampton Roads with special menus.",
+    lat: 36.850114,
+    lng: -76.290209,
+    tags: ["food", "festival", "culture"],
+    type: "event",
+    address: "Multiple locations, Hampton Roads, VA",
+    emoji: "🍽️"
+  },
+  {
+    id: "996",
+    name: "Smithfield Music in the Park",
+    description: "Summer concert series in Smithfield's Windsor Castle Park with local bands and food trucks.",
+    lat: 36.979312,
+    lng: -76.630054,
+    tags: ["music", "family", "festival"],
+    type: "event",
+    address: "Windsor Castle Park, Smithfield, VA 23430",
+    emoji: "🎶"
+  },
+  {
+    id: "997",
+    name: "Isle of Wight County Christmas Parade",
+    description: "Annual holiday parade in Isle of Wight County with floats, marching bands, and Santa.",
+    lat: 36.979992,
+    lng: -76.630011,
+    tags: ["festival", "family"],
+    type: "event",
+    address: "Main Street, Smithfield, VA 23430",
+    emoji: "🎄"
+  },
+  {
+    id: "998",
+    name: "Poquoson Summer Concert Series",
+    description: "Free outdoor concert series in Poquoson City Park with local bands and food vendors.",
+    lat: 37.120669,
+    lng: -76.37972,
+    tags: ["music", "family", "festival"],
+    type: "event",
+    address: "Poquoson City Park, Poquoson, VA 23662",
+    emoji: "🎵"
+  },
 ];

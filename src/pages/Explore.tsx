@@ -24,7 +24,7 @@ export default function Explore() {
   const [userLocation, setUserLocation] = useState<[number, number] | null>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
-  const [phase, setPhase] = useState<'idle' | 'prompt' | 'suggesting' | 'accepted' | 'checked_in' | 'rated'>('idle');
+  const [phase, setPhase] = useState<'idle' | 'prompt' | 'suggesting' | 'accepted' | 'arrived' | 'checked_in' | 'rated'>('idle');
   const [suggestedPlace, setSuggestedPlace] = useState<Place | null>(null);
   const [visitId, setVisitId] = useState<string | null>(null);
   const [history, setHistory] = useState<{ place_id: string; status: string }[]>([]);
@@ -123,6 +123,11 @@ export default function Explore() {
     await refreshProfile();
     setPhase('idle');
   };
+  const handleArrived = async () => {
+    if (!token || !suggestedPlace || !visitId) { setPhase('idle'); return; }
+    await updateUserVisit(token, visitId, { status: 'accepted' });
+    setPhase('arrived');
+  };
 
   const handleCheckIn = async () => {
     if (!token || !suggestedPlace || !visitId) return;
@@ -149,11 +154,12 @@ export default function Explore() {
   };
 
   const cardProps = (() => {
-    if (phase === 'prompt') return { phase: 'prompt' as const, place: null, onAccept: generate, onDecline: handleDismiss, onCheckIn: () => {}, onRate: () => {}, onDismiss: handleDismiss, distance: null };
-    if (phase === 'suggesting') return { phase: 'suggesting' as const, place: suggestedPlace, onAccept: handleAccept, onDecline: handleDecline, onCheckIn: () => {}, onRate: () => {}, onDismiss: handleDismiss, distance: distanceTo(suggestedPlace) };
-    if (phase === 'accepted') return { phase: 'accepted' as const, place: suggestedPlace, onAccept: handleCheckIn, onDecline: handleSkip, onCheckIn: () => {}, onRate: () => {}, onDismiss: handleDismiss, distance: distanceTo(suggestedPlace) };
-    if (phase === 'checked_in') return { phase: 'checked_in' as const, place: suggestedPlace, onAccept: () => {}, onDecline: () => {}, onCheckIn: () => {}, onRate: handleRate, onDismiss: handleDismiss, distance: null };
-    if (phase === 'rated') return { phase: 'rated' as const, place: null, onAccept: () => {}, onDecline: () => {}, onCheckIn: () => {}, onRate: () => {}, onDismiss: handleDismiss, distance: null };
+    if (phase === 'prompt') return { phase: 'prompt' as const, place: null, onAccept: generate, onDecline: handleDismiss, onCheckIn: () => {}, onRate: () => {}, onArrived: () => {}, onDismiss: handleDismiss, distance: null, userLocation };
+    if (phase === 'suggesting') return { phase: 'suggesting' as const, place: suggestedPlace, onAccept: handleAccept, onDecline: handleDecline, onCheckIn: () => {}, onRate: () => {}, onArrived: () => {}, onDismiss: handleDismiss, distance: distanceTo(suggestedPlace), userLocation };
+    if (phase === 'accepted') return { phase: 'accepted' as const, place: suggestedPlace, onAccept: () => {}, onDecline: handleSkip, onCheckIn: () => {}, onRate: () => {}, onArrived: handleArrived, onDismiss: handleDismiss, distance: distanceTo(suggestedPlace), userLocation };
+    if (phase === 'arrived') return { phase: 'arrived' as const, place: suggestedPlace, onAccept: () => {}, onDecline: handleDecline, onCheckIn: handleCheckIn, onRate: () => {}, onArrived: () => {}, onDismiss: handleDismiss, distance: null, userLocation };
+    if (phase === 'checked_in') return { phase: 'checked_in' as const, place: suggestedPlace, onAccept: () => {}, onDecline: () => {}, onCheckIn: () => {}, onRate: handleRate, onArrived: () => {}, onDismiss: handleDismiss, distance: null, userLocation };
+    if (phase === 'rated') return { phase: 'rated' as const, place: null, onAccept: () => {}, onDecline: () => {}, onCheckIn: () => {}, onRate: () => {}, onArrived: () => {}, onDismiss: handleDismiss, distance: null, userLocation };
     return null;
   })();
 

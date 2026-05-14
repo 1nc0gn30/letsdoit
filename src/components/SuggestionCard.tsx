@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MapPin, Navigation, ThumbsUp, ThumbsDown, X, Check, Clock, Star, Zap } from 'lucide-react';
+import { MapPin, Navigation, ThumbsUp, ThumbsDown, X, Check, Clock, Star, Zap, ExternalLink } from 'lucide-react';
 import { Place } from '../data/places';
+import { getGoogleDirectionsUrl, getAppleDirectionsUrl, getWazeUrl } from '../lib/placePresentation';
+import DirectionsPanel from './DirectionsPanel';
 
 export interface SuggestionCardProps {
   place: Place | null;
@@ -10,8 +12,10 @@ export interface SuggestionCardProps {
   onCheckIn: () => void;
   onRate: (liked: boolean) => void;
   onDismiss: () => void;
-  phase: 'prompt' | 'suggesting' | 'accepted' | 'checked_in' | 'rated';
+  onArrived: () => void;
+  phase: 'prompt' | 'suggesting' | 'accepted' | 'arrived' | 'checked_in' | 'rated';
   distance?: number | null;
+  userLocation?: [number, number] | null;
 }
 
 export default function SuggestionCard({
@@ -21,10 +25,13 @@ export default function SuggestionCard({
   onCheckIn,
   onRate,
   onDismiss,
+  onArrived,
   phase,
   distance,
+  userLocation,
 }: SuggestionCardProps) {
   const [showRate, setShowRate] = useState(false);
+  const [showDirections, setShowDirections] = useState(false);
 
   return (
     <AnimatePresence mode="wait">
@@ -116,13 +123,13 @@ export default function SuggestionCard({
                 className="flex-1 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl transition-colors flex items-center justify-center gap-2"
               >
                 <Navigation size={16} />
-                I'm Going
+                Let's Go
               </button>
               <button
                 onClick={onDecline}
-                className="px-5 py-3 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold rounded-xl transition-colors"
+                className="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold rounded-xl transition-colors"
               >
-                Pass
+                Skip
               </button>
             </div>
           </div>
@@ -137,40 +144,135 @@ export default function SuggestionCard({
           exit={{ opacity: 0, y: 20, scale: 0.95 }}
           className="fixed inset-0 z-[2000] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm"
         >
-          <div className="max-w-sm w-full bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-2xl">
-            <div className="text-[10px] font-bold text-green-400 uppercase tracking-widest mb-3">You're Committed</div>
+          <div className="max-w-md w-full max-h-[90vh] overflow-y-auto">
+            <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-2xl relative mb-4">
+              <button
+                onClick={onDismiss}
+                className="absolute top-4 right-4 p-2 text-slate-500 hover:text-slate-300 hover:bg-slate-800 rounded-lg transition-colors"
+              >
+                <X size={18} />
+              </button>
 
-            <div className="w-14 h-14 bg-slate-800 rounded-2xl flex items-center justify-center text-3xl mb-4 border border-slate-700">
-              {place.emoji}
-            </div>
-
-            <h3 className="text-xl font-bold text-white mb-1">{place.name}</h3>
-            <p className="text-sm text-slate-400 mb-4">
-              Head over now. Check in when you arrive to confirm your visit and earn credibility.
-            </p>
-
-            {distance !== null && distance !== undefined && (
-              <div className="flex items-center gap-2 mb-5 px-3 py-2 bg-slate-800 rounded-xl border border-slate-700">
-                <Clock size={14} className="text-slate-400" />
-                <span className="text-xs font-bold text-slate-300">{distance.toFixed(1)} miles away</span>
+              <div className="text-[10px] font-bold text-green-400 uppercase tracking-widest mb-3">You're Committed</div>
+              <div className="w-14 h-14 bg-slate-800 rounded-2xl flex items-center justify-center text-3xl mb-4">
+                {place.emoji}
               </div>
-            )}
+              <h3 className="text-xl font-bold text-white mb-1">{place.name}</h3>
+              <div className="flex items-center gap-1.5 text-xs text-slate-500 mb-2">
+                <MapPin size={12} />
+                {place.address}
+              </div>
+              <p className="text-sm text-slate-400 mb-4">Head over now. Use the in-app directions below or open your favorite map app.</p>
 
+              {distance !== null && distance !== undefined && (
+                <div className="flex items-center gap-2 mb-4 px-3 py-2 bg-slate-800 rounded-xl border border-slate-700">
+                  <Clock size={14} className="text-slate-400" />
+                  <span className="text-xs font-bold text-slate-300">{distance.toFixed(1)} miles away</span>
+                </div>
+              )}
+
+              {/* In-App Directions Toggle */}
+              <button
+                onClick={() => setShowDirections(!showDirections)}
+                className={`w-full mb-3 py-3 rounded-xl font-bold text-xs transition-colors flex items-center justify-center gap-2 border ${showDirections ? 'bg-indigo-600 border-indigo-600 text-white' : 'bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700'}`}
+              >
+                <Navigation size={14} />
+                {showDirections ? 'Hide In-App Directions' : 'Show In-App Directions'}
+              </button>
+
+              <AnimatePresence>
+                {showDirections && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="overflow-hidden mb-4"
+                  >
+                    <DirectionsPanel
+                      place={place}
+                      userLocation={userLocation ?? null}
+                      onArrived={onArrived}
+                    />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              <div className="grid grid-cols-3 gap-2 mb-5">
+                <a
+                  href={getGoogleDirectionsUrl(place)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center justify-center gap-1 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-300 text-[10px] font-bold rounded-xl transition-colors border border-slate-700"
+                >
+                  <Navigation size={14} />
+                  Google Maps
+                </a>
+                <a
+                  href={getAppleDirectionsUrl(place)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center justify-center gap-1 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-300 text-[10px] font-bold rounded-xl transition-colors border border-slate-700"
+                >
+                  <MapPin size={14} />
+                  Apple Maps
+                </a>
+                <a
+                  href={getWazeUrl(place)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center justify-center gap-1 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-300 text-[10px] font-bold rounded-xl transition-colors border border-slate-700"
+                >
+                  <ExternalLink size={14} />
+                  Waze
+                </a>
+              </div>
+
+              {/* Arrived button — only show if directions not expanded */}
+              {!showDirections && (
+                <button
+                  onClick={onArrived}
+                  className="w-full py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl transition-colors flex items-center justify-center gap-2"
+                >
+                  <Check size={16} />
+                  I've Arrived — Check In
+                </button>
+              )}
+            </div>
+          </div>
+        </motion.div>
+      )}
+
+      {phase === 'arrived' && place && (
+        <motion.div
+          key="arrived"
+          initial={{ opacity: 0, y: 40, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: 20, scale: 0.95 }}
+          className="fixed inset-0 z-[2000] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm"
+        >
+          <div className="max-w-sm w-full bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-2xl text-center">
+            <div className="w-16 h-16 bg-indigo-600/20 text-indigo-400 rounded-full flex items-center justify-center mx-auto mb-4 border border-indigo-500/20">
+              <MapPin size={32} />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">Did you make it?</h3>
+            <p className="text-sm text-slate-400 mb-6">
+              Tap below once you're at {place.name}.
+            </p>
             <div className="flex gap-3">
               <button
                 onClick={onCheckIn}
                 className="flex-1 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl transition-colors flex items-center justify-center gap-2"
               >
                 <Check size={16} />
-                Check In
-              </button>
-              <button
-                onClick={onDecline}
-                className="px-5 py-3 bg-red-900/40 hover:bg-red-900/60 text-red-200 font-bold rounded-xl transition-colors border border-red-800"
-              >
-                Didn't Go
+                I'm Here — Check In
               </button>
             </div>
+            <button
+              onClick={onDecline}
+              className="w-full mt-3 text-xs font-bold text-red-400 hover:text-red-300 transition-colors"
+            >
+              Didn't Go
+            </button>
           </div>
         </motion.div>
       )}

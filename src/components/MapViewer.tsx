@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap, Polyline } from 'react-leaflet';
 import L from 'leaflet';
 import { ExternalLink, Navigation } from 'lucide-react';
@@ -24,6 +24,7 @@ import {
   getPlaceTypeLabel,
   HAMPTON_ROADS_BOUNDS,
 } from '../lib/placePresentation';
+import { fetchRoute, formatDistance, formatDuration } from '../lib/directions';
 
 function ChangeView({ center, zoom }: { center: [number, number]; zoom: number }) {
   const map = useMap();
@@ -41,9 +42,11 @@ interface MapViewerProps {
 }
 
 export default function MapViewer({ places, selectedPlaceId, onSelectPlace, userLocation }: MapViewerProps) {
-  const defaultCenter: [number, number] = [36.8529, -76.2840]; 
+  const defaultCenter: [number, number] = [36.8529, -76.2840];
   const [center, setCenter] = useState<[number, number]>(defaultCenter);
   const [zoom, setZoom] = useState(11);
+  const [routeCoords, setRouteCoords] = useState<[number, number][]>([]);
+  const [routeInfo, setRouteInfo] = useState<{ distance: number; duration: number } | null>(null);
 
   const selectedPlace = selectedPlaceId ? places.find(p => p.id === selectedPlaceId) : null;
 
@@ -52,7 +55,7 @@ export default function MapViewer({ places, selectedPlaceId, onSelectPlace, user
 
   useEffect(() => {
     if (userLocation && selectedPlace) {
-      const R = 3958.8; // Radius of the Earth in miles
+      const R = 3958.8;
       const lat1 = userLocation[0] * Math.PI / 180;
       const lat2 = selectedPlace.lat * Math.PI / 180;
       const dLat = (selectedPlace.lat - userLocation[0]) * Math.PI / 180;
@@ -66,6 +69,28 @@ export default function MapViewer({ places, selectedPlaceId, onSelectPlace, user
       setDistance(null);
     }
   }, [userLocation, selectedPlace]);
+
+  // Fetch real route from OSRM
+  const loadRoute = useCallback(async () => {
+    if (!userLocation || !selectedPlace) {
+      setRouteCoords([]);
+      setRouteInfo(null);
+      return;
+    }
+    const result = await fetchRoute(userLocation, [selectedPlace.lat, selectedPlace.lng]);
+    if (result) {
+      setRouteCoords(result.geometry.map((c) => [c[1], c[0]]));
+      setRouteInfo({ distance: result.distance, duration: result.duration });
+    } else {
+      // Fallback to straight line
+      setRouteCoords([userLocation, [selectedPlace.lat, selectedPlace.lng]]);
+      setRouteInfo(null);
+    }
+  }, [userLocation, selectedPlace]);
+
+  useEffect(() => {
+    loadRoute();
+  }, [loadRoute]);
 
   useEffect(() => {
     if (selectedPlace) {
@@ -86,7 +111,7 @@ export default function MapViewer({ places, selectedPlaceId, onSelectPlace, user
         style={{ height: '100%', width: '100%' }}
       >
         <ChangeView center={center} zoom={zoom} />
-        
+
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -95,11 +120,11 @@ export default function MapViewer({ places, selectedPlaceId, onSelectPlace, user
         />
 
         {userLocation && (
-          <Marker 
-            position={userLocation} 
+          <Marker
+            position={userLocation}
             icon={L.divIcon({
               className: 'bg-transparent',
-              html: `<div class="flex items-center justify-center w-6 h-6 bg-blue-600 border-2 border-white rounded-full shadow-lg shadow-blue-500/50 relative"><div class="absolute inset-0 bg-blue-500 rounded-full animate-ping opacity-75"></div><div class="w-2 h-2 bg-white rounded-full"></div></div>`,
+              html: `\u003cdiv class="flex items-center justify-center w-6 h-6 bg-blue-600 border-2 border-white rounded-full shadow-lg shadow-blue-500/50 relative">\u003cdiv class="absolute inset-0 bg-blue-500 rounded-full animate-ping opacity-75">\u003c/div\u003e\u003cdiv class="w-2 h-2 bg-white rounded-full">\u003c/div\u003e\u003c/div\u003e`,
               iconSize: [24, 24],
               iconAnchor: [12, 12]
             })}
@@ -110,16 +135,17 @@ export default function MapViewer({ places, selectedPlaceId, onSelectPlace, user
           </Marker>
         )}
 
-        {/* Navigation In-House Line */}
-        {userLocation && selectedPlace && (
-          <Polyline 
-            positions={[userLocation, [selectedPlace.lat, selectedPlace.lng]]} 
-            pathOptions={{ 
-              color: '#4f46e5', 
-              weight: 3, 
-              dashArray: '10, 10', 
-              opacity: 0.6 
-            }} 
+        {/* Real OSRM route line */}
+        {userLocation && selectedPlace && routeCoords.length > 0 && (
+          <Polyline
+            positions={routeCoords}
+            pathOptions={{
+              color: '#4f46e5',
+              weight: 4,
+              opacity: 0.75,
+              lineCap: 'round',
+              lineJoin: 'round',
+            }}
           />
         )}
 
@@ -131,9 +157,9 @@ export default function MapViewer({ places, selectedPlaceId, onSelectPlace, user
               position={[place.lat, place.lng]}
               icon={L.divIcon({
                 className: 'bg-transparent',
-                html: `<div class="flex items-center justify-center w-8 h-8 bg-white border-2 ${isSelected ? 'border-indigo-600 scale-125' : 'border-slate-200'} rounded-full shadow-md transition-all text-lg hover:scale-110 active:scale-95 cursor-pointer">${place.emoji}</div>`,
+                html: `\u003cdiv class="flex items-center justify-center w-8 h-8 bg-white border-2 ${isSelected ? 'border-indigo-600 scale-125' : 'border-slate-200'} rounded-full shadow-md transition-all text-lg hover:scale-110 active:scale-95 cursor-pointer">${place.emoji}\u003c/div\u003e`,
                 iconSize: [32, 32],
-                iconAnchor: [16, 32] // Anchor bottom center
+                iconAnchor: [16, 32]
               })}
               eventHandlers={{
                 click: () => onSelectPlace(place.id),
@@ -152,9 +178,9 @@ export default function MapViewer({ places, selectedPlaceId, onSelectPlace, user
                   <h3 className="font-bold text-slate-900 leading-tight mb-1 text-base">{place.name}</h3>
                   <p className="text-xs text-slate-500 mb-3">{place.address}</p>
                   <p className="text-xs text-slate-600 leading-relaxed mb-3">{getPlaceDescription(place)}</p>
-                  
+
                   <div className="grid grid-cols-2 gap-2">
-                    <a 
+                    <a
                       href={getGoogleMapsUrl(place)}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -163,7 +189,7 @@ export default function MapViewer({ places, selectedPlaceId, onSelectPlace, user
                       <ExternalLink size={13} />
                       <span>Search</span>
                     </a>
-                    <a 
+                    <a
                       href={getAppleMapsUrl(place)}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -172,8 +198,8 @@ export default function MapViewer({ places, selectedPlaceId, onSelectPlace, user
                       <span>Apple Maps</span>
                     </a>
                   </div>
-                  
-                  <a 
+
+                  <a
                     href={getGoogleDirectionsUrl(place)}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -189,8 +215,8 @@ export default function MapViewer({ places, selectedPlaceId, onSelectPlace, user
         })}
       </MapContainer>
 
-      {/* Distance Overlay */}
-      {distance && selectedPlace && (
+      {/* Distance + Route Info Overlay */}
+      {(distance || routeInfo) && selectedPlace && (
         <div className="absolute top-6 left-1/2 -translate-x-1/2 z-[1000] pointer-events-none w-full max-w-xs px-4">
           <div className="bg-white/95 backdrop-blur-md border border-indigo-100 p-3 rounded-2xl shadow-xl flex items-center gap-3">
             <div className="w-10 h-10 bg-indigo-600 text-white rounded-xl flex items-center justify-center animate-pulse shadow-lg shadow-indigo-200">
@@ -198,7 +224,19 @@ export default function MapViewer({ places, selectedPlaceId, onSelectPlace, user
             </div>
             <div className="flex flex-col min-w-0">
               <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none mb-1 truncate">Target: {selectedPlace.name}</span>
-              <span className="text-base font-black text-slate-800 leading-none">{distance.toFixed(1)} miles away</span>
+              <div className="flex items-center gap-2">
+                {distance && (
+                  <span className="text-base font-black text-slate-800 leading-none">{distance.toFixed(1)} mi</span>
+                )}
+                {routeInfo && (
+                  <>
+                    <span className="text-[10px] text-slate-400">·</span>
+                    <span className="text-xs font-bold text-indigo-600 leading-none">{formatDistance(routeInfo.distance)}</span>
+                    <span className="text-[10px] text-slate-400">·</span>
+                    <span className="text-xs font-bold text-slate-600 leading-none">{formatDuration(routeInfo.duration)}</span>
+                  </>
+                )}
+              </div>
             </div>
           </div>
         </div>
